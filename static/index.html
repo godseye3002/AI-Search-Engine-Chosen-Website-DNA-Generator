@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GodsEye Pipeline Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .runs-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .runs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .runs-table th,
+        .runs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .runs-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .status-running {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pending {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .run-details {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .run-details.active {
+            display: block;
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1进一步加强
+            margin-top: 1rem;
+        }
+        
+        .job-card {
+            background: white;
+ Blank
+            border-radius: 5px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+        }
+        
+        .job-url {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            word-break: break-all;
+        }
+        
+        .rops {
+            inside
+           imes;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .stage-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        
+        .stage-pending {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .stage-running {
+            background: #cce5ff;
+            color: #004085;
+        }
+        
+        .stage-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .stage-failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .results-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .recommendation-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .recommendation-priority {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .recommendation-text {
+            margin-bottom: 0.5rem;
+        }
+        
+        .recommendation-impact {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .runs-table {
+                font-size: 0.9rem;
+            }
+            
+            .runs-table th,
+            .runs-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GodsEye Pipeline Dashboard</h1>
+        <p>Real-time monitoring and control of content analysis和工作</p>
+    </div>
+    
+    <div class="container">
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="total-runs">-</div>
+                <div class="stat-label">Total Runs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="running-runs">-</div>
+                <div class="stat-label">Running</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completed-runs">-</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="success-rate">-</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+        </div>
+        
+        <!-- Pipeline Runs Section -->
+        <div class="runs-section">
+            <div class="section-header">
+                <h2 class="section-title">Pipeline Runs</h2>
+                <button class="btn" onclick="showNewRunModal()">Start New Run</button>
+            </div>
+            
+            <div id="runs-container">
+                <div class="loading">Loading pipeline runs...</div>
+            </div>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="results-section" id="results-section" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title">Analysis Results</h2>
+            </div>
+            <div id="results-container"></div>
+        </div>
+    </div>
+    
+    <!-- New Run Modal -->
+    <div class="modal" id="new-run-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Start New Pipeline Run</h3>
+                <button class="close-btn" onclick="hideNewRunModal()">&times;</button>
+            </div>
+            <form id="new-run-form">
+                <div class="form-group">
+                    <label class="form-label">AI Response File</label>
+                    <input type="text" class="form-input" id="ai-response-file" value="ai_response.json" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Query (optional)</label>
+                    <textarea class="form-input form-textarea" id="query-input" placeholder="Enter search query..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Start Pipeline</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Global variables
+        let ws = null;
+        let currentRunId = null;
+        let refreshInterval = null;
+        
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStats();
+            loadRuns();
+            setupWebSocket();
+            startAutoRefresh();
+        });
+        
+        // Load pipeline statistics
+        async function loadStats() {
+            try {
+                const response = await fetch('/stats');
+                const stats = await response.json();
+                
+                document.getElementById('total-runs').textContent = stats.total_runs;
+                document.getElementById('running-runs').textContent = stats.running_runs;
+                document.getElementById('completed-runs').textContent = stats.completed_runs;
+                document.getElementById('success-rate').textContent = (stats.success_rate * 100).toFixed(1) + '%';
+            } catch (error) {
+                console.error('Failed to load stats:', error);
+            }
+        }
+        
+        // Load pipeline runs
+        async function loadRuns() {
+            try {
+                const response = await fetch('/pipeline/runs');
+                const data = await response.json();
+                
+                const container = document.getElementById('runs-container');
+                
+                if (data.runs.length === 0) {
+                    container.innerHTML = '<div class="loading">No pipeline runs found</div>';
+                    return;
+                }
+                
+                let html = '<table class="runs-table"><thead><tr>';
+                html += '<th>Run ID</th><th>Status</th><th>Stage</th><th>Jobs</th><th>Query</th><th>Created</th><th>Actions</th>';
+                html += '</tr></thead><tbody>';
+                
+                data.runs.forEach(run => {
+                    html += `<tr>
+                        <td><code>${run.run_id.substring(0, 20)}...</code></td>
+                        <td><span class="status-badge status-${run.status}">${run.status}</span></td>
+                        <td>Stage ${run.current_stage}</td>
+                        <td>${run.total_jobs}</td>
+                        <td>${run.query || '-'}</td>
+                        <td>${new Date(run.created_at).toLocaleString()}</td>
+                        <td>
+                            <button class="btn" onclick="viewRunDetails('${run.run_id}')" style="padding: 0.5rem 1rem; font-size: 0.8rem;">View</button>
+                        </td>
+                    </tr>`;
+                });
+                
+                html += '</tbody></table>';
+                container.innerHTML = html;
+                
+            } catch (error) {
+                console.error('Failed to load runs:', error);
+                document.getElementById('runs-container').innerHTML = '<div class="error">Failed to load pipeline runs</div>';
+            }
+        }
+        
+        // View run details
+        async function viewRunDetails(runId) {
+            currentRunId = runId;
+            
+            try {
+                const response = await fetch(`/pipeline/runs/${runId}`);
+                const run = await response.json();
+                
+                // Show results section
+                document.getElementById('results-section').style.display = 'block';
+                
+                // Load results if completed
+                if (run.status === 'completed') {
+                    await loadRunResults(runId);
+                }
+                
+                // Scroll to results
+                document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+                
+            } catch (error) {
+                console.error('Failed to load run details:', error);
+                alert('Failed to load run details');
+            }
+        }
+        
+        // Load run results
+        async function loadRunResults(runId) {
+            try {
+                const [results, summary, recommendations, opportunities] = await Promise.all([
+                    fetch(`/pipeline/runs/${runId}/results`).then(r => r.json()),
+                    fetch(`/pipeline/runs/${runId}/results/summary`).then(r => r.json()),
+                    fetch(`/pipeline/runs/${runId}/results/recommendations`).then(r => r.json()),
+                    fetch(`/pipeline/runs/${runId}/results/opportunities`).then(r => r.json())
+                ]);
+                
+                let html = '<h3>Analysis Summary</h3>';
+                html += `<div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin-bottom: 2rem;">`;
+                html += `<pre style="white-space: pre-wrap; font-family: inherit;">${summary.summary}</pre>`;
+                html += '</div>';
+                
+                html += '<h3>Content Recommendations</h3>';
+                recommendations.recommendations.forEach(rec => {
+                    html += '<div class="recommendation-card">';
+                    html += `<div class="recommendation-priority">${rec.priority.toUpperCase()} PRIORITY</div>`;
+                    html += `<div class="recommendation-text">${rec.recommendation}</div>`;
+                    html += `<div class="recommendation-impact">Expected Impact: ${rec.expected_impact}</div>`;
+                    html += '</div>';
+                });
+                
+                html += '<h3>Ranking Opportunities</h3>';
+                opportunities.opportunities.forEach(opp => {
+                    html += '<div class="recommendation-card">';
+                    html += `<div class="recommendation-priority">${opp.opportunity_type.replace('_', ' ').toUpperCase()}</div>`;
+                    html += `<div class="recommendation-text">${opp.recommendation}</div>`;
+                    html += `<div class="recommendation-impact">Priority: ${opp.priority}</div>`;
+                    html += '</div>';
+                });
+                
+                document.getElementById('results-container').innerHTML = html;
+                
+            } catch (error) {
+                console.error('Failed to load results:', error);
+                document.getElementById('results-container').innerHTML = '<div class="error">Failed to load results</div>';
+            }
+        }
+        
+        // Setup WebSocket for real-time updates
+        function setupWebSocket() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}/ws`;
+            
+            ws = new WebSocket(wsUrl);
+            
+            ws.onopen = function() {
+                console.log('WebSocket connected');
+            };
+            
+            ws.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                handleWebSocketUpdate(data);
+            };
+            
+            ws.onclose = function() {
+                console.log('WebSocket disconnected');
+                // Reconnect after 5 seconds
+                setTimeout(setupWebSocket, 5000);
+            };
+            
+            ws.onerror = function(error) {
+                console.error('WebSocket error:', error);
+            };
+        }
+        
+        // Handle WebSocket updates
+        function handleWebSocketUpdate(data) {
+            console.log('Received update:', data);
+            
+            // Refresh stats and runs on any update
+            loadStats();
+            loadRuns();
+            
+            // If it's about the current run, refresh results
+            if (currentRunId && data.run_id === currentRunId) {
+                if (data.type === 'run_status' && data.data.status === 'completed') {
+                    loadRunResults(currentRunId);
+                }
+            }
+        }
+        
+        // Start auto refresh
+        function startAutoRefresh() {
+            refreshInterval = setInterval(() => {
+                loadStats();
+                loadRuns();
+            }, 10000); // Refresh every 10 seconds
+        }
+        
+        // Modal functions
+        function showNewRunModal() {
+            document.getElementById('new-run-modal').classList.add('active');
+        }
+        
+        function hideNewRunModal() {
+            document.getElementById('new-run-modal').classList.remove('active');
+        }
+        
+        // Handle new run form submission
+        document.getElementById('new-run-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                ai_response_file: document.getElementById('ai-response-file').value,
+                query: document.getElementById('query-input').value
+            };
+            
+            try {
+                const response = await fetch('/pipeline/run', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    hideNewRunModal();
+                    alert(`Pipeline run started: ${result.run_id}`);
+                    loadRuns();
+                    loadStats();
+                    
+                    // Subscribe to WebSocket updates for this run
+                    if (ws && ws.readyState === WebSocket.OPEN) {
+                        // Switch to run-specific WebSocket
+                        ws.close();
+                        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+                        const wsUrl = `${protocol}//${window.location.host}/ws/${result.run_id}`;
+                        ws = new WebSocket(wsUrl);
+                        setupWebSocket();
+                    }
+                } else {
+                    alert(`Failed to start pipeline: ${result.detail || 'Unknown error'}`);
+                }
+                
+            } catch (error) {
+                console.error('Failed to start pipeline:', error);
+                alert('Failed to start pipeline');
+            }
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('new-run-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideNewRunModal();
+            }
+        });
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (refreshInterval) {
+                clearInterval(refreshInterval);
+            }
+            if (ws) {
+                ws.close();
+            }
+        });
+    </script>
+</body>
+</html>

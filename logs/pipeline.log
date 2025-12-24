@@ -1,0 +1,310 @@
+2025-12-20 00:24:42,064 - __main__ - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:24:42,066 - __main__ - INFO - Created run gods_eye_run_1766170482_b89237f2 with 11 jobs
+2025-12-20 00:24:42,066 - __main__ - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:35:39,836 - __main__ - INFO - State Manager initialized
+2025-12-20 00:35:39,836 - __main__ - INFO - Job Queue Manager initialized
+2025-12-20 00:35:39,839 - __main__ - INFO - Stage 1 Worker initialized
+2025-12-20 00:35:39,840 - __main__ - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:35:39,841 - __main__ - INFO - Created run gods_eye_run_1766171139_4c15a879 with 11 jobs
+2025-12-20 00:35:39,841 - __main__ - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:36:15,372 - __main__ - INFO - State Manager initialized
+2025-12-20 00:36:15,373 - __main__ - INFO - Job Queue Manager initialized
+2025-12-20 00:36:15,373 - __main__ - INFO - Stage 1 Worker initialized
+2025-12-20 00:36:15,373 - __main__ - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:36:15,375 - __main__ - INFO - Created run gods_eye_run_1766171175_e48d9e32 with 11 jobs
+2025-12-20 00:36:15,375 - __main__ - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:36:28,411 - __main__ - INFO - State Manager initialized
+2025-12-20 00:36:28,411 - __main__ - INFO - Job Queue Manager initialized
+2025-12-20 00:36:28,412 - __main__ - INFO - Stage 1 Worker initialized
+2025-12-20 00:36:28,412 - __main__ - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:36:28,414 - __main__ - INFO - Created run gods_eye_run_1766171188_1df9e10d with 11 jobs
+2025-12-20 00:36:28,414 - __main__ - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:36:52,625 - pipeline_orchestrator - INFO - State Manager initialized
+2025-12-20 00:36:52,625 - pipeline_orchestrator - INFO - Job Queue Manager initialized
+2025-12-20 00:36:52,626 - pipeline_orchestrator - INFO - Stage 1 Worker initialized
+2025-12-20 00:36:52,626 - pipeline_orchestrator - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:36:52,626 - pipeline_orchestrator - INFO - Starting GodsEye pipeline execution
+2025-12-20 00:36:52,627 - pipeline_orchestrator - INFO - Created run gods_eye_run_1766171212_862f0092 with 11 jobs
+2025-12-20 00:36:52,627 - pipeline_orchestrator - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:36:52,627 - pipeline_orchestrator - INFO - Starting Stage 1 execution for run gods_eye_run_1766171212_862f0092
+2025-12-20 00:36:52,627 - pipeline_orchestrator - INFO - Created Stage 1 queue with 11 jobs
+2025-12-20 00:36:52,628 - pipeline_orchestrator - INFO - Created 2 batches for Stage 1 - Website Classification (max_parallel=10, pending_jobs=11)
+2025-12-20 00:36:52,628 - pipeline_orchestrator - INFO - Processing Stage 1 batch 1/2 (10 jobs)
+2025-12-20 00:36:52,628 - pipeline_orchestrator - INFO - Processing batch of 10 jobs for Stage 1
+2025-12-20 00:36:52,628 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_001 for Stage 1
+2025-12-20 00:36:54,146 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_001 completed Stage 1: special_url
+2025-12-20 00:36:54,147 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_002 for Stage 1
+2025-12-20 00:36:55,398 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_002 completed Stage 1: special_url
+2025-12-20 00:36:55,399 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_003 for Stage 1
+2025-12-20 00:36:56,444 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_003 completed Stage 1: special_url
+2025-12-20 00:36:56,444 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_004 for Stage 1
+2025-12-20 00:36:57,354 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_004 completed Stage 1: special_url
+2025-12-20 00:36:57,354 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_005 for Stage 1
+2025-12-20 00:36:58,357 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_005 completed Stage 1: special_url
+2025-12-20 00:36:58,358 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_006 for Stage 1
+2025-12-20 00:36:59,381 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_006 completed Stage 1: special_url
+2025-12-20 00:36:59,382 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_007 for Stage 1
+2025-12-20 00:37:03,458 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_007 completed Stage 1: third_party
+2025-12-20 00:37:03,459 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_008 for Stage 1
+2025-12-20 00:37:09,583 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_008 completed Stage 1: third_party
+2025-12-20 00:37:09,583 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_009 for Stage 1
+2025-12-20 00:37:12,930 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_009 completed Stage 1: third_party
+2025-12-20 00:37:12,931 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171212_862f0092_job_010 for Stage 1
+2025-12-20 00:37:16,940 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171212_862f0092_job_010 completed Stage 1: third_party
+2025-12-20 00:37:16,943 - pipeline_orchestrator - INFO - Batch completed: 10 successful, 0 failed
+2025-12-20 00:37:37,552 - pipeline_orchestrator - INFO - State Manager initialized
+2025-12-20 00:37:37,553 - pipeline_orchestrator - INFO - Job Queue Manager initialized
+2025-12-20 00:37:37,554 - pipeline_orchestrator - INFO - Stage 1 Worker initialized
+2025-12-20 00:37:37,554 - pipeline_orchestrator - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:37:37,554 - pipeline_orchestrator - INFO - Starting GodsEye pipeline execution
+2025-12-20 00:37:37,555 - pipeline_orchestrator - INFO - Created run gods_eye_run_1766171257_0517d810 with 11 jobs
+2025-12-20 00:37:37,555 - pipeline_orchestrator - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:37:37,556 - pipeline_orchestrator - INFO - Starting Stage 1 execution for run gods_eye_run_1766171257_0517d810
+2025-12-20 00:37:37,556 - pipeline_orchestrator - INFO - Created Stage 1 queue with 11 jobs
+2025-12-20 00:37:37,556 - pipeline_orchestrator - INFO - Created 2 batches for Stage 1 - Website Classification (max_parallel=10, pending_jobs=11)
+2025-12-20 00:37:37,556 - pipeline_orchestrator - INFO - Processing Stage 1 batch 1/2 (10 jobs)
+2025-12-20 00:37:37,556 - pipeline_orchestrator - INFO - Processing batch of 10 jobs for Stage 1
+2025-12-20 00:37:37,557 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_001 for Stage 1
+2025-12-20 00:37:39,013 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_001 completed Stage 1: special_url
+2025-12-20 00:37:39,016 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_002 for Stage 1
+2025-12-20 00:37:40,020 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_002 completed Stage 1: special_url
+2025-12-20 00:37:40,020 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_003 for Stage 1
+2025-12-20 00:37:41,051 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_003 completed Stage 1: special_url
+2025-12-20 00:37:41,051 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_004 for Stage 1
+2025-12-20 00:37:42,095 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_004 completed Stage 1: special_url
+2025-12-20 00:37:42,095 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_005 for Stage 1
+2025-12-20 00:37:43,275 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_005 completed Stage 1: special_url
+2025-12-20 00:37:43,277 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_006 for Stage 1
+2025-12-20 00:37:44,474 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_006 completed Stage 1: special_url
+2025-12-20 00:37:44,474 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_007 for Stage 1
+2025-12-20 00:37:48,206 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_007 completed Stage 1: third_party
+2025-12-20 00:37:48,207 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_008 for Stage 1
+2025-12-20 00:37:52,072 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_008 completed Stage 1: third_party
+2025-12-20 00:37:52,073 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_009 for Stage 1
+2025-12-20 00:37:55,275 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_009 completed Stage 1: third_party
+2025-12-20 00:37:55,275 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_010 for Stage 1
+2025-12-20 00:37:58,673 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_010 completed Stage 1: third_party
+2025-12-20 00:37:58,674 - pipeline_orchestrator - INFO - Batch completed: 10 successful, 0 failed
+2025-12-20 00:37:58,678 - pipeline_orchestrator - INFO - Batch 1 completed: 10 successful, 0 failed
+2025-12-20 00:37:58,678 - pipeline_orchestrator - INFO - Processing Stage 1 batch 2/2 (1 jobs)
+2025-12-20 00:37:58,678 - pipeline_orchestrator - INFO - Processing batch of 1 jobs for Stage 1
+2025-12-20 00:37:58,678 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171257_0517d810_job_011 for Stage 1
+2025-12-20 00:38:02,656 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171257_0517d810_job_011 completed Stage 1: third_party
+2025-12-20 00:38:02,656 - pipeline_orchestrator - INFO - Batch completed: 1 successful, 0 failed
+2025-12-20 00:38:02,661 - pipeline_orchestrator - INFO - Batch 2 completed: 1 successful, 0 failed
+2025-12-20 00:38:02,661 - pipeline_orchestrator - INFO - Stage 1 completed for run gods_eye_run_1766171257_0517d810: 11 successful, 0 failed
+2025-12-20 00:38:02,661 - pipeline_orchestrator - INFO - Filtering Stage 1 results for run gods_eye_run_1766171257_0517d810
+2025-12-20 00:38:02,661 - pipeline_orchestrator - INFO - Stage 1 filtering: 5 selected, 6 rejected for Stage 2
+2025-12-20 00:38:02,662 - pipeline_orchestrator - INFO - Calculated 1 Stage 2 batches for 5 selected jobs
+2025-12-20 00:38:02,664 - pipeline_orchestrator - INFO - Stage 1 filtering completed: 5 selected, 6 rejected
+2025-12-20 00:38:02,664 - pipeline_orchestrator - INFO - Pipeline run gods_eye_run_1766171257_0517d810 completed Stage 1. Stages 2-3 not yet implemented.
+2025-12-20 00:40:54,129 - pipeline_orchestrator - INFO - State Manager initialized
+2025-12-20 00:40:54,129 - pipeline_orchestrator - INFO - Job Queue Manager initialized
+2025-12-20 00:40:54,130 - pipeline_orchestrator - INFO - Stage 1 Worker initialized
+2025-12-20 00:40:54,130 - pipeline_orchestrator - INFO - Stage 2 Worker initialized
+2025-12-20 00:40:54,131 - pipeline_orchestrator - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:40:54,131 - pipeline_orchestrator - INFO - Starting GodsEye pipeline execution
+2025-12-20 00:40:54,132 - pipeline_orchestrator - INFO - Created run gods_eye_run_1766171454_192fada6 with 11 jobs
+2025-12-20 00:40:54,132 - pipeline_orchestrator - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:40:54,132 - pipeline_orchestrator - INFO - Starting Stage 1 execution for run gods_eye_run_1766171454_192fada6
+2025-12-20 00:40:54,133 - pipeline_orchestrator - INFO - Created Stage 1 queue with 11 jobs
+2025-12-20 00:40:54,134 - pipeline_orchestrator - INFO - Created 2 batches for Stage 1 - Website Classification (max_parallel=10, pending_jobs=11)
+2025-12-20 00:40:54,134 - pipeline_orchestrator - INFO - Processing Stage 1 batch 1/2 (10 jobs)
+2025-12-20 00:40:54,135 - pipeline_orchestrator - INFO - Processing batch of 10 jobs for Stage 1
+2025-12-20 00:40:54,135 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_001 for Stage 1
+2025-12-20 00:40:55,781 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_001 completed Stage 1: special_url
+2025-12-20 00:40:55,781 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_002 for Stage 1
+2025-12-20 00:40:56,972 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_002 completed Stage 1: special_url
+2025-12-20 00:40:56,972 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_003 for Stage 1
+2025-12-20 00:40:58,008 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_003 completed Stage 1: special_url
+2025-12-20 00:40:58,008 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_004 for Stage 1
+2025-12-20 00:40:58,590 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_004 completed Stage 1: special_url
+2025-12-20 00:40:58,590 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_005 for Stage 1
+2025-12-20 00:40:59,801 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_005 completed Stage 1: special_url
+2025-12-20 00:40:59,802 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_006 for Stage 1
+2025-12-20 00:41:00,924 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_006 completed Stage 1: special_url
+2025-12-20 00:41:00,925 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_007 for Stage 1
+2025-12-20 00:41:04,616 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_007 completed Stage 1: third_party
+2025-12-20 00:41:04,616 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_008 for Stage 1
+2025-12-20 00:41:07,690 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_008 completed Stage 1: third_party
+2025-12-20 00:41:07,690 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_009 for Stage 1
+2025-12-20 00:41:11,104 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_009 completed Stage 1: third_party
+2025-12-20 00:41:11,104 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_010 for Stage 1
+2025-12-20 00:41:14,986 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_010 completed Stage 1: third_party
+2025-12-20 00:41:14,987 - pipeline_orchestrator - INFO - Batch completed: 10 successful, 0 failed
+2025-12-20 00:41:14,989 - pipeline_orchestrator - INFO - Batch 1 completed: 10 successful, 0 failed
+2025-12-20 00:41:14,990 - pipeline_orchestrator - INFO - Processing Stage 1 batch 2/2 (1 jobs)
+2025-12-20 00:41:14,990 - pipeline_orchestrator - INFO - Processing batch of 1 jobs for Stage 1
+2025-12-20 00:41:14,991 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_011 for Stage 1
+2025-12-20 00:41:18,884 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_011 completed Stage 1: third_party
+2025-12-20 00:41:18,885 - pipeline_orchestrator - INFO - Batch completed: 1 successful, 0 failed
+2025-12-20 00:41:18,887 - pipeline_orchestrator - INFO - Batch 2 completed: 1 successful, 0 failed
+2025-12-20 00:41:18,887 - pipeline_orchestrator - INFO - Stage 1 completed for run gods_eye_run_1766171454_192fada6: 11 successful, 0 failed
+2025-12-20 00:41:18,888 - pipeline_orchestrator - INFO - Filtering Stage 1 results for run gods_eye_run_1766171454_192fada6
+2025-12-20 00:41:18,888 - pipeline_orchestrator - INFO - Stage 1 filtering: 5 selected, 6 rejected for Stage 2
+2025-12-20 00:41:18,888 - pipeline_orchestrator - INFO - Calculated 1 Stage 2 batches for 5 selected jobs
+2025-12-20 00:41:18,890 - pipeline_orchestrator - INFO - Stage 1 filtering completed: 5 selected, 6 rejected
+2025-12-20 00:41:18,891 - pipeline_orchestrator - INFO - Starting Stage 2 execution for run gods_eye_run_1766171454_192fada6
+2025-12-20 00:41:18,891 - pipeline_orchestrator - INFO - Created Stage 2 queue with 5 jobs (from 11 total)
+2025-12-20 00:41:18,892 - pipeline_orchestrator - INFO - Created 1 batches for Stage 2 - DNA Analysis (max_parallel=10, pending_jobs=5)
+2025-12-20 00:41:18,893 - pipeline_orchestrator - INFO - Processing Stage 2 batch 1/1 (5 jobs)
+2025-12-20 00:41:18,893 - pipeline_orchestrator - INFO - Processing batch of 5 jobs for Stage 2
+2025-12-20 00:41:18,893 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_007 for Stage 2
+2025-12-20 00:41:20,433 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_007 completed Stage 2: DNA analysis complete
+2025-12-20 00:41:20,433 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_008 for Stage 2
+2025-12-20 00:41:21,414 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_008 completed Stage 2: DNA analysis complete
+2025-12-20 00:41:21,415 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_009 for Stage 2
+2025-12-20 00:41:22,551 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_009 completed Stage 2: DNA analysis complete
+2025-12-20 00:41:22,553 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_010 for Stage 2
+2025-12-20 00:41:23,984 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_010 completed Stage 2: DNA analysis complete
+2025-12-20 00:41:23,984 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171454_192fada6_job_011 for Stage 2
+2025-12-20 00:41:27,914 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171454_192fada6_job_011 completed Stage 2: DNA analysis complete
+2025-12-20 00:41:27,914 - pipeline_orchestrator - INFO - Batch completed: 5 successful, 0 failed
+2025-12-20 00:41:27,917 - pipeline_orchestrator - INFO - Batch 1 completed: 5 successful, 0 failed
+2025-12-20 00:42:43,084 - pipeline_orchestrator - INFO - State Manager initialized
+2025-12-20 00:42:43,084 - pipeline_orchestrator - INFO - Job Queue Manager initialized
+2025-12-20 00:42:43,085 - pipeline_orchestrator - INFO - Stage 1 Worker initialized
+2025-12-20 00:42:43,085 - pipeline_orchestrator - INFO - Stage 2 Worker initialized
+2025-12-20 00:42:43,085 - pipeline_orchestrator - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:42:43,085 - pipeline_orchestrator - INFO - Starting GodsEye pipeline execution
+2025-12-20 00:42:43,087 - pipeline_orchestrator - INFO - Created run gods_eye_run_1766171563_35345335 with 11 jobs
+2025-12-20 00:42:43,087 - pipeline_orchestrator - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:42:43,087 - pipeline_orchestrator - INFO - Starting Stage 1 execution for run gods_eye_run_1766171563_35345335
+2025-12-20 00:42:43,088 - pipeline_orchestrator - INFO - Created Stage 1 queue with 11 jobs
+2025-12-20 00:42:43,088 - pipeline_orchestrator - INFO - Created 2 batches for Stage 1 - Website Classification (max_parallel=10, pending_jobs=11)
+2025-12-20 00:42:43,088 - pipeline_orchestrator - INFO - Processing Stage 1 batch 1/2 (10 jobs)
+2025-12-20 00:42:43,088 - pipeline_orchestrator - INFO - Processing batch of 10 jobs for Stage 1
+2025-12-20 00:42:43,088 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_001 for Stage 1
+2025-12-20 00:42:44,222 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_001 completed Stage 1: special_url
+2025-12-20 00:42:44,222 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_002 for Stage 1
+2025-12-20 00:42:45,325 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_002 completed Stage 1: special_url
+2025-12-20 00:42:45,325 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_003 for Stage 1
+2025-12-20 00:42:46,310 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_003 completed Stage 1: special_url
+2025-12-20 00:42:46,311 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_004 for Stage 1
+2025-12-20 00:42:47,537 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_004 completed Stage 1: special_url
+2025-12-20 00:42:47,537 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_005 for Stage 1
+2025-12-20 00:42:48,660 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_005 completed Stage 1: special_url
+2025-12-20 00:42:48,663 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_006 for Stage 1
+2025-12-20 00:42:49,625 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_006 completed Stage 1: special_url
+2025-12-20 00:42:49,625 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_007 for Stage 1
+2025-12-20 00:42:53,607 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_007 completed Stage 1: third_party
+2025-12-20 00:42:53,607 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_008 for Stage 1
+2025-12-20 00:42:56,725 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_008 completed Stage 1: third_party
+2025-12-20 00:42:56,727 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_009 for Stage 1
+2025-12-20 00:42:59,541 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_009 completed Stage 1: third_party
+2025-12-20 00:42:59,542 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_010 for Stage 1
+2025-12-20 00:43:02,632 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_010 completed Stage 1: third_party
+2025-12-20 00:43:02,633 - pipeline_orchestrator - INFO - Batch completed: 10 successful, 0 failed
+2025-12-20 00:43:02,635 - pipeline_orchestrator - INFO - Batch 1 completed: 10 successful, 0 failed
+2025-12-20 00:43:02,637 - pipeline_orchestrator - INFO - Processing Stage 1 batch 2/2 (1 jobs)
+2025-12-20 00:43:02,637 - pipeline_orchestrator - INFO - Processing batch of 1 jobs for Stage 1
+2025-12-20 00:43:02,637 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_011 for Stage 1
+2025-12-20 00:43:06,564 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_011 completed Stage 1: third_party
+2025-12-20 00:43:06,564 - pipeline_orchestrator - INFO - Batch completed: 1 successful, 0 failed
+2025-12-20 00:43:06,567 - pipeline_orchestrator - INFO - Batch 2 completed: 1 successful, 0 failed
+2025-12-20 00:43:06,567 - pipeline_orchestrator - INFO - Stage 1 completed for run gods_eye_run_1766171563_35345335: 11 successful, 0 failed
+2025-12-20 00:43:06,568 - pipeline_orchestrator - INFO - Filtering Stage 1 results for run gods_eye_run_1766171563_35345335
+2025-12-20 00:43:06,568 - pipeline_orchestrator - INFO - Stage 1 filtering: 5 selected, 6 rejected for Stage 2
+2025-12-20 00:43:06,568 - pipeline_orchestrator - INFO - Calculated 1 Stage 2 batches for 5 selected jobs
+2025-12-20 00:43:06,571 - pipeline_orchestrator - INFO - Stage 1 filtering completed: 5 selected, 6 rejected
+2025-12-20 00:43:06,572 - pipeline_orchestrator - INFO - Starting Stage 2 execution for run gods_eye_run_1766171563_35345335
+2025-12-20 00:43:06,573 - pipeline_orchestrator - INFO - Created Stage 2 queue with 5 jobs (from 11 total)
+2025-12-20 00:43:06,573 - pipeline_orchestrator - INFO - Created 1 batches for Stage 2 - DNA Analysis (max_parallel=10, pending_jobs=5)
+2025-12-20 00:43:06,574 - pipeline_orchestrator - INFO - Processing Stage 2 batch 1/1 (5 jobs)
+2025-12-20 00:43:06,574 - pipeline_orchestrator - INFO - Processing batch of 5 jobs for Stage 2
+2025-12-20 00:43:06,574 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_007 for Stage 2
+2025-12-20 00:43:08,009 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_007 completed Stage 2: DNA analysis complete
+2025-12-20 00:43:08,009 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_008 for Stage 2
+2025-12-20 00:43:08,947 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_008 completed Stage 2: DNA analysis complete
+2025-12-20 00:43:08,947 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_009 for Stage 2
+2025-12-20 00:43:10,091 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_009 completed Stage 2: DNA analysis complete
+2025-12-20 00:43:10,091 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_010 for Stage 2
+2025-12-20 00:43:11,428 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_010 completed Stage 2: DNA analysis complete
+2025-12-20 00:43:11,428 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171563_35345335_job_011 for Stage 2
+2025-12-20 00:43:15,075 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171563_35345335_job_011 completed Stage 2: DNA analysis complete
+2025-12-20 00:43:15,076 - pipeline_orchestrator - INFO - Batch completed: 5 successful, 0 failed
+2025-12-20 00:43:15,079 - pipeline_orchestrator - INFO - Batch 1 completed: 5 successful, 0 failed
+2025-12-20 00:43:15,080 - pipeline_orchestrator - INFO - Stage 2 completed for run gods_eye_run_1766171563_35345335: 5 successful, 0 failed
+2025-12-20 00:43:15,080 - pipeline_orchestrator - INFO - Filtering Stage 2 results for run gods_eye_run_1766171563_35345335
+2025-12-20 00:43:15,080 - pipeline_orchestrator - INFO - Stage 2 filtering: 5 selected, 0 rejected for Stage 3
+2025-12-20 00:43:15,081 - pipeline_orchestrator - INFO - Calculated 1 Stage 3 batches for 5 selected jobs
+2025-12-20 00:43:15,083 - pipeline_orchestrator - INFO - Stage 2 filtering completed: 5 selected, 0 rejected
+2025-12-20 00:43:15,083 - pipeline_orchestrator - INFO - Pipeline run gods_eye_run_1766171563_35345335 completed Stage 2. Stage 3 not yet implemented.
+2025-12-20 00:45:28,955 - pipeline_orchestrator - INFO - State Manager initialized
+2025-12-20 00:45:28,955 - pipeline_orchestrator - INFO - Job Queue Manager initialized
+2025-12-20 00:45:28,956 - pipeline_orchestrator - INFO - Stage 1 Worker initialized
+2025-12-20 00:45:28,957 - pipeline_orchestrator - INFO - Stage 2 Worker initialized
+2025-12-20 00:45:28,958 - pipeline_orchestrator - INFO - Stage 3 Worker initialized
+2025-12-20 00:45:28,958 - pipeline_orchestrator - INFO - Pipeline Orchestrator initialized
+2025-12-20 00:45:28,958 - pipeline_orchestrator - INFO - Starting GodsEye pipeline execution
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Created run gods_eye_run_1766171728_1a188f2e with 11 jobs
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Stage 1: 2 batches with max 10 workers each
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Starting Stage 1 execution for run gods_eye_run_1766171728_1a188f2e
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Created Stage 1 queue with 11 jobs
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Created 2 batches for Stage 1 - Website Classification (max_parallel=10, pending_jobs=11)
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Processing Stage 1 batch 1/2 (10 jobs)
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Processing batch of 10 jobs for Stage 1
+2025-12-20 00:45:28,960 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_001 for Stage 1
+2025-12-20 00:45:30,620 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_001 completed Stage 1: special_url
+2025-12-20 00:45:30,621 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_002 for Stage 1
+2025-12-20 00:45:31,629 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_002 completed Stage 1: special_url
+2025-12-20 00:45:31,630 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_003 for Stage 1
+2025-12-20 00:45:32,718 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_003 completed Stage 1: special_url
+2025-12-20 00:45:32,718 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_004 for Stage 1
+2025-12-20 00:45:34,054 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_004 completed Stage 1: special_url
+2025-12-20 00:45:34,054 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_005 for Stage 1
+2025-12-20 00:45:35,129 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_005 completed Stage 1: special_url
+2025-12-20 00:45:35,129 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_006 for Stage 1
+2025-12-20 00:45:36,134 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_006 completed Stage 1: special_url
+2025-12-20 00:45:36,135 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_007 for Stage 1
+2025-12-20 00:45:39,916 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_007 completed Stage 1: third_party
+2025-12-20 00:45:39,916 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_008 for Stage 1
+2025-12-20 00:45:42,931 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_008 completed Stage 1: third_party
+2025-12-20 00:45:42,931 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_009 for Stage 1
+2025-12-20 00:45:46,200 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_009 completed Stage 1: third_party
+2025-12-20 00:45:46,201 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_010 for Stage 1
+2025-12-20 00:45:49,434 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_010 completed Stage 1: third_party
+2025-12-20 00:45:49,434 - pipeline_orchestrator - INFO - Batch completed: 10 successful, 0 failed
+2025-12-20 00:45:49,437 - pipeline_orchestrator - INFO - Batch 1 completed: 10 successful, 0 failed
+2025-12-20 00:45:49,438 - pipeline_orchestrator - INFO - Processing Stage 1 batch 2/2 (1 jobs)
+2025-12-20 00:45:49,438 - pipeline_orchestrator - INFO - Processing batch of 1 jobs for Stage 1
+2025-12-20 00:45:49,438 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_011 for Stage 1
+2025-12-20 00:45:53,348 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_011 completed Stage 1: third_party
+2025-12-20 00:45:53,349 - pipeline_orchestrator - INFO - Batch completed: 1 successful, 0 failed
+2025-12-20 00:45:53,352 - pipeline_orchestrator - INFO - Batch 2 completed: 1 successful, 0 failed
+2025-12-20 00:45:53,352 - pipeline_orchestrator - INFO - Stage 1 completed for run gods_eye_run_1766171728_1a188f2e: 11 successful, 0 failed
+2025-12-20 00:45:53,352 - pipeline_orchestrator - INFO - Filtering Stage 1 results for run gods_eye_run_1766171728_1a188f2e
+2025-12-20 00:45:53,353 - pipeline_orchestrator - INFO - Stage 1 filtering: 5 selected, 6 rejected for Stage 2
+2025-12-20 00:45:53,353 - pipeline_orchestrator - INFO - Calculated 1 Stage 2 batches for 5 selected jobs
+2025-12-20 00:45:53,355 - pipeline_orchestrator - INFO - Stage 1 filtering completed: 5 selected, 6 rejected
+2025-12-20 00:45:53,355 - pipeline_orchestrator - INFO - Starting Stage 2 execution for run gods_eye_run_1766171728_1a188f2e
+2025-12-20 00:45:53,355 - pipeline_orchestrator - INFO - Created Stage 2 queue with 5 jobs (from 11 total)
+2025-12-20 00:45:53,356 - pipeline_orchestrator - INFO - Created 1 batches for Stage 2 - DNA Analysis (max_parallel=10, pending_jobs=5)
+2025-12-20 00:45:53,356 - pipeline_orchestrator - INFO - Processing Stage 2 batch 1/1 (5 jobs)
+2025-12-20 00:45:53,356 - pipeline_orchestrator - INFO - Processing batch of 5 jobs for Stage 2
+2025-12-20 00:45:53,357 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_007 for Stage 2
+2025-12-20 00:45:54,738 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_007 completed Stage 2: DNA analysis complete
+2025-12-20 00:45:54,738 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_008 for Stage 2
+2025-12-20 00:45:55,596 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_008 completed Stage 2: DNA analysis complete
+2025-12-20 00:45:55,596 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_009 for Stage 2
+2025-12-20 00:45:56,744 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_009 completed Stage 2: DNA analysis complete
+2025-12-20 00:45:56,744 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_010 for Stage 2
+2025-12-20 00:45:58,065 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_010 completed Stage 2: DNA analysis complete
+2025-12-20 00:45:58,066 - pipeline_orchestrator - INFO - Processing job gods_eye_run_1766171728_1a188f2e_job_011 for Stage 2
+2025-12-20 00:46:01,827 - pipeline_orchestrator - INFO - Job gods_eye_run_1766171728_1a188f2e_job_011 completed Stage 2: DNA analysis complete
+2025-12-20 00:46:01,828 - pipeline_orchestrator - INFO - Batch completed: 5 successful, 0 failed
+2025-12-20 00:46:01,831 - pipeline_orchestrator - INFO - Batch 1 completed: 5 successful, 0 failed
+2025-12-20 00:46:01,831 - pipeline_orchestrator - INFO - Stage 2 completed for run gods_eye_run_1766171728_1a188f2e: 5 successful, 0 failed
+2025-12-20 00:46:01,833 - pipeline_orchestrator - INFO - Filtering Stage 2 results for run gods_eye_run_1766171728_1a188f2e
+2025-12-20 00:46:01,833 - pipeline_orchestrator - INFO - Stage 2 filtering: 5 selected, 0 rejected for Stage 3
+2025-12-20 00:46:01,833 - pipeline_orchestrator - INFO - Calculated 1 Stage 3 batches for 5 selected jobs
+2025-12-20 00:46:01,835 - pipeline_orchestrator - INFO - Stage 2 filtering completed: 5 selected, 0 rejected
+2025-12-20 00:46:01,835 - pipeline_orchestrator - INFO - Starting Stage 3 execution for run gods_eye_run_1766171728_1a188f2e
+2025-12-20 00:46:01,835 - pipeline_orchestrator - INFO - Processing 5 jobs for final aggregation
+2025-12-20 00:46:01,836 - pipeline_orchestrator - INFO - Processing run gods_eye_run_1766171728_1a188f2e for Stage 3 final aggregation
+2025-12-20 00:46:01,923 - pipeline_orchestrator - INFO - Loaded 5 DNA analysis results
+2025-12-20 00:46:02,342 - pipeline_orchestrator - INFO - Saved final aggregation outputs for run gods_eye_run_1766171728_1a188f2e to outputs\stage_3_results\run_gods_eye_run_1766171728_1a188f2e
+2025-12-20 00:46:02,343 - pipeline_orchestrator - INFO - Run gods_eye_run_1766171728_1a188f2e completed Stage 3: Final aggregation complete
+2025-12-20 00:46:02,346 - pipeline_orchestrator - INFO - Stage 3 completed for run gods_eye_run_1766171728_1a188f2e: 5 sources analyzed
+2025-12-20 00:46:02,347 - pipeline_orchestrator - INFO - Final aggregation summary: {'run_id': 'gods_eye_run_1766171728_1a188f2e', 'status': 'completed', 'total_analyzed': 5, 'processing_time': 0.410454, 'error': None, 'has_recommendations': True, 'has_opportunities': True, 'has_report': True}
+2025-12-20 00:46:02,349 - pipeline_orchestrator - INFO - Pipeline run gods_eye_run_1766171728_1a188f2e completed successfully!

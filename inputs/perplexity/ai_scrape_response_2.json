@@ -1,0 +1,50 @@
+{
+  "query": "MMP software to track link clicks and conversions",
+  "success": true,
+  "timestamp": "2025-12-13T12:27:40.687409",
+  "source_links": [
+    {
+      "url": "https://help.impact.com/en/support/solutions/articles/155000001524-mobile-tracking-using-mmps-explained",
+      "text": "impact (+1 sources)",
+      "raw_url": "https://help.impact.com/en/support/solutions/articles/155000001524-mobile-tracking-using-mmps-explained",
+      "related_claim": ", or Mobile Measurement Partners, tracks link clicks and conversions primarily for mobile app campaigns by attributing installs, events, and user actions to specific sources like ad",
+      "extraction_order": 1,
+      "highlight_fragment": null
+    },
+    {
+      "url": "https://apptrove.com",
+      "text": "apptrove (+3 sources)",
+      "raw_url": "https://apptrove.com",
+      "related_claim": "atch them to later conversions like app installs or in-app purchases. They support fraud detection, deep linking, and customizable dashboards for metrics including engagement rates and",
+      "extraction_order": 2,
+      "highlight_fragment": null
+    },
+    {
+      "url": "https://www.singular.net/mmp/",
+      "text": "singular",
+      "raw_url": "https://www.singular.net/mmp/",
+      "related_claim": "Singular: Provides universal linking across channels, partner integrations, and deep links for",
+      "extraction_order": 3,
+      "highlight_fragment": null
+    },
+    {
+      "url": "https://www.branch.io/glossary/mobile-measurement-partner-mmp/",
+      "text": "branch",
+      "raw_url": "https://www.branch.io/glossary/mobile-measurement-partner-mmp/",
+      "related_claim": "Branch.io: Delivers attribution reports, cohort analysis, and performance",
+      "extraction_order": 4,
+      "highlight_fragment": null
+    },
+    {
+      "url": "https://e-cens.com/blog/what-is-a-mobile-measurement-partner/",
+      "text": "e-cens (+2 sources)",
+      "raw_url": "https://e-cens.com/blog/what-is-a-mobile-measurement-partner/",
+      "related_claim": "like affiliate or campaign IDs, and configure postbacks for server-to-server conversion reporting. Use clickless postbacks for mobile to ensure accurate attribution without redirecting users.e-cens+2",
+      "extraction_order": 5,
+      "highlight_fragment": null
+    }
+  ],
+  "error_message": null,
+  "ai_overview_text": "MMP software, or Mobile Measurement Partners, tracks link clicks and conversions primarily for mobile app campaigns by attributing installs, events, and user actions to specific sources like ad networks.\n\nKey Features\n\nMMPs redirect clicks through tracking links to log data such as timestamps, device IDs, and sources, then match them to later conversions like app installs or in-app purchases. They support fraud detection, deep linking, and customizable dashboards for metrics including engagement rates and ROI.\n\nPopular Options\n\nApptrove: Offers precise analytics, anti-fraud for links, and audience tracking with SDK integration.\nSingular: Provides universal linking across channels, partner integrations, and deep links for re-engagement.\nBranch.io: Delivers attribution reports, cohort analysis, and performance dashboards.\n\nApptrove: Offers precise analytics, anti-fraud for links, and audience tracking with SDK integration.\n\nSingular: Provides universal linking across channels, partner integrations, and deep links for re-engagement.\n\nBranch.io: Delivers attribution reports, cohort analysis, and performance dashboards.\n\nSetup Basics\n\nIntegrate an MMP SDK into your app, generate tracking links with macros for parameters like affiliate or campaign IDs, and configure postbacks for server-to-server conversion reporting. Use clickless postbacks for mobile to ensure accurate attribution without redirecting users.",
+  "total_interactions": 5
+}

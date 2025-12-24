@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Analysis Visualizations</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .viz-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .viz-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+        
+        .controls {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .control-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .control-label {
+            font-weight: 500;
+        }
+        
+        .control-input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .dna-profile-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .profile-category {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .category-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .profile-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .profile-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .profile-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .profile-value {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .viz-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DNA Analysis Visualizations</h1>
+        <p>Interactive charts and insights from pipeline analysis</p>
+    </div>
+    
+    <div class="container">
+        <!-- Controls -->
+        <div class="controls">
+            <div class="control-group">
+                <span class="control-label">Select Run:</span>
+                <select class="control-input" id="run-select">
+                    <option value="">Loading runs...</option>
+                </select>
+                <button class="btn" onclick="loadVisualizationData()">Load Visualizations</button>
+            </div>
+        </div>
+        
+        <!-- Key Metrics -->
+        <div class="metrics-grid" id="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="total-analyzed">-</div>
+                <div class="metric-label">Sources Analyzed</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="avg-evidence">-</div>
+                <div class="metric-label">Avg Evidence Quality</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="competitor-count">-</div>
+                <div class="metric-label">Competitors</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="recommendations-count">-</div>
+                <div class="metric-label">Recommendations</div>
+            </div>
+        </div>
+        
+        <!-- DNA Profile Section -->
+        <div class="dna-profile-section" id="dna-profile-section" style="display: none;">
+            <h2 class="viz-title">Aggregated DNA Profile</h2>
+            <div class="profile-grid" id="profile-grid">
+                <!-- Profile categories will be populated here -->
+            </div>
+        </div>
+        
+        <!-- Visualizations Grid -->
+        <div class="viz-grid" id="viz-grid">
+            <div class="viz-card">
+                <h3 class="viz-title">Classification Distribution</h3>
+                <div class="chart-container">
+                    <canvas id="classification-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <h3 class="viz-title">Stage Progress</h3>
+                <div class="chart-container">
+                    <canvas id="progress-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <h3 class="viz-title">Evidence Quality Scores</h3>
+                <div class="chart-container">
+                    <canvas id="evidence-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <h3 class="viz-title">Ranking Factor Analysis</h3>
+                <div class="chart-container">
+                    <canvas id="ranking-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Global variables
+        let charts = {};
+        let currentRunData = null;
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRuns();
+        });
+        
+        // Load available runs
+        async function loadRuns() {
+            try {
+                const response = await fetch('/pipeline/runs');
+                const data = await response.json();
+                
+                const select = document.getElementById('run-select');
+                select.innerHTML = '<option value="">Select a run...</option>';
+                
+                // Filter for completed runs only
+                const completedRuns = data.runs.filter(run => run.status === 'completed');
+                
+                completedRuns.forEach(run => {
+                    const option = document.createElement('option');
+                    option.value = run.run_id;
+                    option.textContent = `${run.run_id.substring(0, 20)}... (${run.query || 'No query'})`;
+                    select.appendChild(option);
+                });
+                
+                if (completedRuns.length === 0) {
+                    select.innerHTML = '<option value="">No completed runs available</option>';
+                }
+                
+            } catch (error) {
+                console.error('Failed to load runs:', error);
+                document.getElementById('run-select').innerHTML = '<option value="">Failed to load runs</option>';
+            }
+        }
+        
+        // Load visualization data for selected run
+        async function loadVisualizationData() {
+            const runId = document.getElementById('run-select').value;
+            if (!runId) {
+                alert('Please select a run');
+                return;
+            }
+            
+            try {
+                // Load all data in parallel
+                const [results, summary, recommendations, opportunities] = await Promise.all([
+                    fetch(`/pipeline/runs/${runId}/results`).then(r => r.json()),
+                    fetch(`/pipeline/runs/${runId}/results/summary`).then(r => r.json()),
+                    fetch(`/pipeline/runs/${runId}/results/recommendations`).then(r => r.json()),
+                    fetch(`/pipeline/runs/${runId}/results/opportunities`).then(r => r.json())
+                ]);
+                
+                currentRunData = {
+                    results,
+                    summary,
+                    recommendations,
+                    opportunities
+                };
+                
+                // Update metrics
+                updateMetrics();
+                
+                // Show DNA profile
+                showDNAProfile();
+                
+                // Create charts
+                createCharts();
+                
+            } catch (error) {
+                console.error('Failed to load visualization data:', error);
+                alert('Failed to load visualization data');
+            }
+        }
+        
+        // Update key metrics
+        function updateMetrics() {
+            const { results, recommendations, opportunities } = currentRunData;
+            
+            document.getElementById('total-analyzed').textContent = results.total_analyzed || 0;
+            
+            const avgEvidence = results.aggregated_dna_profile?.ranking_factors?.average_evidence_quality || 0;
+            document.getElementById('avg-evidence').textContent = avgEvidence.toFixed(1) + '%';
+            
+            const competitorCount = results.competitive_insights?.competitive_landscape?.competitor_sources || 0;
+            document.getElementById('competitor-count').textContent = competitorCount;
+            
+            const recCount = recommendations.recommendations?.length || 0;
+            document.getElementById('recommendations-count').textContent = recCount;
+        }
+        
+        // Show DNA profile
+        function showDNAProfile() {
+            const profile = currentRunData.results.aggregated_dna_profile;
+            if (!profile) return;
+            
+            const section = document.getElementById('dna-profile-section');
+            const grid = document.getElementById('profile-grid');
+            
+            section.style.display = 'block';
+            grid.innerHTML = '';
+            
+            // Page Structure
+            if (profile.page_structure) {
+                const html = createProfileCategory('Page Structure', profile.page_structure);
+                grid.innerHTML += html;
+            }
+            
+            // Content Characteristics
+            if (profile.content_characteristics) {
+                const html = createProfileCategory('Content Characteristics', profile.content_characteristics);
+                grid.innerHTML += html;
+            }
+            
+            // Technical SEO
+            if (profile.technical_seo) {
+                const html = createProfileCategory('Technical SEO', profile.technical_seo);
+                grid.innerHTML += html;
+            }
+            
+            // Ranking Factors
+            if (profile.ranking_factors) {
+                const html = createProfileCategory('Ranking Factors', profile.ranking_factors);
+                grid.innerHTML += html;
+            }
+        }
+        
+        // Create profile category HTML
+        function createProfileCategory(title, data) {
+            let html = `<div class="profile-category">
+                <div class="category-title">${title}</div>`;
+            
+            Object.entries(data).forEach(([key, value]) => {
+                if (typeof value === 'object' && value !== null) {
+                    // Handle nested objects
+                    const nestedHtml = Object.entries(value)
+                        .map(([k, v]) => `<div class="profile-item">
+                            <span class="profile-label">${k}:</span>
+                            <span class="profile-value">${formatValue(v)}</span>
+                        </div>`)
+                        .join('');
+                    html += `<div style="margin-bottom: 1rem;">
+                        <div style="font-weight: 500; margin-bottom: 0.5rem;">${key}:</div>
+                        ${nestedHtml}
+                    </div>`;
+                } else {
+                    html += `<div class="profile-item">
+                        <span class="profile-label">${formatKey(key)}:</span>
+                        <span class="profile-value">${formatValue(value)}</span>
+                    </div>`;
+                }
+            });
+            
+            html += '</div>';
+            return html;
+        }
+        
+        // Format key for display
+        function formatKey(key) {
+            return key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+        
+        // Format value for display
+        function formatValue(value) {
+            if (Array.isArray(value)) {
+                return value.length > 0 ? value.slice(0, 3).join(', ') + (value.length > 3 ? '...' : '') : 'None';
+            }
+            if (typeof value === 'number') {
+                return value.toFixed(1);
+            }
+            return String(value);
+        }
+        
+        // Create all charts
+        function createCharts() {
+            createClassificationChart();
+            createProgressChart();
+            createEvidenceChart();
+            createRankingChart();
+        }
+        
+        // Classification distribution chart
+        function createClassificationChart() {
+            const ctx = document.getElementById('classification-chart').getContext('2d');
+            
+            // Destroy existing chart if it exists
+            if (charts.classification) {
+                charts.classification.destroy();
+            }
+            
+            // Get classification data (this would need to be calculated from individual job data)
+            const data = {
+                labels: ['Third Party', 'Competitor', 'Special URL'],
+                datasets: [{
+                    label: 'Source Classification',
+                    data: [5, 2, 1], // Placeholder data
+                    backgroundColor: [
+                        'rgba(102, 126, 234, 0.8)',
+                        'rgba(118, 75, 162, 0.8)',
+                        'rgba(255, 193, 7, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(102, 126, 234, 1)',
+                        'rgba(118, 75, 162, 1)',
+                        'rgba(255, 193, 7, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+            
+            charts.classification = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Stage progress chart
+        function createProgressChart() {
+            const ctx = document.getElementById('progress-chart').getContext('2d');
+            
+            if (charts.progress) {
+                charts.progress.destroy();
+            }
+            
+            const data = {
+                labels: ['Stage 1', 'Stage 2', 'Stage 3'],
+                datasets: [{
+                    label: 'Jobs Completed',
+                    data: [11, 5, 5], // Placeholder data
+                    backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                    borderColor: 'rgba(102, 126, 234, 1)',
+                    borderWidth: 1
+                }]
+            };
+            
+            charts.progress = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Evidence quality chart
+        function createEvidenceChart() {
+            const ctx = document.getElementById('evidence-chart').getContext('2d');
+            
+            if (charts.evidence) {
+                charts.evidence.destroy();
+            }
+            
+            const data = {
+                labels: ['Source 1', 'Source 2', 'Source 3', 'Source 4', 'Source 5'],
+                datasets: [{
+                    label: 'Evidence Quality',
+                    data: [85, 72, 90, 68, 78], // Placeholder data
+                    backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                    borderColor: 'rgba(102, 126, 234, 1)',
+                    borderWidth: 1
+                }]
+            };
+            
+            charts.evidence = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Ranking factors chart
+        function createRankingChart() {
+            const ctx = document.getElementById('ranking-chart').getContext('2d');
+            
+            if (charts.ranking) {
+                charts.ranking.destroy();
+            }
+            
+            const data = {
+                labels: ['Content Quality', 'Authority', 'Technical SEO', 'User Experience', 'Freshness'],
+                datasets: [{
+                    label: 'Impact Score',
+                    data: [85, 72, 68, 78, 65], // Placeholder data
+                    backgroundColor: [
+                        'rgba(102, 126, 234, 0.8)',
+                        'rgba(118, 75, 162, 0.8)',
+                        'rgba(255, 193, 7, 0.8)',
+                        'rgba(40, 167, 69, 0.8)',
+                        'rgba(220, 53, 69, 0.8)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+            
+            charts.ranking = new Chart(ctx, {
+                type: 'radar',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

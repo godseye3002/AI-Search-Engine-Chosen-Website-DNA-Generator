@@ -1,0 +1,85 @@
+# GodsEye Pipeline Configuration
+# Master settings for the orchestrated content analysis pipeline
+
+# Pipeline-wide settings
+pipeline:
+  # Maximum parallel workers per stage (user configurable N)
+  max_parallel_workers_stage_1: 10  # For website classification
+  max_parallel_workers_stage_2: 10  # For DNA analysis
+  enable_retry: true
+  max_retries: 2
+  
+  # Run identification
+  run_id_prefix: "gods_eye_run"
+  
+  # Output structure
+  base_output_dir: "outputs"
+  logs_dir: "logs"
+
+# Stage 1: Website Classification
+stage_1_classification:
+  # Timeouts (seconds)
+  timeout_per_link: 30
+  batch_timeout_buffer: 10  # Extra wait time for batch completion
+  
+  # Output settings
+  output_dir: "stage_1_results"
+  save_raw_html: true
+  save_metadata: true
+  
+  # Worker settings
+  worker_module: "stage_1_worker"
+  worker_function: "process_job_stage_1"
+
+# Stage 2: DNA Analysis  
+stage_2_dna_analysis:
+  # Timeouts (seconds) - 3 minutes per link
+  timeout_per_link: 180
+  batch_timeout_buffer: 30  # Extra wait time for batch completion
+  
+  # Output settings
+  output_dir: "stage_2_results"
+  save_dna_json: true
+  
+  # Worker settings
+  worker_module: "stage_2_worker"
+  worker_function: "process_job_stage_2"
+
+# Stage 3: Final Aggregation - Enhanced with Master Blueprint
+stage_3_aggregation:
+  enabled: true
+  timeout_per_job: 300  # 5 minutes per aggregation (increased for Master Blueprint)
+  timeout_total: 600  # 10 minutes for entire aggregation
+  output_dir: "stage_3_results"
+  
+  # Master Blueprint settings
+  model_name: "gemini-3-pro-preview"  # Advanced model for blueprint generation
+  enable_master_blueprint: true
+  
+  # Worker settings
+  worker_module: "stage_3_worker"
+  worker_function: "process_run"
+  
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "pipeline.log"
+  max_file_size: "10MB"
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Error handling
+error_handling:
+  max_total_failures: 5  # Stop pipeline if more than this many jobs fail
+  retry_delay: 5  # Seconds between retries
+  save_error_details: true
+
+# Performance tuning
+performance:
+  # Memory and CPU limits (optional)
+  max_memory_per_worker: "512MB"
+  cpu_affinity: false  # Set to true to bind workers to specific CPU cores
+  
+  # Batch processing optimization
+  enable_batch_buffering: true
+  batch_buffer_size: 2  # Process 2 batches ahead if resources available

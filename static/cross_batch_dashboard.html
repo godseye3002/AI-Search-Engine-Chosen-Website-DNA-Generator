@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Batch Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .chart-container {
+            margin-bottom: 30px;
+            height: 300px;
+        }
+        .batch-list {
+            margin-bottom: 30px;
+        }
+        .batch-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .batch-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status-valid { background: #d4edda; color: #155724; }
+        .status-invalid { background: #f8d7da; color: #721c24; }
+        .status-warning { background: #fff3cd; color: #856404; }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Cross-Batch Dashboard</h1>
+            <p>Monitor and analyze cross-batch aggregation results</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="loadCrossBatchData()">Refresh Data</button>
+            <button class="btn" onclick="startNewAggregation()">Start New Aggregation</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalBatches">0</div>
+                <div class="stat-label">Total Batches</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="validBatches">0</div>
+                <div class="stat-label">Valid Batches</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalJobs">0</div>
+                <div class="stat-label">Total Jobs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgQuality">0%</div>
+                <div class="stat-label">Avg Quality Score</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="batchStatusChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="qualityTrendChart"></canvas>
+        </div>
+
+        <div class="batch-list" id="batchList">
+            <h3>Batch Status</h3>
+            <div id="batchItems"></div>
+        </div>
+
+        <div class="hidden" id="aggregationResults">
+            <h3>Latest Aggregation Results</h3>
+            <div id="aggregationContent"></div>
+        </div>
+    </div>
+
+    <script>
+        let batchStatusChart = null;
+        let qualityTrendChart = null;
+
+        async function fetchAPI(endpoint) {
+            try {
+                const response = await fetch(endpoint);
+                return await response.json();
+            } catch (error) {
+                console.error('API Error:', error);
+                return null;
+            }
+        }
+
+        async function loadCrossBatchData() {
+            // Load batch validation data
+            const batches = await fetchAPI('/api/batches');
+            if (!batches) return;
+
+            updateStats(batches);
+            updateBatchList(batches);
+            updateCharts(batches);
+            
+            // Load latest aggregation if available
+            const aggregation = await fetchAPI('/api/cross-batch/latest');
+            if (aggregation) {
+                displayAggregationResults(aggregation);
+            }
+        }
+
+        function updateStats(batches) {
+            const totalBatches = batches.length;
+            const validBatches = batches.filter(b => b.is_valid).length;
+            const totalJobs = batches.reduce((sum, b) => sum + b.total_jobs, 0);
+            const avgQuality = batches.length > 0 
+                ? (batches.reduce((sum, b) => sum + (b.quality_score || 0), 0) / batches.length * 100).toFixed(1)
+                : 0;
+
+            document.getElementById('totalBatches').textContent = totalBatches;
+            document.getElementById('validBatches').textContent = validBatches;
+            document.getElementById('totalJobs').textContent = totalJobs;
+            document.getElementById('avgQuality').textContent = avgQuality + '%';
+        }
+
+        function updateBatchList(batches) {
+            const container = document.getElementById('batchItems');
+            container.innerHTML = '';
+
+            batches.forEach(batch => {
+                const item = document.createElement('div');
+                item.className = 'batch-item';
+                
+                let statusClass = 'status-valid';
+                let statusText = 'Valid';
+                
+                if (!batch.is_valid) {
+                    statusClass = 'status-invalid';
+                    statusText = 'Invalid';
+                } else if (batch.warnings && batch.warnings.length > 0) {
+                    statusClass = 'status-warning';
+                    statusText = 'Warning';
+                }
+
+                item.innerHTML = `
+                    <div>
+                        <strong>${batch.batch_id}</strong>
+                        <br>
+                        Jobs: ${batch.stage_1_complete}/${batch.total_jobs}
+                    </div>
+                    <div class="batch-status ${statusClass}">${statusText}</div>
+                `;
+                
+                container.appendChild(item);
+            });
+        }
+
+        function updateCharts(batches) {
+            // Update batch status chart
+            const statusData = {
+                valid: batches.filter(b => b.is_valid && (!b.warnings || b.warnings.length === 0)).length,
+                warning: batches.filter(b => b.is_valid && b.warnings && b.warnings.length > 0).length,
+                invalid: batches.filter(b => !b.is_valid).length
+            };
+
+            if (batchStatusChart) {
+                batchStatusChart.data.datasets[0].data = [statusData.valid, statusData.warning, statusData.invalid];
+                batchStatusChart.update();
+            } else {
+                const ctx = document.getElementById('batchStatusChart').getContext('2d');
+                batchStatusChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Valid', 'Warning', 'Invalid'],
+                        datasets: [{
+                            data: [statusData.valid, statusData.warning, statusData.invalid],
+                            backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Batch Status Distribution'
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Update quality trend chart
+            const qualityData = batches.map(b => b.quality_score || 0.5);
+            const labels = batches.map(b => b.batch_id);
+
+            if (qualityTrendChart) {
+                qualityTrendChart.data.labels = labels;
+                qualityTrendChart.data.datasets[0].data = qualityData;
+                qualityTrendChart.update();
+            } else {
+                const ctx = document.getElementById('qualityTrendChart').getContext('2d');
+                qualityTrendChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Quality Score',
+                            data: qualityData,
+                            borderColor: '#007bff',
+                            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Quality Score Trend'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 1
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function displayAggregationResults(aggregation) {
+            const container = document.getElementById('aggregationContent');
+            const resultsDiv = document.getElementById('aggregationResults');
+            
+            container.innerHTML = `
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                    <h4>Aggregation ID: ${aggregation.aggregation_id}</h4>
+                    <p><strong>Created:</strong> ${new Date(aggregation.created_at).toLocaleString()}</p>
+                    <p><strong>Total Batches:</strong> ${aggregation.total_batches}</p>
+                    <p><strong>Total Jobs:</strong> ${aggregation.total_jobs}</p>
+                </div>
+                
+                <h5>Key Insights:</h5>
+                <ul>
+                    ${aggregation.cross_batch_insights.performance_patterns ? 
+                        Object.entries(aggregation.cross_batch_insights.performance_patterns)
+                            .slice(0, 3)
+                            .map(([key, value]) => `<li><strong>${key}:</strong> ${JSON.stringify(value)}</li>`)
+                            .join('') : '<li>No insights available</li>'
+                    }
+                </ul>
+                
+                <h5>Top Recommendations:</h5>
+                <ul>
+                    ${aggregation.unified_recommendations.slice(0, 5).map(rec => 
+                        `<li><strong>[${rec.priority}]</strong> ${rec.recommendation}</li>`
+                    ).join('')}
+                </ul>
+            `;
+            
+            resultsDiv.classList.remove('hidden');
+        }
+
+        async function startNewAggregation() {
+            if (!confirm('Start new cross-batch aggregation? This may take several minutes.')) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/cross-batch/aggregate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        batch_ids: 'all'  // This would be more sophisticated in real implementation
+                    })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert('Cross-batch aggregation started successfully!');
+                    loadCrossBatchData(); // Refresh data
+                } else {
+                    alert('Failed to start aggregation: ' + response.statusText);
+                }
+            } catch (error) {
+                alert('Error starting aggregation: ' + error.message);
+            }
+        }
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadCrossBatchData);
+
+        // Auto-refresh every 30 seconds
+        setInterval(loadCrossBatchData, 30000);
+    </script>
+</body>
+</html>
