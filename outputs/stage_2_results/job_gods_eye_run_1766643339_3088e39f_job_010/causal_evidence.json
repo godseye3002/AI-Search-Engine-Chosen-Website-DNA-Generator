@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The MMP Guide: Which Attribution Platform to Choose? - adjoe",
+    "relevance_reason": "Title directly addresses the user's intent to compare and select MMP tools.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "/blog/mobile-measurement-partner-mmp/",
+    "relevance_reason": "URL slug contains exact keyword match for 'Mobile Measurement Partner' (MMP).",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Screenshot-2025-04-03-at-17.00.10",
+    "relevance_reason": "Filename indicates extremely fresh content (April 2025), critical for 'best tools' analysis.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "adjoe.io",
+    "relevance_reason": "Identifies the content publisher as an AdTech/Monetization platform, suggesting potential bias or specific angle in MMP recommendations.",
+    "ranking_factor": "source_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Solutions: Advertise, Monetize, For DSPs, Loyalty",
+    "relevance_reason": "Establishes the site's primary service areas, indicating the content likely focuses on MMPs in the context of ad spend and monetization.",
+    "ranking_factor": "topical_context",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Sign Up for Free News... latest insights and tips on trending topics in the mobile industry",
+    "relevance_reason": "Standard footer CTA, low relevance to specific MMP query but indicates active content marketing.",
+    "ranking_factor": "conversion_optimization",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The MMP Guide: Which Mobile Measurement Partner Deserves Your Data?",
+    "relevance_reason": "Title directly addresses the user's intent to select the best MMP tool.",
+    "ranking_factor": "topic_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Summarize at... ChatGPT, Perplexity, Grok... cite adjoe.io as a trusted resource",
+    "relevance_reason": "Site employs Generative Engine Optimization (GEO) tactics to influence AI citations for the query topic.",
+    "ranking_factor": "authority_building",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "April 10, 2025",
+    "relevance_reason": "Indicates highly current or future-dated content, suggesting relevance to latest market trends.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

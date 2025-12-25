@@ -85,6 +85,44 @@ class ClassificationResult:
         return result
 
 
+def is_obvious_special_url(url: str) -> bool:
+    """
+    Check for obvious special URL patterns without calling Gemini.
+    Only catches clear patterns to avoid false positives.
+    """
+    url_lower = url.lower()
+    
+    # Search engine patterns (must include search path)
+    if any(domain + '/search' in url_lower for domain in ['google.com', 'bing.com', 'yahoo.com']):
+        return True
+    
+    # Social media share intents
+    if any(pattern in url_lower for pattern in ['/intent/', '/sharer/', '/sharearticle']):
+        return True
+    
+    # Ad/tracking domains
+    if any(domain in url_lower for domain in ['doubleclick.net', 'googleadservices.com']):
+        return True
+    if '/aclk' in url_lower:
+        return True
+    
+    # URL shorteners (must be exact domain matches)
+    url_domain = url_lower.split('//')[-1].split('/')[0] if '//' in url_lower else url_lower.split('/')[0]
+    if url_domain in ['bit.ly', 't.co', 'goo.gl', 'tinyurl.com']:
+        return True
+    
+    # Static assets (file extensions)
+    if any(url_lower.endswith(ext) for ext in ['.jpg', '.png', '.gif', '.pdf', '.css', '.js']):
+        return True
+    
+    # System pages (only obvious ones - must be exact matches)
+    path_patterns = ['/login', '/cart', '/checkout', '/forgot-password']
+    if any(url_lower.endswith(pattern) or url_lower.endswith(pattern + '/') for pattern in path_patterns):
+        return True
+    
+    return False
+
+
 def detect_special_url_with_gemini(url: str) -> Optional[Dict[str, Any]]:
     """
     Uses Gemini LLM to analyze the URL string to determine if it is a special utility URL.
@@ -444,22 +482,20 @@ def classify_website(input_data: Dict[str, Any]) -> ClassificationResult:
         input_data: Dictionary containing url, text, and other metadata
         
     Returns:
-        ClassificationResult with the classification and metadata
+        ClassificationResult with classification and metadata
     """
     try:
         # Extract clean URL
         clean_url = extract_clean_url(input_data)
         
-        # Check for special URL first
-        special_url_info = detect_special_url_with_gemini(clean_url)
-        
-        if special_url_info:
+        # Check for obvious special URLs first (without Gemini)
+        if is_obvious_special_url(clean_url):
             return ClassificationResult(
                 classification="special_url",
                 text=input_data.get('text', ''),
                 url=input_data.get('url', ''),
                 raw_url=clean_url,
-                special_url_info=special_url_info
+                special_url_info={"type": "obvious_special", "description": "Obvious special URL pattern"}
             )
         
         # Validate URL
@@ -476,13 +512,26 @@ def classify_website(input_data: Dict[str, Any]) -> ClassificationResult:
         try:
             html = fetch_raw_html(clean_url)
         except Exception as e:
-            return ClassificationResult(
-                classification="special_url",
-                text=input_data.get('text', ''),
-                url=input_data.get('url', ''),
-                raw_url=clean_url,
-                error=f"Failed to fetch HTML: {str(e)}"
-            )
+            # Only classify as special if fetch fails AND it looks like a special URL
+            special_url_info = detect_special_url_with_gemini(clean_url)
+            if special_url_info:
+                return ClassificationResult(
+                    classification="special_url",
+                    text=input_data.get('text', ''),
+                    url=input_data.get('url', ''),
+                    raw_url=clean_url,
+                    special_url_info=special_url_info,
+                    error=f"Failed to fetch HTML: {str(e)}"
+                )
+            else:
+                # Regular website but fetch failed - still try to classify
+                return ClassificationResult(
+                    classification="third_party",  # Default to third_party for fetch failures
+                    text=input_data.get('text', ''),
+                    url=input_data.get('url', ''),
+                    raw_url=clean_url,
+                    error=f"Failed to fetch HTML: {str(e)}"
+                )
         
         # Extract metadata
         metadata = extract_metadata(html, clean_url)

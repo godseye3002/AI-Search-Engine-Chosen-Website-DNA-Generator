@@ -1,0 +1,170 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "what are the best MMP app tracking analytics tools for growth marketers needing granular channel insights",
+  "sources_analyzed": 5,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Establish freshness and authority immediately",
+      "optimized_pattern_template": "Top/Best Mobile Measurement Partners (MMPs) in [Current_Year_Plus_1]",
+      "adoption_rate": 0.8
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "definition_block",
+      "consensus_intent": "Define MMP specifically for Growth Marketers",
+      "optimized_pattern_template": "What is a Mobile Measurement Partner and why [Persona] needs granular attribution?",
+      "adoption_rate": 0.6
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "selection_criteria",
+      "consensus_intent": "Outline evaluation metrics before listing tools",
+      "optimized_pattern_template": "Key Features: Attribution Accuracy, Fraud Prevention, Integration Capabilities, and Pricing",
+      "adoption_rate": 0.6
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "listicle_comparison",
+      "consensus_intent": "Direct comparison of tools",
+      "optimized_pattern_template": "The [Number] Best MMP Tools for [Specific_Goal]",
+      "adoption_rate": 1.0
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "MobileAction": {
+      "classification": "MMP / App Analytics Tool",
+      "primary_definition": "A leading mobile measurement partner focused on attribution and ad intelligence.",
+      "high_value_attributes": [
+        {
+          "data_point": "Client 'Square' achieved 50% ROAS uplift and 40% CPC decrease",
+          "source_weight": "High (Specific Case Study)",
+          "confidence": 0.95
+        },
+        {
+          "data_point": "Integration with SearchAds.com ecosystem",
+          "source_weight": "Medium",
+          "confidence": 0.8
+        }
+      ],
+      "semantic_keywords": [
+        "ROAS uplift",
+        "CPC decrease",
+        "SearchAds",
+        "Attribution"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Segwise": {
+      "classification": "AI-Powered Analytics / MMP",
+      "primary_definition": "An analytics tool tailored for growth marketers focusing on creative performance.",
+      "high_value_attributes": [
+        {
+          "data_point": "Specializes in Creative Analytics and Fatigue Tracking",
+          "source_weight": "High (Unique Differentiator)",
+          "confidence": 0.9
+        },
+        {
+          "data_point": "Competitor Tracking capabilities included",
+          "source_weight": "Medium",
+          "confidence": 0.85
+        }
+      ],
+      "semantic_keywords": [
+        "Creative Tagging",
+        "Fatigue Tracking",
+        "AI Analytics"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "MMP_Core_Features": {
+      "classification": "Functional Requirements",
+      "primary_definition": "Essential capabilities required for granular channel insights.",
+      "high_value_attributes": [
+        {
+          "data_point": "Must support 'Granular Channel Insights' via accurate attribution",
+          "source_weight": "High (Query Match)",
+          "confidence": 0.95
+        },
+        {
+          "data_point": "Fraud Prevention is a critical selection criterion",
+          "source_weight": "Medium (Consensus)",
+          "confidence": 0.8
+        },
+        {
+          "data_point": "Segmentation Analysis (Stop Targeting Averages)",
+          "source_weight": "High (Methodology Signal)",
+          "confidence": 0.85
+        }
+      ],
+      "semantic_keywords": [
+        "Attribution Accuracy",
+        "Fraud Prevention",
+        "Data Analysis",
+        "Segmentation"
+      ],
+      "frequency_across_sources": 0.8
+    },
+    "Firebase": {
+      "classification": "App Analytics Platform",
+      "primary_definition": "Google's app development and analytics platform.",
+      "high_value_attributes": [
+        {
+          "data_point": "Stands out for spending analysis across different channels",
+          "source_weight": "Medium",
+          "confidence": 0.7
+        }
+      ],
+      "semantic_keywords": [
+        "Google",
+        "Spending Analysis"
+      ],
+      "frequency_across_sources": 0.2
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "quantified_listicle",
+        "usage_frequency": 0.6,
+        "effectiveness_score": 0.95,
+        "notes": "Titles like '16 Best Tools' or 'Top MMPs in 2025' perform best."
+      },
+      {
+        "format_type": "case_study_integration",
+        "usage_frequency": 0.2,
+        "effectiveness_score": 0.9,
+        "notes": "Including specific metrics (e.g., 50% ROAS uplift) significantly boosts authority."
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2500,
+      "entity_density_optimal": 0.06,
+      "readability_score": 0.65,
+      "estimated_read_time": "11-16 minutes"
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "Future-dated year in title (e.g., 2025, 2026) for freshness signal",
+      "Specific metrics (ROAS, CPC, Uplift) to satisfy 'granular' intent",
+      "Definitions of 'Attribution' and 'Fraud Prevention'",
+      "Comparison of specific tools (MobileAction, Segwise, Firebase, Adjoe)"
+    ],
+    "negative_constraints": [
+      "Avoid generic descriptions without feature specifics",
+      "Do not omit the 'Growth Marketer' persona context",
+      "Avoid outdated lists (pre-2024)"
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true,
+      "meta_title_pattern": "[Number] Best MMP Tools for [Year] | [Benefit]"
+    }
+  },
+  "generation_timestamp": "2025-12-25T11:53:33.997463",
+  "sources_processed": 5
+}

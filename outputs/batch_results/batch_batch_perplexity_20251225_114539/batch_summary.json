@@ -1,0 +1,11 @@
+{
+  "batch_id": "batch_perplexity_20251225_114539",
+  "total_jobs": 3,
+  "completed_jobs": 3,
+  "failed_jobs": 0,
+  "total_processing_time": 480.964102,
+  "success_rate": 1.0,
+  "start_time": "2025-12-25T11:45:39.158193",
+  "end_time": "2025-12-25T11:53:40.122295",
+  "errors": []
+}

@@ -11,7 +11,7 @@ import logging
 from datetime import datetime
 from typing import Dict, Any, Optional
 
-from final_aggregation_core import MasterBlueprintAggregator, AggregationResult
+from final_aggregation_core import aggregate_pipeline_results
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
 from pipeline_models import Job
 
@@ -24,19 +24,15 @@ class Stage3Worker:
         self.logger = logger or logging.getLogger(__name__)
         
         # Stage 3 specific settings
-        self.timeout_per_job = config.get('stage_3_aggregation', {}).get('timeout_per_job', 300)  # Increased for Master Blueprint
+        self.timeout_per_job = config.get('stage_3_aggregation', {}).get('timeout_per_job', 300)
         self.output_dir = config.get('stage_3_aggregation', {}).get('output_dir', 'stage_3_results')
         self.base_output_dir = config.get('pipeline', {}).get('base_output_dir', 'outputs')
-        
-        # Initialize Master Blueprint Aggregator
-        model_name = config.get('stage_3_aggregation', {}).get('model_name', 'gemini-3-pro-preview')
-        self.master_aggregator = MasterBlueprintAggregator(model_name=model_name)
         
         # Create output directory
         self.stage_output_dir = os.path.join(self.base_output_dir, self.output_dir)
         os.makedirs(self.stage_output_dir, exist_ok=True)
         
-        self.logger.info("Stage 3 Worker initialized")
+        self.logger.info("Stage 3 Worker initialized with simplified aggregation")
     
     def process_run(self, run_id: str, query: str, jobs: list) -> Dict[str, Any]:
         """
@@ -63,17 +59,17 @@ class Stage3Worker:
             
             # Execute Master Blueprint aggregation with timeout
             result = execute_with_timeout(
-                self.master_aggregator.aggregate_run_results,
+                aggregate_pipeline_results,
                 args=(run_id, query, dna_results),
                 timeout=self.timeout_per_job
             )
             
             # Process result
             if result.status == TimeoutResult.SUCCESS:
-                aggregation_result = result.result
+                master_blueprint = result.result
                 
                 # Save aggregation outputs
-                output_paths = self._save_run_outputs(run_id, aggregation_result)
+                output_paths = self._save_run_outputs(run_id, master_blueprint)
                 
                 # Update job statuses
                 for job in jobs:
@@ -85,9 +81,9 @@ class Stage3Worker:
                 return {
                     'status': 'completed',
                     'run_id': run_id,
-                    'total_analyzed': aggregation_result.total_analyzed,
+                    'total_analyzed': len(dna_results),
                     'output_paths': output_paths,
-                    'processing_time': aggregation_result.processing_time,
+                    'processing_time': None,
                     'error': None
                 }
                 
@@ -183,7 +179,7 @@ class Stage3Worker:
         
         return dna_results
     
-    def _save_run_outputs(self, run_id: str, result: AggregationResult) -> Dict[str, str]:
+    def _save_run_outputs(self, run_id: str, result: Dict[str, Any]) -> Dict[str, str]:
         """
         Save final aggregation results to files.
         
@@ -201,50 +197,16 @@ class Stage3Worker:
         file_paths = {}
         
         # Save complete aggregation result
+        # Save master blueprint as the main output (simplified approach)
         aggregation_path = os.path.join(run_dir, 'final_aggregation.json')
-        aggregation_data = result.to_dict()
         
+        # The result is now just the master blueprint dictionary
         with open(aggregation_path, 'w', encoding='utf-8') as f:
-            json.dump(aggregation_data, f, indent=2, ensure_ascii=False)
+            json.dump(result, f, indent=2, ensure_ascii=False)
         
         file_paths['aggregation_path'] = aggregation_path
         
-        # Save master blueprint separately (new)
-        if result.master_blueprint:
-            blueprint_path = os.path.join(run_dir, 'master_blueprint.json')
-            with open(blueprint_path, 'w', encoding='utf-8') as f:
-                json.dump(result.master_blueprint, f, indent=2, ensure_ascii=False)
-            file_paths['blueprint_path'] = blueprint_path
-        
-        # Save summary report separately
-        if result.summary_report:
-            report_path = os.path.join(run_dir, 'summary_report.txt')
-            with open(report_path, 'w', encoding='utf-8') as f:
-                f.write(result.summary_report)
-            file_paths['report_path'] = report_path
-        
-        # Save recommendations separately
-        if result.content_recommendations:
-            recs_path = os.path.join(run_dir, 'content_recommendations.json')
-            with open(recs_path, 'w', encoding='utf-8') as f:
-                json.dump(result.content_recommendations, f, indent=2, ensure_ascii=False)
-            file_paths['recommendations_path'] = recs_path
-        
-        # Save ranking opportunities separately
-        if result.ranking_opportunities:
-            opportunities_path = os.path.join(run_dir, 'ranking_opportunities.json')
-            with open(opportunities_path, 'w', encoding='utf-8') as f:
-                json.dump(result.ranking_opportunities, f, indent=2, ensure_ascii=False)
-            file_paths['opportunities_path'] = opportunities_path
-        
-        # Save competitive insights separately
-        if result.competitive_insights:
-            insights_path = os.path.join(run_dir, 'competitive_insights.json')
-            with open(insights_path, 'w', encoding='utf-8') as f:
-                json.dump(result.competitive_insights, f, indent=2, ensure_ascii=False)
-            file_paths['insights_path'] = insights_path
-        
-        self.logger.info(f"Saved final aggregation outputs for run {run_id} to {run_dir}")
+        self.logger.info(f"Saved master blueprint to {aggregation_path}")
         return file_paths
     
     def get_run_summary(self, run_result: Dict[str, Any]) -> Dict[str, Any]:

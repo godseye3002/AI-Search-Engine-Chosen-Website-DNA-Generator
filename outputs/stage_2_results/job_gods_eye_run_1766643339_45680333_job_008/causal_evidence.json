@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+    "relevance_reason": "Directly answers the query for 'best MMP app tracking analytics tools' with a quantified list (16 tools) and aggressive freshness signal (2026).",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+    "relevance_reason": "Explicitly mentions 'attribution accuracy' which semantically maps to the user's need for 'granular channel insights'.",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Find the perfect MMP solution for your app marketing campaigns",
+    "relevance_reason": "Aligns with the 'growth marketers' persona specified in the user query.",
+    "ranking_factor": "user_intent_alignment",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+    "relevance_reason": "Provides quantifiable social proof (ROAS/CPC) relevant to growth marketers using the tool",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Read the Success Story",
+    "relevance_reason": "Directs users to deep-dive evidence of tool efficacy",
+    "ranking_factor": "user_engagement",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "16 the Best Mobile Attribution Partners in 2024",
+    "relevance_reason": "Directly signals a listicle format containing the specific tools requested by the user",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "How to Choose a Mobile Measurement Partner in 2024",
+    "relevance_reason": "Addresses the decision-making criteria implied by 'needing granular channel insights'",
+    "ranking_factor": "user_intent_satisfaction",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Integrate Your MMP into SearchAds.com",
+    "relevance_reason": "Strategic placement of proprietary tool integration within educational content",
+    "ranking_factor": "commercial_optimization",
+    "causal_strength": 0.8
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "job_id": "gods_eye_run_1766643339_45680333_job_008",
+  "url": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/#:~:text=Overall%2C%20Firebase%20stands%20out%20as,of%20spending%20across%20different%20channels.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_description",
+        "meta_tag",
+        "fallback_analysis",
+        "case_study_teaser",
+        "call_to_action",
+        "navigation_anchor",
+        "navigation_anchor",
+        "internal_link_upsell"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 192,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 75.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+      "relevance_reason": "Directly answers the query for 'best MMP app tracking analytics tools' with a quantified list (16 tools) and aggressive freshness signal (2026).",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+      "relevance_reason": "Explicitly mentions 'attribution accuracy' which semantically maps to the user's need for 'granular channel insights'.",
+      "ranking_factor": "semantic_match",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Find the perfect MMP solution for your app marketing campaigns",
+      "relevance_reason": "Aligns with the 'growth marketers' persona specified in the user query.",
+      "ranking_factor": "user_intent_alignment",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+      "relevance_reason": "Provides quantifiable social proof (ROAS/CPC) relevant to growth marketers using the tool",
+      "ranking_factor": "trust_signal",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Read the Success Story",
+      "relevance_reason": "Directs users to deep-dive evidence of tool efficacy",
+      "ranking_factor": "user_engagement",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "16 the Best Mobile Attribution Partners in 2024",
+      "relevance_reason": "Directly signals a listicle format containing the specific tools requested by the user",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "How to Choose a Mobile Measurement Partner in 2024",
+      "relevance_reason": "Addresses the decision-making criteria implied by 'needing granular channel insights'",
+      "ranking_factor": "user_intent_satisfaction",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Integrate Your MMP into SearchAds.com",
+      "relevance_reason": "Strategic placement of proprietary tool integration within educational content",
+      "ranking_factor": "commercial_optimization",
+      "causal_strength": 0.8
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 77.767141,
+  "analysis_timestamp": "2025-12-25T11:48:42.100123"
+}

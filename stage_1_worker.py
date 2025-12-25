@@ -15,6 +15,13 @@ from classification_core import classify_website, ClassificationResult
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
 from pipeline_models import Job
 
+# Configure verbose logging for Stage 1
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - [STAGE1] - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 
 class Stage1Worker:
     """Worker for Stage 1: Website Classification"""
@@ -45,6 +52,8 @@ class Stage1Worker:
             Updated Job object with results
         """
         self.logger.info(f"Processing job {job.job_id} for Stage 1")
+        self.logger.info(f"Job URL: {job.url}")
+        self.logger.info(f"Job text: {job.text[:100]}..." if len(job.text) > 100 else f"Job text: {job.text}")
         
         # Mark job as started
         job.mark_stage_start(1)
@@ -62,7 +71,10 @@ class Stage1Worker:
                 'extraction_order': job.source_link.get('extraction_order')
             }
             
+            self.logger.info(f"Prepared input data for classification: {list(input_data.keys())}")
+            
             # Execute classification with timeout
+            self.logger.info(f"Starting classification with timeout: {self.timeout_per_link}s")
             result = execute_with_timeout(
                 classify_website,
                 args=(input_data,),
@@ -72,6 +84,7 @@ class Stage1Worker:
             # Process result
             if result.status == TimeoutResult.SUCCESS:
                 classification_result = result.result
+                self.logger.info(f"Classification successful: {classification_result.classification}")
                 
                 # Update job with results
                 job.classification = classification_result.classification

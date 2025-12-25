@@ -15,6 +15,13 @@ from dna_analysis_core import analyze_website_dna, DNAAnalysisResult
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
 from pipeline_models import Job
 
+# Configure verbose logging for Stage 2
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - [STAGE2] - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 
 class Stage2Worker:
     """Worker for Stage 2: DNA Analysis"""
