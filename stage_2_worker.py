@@ -10,14 +10,17 @@ import json
 import logging
 from datetime import datetime
 from typing import Dict, Any, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from dna_analysis_core import analyze_website_dna, DNAAnalysisResult
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
+from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
 from pipeline_models import Job
 
-# Configure verbose logging for Stage 2
+# Configure logging based on environment
+log_level = logging.INFO if not is_production_mode() else logging.ERROR
 logging.basicConfig(
-    level=logging.INFO,
+    level=log_level,
     format='%(asctime)s - %(name)s - %(levelname)s - [STAGE2] - %(message)s'
 )
 logger = logging.getLogger(__name__)
@@ -141,6 +144,12 @@ class Stage2Worker:
         Returns:
             Dictionary with file paths
         """
+        # Check if we should save outputs for this stage
+        if not should_save_stage_outputs('stage_2'):
+            if not is_production_mode():
+                logger.info(f"[STAGE2] Skipping file save for job {job_id} in production mode")
+            return {}
+        
         # Create job-specific directory
         job_dir = os.path.join(self.stage_output_dir, f"job_{job_id}")
         os.makedirs(job_dir, exist_ok=True)
@@ -177,7 +186,9 @@ class Stage2Worker:
                 json.dump(result.content_insights, f, indent=2, ensure_ascii=False)
             file_paths['insights_path'] = insights_path
         
-        self.logger.debug(f"Saved DNA analysis outputs for job {job_id} to {job_dir}")
+        if not is_production_mode():
+            logger.debug(f"Saved DNA analysis outputs for job {job_id} to {job_dir}")
+        
         return file_paths
     
     def process_batch(self, jobs: list, ai_response: Dict[str, Any]) -> list:
@@ -193,11 +204,13 @@ class Stage2Worker:
         """
         self.logger.info(f"Processing batch of {len(jobs)} jobs for Stage 2")
         
-        # Process jobs sequentially for now (can be made parallel later)
+        max_workers = self.config.get('pipeline', {}).get('max_parallel_workers_stage_2', 10)
+
         processed_jobs = []
-        for job in jobs:
-            processed_job = self.process_job(job, ai_response)
-            processed_jobs.append(processed_job)
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(self.process_job, job, ai_response): job for job in jobs}
+            for future in as_completed(futures):
+                processed_jobs.append(future.result())
         
         # Count results
         completed = sum(1 for job in processed_jobs if job.stage_2_status == 'completed')

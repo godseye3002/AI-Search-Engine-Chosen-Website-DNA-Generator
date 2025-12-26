@@ -1,0 +1,37 @@
+{
+  "product_id": "02f92e70-7b53-45b6-bdef-7ef36d8fc578",
+  "run_id": "test-run-aaced596",
+  "dna_blueprint": {
+    "query": "best AI productivity tools",
+    "total_analyzed": 5,
+    "successful_analyses": 4,
+    "failed_analyses": 1,
+    "dna_profile": {
+      "unique_value_props": [
+        {
+          "proposition": "AI-powered automation",
+          "confidence": 0.85,
+          "sources": [
+            "example.com/ai-automation",
+            "test.com/productivity"
+          ]
+        }
+      ],
+      "market_signals": {
+        "competitors": [
+          "Tool A",
+          "Tool B"
+        ],
+        "price_range": "$10-50/month",
+        "target_audience": "knowledge workers"
+      },
+      "content_gaps": [
+        "Integration with enterprise systems",
+        "Advanced analytics features"
+      ]
+    },
+    "generated_at": "2025-12-26T14:44:30.422144",
+    "version": "1.0"
+  },
+  "test_timestamp": "2025-12-26T14:44:37.826840"
+}

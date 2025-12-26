@@ -11,11 +11,13 @@ from datetime import datetime
 
 import google.generativeai as genai
 from dotenv import load_dotenv
+from utils.env_utils import is_production_mode, get_log_level
 
-# Configure verbose logging
+# Configure logging based on environment
+log_level = logging.INFO if not is_production_mode() else logging.ERROR
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level=log_level,
+    format='%(asctime)s - %(name)s - %(levelname)s - [STAGE3] - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
@@ -132,8 +134,9 @@ You must output final result in following JSON structure. **Do not use biologica
 6. Include adoption rates and effectiveness scores based on frequency across sources
 """
     
-    def __init__(self, model_name: str = "gemini-3-pro-preview"):
-        logger.info(f"Initializing SimpleBlueprintGenerator with model: {model_name}")
+    def __init__(self, model_name: str = "gemini-2.5-pro"):
+        if not is_production_mode():
+            logger.info(f"Initializing SimpleBlueprintGenerator with model: {model_name}")
         self.model = genai.GenerativeModel(
             model_name=model_name,
             generation_config={
@@ -143,7 +146,8 @@ You must output final result in following JSON structure. **Do not use biologica
                 "max_output_tokens": 8192,
             }
         )
-        logger.info("Gemini model configured successfully")
+        if not is_production_mode():
+            logger.info("Gemini model configured successfully")
     
     def generate_master_blueprint(self, dna_results: List[Dict[str, Any]], query: str) -> Dict[str, Any]:
         """
@@ -156,8 +160,9 @@ You must output final result in following JSON structure. **Do not use biologica
         Returns:
             Master blueprint JSON structure
         """
-        logger.info(f"Starting master blueprint generation for {len(dna_results)} DNA results")
-        logger.info(f"Query context: {query}")
+        if not is_production_mode():
+            logger.info(f"Starting master blueprint generation for {len(dna_results)} DNA results")
+            logger.info(f"Query context: {query}")
         
         try:
             # Prepare input for Gemini
@@ -165,14 +170,17 @@ You must output final result in following JSON structure. **Do not use biologica
             for i, result in enumerate(dna_results, 1):
                 input_text += f"\n--- Source {i} ---\n{json.dumps(result, indent=2)}\n"
             
-            logger.info(f"Prepared input text of length: {len(input_text)} characters")
+            if not is_production_mode():
+                logger.info(f"Prepared input text of length: {len(input_text)} characters")
             
             # Generate blueprint
-            logger.info("Calling Gemini API to generate master blueprint...")
+            if not is_production_mode():
+                logger.info("Calling Gemini API to generate master blueprint...")
             response = self.model.generate_content(self.MASTER_BLUEPRINT_PROMPT + "\n\n" + input_text)
             response_text = response.text
             
-            logger.info(f"Received response of length: {len(response_text)} characters")
+            if not is_production_mode():
+                logger.info(f"Received response of length: {len(response_text)} characters")
             
             # Clean response
             if "```json" in response_text:
@@ -185,19 +193,22 @@ You must output final result in following JSON structure. **Do not use biologica
                 response_text = response_text[json_start:json_end].strip()
             
             # Parse JSON
-            logger.info("Parsing JSON response...")
+            if not is_production_mode():
+                logger.info("Parsing JSON response...")
             master_blueprint = json.loads(response_text)
             
             # Add metadata
             master_blueprint['generation_timestamp'] = datetime.now().isoformat()
             master_blueprint['sources_processed'] = len(dna_results)
             
-            logger.info(f"Successfully generated master blueprint with {len(master_blueprint)} top-level keys")
+            if not is_production_mode():
+                logger.info(f"Successfully generated master blueprint with {len(master_blueprint)} top-level keys")
             return master_blueprint
             
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse JSON response: {str(e)}")
-            logger.debug(f"Response text: {response_text[:500]}...")
+            if not is_production_mode():
+                logger.debug(f"Response text: {response_text[:500]}...")
             return None
         except Exception as e:
             error_msg = str(e)
@@ -205,19 +216,22 @@ You must output final result in following JSON structure. **Do not use biologica
             
             # Check for token limit error and implement fallback
             if "generation exceeded max tokens limit" in error_msg or "max_output_tokens" in error_msg:
-                logger.warning("Token limit exceeded, trying with reduced input size...")
+                if not is_production_mode():
+                    logger.warning("Token limit exceeded, trying with reduced input size...")
                 return self._generate_with_reduced_input(dna_results, query)
             
             return None
     
     def _generate_with_reduced_input(self, dna_results: List[Dict[str, Any]], query: str) -> Dict[str, Any]:
         """Fallback method with reduced input size to handle token limits"""
-        logger.info("Attempting generation with reduced input size...")
+        if not is_production_mode():
+            logger.info("Attempting generation with reduced input size...")
         
         try:
             # Take only the first 3 results to reduce input size
             reduced_results = dna_results[:3]
-            logger.info(f"Reduced input from {len(dna_results)} to {len(reduced_results)} results")
+            if not is_production_mode():
+                logger.info(f"Reduced input from {len(dna_results)} to {len(reduced_results)} results")
             
             # Prepare simplified input
             input_text = f"Query: {query}\n\nDNA Analysis Results (Top 3):\n"
@@ -230,16 +244,18 @@ You must output final result in following JSON structure. **Do not use biologica
                 }
                 input_text += f"\n--- Source {i} ---\n{json.dumps(simplified_result, indent=2)}\n"
             
-            logger.info(f"Prepared reduced input text of length: {len(input_text)} characters")
-            
+            if not is_production_mode():
+                logger.info(f"Prepared reduced input text of length: {len(input_text)} characters")
+            # gemini-2.5-pro
+            # gemini-3-pro-preview
             # Generate with even smaller token limit
             reduced_model = genai.GenerativeModel(
-                model_name="gemini-3-pro-preview",
+                model_name="gemini-2.5-pro",
                 generation_config={
                     "temperature": 0.2,
                     "top_p": 0.95,
                     "top_k": 40,
-                    "max_output_tokens": 2048,  # Further reduced
+                    "max_output_tokens": 4048,  # Further reduced
                 }
             )
             

@@ -10,11 +10,13 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Dict, Any
 
 # Add current directory to path for imports
 sys.path.append('.')
 
-from batch_processor import BatchProcessor
+from pipeline_orchestrator import PipelineOrchestrator
 
 def setup_logging():
     """Setup logging for the run"""
@@ -45,38 +47,65 @@ def find_input_directories():
     
     return input_dirs
 
-def run_batch_for_directory(batch_processor, directory, logger):
-    """Run batch processing for a single directory"""
+
+def load_and_merge_ai_responses(directory: str) -> Dict[str, Any]:
+    json_files = sorted([str(p) for p in Path(directory).glob('*.json')])
+    if not json_files:
+        raise ValueError(f"No JSON files found in {directory}")
+
+    merged_source_links = []
+    queries = []
+
+    for json_file in json_files:
+        with open(json_file, 'r', encoding='utf-8') as f:
+            ai_response = json.load(f)
+
+        q = ai_response.get('query')
+        if q:
+            queries.append(q)
+
+        links = ai_response.get('source_links') or []
+        if isinstance(links, list):
+            merged_source_links.extend(links)
+
+    unique_queries = []
+    for q in queries:
+        if q not in unique_queries:
+            unique_queries.append(q)
+
+    query_context = " | ".join(unique_queries) if unique_queries else os.path.basename(directory)
+
+    return {
+        'query': query_context,
+        'source_links': merged_source_links,
+        'batch_queries': unique_queries,
+        'input_directory': directory,
+        'input_files': json_files,
+    }
+
+def run_pipeline_for_directory(directory: str, logger: logging.Logger, max_workers: int) -> Dict[str, Any]:
     logger.info(f"Processing directory: {directory}")
-    
-    try:
-        # Create batch from directory and get the batch_id
-        batch_id = f"batch_{os.path.basename(directory)}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-        jobs = batch_processor.create_batch_from_directory(directory)
-        
-        # The batch_id should match what was created in create_batch_from_directory
-        # Let's check what batch_id was actually used
-        if jobs:
-            # Extract the actual batch_id from the first job's job_id
-            actual_batch_id = "_".join(jobs[0].job_id.split('_')[:4])  # Get first 4 parts
-            logger.info(f"Using batch_id: {actual_batch_id} with {len(jobs)} jobs")
-            batch_id = actual_batch_id
-        else:
-            logger.error("No jobs created from directory")
-            return None
-        
-        logger.info(f"Created batch {batch_id} with {len(jobs)} jobs")
-        
-        # Process batch in parallel
-        result = batch_processor.process_batch_parallel(batch_id)
-        
-        logger.info(f"Batch {directory} completed: {result.completed_jobs}/{result.total_jobs} successful")
-        
-        return result
-        
-    except Exception as e:
-        logger.error(f"Failed to process directory {directory}: {str(e)}")
-        return None
+
+    ai_response = load_and_merge_ai_responses(directory)
+    run_id = os.path.basename(directory)
+
+    orchestrator = PipelineOrchestrator()
+    executed_run_id = orchestrator.run_pipeline_from_ai_response(ai_response, run_id_override=run_id)
+
+    final_output_path = os.path.join(
+        'outputs',
+        'stage_3_results',
+        f"run_{executed_run_id}",
+        'final_aggregation.json'
+    )
+
+    return {
+        'directory': directory,
+        'run_id': executed_run_id,
+        'final_output_path': final_output_path,
+        'total_source_links': len(ai_response.get('source_links', [])),
+        'unique_queries': ai_response.get('batch_queries', []),
+    }
 
 def main():
     """Main function to run all inputs"""
@@ -93,13 +122,10 @@ def main():
         logger.error(f"Failed to load config: {e}")
         return 1
     
-    # Create batch processor
-    try:
-        batch_processor = BatchProcessor(config, logger)
-        logger.info("Batch processor initialized")
-    except Exception as e:
-        logger.error(f"Failed to initialize batch processor: {e}")
-        return 1
+    max_workers = min(
+        len(find_input_directories()),
+        config.get('batch_processing', {}).get('max_concurrent_runs', 2)
+    )
     
     # Find all input directories
     input_dirs = find_input_directories()
@@ -109,36 +135,39 @@ def main():
     
     logger.info(f"Found {len(input_dirs)} input directories to process")
     
-    # Process each directory
     total_results = []
-    for directory in input_dirs:
-        logger.info(f"\n{'='*60}")
-        result = run_batch_for_directory(batch_processor, directory, logger)
-        if result:
-            total_results.append({
-                'directory': directory,
-                'result': result
-            })
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {
+            executor.submit(run_pipeline_for_directory, directory, logger, max_workers): directory
+            for directory in input_dirs
+        }
+
+        for future in as_completed(futures):
+            directory = futures[future]
+            try:
+                result = future.result()
+                total_results.append(result)
+                logger.info(f"Final output for {directory}: {result['final_output_path']}")
+            except Exception as e:
+                logger.error(f"Failed to process directory {directory}: {e}")
     
     # Print summary
     logger.info(f"\n{'='*60}")
     logger.info("BATCH PROCESSING SUMMARY")
     logger.info(f"{'='*60}")
     
-    total_jobs = sum(r['result'].total_jobs for r in total_results)
-    total_completed = sum(r['result'].completed_jobs for r in total_results)
-    total_failed = sum(r['result'].failed_jobs for r in total_results)
+    total_runs = len(total_results)
+    total_failed = max(0, len(input_dirs) - total_runs)
     
-    logger.info(f"Total directories processed: {len(total_results)}")
-    logger.info(f"Total jobs: {total_jobs}")
-    logger.info(f"Completed: {total_completed}")
+    logger.info(f"Total directories processed: {total_runs}")
     logger.info(f"Failed: {total_failed}")
-    logger.info(f"Success rate: {total_completed/total_jobs*100:.1f}%" if total_jobs > 0 else "N/A")
-    
-    # Cleanup
-    batch_processor.shutdown()
-    logger.info("Batch processor shutdown complete")
-    
+    logger.info(f"Success rate: {total_runs/len(input_dirs)*100:.1f}%" if len(input_dirs) > 0 else "N/A")
+
+    for result in sorted(total_results, key=lambda r: r['directory']):
+        logger.info(f"Directory: {result['directory']}")
+        logger.info(f"Run ID: {result['run_id']}")
+        logger.info(f"Final output: {result['final_output_path']}")
+
     return 0 if total_failed == 0 else 1
 
 if __name__ == "__main__":

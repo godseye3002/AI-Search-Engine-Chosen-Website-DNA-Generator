@@ -1,0 +1,165 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "best MMP app tracking and analytics tools for growth marketers",
+  "sources_analyzed": 33,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Clearly define the topic and target audience",
+      "optimized_pattern_template": "The Top [Number] MMP & App Tracking Tools for Growth Marketers in [Year]",
+      "adoption_rate": 0.9
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Must provide a concise summary defining MMPs and list the top 3 recommended tools. Must include key entities: Mobile Measurement Partner (MMP), Channel Attribution, Link Tracking.",
+      "adoption_rate": 0.8
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "comparison_table_section",
+      "consensus_intent": "Allow for quick comparison of key features",
+      "content_requirement": "Table comparing top tools on criteria like 'Pricing Model', 'Key Integrations', 'Attribution Granularity', and 'Best For'.",
+      "adoption_rate": 0.9
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "detailed_review_list",
+      "consensus_intent": "Provide in-depth analysis of each recommended tool",
+      "content_requirement": "Use H2 headings for each tool, followed by paragraphs detailing features, pros, cons, and specific use cases for growth marketers.",
+      "adoption_rate": 0.85
+    },
+    {
+      "sequence_order": 5,
+      "component_type": "faq_section",
+      "consensus_intent": "Address common user questions and capture long-tail keywords",
+      "content_requirement": "Include questions like 'What is the difference between an MMP and link tracking software?' and 'How to choose the right MMP for a small business?'.",
+      "adoption_rate": 0.6
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "Mobile Measurement Partner (MMP)": {
+      "classification": "Core Technology Concept",
+      "primary_definition": "A platform that attributes app installs and post-install events to specific marketing campaigns and channels, providing a single source of truth for mobile marketing performance.",
+      "high_value_attributes": [
+        {
+          "data_point": "Must specify support for SKAdNetwork (SKAN) for iOS attribution.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        },
+        {
+          "data_point": "Must detail fraud detection and prevention capabilities.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "MMP",
+        "mobile attribution",
+        "app analytics",
+        "user acquisition",
+        "SKAdNetwork"
+      ],
+      "frequency_across_sources": 1.0
+    },
+    "Channel Attribution": {
+      "classification": "Key Feature/Function",
+      "primary_definition": "The process of identifying and assigning credit to the marketing channels that drive user actions, such as app installs, registrations, or purchases.",
+      "high_value_attributes": [
+        {
+          "data_point": "Mention specific attribution models (e.g., last-touch, multi-touch).",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.8
+        }
+      ],
+      "semantic_keywords": [
+        "marketing attribution",
+        "channel performance",
+        "ROAS",
+        "LTV",
+        "conversion tracking"
+      ],
+      "frequency_across_sources": 0.9
+    },
+    "Link Tracking": {
+      "classification": "Key Feature/Function",
+      "primary_definition": "The technology used to monitor and analyze user clicks on URLs, providing data on the source, medium, and campaign effectiveness for both web and app user journeys.",
+      "high_value_attributes": [
+        {
+          "data_point": "Must differentiate between standard link tracking and deep linking capabilities.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "deep linking",
+        "UTM parameters",
+        "click tracking",
+        "performance marketing",
+        "channel distribution"
+      ],
+      "frequency_across_sources": 0.9
+    },
+    "Growth Marketer": {
+      "classification": "Target Audience",
+      "primary_definition": "A marketing professional focused on rapid experimentation across marketing channels and product development to identify the most efficient ways to grow a business.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "user acquisition manager",
+        "performance marketer",
+        "mobile marketer",
+        "growth hacking"
+      ],
+      "frequency_across_sources": 1.0
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "comparison_table",
+        "usage_frequency": 0.9,
+        "effectiveness_score": 0.95
+      },
+      {
+        "format_type": "numbered_listicle",
+        "usage_frequency": 1.0,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "case_study_snippet",
+        "usage_frequency": 0.3,
+        "effectiveness_score": 0.8
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2500,
+      "entity_density_optimal": 0.04,
+      "readability_score": 0.65
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "A clear definition of what a Mobile Measurement Partner (MMP) is and why it's crucial.",
+      "A comparative analysis of at least 5 top tools.",
+      "Specific features relevant to 'growth marketers', such as granular channel insights and ROAS analysis.",
+      "Mention of key technical concepts like SKAdNetwork, deep linking, and fraud prevention.",
+      "Use cases or examples of how these tools solve specific marketing problems."
+    ],
+    "negative_constraints": [
+      "Avoid overly generic descriptions without mentioning specific features.",
+      "Do not list tools without providing clear pros and cons.",
+      "Avoid making definitive 'best' claims without supporting data or context (e.g., 'best for startups')."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2.5s",
+      "mobile_friendly": true,
+      "structured_data_present": true,
+      "has_canonical_tag": true,
+      "has_og_tags": true
+    }
+  },
+  "generation_timestamp": "2025-12-27T01:01:10.396337",
+  "sources_processed": 33
+}

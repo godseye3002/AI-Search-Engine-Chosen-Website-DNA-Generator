@@ -47,6 +47,8 @@ class PipelineOrchestrator:
         
         # Active runs
         self.active_runs: Dict[str, PipelineRun] = {}
+
+        self._ai_response_by_run_id: Dict[str, Dict[str, Any]] = {}
         
         self.logger.info("Pipeline Orchestrator initialized")
     
@@ -110,18 +112,22 @@ class PipelineOrchestrator:
         except json.JSONDecodeError as e:
             raise ValueError(f"Invalid JSON in AI response file: {e}")
     
-    def create_run(self, ai_response: Dict[str, Any]) -> str:
+    def create_run(self, ai_response: Dict[str, Any], run_id_override: str = None) -> str:
         """
         Create a new pipeline run from AI response.
         
         Args:
             ai_response: AI response data with source_links
+            run_id_override: Optional override for run_id (for batch processing)
             
         Returns:
             run_id for the created run
         """
-        # Generate run ID
-        run_id = f"{self.config.get('pipeline', {}).get('run_id_prefix', 'gods_eye_run')}_{int(time.time())}_{uuid.uuid4().hex[:8]}"
+        # Use provided run_id_override or generate new one
+        if run_id_override:
+            run_id = run_id_override
+        else:
+            run_id = f"{self.config.get('pipeline', {}).get('run_id_prefix', 'gods_eye_run')}_{int(time.time())}_{uuid.uuid4().hex[:8]}"
         
         # Extract query and source links
         query = ai_response.get('query', '')
@@ -161,6 +167,22 @@ class PipelineOrchestrator:
         self.logger.info(f"Created run {run_id} with {len(source_links)} jobs")
         self.logger.info(f"Stage 1: {len(run.stage_1_batches)} batches with max {max_parallel} workers each")
         
+        return run_id
+
+    def run_pipeline_from_ai_response(self, ai_response: Dict[str, Any], run_id_override: Optional[str] = None) -> str:
+        """Run the complete pipeline on already loaded AI response data."""
+        self.logger.info("Starting GodsEye pipeline execution")
+
+        run_id = self.create_run(ai_response, run_id_override=run_id_override)
+        self._ai_response_by_run_id[run_id] = ai_response
+
+        self._execute_stage_1(run_id)
+        self._filter_stage_1_results(run_id)
+        self._execute_stage_2(run_id)
+        self._filter_stage_2_results(run_id)
+        self._execute_stage_3(run_id)
+
+        self.logger.info(f"Pipeline run {run_id} completed successfully!")
         return run_id
     
     def get_run_status(self, run_id: str) -> Optional[Dict[str, Any]]:
@@ -231,6 +253,8 @@ class PipelineOrchestrator:
         
         # Create run
         run_id = self.create_run(ai_response)
+
+        self._ai_response_by_run_id[run_id] = ai_response
         
         # Execute Stage 1
         self._execute_stage_1(run_id)
@@ -349,8 +373,7 @@ class PipelineOrchestrator:
         # Create batches for Stage 2
         batches = self.queue_manager.create_batches_for_stage(stage2_queue)
         
-        # Load AI response for context
-        ai_response = self.load_ai_response()
+        ai_response = self._ai_response_by_run_id.get(run_id) or self.load_ai_response()
         
         # Process each batch
         for batch_idx, batch in enumerate(batches):
@@ -434,8 +457,7 @@ class PipelineOrchestrator:
         
         self.logger.info(f"Processing {len(stage_3_jobs)} jobs for final aggregation")
         
-        # Load AI response for context
-        ai_response = self.load_ai_response()
+        ai_response = self._ai_response_by_run_id.get(run_id) or self.load_ai_response()
         query = ai_response.get('query', '')
         
         # Process final aggregation

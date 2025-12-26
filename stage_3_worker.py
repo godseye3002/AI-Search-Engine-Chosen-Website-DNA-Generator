@@ -13,7 +13,16 @@ from typing import Dict, Any, Optional
 
 from final_aggregation_core import aggregate_pipeline_results
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
+from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
 from pipeline_models import Job
+
+# Configure logging based on environment
+log_level = logging.INFO if not is_production_mode() else logging.ERROR
+logging.basicConfig(
+    level=log_level,
+    format='%(asctime)s - %(name)s - %(levelname)s - [STAGE3] - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 class Stage3Worker:
@@ -185,19 +194,24 @@ class Stage3Worker:
         
         Args:
             run_id: Pipeline run identifier
-            result: Aggregation result
+            result: Aggregation result (master blueprint)
             
         Returns:
             Dictionary with file paths
         """
+        # Check if we should save outputs for this stage
+        if not should_save_stage_outputs('stage_3'):
+            if not is_production_mode():
+                logger.info(f"[STAGE3] Skipping file save for run {run_id} in production mode")
+            return {}
+        
         # Create run-specific directory
         run_dir = os.path.join(self.stage_output_dir, f"run_{run_id}")
         os.makedirs(run_dir, exist_ok=True)
         
         file_paths = {}
         
-        # Save complete aggregation result
-        # Save master blueprint as the main output (simplified approach)
+        # Save master blueprint as the main output (only file in production mode)
         aggregation_path = os.path.join(run_dir, 'final_aggregation.json')
         
         # The result is now just the master blueprint dictionary
@@ -206,7 +220,12 @@ class Stage3Worker:
         
         file_paths['aggregation_path'] = aggregation_path
         
-        self.logger.info(f"Saved master blueprint to {aggregation_path}")
+        if not is_production_mode():
+            logger.info(f"Saved master blueprint to {aggregation_path}")
+        else:
+            # In production mode, only log essential info
+            logger.error(f"[STAGE3] Master blueprint saved for run {run_id}")
+        
         return file_paths
     
     def get_run_summary(self, run_result: Dict[str, Any]) -> Dict[str, Any]:
