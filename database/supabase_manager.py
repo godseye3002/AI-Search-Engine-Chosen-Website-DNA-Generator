@@ -102,8 +102,6 @@ class SupabaseDataManager:
             # Add limit if specified
             if limit:
                 query = query.limit(limit)
-ently(limit)
-YC
             
             # Order by created_at to process oldest first
             query = query.order("created_at", desc=False)
@@ -116,7 +114,9 @@ YC
                     record = ProductAnalysisRecord(
                         id=item['id'],
                         product_id=item['product_id'],
-                        raw_serp_results=item['raw_serp_results'] if isinstance(item['raw_serp_results'], dict) else json.loads(item['raw_serp_results']),
+                        raw_serp_results=item['raw_serp_results'] if isinstance(item['raw_serp_results'], dict) else (
+                            json.loads(item['raw_serp_results']) if isinstance(item['raw_serp_results'], str) else item['raw_serp_results']
+                        ),
                         created_at=item.get('created_at'),
                         updated_at=item.get('updated_at')
                     )
@@ -156,7 +156,9 @@ YC
                 record = ProductAnalysisRecord(
                     id=item['id'],
                     product_id=item['product_id'],
-                    raw_serp_results=item['raw_serp_results'] if isinstance(item['raw_serp_results'], dict) else json.loads(item['raw_serp_results']),
+                    raw_serp_results=item['raw_serp_results'] if isinstance(item['raw_serp_results'], dict) else (
+                        json.loads(item['raw_serp_results']) if isinstance(item['raw_serp_results'], str) else item['raw_serp_results']
+                    ),
                     created_at=item.get('created_at'),
                     updated_at=item.get('updated_at')
                 )

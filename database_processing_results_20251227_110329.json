@@ -1,0 +1,22 @@
+{
+  "google": [
+    {
+      "status": "completed",
+      "product_id": "9730f5ba-8b22-495a-a577-46432a9f060f",
+      "data_source": "google",
+      "run_id": "dna_google_9730f5ba-8b22-495a-a577-46432a9f060f_1766813609",
+      "analysis_id": "9148d956-9ba8-4a5c-ba43-c3ba20b5e951",
+      "final_output_path": "outputs/stage_3_results/run_dna_google_9730f5ba-8b22-495a-a577-46432a9f060f_1766813609/final_aggregation.json"
+    }
+  ],
+  "perplexity": [
+    {
+      "status": "completed",
+      "product_id": "9730f5ba-8b22-495a-a577-46432a9f060f",
+      "data_source": "perplexity",
+      "run_id": "dna_perplexity_9730f5ba-8b22-495a-a577-46432a9f060f_1766813609",
+      "analysis_id": "6e9c6874-5db3-44d4-b469-d6a67f72cfd4",
+      "final_output_path": "outputs/stage_3_results/run_dna_perplexity_9730f5ba-8b22-495a-a577-46432a9f060f_1766813609/final_aggregation.json"
+    }
+  ]
+}

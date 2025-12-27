@@ -1,0 +1,123 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "top link tracking tools to measure marketing distribution channel performance for onboarding (MMP platforms)",
+  "sources_analyzed": 8,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Clearly define the main topic and promise of the content.",
+      "optimized_pattern_template": "The [Number] Best MMPs (Mobile Measurement Partners) for [Use Case/Year]",
+      "adoption_rate": 1.0
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Must include key entities: MMP, mobile attribution, link tracking, marketing channels",
+      "consensus_intent": "Provide an executive summary defining MMPs and their importance.",
+      "adoption_rate": 0.9
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "list_of_tools_section",
+      "consensus_intent": "Provide detailed reviews of individual tools.",
+      "optimized_pattern_template": "H2: [Tool Name] followed by P: [Description], UL: [Features/Pros/Cons]",
+      "adoption_rate": 1.0
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "comparison_table_section",
+      "consensus_intent": "Allow for quick comparison of key features across tools.",
+      "content_requirement": "Must compare at least 3 key features (e.g., Pricing, Key Integration, Unique Feature).",
+      "adoption_rate": 0.4
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "MMP (Mobile Measurement Partner)": {
+      "classification": "Technology Category",
+      "primary_definition": "A third-party platform that tracks and attributes mobile app installs and post-install events to specific marketing campaigns and channels.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mobile attribution",
+        "link tracking",
+        "app marketing",
+        "user acquisition",
+        "channel performance"
+      ],
+      "frequency_across_sources": 1.0
+    },
+    "Google Tag Manager": {
+      "classification": "Tag Management System",
+      "primary_definition": "A system for managing marketing and analytics tags on websites and mobile apps, often used in conjunction with MMPs.",
+      "high_value_attributes": [
+        {
+          "data_point": "Detected via tracking code 'GTM-M4LRWT7N' on a ranking page.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 1.0
+        }
+      ],
+      "semantic_keywords": [
+        "GTM",
+        "tag management",
+        "tracking codes",
+        "analytics implementation"
+      ],
+      "frequency_across_sources": 0.125
+    },
+    "Segwise": {
+      "classification": "Analytics Platform",
+      "primary_definition": "An analytics platform identified as a publisher of content relevant to the MMP and analytics query context.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "segwise.ai",
+        "analytics",
+        "product insights"
+      ],
+      "frequency_across_sources": 0.25
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "listicle",
+        "usage_frequency": 0.9,
+        "effectiveness_score": 0.85
+      },
+      {
+        "format_type": "comparison_table",
+        "usage_frequency": 0.4,
+        "effectiveness_score": 0.9
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2000,
+      "entity_density_optimal": 0.025,
+      "readability_score": 0.7
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "A curated list of specific, named MMP tools.",
+      "Specific examples or brief case studies for tool applications.",
+      "Clear definitions for core concepts like 'MMP', 'attribution', and 'link tracking'.",
+      "A section on 'Key Features to Consider' when choosing an MMP."
+    ],
+    "negative_constraints": [
+      "Avoid generic content that lacks specific tool names, features, or data.",
+      "Avoid low entity density; the topic requires naming multiple products and technologies.",
+      "Do not publish without a clear H1 and logical H2/H3 heading structure."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true,
+      "canonical_tag_required": true,
+      "og_tags_required": true,
+      "optimal_title_length_chars": "55-65",
+      "optimal_meta_desc_length_chars": "150-160"
+    }
+  },
+  "generation_timestamp": "2025-12-27T12:01:31.534082",
+  "sources_processed": 8
+}

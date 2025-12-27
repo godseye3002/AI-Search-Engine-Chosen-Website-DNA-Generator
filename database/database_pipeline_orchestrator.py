@@ -125,17 +125,40 @@ class DatabasePipelineOrchestrator:
             # Convert raw_serp_results to AI response format
             ai_response = self._convert_to_ai_response(product_record.raw_serp_results)
             
+            # Check if source_links is empty - if so, skip processing
+            if not ai_response.get('source_links'):
+                self.logger.info(f"Skipping product {product_id} - no source_links found")
+                return {
+                    "status": "skipped",
+                    "product_id": product_id,
+                    "data_source": data_source.value,
+                    "reason": "No source_links found in raw_serp_results"
+                }
+            
             # Generate stable run_id
             run_id = f"dna_{data_source.value}_{product_id}_{int(time.time())}"
             
             # Run pipeline
             final_result = self.run_pipeline_from_ai_response(ai_response, run_id_override=run_id)
             
+            # Extract actual master blueprint from final_aggregation.json if available
+            master_blueprint = {}
+            if final_result.get('status') == 'completed' and 'output_paths' in final_result:
+                aggregation_path = final_result['output_paths'].get('aggregation_path', '')
+                if aggregation_path:
+                    try:
+                        with open(aggregation_path, 'r', encoding='utf-8') as f:
+                            master_blueprint = json.load(f)
+                        self.logger.info(f"Loaded master blueprint from {aggregation_path}")
+                    except Exception as e:
+                        self.logger.warning(f"Failed to load master blueprint from {aggregation_path}: {e}")
+                        master_blueprint = {}
+            
             # Save results to database
             dna_record = DNAAnalysisRecord(
                 product_id=product_id,
                 run_id=run_id,
-                dna_blueprint=final_result,
+                dna_blueprint=master_blueprint,
                 status="completed"
             )
             
@@ -205,23 +228,65 @@ class DatabasePipelineOrchestrator:
         
         return results
     
-    def _convert_to_ai_response(self, raw_serp_results: Dict[str, Any]) -> Dict[str, Any]:
+    def _convert_to_ai_response(self, raw_serp_results: Any) -> Dict[str, Any]:
         """
         Convert raw SERP results to AI response format
         
         Args:
-            raw_serp_results: Raw SERP data from database
+            raw_serp_results: Raw SERP data from database (could be dict, list, or None)
             
         Returns:
             Formatted AI response
         """
-        # Extract query and source links from raw_serp_results
-        query = raw_serp_results.get('query', '')
-        source_links = raw_serp_results.get('source_links', [])
+        # Handle different data types
+        if raw_serp_results is None:
+            self.logger.warning("raw_serp_results is None, creating empty response")
+            return {
+                'query': '',
+                'source_links': []
+            }
         
+        if isinstance(raw_serp_results, list):
+            self.logger.info(f"raw_serp_results is a list with {len(raw_serp_results)} items")
+            # If it's a list, assume it's source_links directly
+            return {
+                'query': '',
+                'source_links': raw_serp_results
+            }
+        
+        if isinstance(raw_serp_results, dict):
+            """Use the full raw SERP object as the ai_response.
+
+            We only validate that it has non-empty source_links; otherwise we
+            return it unchanged so downstream stages (especially Stage 2 DNA
+            analysis) can see the complete context: query, ai_overview_text,
+            structure_type, location, etc.
+            """
+            # Ensure source_links exists and is a list
+            source_links = raw_serp_results.get('source_links') or []
+
+            # If there are no links, this product should be skipped
+            if not source_links:
+                query = raw_serp_results.get('query', raw_serp_results.get('original_query', ''))
+                self.logger.warning("source_links is empty, this product should be skipped")
+                return {
+                    'query': query,
+                    'source_links': []
+                }
+
+            self.logger.info(
+                f"Converted raw_serp_results: query='{raw_serp_results.get('query', raw_serp_results.get('original_query', ''))}', "
+                f"source_links_count={len(source_links)}"
+            )
+
+            # Return the full raw object so Stage 2 gets full ai_response context
+            return raw_serp_results
+        
+        # Fallback for unexpected types
+        self.logger.warning(f"raw_serp_results has unexpected type: {type(raw_serp_results)}")
         return {
-            'query': query,
-            'source_links': source_links
+            'query': '',
+            'source_links': []
         }
     
     def run_pipeline_from_ai_response(self, ai_response: Dict[str, Any], run_id_override: str = None) -> Dict[str, Any]:
@@ -247,7 +312,7 @@ class DatabasePipelineOrchestrator:
         # Execute all stages
         self._execute_stage_1(run_id)
         stage_1_results = self._execute_stage_2(run_id)
-        final_result = self._execute_stage_3(run_id, stage_1_results)
+        final_result = self._execute_stage_3(run_id)
         
         return final_result
     
@@ -297,54 +362,154 @@ class DatabasePipelineOrchestrator:
         run = self.active_runs[run_id]
         self.logger.info(f"Executing Stage 1 for run {run_id}")
         
-        # Process batches in parallel
+        # Create Stage 1 queue
+        stage1_queue = self.queue_manager.create_stage_1_queue(run)
+        
+        # Create batches for Stage 1
+        batches = self.queue_manager.create_batches_for_stage(stage1_queue)
+        
+        # Process each batch
         stage_1_results = []
-        for batch_info in run.stage_1_batches:
-            batch_jobs = [run.jobs[job_id] for job_id in batch_info.job_ids]
-            batch_result = self.stage_1_worker.process_batch(batch_jobs, run_id)
-            stage_1_results.extend(batch_result.get('results', []))
+        for batch_idx, batch in enumerate(batches):
+            self.logger.info(f"Processing Stage 1 batch {batch_idx + 1}/{len(batches)} "
+                           f"({len(batch.items)} jobs)")
+            
+            # Extract jobs for this batch
+            batch_jobs = []
+            for job_ref in batch.items:
+                if hasattr(job_ref, 'job_id'):
+                    batch_jobs.append(job_ref)
+                else:
+                    # Handle case where batch contains job_ids instead of job objects
+                    batch_jobs.append(run.jobs[job_ref])
+            
+            # Process batch
+            batch_result = self.stage_1_worker.process_batch(batch_jobs)
+            stage_1_results.extend(batch_result)
+            
+            # Update run with processed jobs
+            for job in batch_result:
+                run.jobs[job.job_id] = job
         
         run.stage_1_results = stage_1_results
         self.logger.info(f"Stage 1 completed for run {run_id}")
+        
+        # Filter Stage 1 results to determine which jobs proceed to Stage 2
+        self._filter_stage_1_results(run_id)
+    
+    def _filter_stage_1_results(self, run_id: str):
+        """
+        Filter Stage 1 results to determine which jobs proceed to Stage 2.
+        
+        Args:
+            run_id: Pipeline run ID
+        """
+        self.logger.info(f"Filtering Stage 1 results for run {run_id}")
+        
+        run = self.active_runs[run_id]
+        
+        # Use queue manager to filter results
+        selected_count, rejected_count = self.queue_manager.filter_stage_1_results(run)
+        
+        # Calculate Stage 2 batches for selected jobs
+        if selected_count > 0:
+            max_parallel = self.config.get('pipeline', {}).get('max_parallel_workers_stage_2', 10)
+            run.stage_2_batches = calculate_batches(selected_count, max_parallel)
+            self.logger.info(f"Calculated {len(run.stage_2_batches)} Stage 2 batches for {selected_count} selected jobs")
     
     def _execute_stage_2(self, run_id: str) -> List[Dict[str, Any]]:
         """Execute Stage 2: DNA Analysis"""
         run = self.active_runs[run_id]
         self.logger.info(f"Executing Stage 2 for run {run_id}")
         
-        # Calculate Stage 2 batches
-        max_parallel = self.config.get('pipeline', {}).get('max_parallel_workers_stage_2', 5)
-        run.stage_2_batches = calculate_batches(len(run.stage_1_results), max_parallel)
+        # Get AI response for this run
+        ai_response = self._ai_responses.get(run_id, {})
         
-        # Process batches in parallel
+        # Create Stage 2 queue and batches
+        stage2_queue = self.queue_manager.create_stage_2_queue(run)
+        batches = self.queue_manager.create_batches_for_stage(stage2_queue)
+        
+        # Process each batch
         stage_2_results = []
-        for batch_info in run.stage_2_batches:
-            batch_results = [run.stage_1_results[i] for i in batch_info.job_ids]
-            batch_result = self.stage_2_worker.process_batch(batch_results, run_id)
-            stage_2_results.extend(batch_result.get('results', []))
+        for batch_idx, batch in enumerate(batches):
+            self.logger.info(f"Processing Stage 2 batch {batch_idx + 1}/{len(batches)} "
+                           f"({len(batch.items)} jobs)")
+            
+            # Extract jobs for this batch
+            batch_jobs = []
+            for job_ref in batch.items:
+                if hasattr(job_ref, 'job_id'):
+                    batch_jobs.append(job_ref)
+                else:
+                    # Handle case where batch contains job_ids instead of job objects
+                    batch_jobs.append(run.jobs[job_ref])
+            
+            # Process batch
+            batch_result = self.stage_2_worker.process_batch(batch_jobs, ai_response)
+            stage_2_results.extend(batch_result)
+            
+            # Update run with processed jobs
+            for job in batch_result:
+                run.jobs[job.job_id] = job
         
         run.stage_2_results = stage_2_results
         self.logger.info(f"Stage 2 completed for run {run_id}")
         
+        # Filter Stage 2 results to determine which jobs proceed to Stage 3
+        self._filter_stage_2_results(run_id)
+        
         return stage_2_results
     
-    def _execute_stage_3(self, run_id: str, stage_2_results: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def _filter_stage_2_results(self, run_id: str):
+        """
+        Filter Stage 2 results to determine which jobs proceed to Stage 3.
+        
+        Args:
+            run_id: Pipeline run ID
+        """
+        self.logger.info(f"Filtering Stage 2 results for run {run_id}")
+        
+        run = self.active_runs[run_id]
+        
+        # Use queue manager to filter results
+        selected_count, rejected_count = self.queue_manager.filter_stage_2_results(run)
+        
+        # Calculate Stage 3 batches for selected jobs
+        if selected_count > 0:
+            max_parallel = self.config.get('pipeline', {}).get('max_parallel_workers_stage_3', 5)
+            run.stage_3_batches = calculate_batches(selected_count, max_parallel)
+            self.logger.info(f"Calculated {len(run.stage_3_batches)} Stage 3 batches for {selected_count} selected jobs")
+    
+    def _execute_stage_3(self, run_id: str) -> Dict[str, Any]:
         """Execute Stage 3: Final Aggregation"""
         run = self.active_runs[run_id]
         self.logger.info(f"Executing Stage 3 for run {run_id}")
+        
+        # Get jobs selected for Stage 3
+        stage_3_jobs = []
+        for job in run.jobs.values():
+            if job.selected_for_stage_3 and job.stage_2_status == 'completed':
+                stage_3_jobs.append(job)
+        
+        if not stage_3_jobs:
+            self.logger.info(f"No jobs selected for Stage 3 in run {run_id}")
+            return {}
+        
+        self.logger.info(f"Processing {len(stage_3_jobs)} jobs for final aggregation")
         
         # Get AI response for this run
         ai_response = self._ai_responses.get(run_id, {})
         query = ai_response.get('query', '')
         
-        # Process final aggregation
-        final_result = self.stage_3_worker.process_run(run_id, query, run.jobs)
-        
-        run.stage_3_result = final_result
-        run.completed_at = datetime.now()
-        
-        self.logger.info(f"Stage 3 completed for run {run_id}")
-        return final_result.get('result', {})
+        # Process final aggregation using stage 3 worker
+        try:
+            # Stage3Worker expects (run_id, query, jobs)
+            final_result = self.stage_3_worker.process_run(run_id, query, stage_3_jobs)
+            self.logger.info(f"Stage 3 completed for run {run_id}")
+            return final_result
+        except Exception as e:
+            self.logger.error(f"Run {run_id} failed Stage 3: {str(e)}")
+            raise
     
     def get_pipeline_statistics(self) -> Dict[str, Any]:
         """Get comprehensive pipeline statistics"""
