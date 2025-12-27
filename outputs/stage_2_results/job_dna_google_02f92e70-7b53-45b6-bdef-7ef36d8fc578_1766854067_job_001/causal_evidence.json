@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "HubSpot Logo (SVG)",
+    "relevance_reason": "Identifies the domain as a major competitor in the marketing platform space",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Global Utility Navigation (Language Switcher: English, 日本語, Deutsch)",
+    "relevance_reason": "Indicates global market reach and localization strategy, though not a direct answer to the MMP query",
+    "ranking_factor": "site_architecture",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Unite marketing, sales, and customer service on one AI-powered customer platform",
+    "relevance_reason": "Broad platform positioning; lacks specific mention of link tracking or MMP capabilities required by query.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Get a demo ... Get started free",
+    "relevance_reason": "Dual CTA approach targeting both enterprise (demo) and PLG (free start) segments.",
+    "ranking_factor": "conversion_optimization",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Where go-to-market teams go to grow / scale / close / retain",
+    "relevance_reason": "Focuses on general GTM lifecycle rather than specific attribution or tracking metrics.",
+    "ranking_factor": "user_engagement",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "278,000 customers in over 135 countries",
+    "relevance_reason": "High-volume usage statistics used to establish market dominance and trust",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "eBay, DoorDash, Reddit",
+    "relevance_reason": "Enterprise-level client logos (eBay, DoorDash, Reddit) utilized as social proof",
+    "ranking_factor": "authority_building",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "grow their businesses with HubSpot",
+    "relevance_reason": "Broad value proposition focusing on business growth rather than specific tracking features",
+    "ranking_factor": "brand_messaging",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

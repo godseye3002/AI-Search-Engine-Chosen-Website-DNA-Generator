@@ -1,0 +1,174 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766854304_job_002",
+  "url": "https://segwise.ai/blog/mobile-measurement-partners#:~:text=Key%20Features%20to%20Consider,Tool%20Comparison",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "brand_identifier",
+        "platform_infrastructure",
+        "analytics_setup",
+        "toc_heading",
+        "toc_heading",
+        "navigation_entity",
+        "heading",
+        "meta_category",
+        "meta_time",
+        "meta_date"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 46,
+        "description_length": 161,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 66.25,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+      "relevance_reason": "Identifies 'Segwise' as the publisher; Segwise is a platform relevant to mobile growth and MMP data, establishing source authority.",
+      "ranking_factor": "source_identification",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "assets.superblog.ai",
+      "relevance_reason": "Indicates the site is built on Superblog.ai, suggesting a focus on high-performance, SEO-optimized content delivery.",
+      "ranking_factor": "competitor_tech_stack",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GTM-M4LRWT7N",
+      "relevance_reason": "Active Google Tag Manager implementation suggests sophisticated user tracking and attribution capabilities.",
+      "ranking_factor": "technical_maturity",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "Direct semantic match to the user's query regarding 'MMP platforms'.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Key Features to Consider",
+      "relevance_reason": "Indicates upcoming content addressing the 'measure marketing distribution channel performance' aspect of the query.",
+      "ranking_factor": "content_structure",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Segwise.ai features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+      "relevance_reason": "Identifies the host platform (Segwise) and its specific analytics value propositions, establishing it as a potential tool in the space.",
+      "ranking_factor": "entity_identification",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Top Mobile Measurement Partners (MMPs) in 2025",
+      "relevance_reason": "Direct keyword match for 'MMP platforms' and 'top tools' with forward-looking date.",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Tool Comparison",
+      "relevance_reason": "Explicitly categorizes content as a comparison, matching the user's intent to evaluate options.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "11 min read",
+      "relevance_reason": "Indicates significant depth of content, suggesting detailed analysis of the tools.",
+      "ranking_factor": "content_depth_indicator",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "Directly addresses the user's query regarding 'MMP platforms' by defining the core entity.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Key Features to Consider: Accurate Attribution, Data Analysis & Reporting, Seamless Integrations",
+      "relevance_reason": "Outlines the functional requirements for 'measuring marketing distribution channel performance' requested in the query.",
+      "ranking_factor": "semantic_matching",
+      "causal_strength": 0.85
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 68.026617,
+  "analysis_timestamp": "2025-12-27T22:22:58.105265"
+}

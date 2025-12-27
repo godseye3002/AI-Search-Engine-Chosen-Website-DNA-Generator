@@ -1,0 +1,174 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766854304_job_003",
+  "url": "https://segwise.ai/blog/mobile-measurement-partners#:~:text=Mobile%20Measurement%20Partners%20(MMPs)%20play,AI%2Ddriven%20insights%20in%20action.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "brand_identifier",
+        "tech_stack",
+        "tracking_infrastructure",
+        "navigation_heading",
+        "navigation_heading",
+        "brand_entity",
+        "feature_list",
+        "heading",
+        "meta_category",
+        "meta_time"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 46,
+        "description_length": 161,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 65.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+      "relevance_reason": "Identifies 'Segwise' as the publisher, establishing context as a potential B2B SaaS competitor or industry voice.",
+      "ranking_factor": "domain_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "assets.superblog.ai",
+      "relevance_reason": "Reveals competitor uses Superblog.ai for content hosting/CMS.",
+      "ranking_factor": "platform_infrastructure",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GTM-M4LRWT7N",
+      "relevance_reason": "Confirm usage of Google Tag Manager for analytics/attribution, relevant to the topic of tracking tools.",
+      "ranking_factor": "technical_implementation",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "Table of Contents entry directly matches the acronym 'MMP' from the user query.",
+      "ranking_factor": "topic_alignment",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Key Features to Consider",
+      "relevance_reason": "Indicates the article contains evaluation criteria for the requested tools.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "segwise.ai",
+      "relevance_reason": "Host domain identified via navigation links; offers 'Creative Analytics' and 'Competitor Tracking'.",
+      "ranking_factor": "source_authority",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Top Mobile Measurement Partners (MMPs) in 2025",
+      "relevance_reason": "Direct semantic match to user query for 'top link tracking tools' and 'MMP platforms'.",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Tool Comparison",
+      "relevance_reason": "Confirms the content structure aligns with the user's intent to compare options.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "February 19, 2025",
+      "relevance_reason": "Indicates highly current data, essential for 'top tools' queries.",
+      "ranking_factor": "freshness",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "Directly addresses the acronym 'MMP' from the user query, signaling definitional content.",
+      "ranking_factor": "semantic_relevance",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Key Features to Consider: Accurate Attribution, Data Analysis & Reporting, Seamless Integrations",
+      "relevance_reason": "Establishes the criteria used to evaluate the 'tracking tools' requested by the user.",
+      "ranking_factor": "content_depth_signal",
+      "causal_strength": 0.8
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 64.922654,
+  "analysis_timestamp": "2025-12-27T22:22:55.031849"
+}

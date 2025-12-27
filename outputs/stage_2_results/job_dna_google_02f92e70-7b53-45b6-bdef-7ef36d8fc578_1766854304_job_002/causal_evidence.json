@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+    "relevance_reason": "Identifies 'Segwise' as the publisher; Segwise is a platform relevant to mobile growth and MMP data, establishing source authority.",
+    "ranking_factor": "source_identification",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai",
+    "relevance_reason": "Indicates the site is built on Superblog.ai, suggesting a focus on high-performance, SEO-optimized content delivery.",
+    "ranking_factor": "competitor_tech_stack",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Active Google Tag Manager implementation suggests sophisticated user tracking and attribution capabilities.",
+    "ranking_factor": "technical_maturity",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "Direct semantic match to the user's query regarding 'MMP platforms'.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Key Features to Consider",
+    "relevance_reason": "Indicates upcoming content addressing the 'measure marketing distribution channel performance' aspect of the query.",
+    "ranking_factor": "content_structure",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Segwise.ai features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+    "relevance_reason": "Identifies the host platform (Segwise) and its specific analytics value propositions, establishing it as a potential tool in the space.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top Mobile Measurement Partners (MMPs) in 2025",
+    "relevance_reason": "Direct keyword match for 'MMP platforms' and 'top tools' with forward-looking date.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Tool Comparison",
+    "relevance_reason": "Explicitly categorizes content as a comparison, matching the user's intent to evaluate options.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "11 min read",
+    "relevance_reason": "Indicates significant depth of content, suggesting detailed analysis of the tools.",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "Directly addresses the user's query regarding 'MMP platforms' by defining the core entity.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Key Features to Consider: Accurate Attribution, Data Analysis & Reporting, Seamless Integrations",
+    "relevance_reason": "Outlines the functional requirements for 'measuring marketing distribution channel performance' requested in the query.",
+    "ranking_factor": "semantic_matching",
+    "causal_strength": 0.85
+  }
+]

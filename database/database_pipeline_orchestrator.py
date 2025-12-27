@@ -12,6 +12,7 @@ import json
 import uuid
 import time
 import logging
+import hashlib
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, field, asdict
@@ -78,6 +79,39 @@ class DatabasePipelineOrchestrator:
         
         return logger
     
+    def _generate_input_hash(self, input_rows: List[Any]) -> str:
+        """
+        Generate a hash from input row IDs to detect data changes
+        
+        Args:
+            input_rows: List of input database rows
+            
+        Returns:
+            SHA-256 hex digest of sorted input IDs
+        """
+        if not input_rows:
+            # Handle empty input
+            return hashlib.sha256(b"").hexdigest()
+        
+        # Extract IDs from rows (assuming they have 'id' field)
+        try:
+            ids = [str(row.id) for row in input_rows]
+        except AttributeError:
+            # Fallback if rows don't have 'id' field
+            ids = [str(row) for row in input_rows]
+        
+        # Sort IDs to ensure consistent hash regardless of order
+        sorted_ids = sorted(ids)
+        
+        # Combine IDs into a single string
+        combined_ids = ",".join(sorted_ids)
+        
+        # Generate SHA-256 hash
+        hash_digest = hashlib.sha256(combined_ids.encode('utf-8')).hexdigest()
+        
+        self.logger.debug(f"Generated input hash from {len(sorted_ids)} rows: {hash_digest[:12]}...")
+        return hash_digest
+    
     def _create_directories(self):
         """Create necessary output directories"""
         base_dir = self.config.get('pipeline', {}).get('base_output_dir', 'outputs')
@@ -105,19 +139,40 @@ class DatabasePipelineOrchestrator:
         self.logger.info(f"Starting database pipeline processing for product {product_id} from {data_source.value} source")
         
         try:
-            # Check if analysis already exists
-            existing_analysis = self.db_manager.check_existing_analysis(data_source, product_id)
-            if existing_analysis and existing_analysis.status == "completed":
-                self.logger.info(f"Product {product_id} already has completed analysis")
-                return {
-                    "status": "already_exists",
-                    "product_id": product_id,
-                    "data_source": data_source.value,
-                    "existing_analysis_id": existing_analysis.id,
-                    "message": "Analysis already completed"
-                }
+            # Fetch all input rows for the product first
+            input_rows = self.db_manager.fetch_all_input_rows_for_product(data_source, product_id)
             
-            # Fetch product data from database
+            # Generate hash from input rows
+            current_input_hash = self._generate_input_hash(input_rows)
+            self.logger.info(f"Generated input hash for product {product_id}: {current_input_hash[:12]}...")
+            
+            # Check if analysis already exists and compare data freshness
+            should_skip, existing_analysis = self.db_manager.check_existing_analysis(data_source, product_id, current_input_hash)
+            
+            if should_skip:
+                if existing_analysis:
+                    self.logger.info(f"Product {product_id} data is unchanged, skipping processing")
+                    return {
+                        "status": "skipped",
+                        "product_id": product_id,
+                        "data_source": data_source.value,
+                        "existing_analysis_id": existing_analysis.id,
+                        "message": "Skipped - Up to date"
+                    }
+                else:
+                    # This shouldn't happen with the new logic, but keeping for safety
+                    self.logger.info(f"Product {product_id} has no existing analysis, but should_skip is True")
+                    pass
+            elif existing_analysis:
+                # Data has changed, log this and continue with reprocessing
+                self.logger.info(f"Product {product_id} data has changed, reprocessing (existing analysis ID: {existing_analysis.id})")
+                is_reprocessing = True
+            else:
+                # New product
+                self.logger.info(f"Product {product_id} has no existing analysis, processing for the first time")
+                is_reprocessing = False
+            
+            # Get the first product record for processing (legacy behavior)
             product_record = self.db_manager.fetch_product_by_id(data_source, product_id)
             if not product_record:
                 raise ValueError(f"Product {product_id} not found in {data_source.value} table")
@@ -159,12 +214,19 @@ class DatabasePipelineOrchestrator:
                 product_id=product_id,
                 run_id=run_id,
                 dna_blueprint=master_blueprint,
-                status="completed"
+                status="completed",
+                input_data_hash=current_input_hash
             )
             
             saved_record = self.db_manager.save_dna_analysis(data_source, dna_record)
             
             self.logger.info(f"Successfully processed product {product_id} with analysis ID {saved_record.id}")
+            
+            # Determine the appropriate message
+            if 'is_reprocessing' in locals() and is_reprocessing:
+                message = "Processed - Data Updated"
+            else:
+                message = "Processed - New Data"
             
             return {
                 "status": "completed",
@@ -172,7 +234,8 @@ class DatabasePipelineOrchestrator:
                 "data_source": data_source.value,
                 "run_id": run_id,
                 "analysis_id": saved_record.id,
-                "final_output_path": f"outputs/stage_3_results/run_{run_id}/final_aggregation.json"
+                "final_output_path": f"outputs/stage_3_results/run_{run_id}/final_aggregation.json",
+                "message": message
             }
             
         except Exception as e:

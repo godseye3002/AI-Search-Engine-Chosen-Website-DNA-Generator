@@ -52,6 +52,7 @@ class DNAAnalysisRecord:
     run_id: str
     dna_blueprint: Dict[str, Any]
     status: str = "completed"
+    input_data_hash: Optional[str] = None
     id: Optional[int] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
@@ -172,6 +173,49 @@ class SupabaseDataManager:
             logger.error(f"Error fetching product {product_id} from {table_name}: {str(e)}")
             raise
     
+    def fetch_all_input_rows_for_product(self, data_source: DataSource, product_id: str) -> List[ProductAnalysisRecord]:
+        """
+        Fetch all input rows for a specific product to generate hash
+        
+        Args:
+            data_source: GOOGLE or PERPLEXITY
+            product_id: Product identifier
+            
+        Returns:
+            List of all ProductAnalysisRecord objects for the product
+        """
+        table_name = self.input_tables[data_source]
+        logger.info(f"Fetching all input rows for product {product_id} from {table_name}")
+        
+        try:
+            response = self.client.table(table_name).select(
+                "id, product_id, raw_serp_results, created_at, updated_at"
+            ).eq("product_id", product_id).execute()
+            
+            if response.data and len(response.data) > 0:
+                records = []
+                for item in response.data:
+                    record = ProductAnalysisRecord(
+                        id=item['id'],
+                        product_id=item['product_id'],
+                        raw_serp_results=(
+                            json.loads(item['raw_serp_results']) if isinstance(item['raw_serp_results'], str) else item['raw_serp_results']
+                        ),
+                        created_at=item.get('created_at'),
+                        updated_at=item.get('updated_at')
+                    )
+                    records.append(record)
+                
+                logger.info(f"Found {len(records)} input rows for product {product_id}")
+                return records
+            else:
+                logger.warning(f"No input rows found for product {product_id} in {table_name}")
+                return []
+                
+        except Exception as e:
+            logger.error(f"Error fetching input rows for product {product_id} from {table_name}: {str(e)}")
+            raise
+    
     def save_dna_analysis(self, data_source: DataSource, record: DNAAnalysisRecord) -> DNAAnalysisRecord:
         """
         Save DNA analysis results to the appropriate output table
@@ -195,6 +239,10 @@ class SupabaseDataManager:
                 "status": record.status
             }
             
+            # Add input_data_hash if provided
+            if record.input_data_hash is not None:
+                data["input_data_hash"] = record.input_data_hash
+            
             response = self.client.table(table_name).insert(data).execute()
             
             if response.data and len(response.data) > 0:
@@ -205,6 +253,7 @@ class SupabaseDataManager:
                     run_id=saved_item['run_id'],
                     dna_blueprint=saved_item['dna_blueprint'],
                     status=saved_item['status'],
+                    input_data_hash=saved_item.get('input_data_hash'),
                     created_at=saved_item.get('created_at'),
                     updated_at=saved_item.get('updated_at')
                 )
@@ -248,23 +297,27 @@ class SupabaseDataManager:
             logger.error(f"Error updating status for record {record_id}: {str(e)}")
             return False
     
-    def check_existing_analysis(self, data_source: DataSource, product_id: str) -> Optional[DNAAnalysisRecord]:
+    def check_existing_analysis(self, data_source: DataSource, product_id: str, current_input_hash: Optional[str] = None) -> Tuple[bool, Optional[DNAAnalysisRecord]]:
         """
-        Check if DNA analysis already exists for a product
+        Check if DNA analysis already exists for a product and compare data freshness
         
         Args:
             data_source: GOOGLE or PERPLEXITY
             product_id: Product identifier
+            current_input_hash: Hash of current input data for freshness comparison
             
         Returns:
-            Existing DNAAnalysisRecord or None
+            Tuple of (should_skip, existing_record)
+            - should_skip: True if data is unchanged, False if should process
+            - existing_record: The existing record if found, None otherwise
         """
         table_name = self.output_tables[data_source]
         logger.info(f"Checking existing analysis for product {product_id} in {table_name}")
         
         try:
+            # Include input_data_hash in the query
             response = self.client.table(table_name).select(
-                "id, product_id, run_id, dna_blueprint, status, created_at, updated_at"
+                "id, product_id, run_id, dna_blueprint, status, input_data_hash, created_at, updated_at"
             ).eq("product_id", product_id).execute()
             
             if response.data and len(response.data) > 0:
@@ -278,15 +331,27 @@ class SupabaseDataManager:
                     created_at=item.get('created_at'),
                     updated_at=item.get('updated_at')
                 )
-                logger.info(f"Found existing analysis for product {product_id} with status '{record.status}'")
-                return record
+                
+                existing_hash = item.get('input_data_hash')
+                
+                if current_input_hash is not None:
+                    if existing_hash == current_input_hash:
+                        logger.info(f"Product {product_id} data is unchanged (hash: {current_input_hash[:12]}...), skipping")
+                        return True, record
+                    else:
+                        logger.info(f"Product {product_id} data has changed (old: {existing_hash[:12] if existing_hash else 'None'}..., new: {current_input_hash[:12]}...), reprocessing")
+                        return False, record
+                else:
+                    # Legacy behavior - if no hash provided, just check existence
+                    logger.info(f"Found existing analysis for product {product_id} with status '{record.status}' (no hash comparison)")
+                    return True, record
             else:
                 logger.info(f"No existing analysis found for product {product_id}")
-                return None
+                return False, None
                 
         except Exception as e:
             logger.error(f"Error checking existing analysis for product {product_id}: {str(e)}")
-            return None
+            raise
     
     def get_processing_statistics(self) -> Dict[str, Any]:
         """
