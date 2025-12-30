@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "best-marketing-analytics-tools.png",
+    "relevance_reason": "The preloaded hero image filename contains keywords that directly align with the user's intent to find top marketing tools.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Next.js, Contentful CMS",
+    "relevance_reason": "The site uses a modern stack (Next.js framework, Contentful headless CMS) focused on performance, a key factor for SEO and user experience.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics",
+    "relevance_reason": "Identifies the content publisher as 'AgencyAnalytics', a marketing analytics platform. This provides context about the source but does not address the user query.",
+    "ranking_factor": "brand_context",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics G2 Leader Fall 2025",
+    "relevance_reason": "The footer contains G2 award badges, establishing the publisher's authority in the 'Business Intelligence' space, which is tangentially related to the query's domain.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "18 Best Marketing Analytics Tools in 2025 (Features + Reviews)",
+    "relevance_reason": "The headline targets a broad, high-intent keyword ('best marketing analytics tools') that encompasses the user's more specific query about MMPs, indicating the page's overall topic.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Compare features, pricing, and pros and cons of the 18 best marketing analytics tools in 2025.",
+    "relevance_reason": "The description explicitly promises a comparative analysis (features, pricing, pros/cons), which directly matches the user's intent to evaluate and select a tool.",
+    "ranking_factor": "user_intent_matching",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "\"datePublished\": \"2025-07-15...\"",
+    "relevance_reason": "Content is intentionally future-dated to 2025, a common SEO tactic to maximize the perceived freshness of the content for a longer duration.",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.8
+  }
+]

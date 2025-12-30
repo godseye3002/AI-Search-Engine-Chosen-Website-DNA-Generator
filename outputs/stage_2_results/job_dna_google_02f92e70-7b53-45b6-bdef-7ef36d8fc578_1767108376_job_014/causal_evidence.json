@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Identifies the use of Google Tag Manager, a core component for deploying tracking scripts and managing marketing analytics.",
+    "ranking_factor": "tech_stack_indicator",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai/.../favicon-segwise...",
+    "relevance_reason": "Reveals the publisher is likely 'Segwise' and the content platform is 'Superblog.ai', identifying the competitor and their content management system.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "/*! tailwindcss v4.1.8",
+    "relevance_reason": "Indicates the use of Tailwind CSS, providing insight into the site's front-end development framework.",
+    "ranking_factor": "tech_stack_indicator",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+    "relevance_reason": "Identifies the site owner (segwise.ai) and its product's focus on creative performance, which is a sub-topic of marketing channel analysis. This provides context on the author's perspective.",
+    "ranking_factor": "author_expertise",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile App Analytics Tools?",
+    "relevance_reason": "The Table of Contents (TOC) heading directly addresses the broader category of tools the user is searching for (MMPs are a type of mobile app analytics tool), indicating the article's intent to cover this topic.",
+    "ranking_factor": "content_structure",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Best Mobile App Analytics Tool in 2025: Ultimate Guide for Marketers",
+    "relevance_reason": "The H1 title directly aligns with the user's intent to find and compare tools. 'Mobile App Analytics' is the broader category that includes MMPs and link tracking.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "<time datetime=\"2025-12-02T05:54:47Z\">December 02, 2025</time>",
+    "relevance_reason": "The article is future-dated, a specific SEO tactic to maintain a high perception of freshness and relevance for forward-looking queries.",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "8 min read",
+    "relevance_reason": "Indicates a piece of substantial length, suggesting a comprehensive overview rather than a brief list, which is valuable for a user doing in-depth research.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "List of Top 5 Mobile App Analytics Tools in 2025",
+    "relevance_reason": "The heading directly addresses the user's intent to find a list of 'top tools', indicating a listicle format that is highly relevant to the query.",
+    "ranking_factor": "content_format",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Segwise",
+    "relevance_reason": "A specific tool is named, indicating the content provides concrete examples relevant to the user's search for platforms.",
+    "ranking_factor": "entity_mention",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "What Are Mobile App Analytics Tools?",
+    "relevance_reason": "The content starts with a foundational definition, suggesting it's a comprehensive guide aimed at users at various stages of the research funnel.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.85
+  }
+]

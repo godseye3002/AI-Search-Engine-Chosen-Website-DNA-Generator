@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<title>Top 6 Mobile Measurement Partners In India For Accurate App Analytics (2025)</title>",
+    "relevance_reason": "The title directly matches the user's query for 'top... MMP platforms'. It specifies a number ('6') and a future year ('2025'), indicating a fresh, list-based article.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<meta content=\"Discover the top 6 mobile measurement partners in India to track your app marketing ROI and performance effectively in 2025.\" name=\"description\"/>",
+    "relevance_reason": "The description reinforces the topic and highlights key benefits like tracking 'app marketing ROI and performance', which aligns with the user's goal of measuring channel performance.",
+    "ranking_factor": "user_intent_alignment",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->",
+    "relevance_reason": "Indicates the use of a professional SEO plugin (Rank Math PRO), suggesting a deliberate and potentially sophisticated content and SEO strategy.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 6 Mobile Measurement Partners in India (2025 Guide)",
+    "relevance_reason": "The H1 title directly addresses the user's query for 'top' 'MMP platforms' with a specific, high-value angle (geographic focus and future-dating).",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Mobile Measurement Partners (MMPs) are third-party platforms that help app marketers attribute installs, measure campaign performance, and detect fraud.",
+    "relevance_reason": "This sentence provides a concise definition of the core entity (MMP), directly aligning with the user's goal of measuring channel performance.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch stands out for its deep linking and cross-platform attribution capabilities.",
+    "relevance_reason": "Highlights a specific tool's unique value proposition, which is a key piece of information for a user comparing options.",
+    "ranking_factor": "entity_differentiation",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "tel:(309)%208855-314",
+    "relevance_reason": "A telephone link, which is a form of contact information. This is completely irrelevant to the user's query about marketing tools.",
+    "ranking_factor": "off_topic_entity",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "<div class=\"ekit-sidebar-group info-group ekit-slide\">",
+    "relevance_reason": "The content is a sidebar widget, which is auxiliary to the main content and typically contains navigation, ads, or contact info, not primary information answering a query.",
+    "ranking_factor": "low_priority_section",
+    "causal_strength": 0.0
+  }
+]

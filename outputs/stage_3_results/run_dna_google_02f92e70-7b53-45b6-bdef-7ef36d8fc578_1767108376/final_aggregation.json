@@ -1,0 +1,202 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "top link tracking tools to measure marketing distribution channel performance for onboarding (MMP platforms)",
+  "sources_analyzed": 30,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Attract clicks with a specific, fresh, and comprehensive title",
+      "optimized_pattern_template": "Top [Number] Best Mobile Measurement Partners (MMPs) in [Future_Year]",
+      "adoption_rate": 0.8
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Define what an MMP is and state the article's value proposition (e.g., comparing tools on key criteria like attribution, fraud prevention, and pricing). Must include key entities: AppsFlyer, Adjust, Branch.",
+      "adoption_rate": 0.9
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "explanatory_section",
+      "consensus_intent": "Educate the user on the core topic and its importance",
+      "optimized_pattern_template": "What is a Mobile Measurement Partner (MMP) and Why Do You Need One?",
+      "adoption_rate": 0.4
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "criteria_list",
+      "consensus_intent": "Establish an evaluation framework before listing tools",
+      "optimized_pattern_template": "Key Features to Consider When Choosing an MMP",
+      "content_requirement": "Must cover: Attribution Accuracy, Fraud Prevention, Deep Linking, Integration Capabilities, Pricing, and Analytics Suite.",
+      "adoption_rate": 0.3
+    },
+    {
+      "sequence_order": 5,
+      "component_type": "comparison_block",
+      "consensus_intent": "Detail and compare the top tools to fulfill the user's primary search intent",
+      "content_requirement": "Provide a detailed review for each of the top [Number] MMPs, including pros, cons, and unique features.",
+      "adoption_rate": 0.9
+    },
+    {
+      "sequence_order": 6,
+      "component_type": "faq_section",
+      "consensus_intent": "Capture long-tail keywords and address secondary user questions",
+      "content_requirement": "Include questions like 'How do MMPs work?' and 'Is Google Analytics an MMP?'. Use FAQPage schema.",
+      "adoption_rate": 0.15
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "AppsFlyer": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "A leading MMP known for its comprehensive analytics suite, deep linking capabilities, and a large ecosystem of over 9,000 integrated partners.",
+      "high_value_attributes": [
+        {
+          "data_point": "Offers a 98% accuracy rate in attribution.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        },
+        {
+          "data_point": "Processes over 100 billion mobile events daily.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        },
+        {
+          "data_point": "Blocks over $1 billion in ad fraud annually.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "mobile attribution",
+        "deep linking",
+        "fraud protection",
+        "analytics suite",
+        "ROAS"
+      ],
+      "frequency_across_sources": 0.13
+    },
+    "Adjust": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "A major MMP praised for its strong fraud prevention suite and granular cohort analysis capabilities.",
+      "high_value_attributes": [
+        {
+          "data_point": "Used by over 50,000 apps worldwide.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "fraud prevention",
+        "cohort analysis",
+        "attribution",
+        "mobile analytics",
+        "data privacy"
+      ],
+      "frequency_across_sources": 0.1
+    },
+    "Branch": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "An MMP that excels at deep linking technology, creating seamless user journeys from web-to-app and improving user onboarding experiences.",
+      "high_value_attributes": [
+        {
+          "data_point": "Core strength is creating seamless user journeys from web to app, including deferred deep linking.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        }
+      ],
+      "semantic_keywords": [
+        "deep linking",
+        "user journey",
+        "onboarding",
+        "web-to-app",
+        "attribution"
+      ],
+      "frequency_across_sources": 0.07
+    },
+    "MobileAction": {
+      "classification": "Mobile App Intelligence Platform",
+      "primary_definition": "A mobile intelligence platform providing tools for ad and app store optimization (ASO) to improve marketing performance.",
+      "high_value_attributes": [
+        {
+          "data_point": "Case study with Square showed a 50% ROAS uplift and a 40% CPC decrease.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "ad intelligence",
+        "ASO",
+        "ROAS",
+        "CPC",
+        "app analytics"
+      ],
+      "frequency_across_sources": 0.07
+    },
+    "Key Metrics": {
+      "classification": "Performance Metric",
+      "primary_definition": "Key Performance Indicators (KPIs) used to evaluate the effectiveness of marketing channels and MMPs.",
+      "high_value_attributes": [
+        {
+          "data_point": "Critical metrics to track include LTV (Lifetime Value), ROAS (Return on Ad Spend), and retention rates.",
+          "source_weight": "Medium (consensus across multiple sources)",
+          "confidence": 1
+        }
+      ],
+      "semantic_keywords": [
+        "LTV",
+        "ROAS",
+        "retention",
+        "CPC",
+        "KPI"
+      ],
+      "frequency_across_sources": 0.1
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "listicle_comparison",
+        "usage_frequency": 0.85,
+        "effectiveness_score": 0.95
+      },
+      {
+        "format_type": "buyers_guide",
+        "usage_frequency": 0.2,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "downloadable_asset",
+        "usage_frequency": 0.1,
+        "effectiveness_score": 0.8
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2800,
+      "entity_density_optimal": 0.03,
+      "readability_score": 0.7
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "Use a future year (e.g., 2025, 2026) in the H1 title and meta title.",
+      "Explicitly define 'Mobile Measurement Partner (MMP)'.",
+      "List and compare at least 8-10 specific MMP tools, including leaders like AppsFlyer, Adjust, and Branch.",
+      "Include a section on 'Key Criteria for Selection' (e.g., Attribution, Fraud, Pricing).",
+      "Mention key performance metrics like ROAS, LTV, and CPC."
+    ],
+    "negative_constraints": [
+      "Avoid overly broad titles like 'Best Marketing Tools'.",
+      "Do not present a biased review favoring one tool without justification (unless it's a direct competitor page).",
+      "Avoid using outdated information or past years in titles."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true
+    }
+  },
+  "generation_timestamp": "2025-12-30T21:02:54.836656",
+  "sources_processed": 30
+}

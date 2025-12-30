@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Identifies the use of Google Tag Manager, a tool for managing marketing and analytics scripts. This is part of the broader marketing measurement technology stack.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+    "relevance_reason": "The favicon URL indicates the brand is likely 'Segwise'. A company in the analytics space would have high topical authority on MMPs and link tracking.",
+    "ranking_factor": "brand_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai",
+    "relevance_reason": "Identifies that the content is hosted on the 'Superblog' platform, which could be a factor in content strategy or technology choices.",
+    "ranking_factor": "platform_analysis",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+    "relevance_reason": "The primary navigation for 'segwise.ai' reveals its product focus on marketing analytics, which is contextually relevant to the user's query about measuring performance.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile App Analytics Tools?",
+    "relevance_reason": "The Table of Contents (ToC) heading directly addresses the broader category of the user's query (MMP platforms are a type of mobile app analytics tool), indicating the page's content is on-topic.",
+    "ranking_factor": "content_structure",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Best Mobile App Analytics Tool in 2025: Ultimate Guide for Marketers",
+    "relevance_reason": "The H1 title is highly relevant to the user query, addressing the broader category of 'Mobile App Analytics Tools' which includes MMPs and link tracking. The use of 'Best' and 'Ultimate Guide' targets a comparison-oriented search intent.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "December 02, 2025",
+    "relevance_reason": "The article is future-dated, a specific SEO tactic to signal long-term relevance and freshness to search engines, potentially increasing its ranking for competitive terms.",
+    "ranking_factor": "content_freshness_tactic",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "8 min read",
+    "relevance_reason": "Provides an estimate of content length, suggesting a comprehensive piece which is often favored by search algorithms for 'guide' or 'best of' type queries.",
+    "ranking_factor": "user_experience_signal",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "List of Top 5 Mobile App Analytics Tools in 2025",
+    "relevance_reason": "This heading from the Table of Contents directly promises a list of tools, which aligns perfectly with the user's query for 'top...tools'. The year '2025' also signals content freshness.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Segwise",
+    "relevance_reason": "Identifies a specific tool/platform, which is a primary entity the user is searching for.",
+    "ranking_factor": "entity_coverage",
+    "causal_strength": 0.85
+  }
+]

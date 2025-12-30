@@ -1,0 +1,199 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767105110_job_019",
+  "url": "https://www.appsflyer.com/blog/measurement-analytics/mmp-buying-guide/#:~:text=Converting%20users%20across%20platforms%20and,installs%20through%20email%20campaigns%20alone.",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "structured_data",
+        "company_entity",
+        "navigation_link",
+        "navigation_link",
+        "brand_entity",
+        "heading",
+        "metadata",
+        "navigation"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 49,
+        "description_length": 152,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 68.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "The marketer’s guide to buying an MMP | AppsFlyer",
+      "relevance_reason": "Directly addresses the user's query about MMP platforms by positioning the content as an authoritative buyer's guide.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Cut through the noise with this in-depth guide into buying an MMP helping you transform your marketing efforts from guesswork to a data-driven strategy.",
+      "relevance_reason": "States a clear value proposition that aligns with the user's goal of measuring performance to enable a data-driven strategy.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "'Categories': 'Measurement &amp; analytics'",
+      "relevance_reason": "Internal data layer explicitly categorizes the content under 'Measurement & analytics', confirming its topical relevance to the user's query.",
+      "ranking_factor": "content_categorization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Mobile Attribution",
+      "relevance_reason": "This is a core feature of an MMP platform, directly addressing the user's need to measure marketing channel performance for mobile.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "CTV Attribution, PC & Console Attribution",
+      "relevance_reason": "These navigation items reveal the competitor's (AppsFlyer) value proposition of being a cross-platform measurement tool, not limited to mobile.",
+      "ranking_factor": "value_proposition",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "appsflyer.com",
+      "relevance_reason": "The domain identifies the competitor as AppsFlyer, a major player in the MMP space and highly relevant to the user's query.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "The marketer’s guide to buying an MMP",
+      "relevance_reason": "The H1 title directly addresses the user's intent to evaluate and select an MMP, which is a core part of the query.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "14 min read",
+      "relevance_reason": "Indicates a comprehensive, long-form article, suggesting high authority and in-depth coverage of the topic.",
+      "ranking_factor": "content_depth",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "What's inside?",
+      "relevance_reason": "The presence of a Table of Contents (ToC) signals a well-structured, user-friendly article, which is a positive quality signal for complex topics like MMP evaluation.",
+      "ranking_factor": "content_structure",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "https://www.appsflyer.com/start/demo/",
+      "relevance_reason": "The URL identifies the competitor as AppsFlyer, a major Mobile Measurement Partner (MMP), which is directly relevant to the user's query.",
+      "ranking_factor": "brand_identification",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Contact sales / Sign up free",
+      "relevance_reason": "Reveals a dual-funnel conversion strategy, targeting both enterprise (sales-led) and self-serve (product-led) user segments.",
+      "ranking_factor": "conversion_strategy",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "style=\"display: none !important;\"",
+      "relevance_reason": "Indicates that this CTA banner is intentionally hidden from the user. This could be for A/B testing, personalization, or it could be deprecated code, which provides a technical insight into the competitor's web practices.",
+      "ranking_factor": "technical_implementation",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Dec 16, 2024",
+      "relevance_reason": "Indicates a strong content freshness strategy. A future date suggests the content is either scheduled or intentionally post-dated to maintain a high ranking.",
+      "ranking_factor": "content_freshness_signal",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "14 min read",
+      "relevance_reason": "Signals a long-form, in-depth article. This suggests the competitor is targeting comprehensiveness, which is a known factor for authority and user engagement.",
+      "ranking_factor": "content_depth_signal",
+      "causal_strength": 0.1
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 97.826532,
+  "analysis_timestamp": "2025-12-30T20:08:12.019194"
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Top 10 Best Link Tracking Software for Effective Performance Analysis",
+    "relevance_reason": "The H1 title directly addresses the user's core query for 'link tracking tools' and 'performance' measurement, indicating high topical relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Published: November 16, 2025",
+    "relevance_reason": "The future publication date suggests the content is either scheduled and intended to be fresh, or is an error. This provides insight into the publisher's content strategy and planning.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 10 Best Link Tracking Software for Effective Performance Analysis",
+    "relevance_reason": "The H1 title directly matches the user's intent to find a list of top link tracking tools.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "These tools turn every shared link or QR code into a measurable asset, revealing where traffic comes from and which campaigns drive sales.",
+    "relevance_reason": "This sentence clearly articulates the core value proposition of link tracking, which aligns with the user's goal of measuring channel performance.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "In this guide, we compare the top 10 link tracking platforms. We’ll define what link tracking software does, highlight must-have features, and examine each tool’s strengths, weaknesses, and pricing.",
+    "relevance_reason": "This statement sets clear expectations for a comprehensive comparison, a high-value format for users performing competitive analysis.",
+    "ranking_factor": "content_structure_signal",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "10 Best Free Link Shortener Options in 2025",
+    "relevance_reason": "The linked content discusses a category of tools ('Link Shortener') that is relevant to the 'link tracking tools' part of the user's query.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "30+ Marketing Metrics to Track",
+    "relevance_reason": "The linked content addresses the 'measure marketing... performance' aspect of the query by focusing on metrics, though not specific to MMPs.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "QR Code Analytics",
+    "relevance_reason": "Identifies a niche but relevant tracking method (QR codes) which can be a marketing distribution channel.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.4
+  }
+]

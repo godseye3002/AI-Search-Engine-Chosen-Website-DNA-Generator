@@ -5,9 +5,14 @@ from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 from dotenv import load_dotenv
 import traceback
+from typing import Any, Dict, Optional
+
+import google.generativeai as genai
 
 # Load environment variables
 load_dotenv()
+
+SERVER_NAME = "Deep Analysis Website DNA Extracter"
 
 def summarize_error(error):
     """
@@ -23,6 +28,174 @@ Error Message: {error_message}
 Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
     """
     return summary
+
+def _format_error_payload(
+    error: Exception,
+    error_context: str = "",
+    metadata: Optional[Dict[str, Any]] = None,
+    stack_trace: Optional[str] = None,
+) -> Dict[str, Any]:
+    metadata = metadata or {}
+
+    return {
+        "server_name": SERVER_NAME,
+        "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+        "timestamp_local": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "error_type": type(error).__name__,
+        "error_message": str(error),
+        "context": error_context or "",
+        "product_id": metadata.get("product_id"),
+        "data_source": metadata.get("data_source"),
+        "run_id": metadata.get("run_id"),
+        "job_id": metadata.get("job_id"),
+        "stage": metadata.get("stage"),
+        "url": metadata.get("url"),
+        "extra": metadata.get("extra", {}),
+        "stack_trace": stack_trace or traceback.format_exc(),
+    }
+
+def generate_ai_error_message(error_payload: Dict[str, Any]) -> str:
+    """Generate an expert-engineer style error email body using Gemini.
+
+    Falls back to a deterministic summary if Gemini is unavailable.
+    """
+    api_key = os.getenv('GEMINI_API_KEY', '')
+    if not api_key:
+        return (
+            f"Server: {error_payload.get('server_name')}\n"
+            f"Time: {error_payload.get('timestamp_local')}\n"
+            f"Error Type: {error_payload.get('error_type')}\n"
+            f"Error Message: {error_payload.get('error_message')}\n\n"
+            f"Context: {error_payload.get('context')}\n\n"
+            f"Product: {error_payload.get('product_id')}\n"
+            f"Run ID: {error_payload.get('run_id')}\n"
+            f"Job ID: {error_payload.get('job_id')}\n"
+        )
+
+    try:
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel("gemini-2.5-pro")
+
+        prompt = f"""
+You are a senior backend reliability engineer and debugging expert.
+
+Write a concise, high-signal incident email for engineers.
+
+Requirements:
+- Start with a 1-line incident headline.
+- Include: server_name, time (UTC + local), product_id, data_source, run_id, job_id, stage.
+- Explain likely root causes and immediate next debugging steps.
+- Do NOT hide details; if info is missing say 'unknown'.
+- Keep it readable in email.
+- Output plain text only (no markdown).
+
+Incident payload (JSON):
+{error_payload}
+"""
+
+        response = model.generate_content(prompt)
+        text = (response.text or "").strip()
+        return text or f"AI summary unavailable.\n\n{summarize_error(Exception(error_payload.get('error_message')))}"
+    except Exception as e:
+        # Hard fallback: never allow AI issues to mask the original error
+        return (
+            f"AI summarization failed ({type(e).__name__}): {e}\n\n"
+            f"Server: {error_payload.get('server_name')}\n"
+            f"Time (UTC): {error_payload.get('timestamp_utc')}\n"
+            f"Time (Local): {error_payload.get('timestamp_local')}\n"
+            f"Product: {error_payload.get('product_id')}\n"
+            f"Run ID: {error_payload.get('run_id')}\n"
+            f"Job ID: {error_payload.get('job_id')}\n"
+            f"Stage: {error_payload.get('stage')}\n"
+            f"Error Type: {error_payload.get('error_type')}\n"
+            f"Error Message: {error_payload.get('error_message')}\n\n"
+            f"Context: {error_payload.get('context')}\n\n"
+            f"Stack Trace:\n{error_payload.get('stack_trace')}\n"
+        )
+
+
+def send_ai_error_email(
+    error: Exception,
+    error_context: str = "",
+    metadata: Optional[Dict[str, Any]] = None,
+    stack_trace: Optional[str] = None,
+) -> bool:
+    """Send error notification email with Gemini-generated expert summary.
+
+    This keeps the same SMTP config as send_error_email().
+    """
+    payload = _format_error_payload(
+        error=error,
+        error_context=error_context,
+        metadata=metadata,
+        stack_trace=stack_trace,
+    )
+
+    # Get SMTP configuration from environment variables
+    smtp_host = os.getenv('SMTP_HOST', 'smtp.gmail.com')
+    smtp_port = int(os.getenv('SMTP_PORT', 587))
+    smtp_user = os.getenv('SMTP_USER')
+    smtp_pass = os.getenv('SMTP_PASS')
+    from_email = os.getenv('FROM_EMAIL', smtp_user)
+    to_email = os.getenv('ERROR_NOTIFICATION_EMAIL', smtp_user)
+
+    if not smtp_user or not smtp_pass:
+        print("ERROR: SMTP credentials not configured in environment variables")
+        return False
+
+    ai_message = generate_ai_error_message(payload)
+
+    product_id = payload.get('product_id') or "unknown_product"
+    run_id = payload.get('run_id') or "unknown_run"
+    error_type = payload.get('error_type') or "UnknownError"
+
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = f"🚨 {SERVER_NAME} | {error_type} | product={product_id} | run={run_id}"
+    msg['From'] = from_email
+    msg['To'] = to_email
+
+    html_body = f"""
+    <div style="background:#f4f6fb;padding:40px 0;min-height:100vh;font-family:Arial,sans-serif;">
+        <div style="max-width:740px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:28px 28px 20px 28px;">
+            <div style="font-size:20px;font-weight:700;color:#dc3545;margin-bottom:10px;">{SERVER_NAME} - Error Notification</div>
+            <div style="font-size:13px;color:#555;margin-bottom:18px;">UTC: {payload.get('timestamp_utc')} | Local: {payload.get('timestamp_local')}</div>
+
+            <div style="background:#f8f9fa;border-left:4px solid #6c757d;padding:14px;margin-bottom:14px;border-radius:4px;">
+                <div style="font-size:13px;color:#333;font-weight:700;margin-bottom:6px;">AI Incident Summary</div>
+                <div style="font-size:13px;color:#333;white-space:pre-wrap;">{ai_message}</div>
+            </div>
+
+            <div style="background:#fff3cd;border-left:4px solid #ffc107;padding:14px;margin-bottom:14px;border-radius:4px;">
+                <div style="font-size:13px;color:#856404;font-weight:700;margin-bottom:6px;">Raw Error</div>
+                <div style="font-size:12px;color:#856404;white-space:pre-wrap;">Error Type: {payload.get('error_type')}\nError Message: {payload.get('error_message')}\nStage: {payload.get('stage')}\nProduct: {payload.get('product_id')}\nRun ID: {payload.get('run_id')}\nJob ID: {payload.get('job_id')}</div>
+            </div>
+
+            {f'<div style="background:#e7f3ff;border-left:4px solid #0066cc;padding:14px;margin-bottom:14px;border-radius:4px;"><div style="font-size:12px;color:#004085;"><strong>Context:</strong> {payload.get("context")}</div></div>' if payload.get('context') else ''}
+
+            <div style="background:#f8f9fa;border-left:4px solid #6c757d;padding:14px;margin-bottom:8px;border-radius:4px;">
+                <div style="font-size:13px;color:#495057;font-weight:700;margin-bottom:6px;">Stack Trace</div>
+                <div style="font-size:11px;color:#495057;font-family:Consolas,monospace;white-space:pre-wrap;overflow-x:auto;">{payload.get('stack_trace')}</div>
+            </div>
+
+            <div style="text-align:center;font-size:12px;color:#aaa;margin-top:18px;">— Automated Error Monitoring</div>
+        </div>
+    </div>
+    """
+
+    msg.attach(MIMEText(html_body, 'html'))
+
+    try:
+        with smtplib.SMTP(smtp_host, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_pass)
+            server.send_message(msg)
+
+        print(f"✅ AI error notification sent to {to_email}")
+        return True
+    except Exception as e:
+        print(f"❌ Failed to send AI error notification: {e}")
+        return False
+
 
 def send_error_email(error, error_context=""):
     """

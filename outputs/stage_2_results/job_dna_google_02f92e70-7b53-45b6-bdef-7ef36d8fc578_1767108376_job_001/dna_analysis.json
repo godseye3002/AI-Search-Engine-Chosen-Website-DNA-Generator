@@ -1,0 +1,167 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767108376_job_001",
+  "url": "https://www.hubspot.com/",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "metadata_tag",
+        "metadata_tag",
+        "metadata_tag",
+        "brand_identifier",
+        "feature_indicator",
+        "heading",
+        "text_content",
+        "call_to_action",
+        "statistic",
+        "customer_logos"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 55,
+        "description_length": 129,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 30.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "HubSpot's customer platform includes all the marketing, sales, customer service, and CRM software you need to grow your business.",
+      "relevance_reason": "Defines the competitor's core value proposition as a broad, all-in-one platform, which contrasts with the user's specific query for specialized MMP tools.",
+      "ranking_factor": "brand_positioning",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "<link href=\"https://www.hubspot.es\" hreflang=\"es\" rel=\"alternate\"/>",
+      "relevance_reason": "The presence of numerous hreflang tags indicates a strong global and multilingual market strategy, a key competitive differentiator.",
+      "ranking_factor": "market_strategy",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "<link href=\"https://js.hs-analytics.net\" rel=\"dns-prefetch\"/>",
+      "relevance_reason": "Reveals the use of a proprietary analytics platform ('hs-analytics.net'), suggesting they develop and rely on their own tracking technology.",
+      "ranking_factor": "technology_stack",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<a aria-label=\"HubSpot\" class=\"global-nav-logo-wrapper ga_nav_link\"...><img alt=\"HubSpot\" ...></a>",
+      "relevance_reason": "Identifies the content source as HubSpot, a major competitor in the marketing automation and analytics space, which often overlaps with MMP functionalities.",
+      "ranking_factor": "brand_authority",
+      "causal_strength": 0.2
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<li class=\"global-nav-utility-list-item -hasDropdown\"...><span class=\"global-nav-utility-link cl-navLink-link\">... English</span>...</li>",
+      "relevance_reason": "The presence of a language switcher with Japanese and German options indicates a strong international presence and a global market strategy, which is a key competitive differentiator.",
+      "ranking_factor": "market_positioning",
+      "causal_strength": 0.2
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Where go-to-market teams go to grow / scale / close / retain",
+      "relevance_reason": "Defines the target audience (GTM teams) and high-level value, but is not relevant to the specific query about link tracking or MMPs.",
+      "ranking_factor": "brand_positioning",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Unite marketing, sales, and customer service on one AI-powered customer platform that delivers results fast.",
+      "relevance_reason": "This is the core Unique Value Proposition (UVP), focusing on an integrated platform, which is a different solution than a specialized MMP tool.",
+      "ranking_factor": "value_proposition",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Get a demo | Get started free",
+      "relevance_reason": "The dual CTA strategy targets different user intents (sales-led vs. product-led), a common pattern for broad platforms.",
+      "ranking_factor": "conversion_strategy",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "278,000 customers in over 135 countries",
+      "relevance_reason": "Quantifiable claim of market size and global reach, used as a form of social proof.",
+      "ranking_factor": "social_proof",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "ebay-logo, doordash-logo, reddit-logo",
+      "relevance_reason": "Features prominent, high-authority brands as customers to build credibility.",
+      "ranking_factor": "brand_authority",
+      "causal_strength": 0.05
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 108.24666,
+  "analysis_timestamp": "2025-12-30T20:58:33.424504"
+}

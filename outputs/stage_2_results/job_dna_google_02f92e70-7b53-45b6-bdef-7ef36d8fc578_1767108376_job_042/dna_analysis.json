@@ -1,0 +1,175 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767108376_job_042",
+  "url": "https://e-cens.com/blog/what-is-a-mobile-measurement-partner/#:~:text=down%20the%20road.-,Best%20Mobile%20Measurement%20Partners:%20Comparing%20Top%20MMPs,web%2Dto%2Dapp%20journeys.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_description",
+        "structured_data",
+        "twitter_metadata",
+        "navigation_item",
+        "navigation_item",
+        "navigation_item",
+        "heading",
+        "text_content",
+        "navigation_link"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 126,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 71.25,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "What’s A Mobile Measurement Partner (MMP) | E-CENS",
+      "relevance_reason": "The title directly targets the 'MMP' concept specified in the user's query, indicating high topical relevance.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Understand MMPs & their role in measuring marketing campaign success.",
+      "relevance_reason": "The description aligns with the user's goal of measuring marketing performance by explaining the role of MMPs.",
+      "ranking_factor": "user_intent_alignment",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "script class=\"rank-math-schema\" type=\"application/ld+json\"",
+      "relevance_reason": "The presence of comprehensive Schema.org markup (Organization, WebSite, BreadcrumbList) indicates a technically well-optimized page, which often correlates with authoritative content.",
+      "ranking_factor": "technical_seo",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Measurement & Data Collection",
+      "relevance_reason": "This navigation link directly addresses the core user need of measuring and collecting data for marketing performance, which is central to the query about link tracking and MMPs.",
+      "ranking_factor": "service_offering_relevance",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Measurement Strategy",
+      "relevance_reason": "Indicates that the site offers strategic consulting related to the user's query, positioning them as an expert or service provider in the measurement space.",
+      "ranking_factor": "service_offering_relevance",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Data Strategy & Consulting",
+      "relevance_reason": "This higher-level menu item shows a broad focus on data, which is the foundation for any link tracking or MMP platform.",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "GTM vs. Google Analytics vs. Gtag.js: The 2026 Guide",
+      "relevance_reason": "Identifies specific analytics tools (GTM, Google Analytics) which are related to link tracking, but does not mention the more specific 'MMP' or 'onboarding' aspects of the query.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.55
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "The 2026 Guide",
+      "relevance_reason": "The use of a future year in the title is a content strategy to signal freshness and long-term relevance, aiming to attract clicks.",
+      "ranking_factor": "content_freshness_angle",
+      "causal_strength": 0.55
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Mobile App Analytics",
+      "relevance_reason": "Directly relevant to the user's need for mobile measurement platforms (MMPs) and app performance tracking.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Measurement Strategy",
+      "relevance_reason": "Addresses the core task in the user query: 'to measure... performance', indicating expertise in the strategic aspect of analytics.",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "GA4 Migration",
+      "relevance_reason": "Mentions a specific, modern analytics platform (GA4) relevant to web and app tracking, signaling up-to-date technical knowledge.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.6
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 82.830492,
+  "analysis_timestamp": "2025-12-30T20:59:56.777436"
+}

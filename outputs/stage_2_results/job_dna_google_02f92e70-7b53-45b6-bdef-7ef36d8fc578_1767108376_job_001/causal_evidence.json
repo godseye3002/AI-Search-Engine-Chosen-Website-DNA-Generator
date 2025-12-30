@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "HubSpot's customer platform includes all the marketing, sales, customer service, and CRM software you need to grow your business.",
+    "relevance_reason": "Defines the competitor's core value proposition as a broad, all-in-one platform, which contrasts with the user's specific query for specialized MMP tools.",
+    "ranking_factor": "brand_positioning",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<link href=\"https://www.hubspot.es\" hreflang=\"es\" rel=\"alternate\"/>",
+    "relevance_reason": "The presence of numerous hreflang tags indicates a strong global and multilingual market strategy, a key competitive differentiator.",
+    "ranking_factor": "market_strategy",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<link href=\"https://js.hs-analytics.net\" rel=\"dns-prefetch\"/>",
+    "relevance_reason": "Reveals the use of a proprietary analytics platform ('hs-analytics.net'), suggesting they develop and rely on their own tracking technology.",
+    "ranking_factor": "technology_stack",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<a aria-label=\"HubSpot\" class=\"global-nav-logo-wrapper ga_nav_link\"...><img alt=\"HubSpot\" ...></a>",
+    "relevance_reason": "Identifies the content source as HubSpot, a major competitor in the marketing automation and analytics space, which often overlaps with MMP functionalities.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<li class=\"global-nav-utility-list-item -hasDropdown\"...><span class=\"global-nav-utility-link cl-navLink-link\">... English</span>...</li>",
+    "relevance_reason": "The presence of a language switcher with Japanese and German options indicates a strong international presence and a global market strategy, which is a key competitive differentiator.",
+    "ranking_factor": "market_positioning",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Where go-to-market teams go to grow / scale / close / retain",
+    "relevance_reason": "Defines the target audience (GTM teams) and high-level value, but is not relevant to the specific query about link tracking or MMPs.",
+    "ranking_factor": "brand_positioning",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Unite marketing, sales, and customer service on one AI-powered customer platform that delivers results fast.",
+    "relevance_reason": "This is the core Unique Value Proposition (UVP), focusing on an integrated platform, which is a different solution than a specialized MMP tool.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Get a demo | Get started free",
+    "relevance_reason": "The dual CTA strategy targets different user intents (sales-led vs. product-led), a common pattern for broad platforms.",
+    "ranking_factor": "conversion_strategy",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "278,000 customers in over 135 countries",
+    "relevance_reason": "Quantifiable claim of market size and global reach, used as a form of social proof.",
+    "ranking_factor": "social_proof",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "ebay-logo, doordash-logo, reddit-logo",
+    "relevance_reason": "Features prominent, high-authority brands as customers to build credibility.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.05
+  }
+]

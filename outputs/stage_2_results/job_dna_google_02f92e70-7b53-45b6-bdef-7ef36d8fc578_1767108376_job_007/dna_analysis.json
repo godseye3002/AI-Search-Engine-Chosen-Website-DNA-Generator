@@ -1,0 +1,207 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767108376_job_007",
+  "url": "https://splitmetrics.com/blog/best-mobile-measurement-partners-2022/#:~:text=28%20Jul%202025-,8%20Best%20Mobile%20Measurement%20Partners%20(MMPs)%20to%20Consider%20for%20Your,Integrate%20Apple%20Ads%20and%20MMP?",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_description",
+        "twitter_metadata",
+        "canonical_url",
+        "product_suite_navigation",
+        "value_proposition",
+        "value_proposition",
+        "heading",
+        "text_content",
+        "data_point"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 93,
+        "description_length": 123,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 82.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+      "relevance_reason": "The title directly addresses the user's query for 'MMP platforms' and uses a listicle format ('8 Best') which is highly relevant for a 'top tools' query.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Make use of our list of the best mobile measurement partners to use in 2022 and go through the checklist of picking an MMP.",
+      "relevance_reason": "Promises a practical guide ('checklist') for selecting an MMP, aligning with the user's goal of evaluating and choosing a tool.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Est. reading time: 37 minutes",
+      "relevance_reason": "The long estimated reading time suggests a comprehensive, in-depth article, not a superficial overview, which is valuable for a research-oriented query.",
+      "ranking_factor": "content_depth_indicator",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Products: SplitMetrics Acquire, SplitMetrics Optimize, App Radar by SplitMetrics",
+      "relevance_reason": "Identifies a competitor's product portfolio in the mobile marketing space. These tools, while not explicitly MMPs, are used for measuring and optimizing mobile marketing channels like Apple Ads and app store pages.",
+      "ranking_factor": "competitor_product_discovery",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SplitMetrics Acquire: Automate and optimize Apple Ads campaigns at scale",
+      "relevance_reason": "Highlights a specific value proposition for a tool focused on a key mobile distribution channel (Apple Ads), which is relevant to the user's interest in measuring channel performance.",
+      "ranking_factor": "feature_identification",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SplitMetrics Optimize: Run mobile A/B tests, validate hypothesis, launch games and apps",
+      "relevance_reason": "Indicates a focus on conversion rate optimization (CRO) through A/B testing, a critical component of performance measurement for onboarding.",
+      "ranking_factor": "feature_identification",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Best Mobile Measurement Partners for Onboarding Analytics",
+      "relevance_reason": "Heading directly matches multiple keywords from the user query, including 'MMP' and 'onboarding'.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Branch excels at deep linking, which is vital for a seamless user onboarding experience from ad click to app open.",
+      "relevance_reason": "Directly connects a specific tool's feature (deep linking) to the user's goal (onboarding), demonstrating topical expertise.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "AppsFlyer: ...over 9,000 partners and advanced fraud protection. They claim to process over 100 billion mobile events daily.",
+      "relevance_reason": "Provides specific, quantifiable data (9,000 partners, 100 billion events) that establishes authority and helps users compare tools.",
+      "ranking_factor": "data_driven_content",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+      "relevance_reason": "The main heading directly addresses the user's query for top MMP platforms.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+      "relevance_reason": "The Table of Contents lists specific, highly relevant MMP tools that directly answer the user's query.",
+      "ranking_factor": "entity_coverage",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "28 Jul 2025",
+      "relevance_reason": "The future date positions the content as forward-looking and evergreen, a tactic to maintain relevance.",
+      "ranking_factor": "content_freshness",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "Top 5 Mobile Measurement Partners (MMPs) for 2024",
+      "relevance_reason": "Directly addresses the user's query for 'top' 'MMP platforms'.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "increase conversion rates by up to 55%",
+      "relevance_reason": "Provides a quantifiable performance metric directly related to onboarding success, a key part of the user query.",
+      "ranking_factor": "data_driven_authority",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "Unified marketing analytics and cost aggregation",
+      "relevance_reason": "Highlights a unique benefit that solves a major pain point in measuring channel performance.",
+      "ranking_factor": "competitive_differentiation",
+      "causal_strength": 0.95
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 97.318395,
+  "analysis_timestamp": "2025-12-30T21:00:10.799978"
+}

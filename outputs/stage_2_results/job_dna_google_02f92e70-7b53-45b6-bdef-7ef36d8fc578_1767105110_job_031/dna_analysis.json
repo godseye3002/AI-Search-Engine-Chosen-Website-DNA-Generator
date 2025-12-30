@@ -1,0 +1,113 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767105110_job_031",
+  "url": "https://www.goodbarber.com/blog/10-marketing-tools-you-need-to-boost-revenues-for-small-businesses-in-2023-a1213/#:~:text=Hootsuite%20is%20a%20social%20media%20marketing%20tool,that%20resonate%20the%20most%20with%20your%20audience.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title",
+        "meta_keywords",
+        "meta_description",
+        "brand_mention"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 74,
+        "description_length": 160,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 10.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+      "relevance_reason": "The title indicates a broad, generalist article for small businesses, which is a mismatch for the specific, technical query about MMPs and link tracking for onboarding.",
+      "ranking_factor": "topic_mismatch",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GoodBarber, app builder, app, mobile app, Reseller, ASO, marketing, business, mobile, features, Beacons, Geofencing, engagement, iOS, Android, native, native app",
+      "relevance_reason": "Keywords focus on the publisher's product (GoodBarber app builder) and general mobile app topics, but lack specific entities from the user query like 'MMP', 'link tracking', or 'attribution'.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Small businesses are always looking for ways to increase their revenue and productivity. Here are 10 great marketing tools that can help them do just that in 20",
+      "relevance_reason": "The description confirms the content's focus is on revenue and productivity for small businesses, not performance measurement for marketing channels.",
+      "ranking_factor": "audience_mismatch",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "GoodBarber",
+      "relevance_reason": "Identifies the publisher's brand from the logo link and SVG title. The brand itself (an app builder) is not directly relevant to the user's query about MMPs or link tracking tools.",
+      "ranking_factor": "brand_identification",
+      "causal_strength": 0.0
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Low evidence quality and relevance",
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 51.862327,
+  "analysis_timestamp": "2025-12-30T20:07:25.792662"
+}

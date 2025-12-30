@@ -129,8 +129,8 @@ class Stage3Worker:
                 }
         
         except Exception as e:
-            error_msg = f"Unexpected error in Stage 3: {str(e)}"
-            self.logger.error(f"Run {run_id} failed Stage 3: {error_msg}")
+            error_msg = f"Unexpected error in Stage 3 ({type(e).__name__}): {str(e)}"
+            self.logger.exception(f"Run {run_id} failed Stage 3 with unexpected error")
             
             # Mark jobs as failed
             for job in jobs:

@@ -64,9 +64,6 @@ class Stage2Worker:
             # Load Stage 1 classified data
             classified_data = self._load_stage_1_output(job)
             
-            if not classified_data:
-                raise FileNotFoundError(f"No Stage 1 output found for job {job.job_id}")
-            
             # Execute DNA analysis with timeout
             result = execute_with_timeout(
                 analyze_website_dna,
@@ -98,9 +95,9 @@ class Stage2Worker:
                 self.logger.error(f"Job {job.job_id} failed Stage 2: {error_msg}")
         
         except Exception as e:
-            error_msg = f"Unexpected error in Stage 2: {str(e)}"
+            error_msg = f"Unexpected error in Stage 2 ({type(e).__name__}): {str(e)}"
             job.mark_stage_failed(2, error_msg)
-            self.logger.error(f"Job {job.job_id} failed Stage 2: {error_msg}")
+            self.logger.exception(f"Job {job.job_id} failed Stage 2 with unexpected error")
         
         return job
     
@@ -115,7 +112,7 @@ class Stage2Worker:
             Classified data dictionary or None if not found
         """
         if not job.stage_1_output_path:
-            return None
+            raise FileNotFoundError(f"Stage 1 output path missing for job {job.job_id}")
         
         try:
             with open(job.stage_1_output_path, 'r', encoding='utf-8') as f:
@@ -126,12 +123,12 @@ class Stage2Worker:
             
             return classified_data
             
-        except FileNotFoundError:
-            self.logger.error(f"Stage 1 output file not found: {job.stage_1_output_path}")
-            return None
+        except FileNotFoundError as e:
+            self.logger.error(f"Stage 1 output file not found for job {job.job_id}: {job.stage_1_output_path}")
+            raise
         except json.JSONDecodeError as e:
-            self.logger.error(f"Invalid JSON in Stage 1 output: {e}")
-            return None
+            self.logger.error(f"Invalid JSON in Stage 1 output for job {job.job_id}: {e}")
+            raise ValueError(f"Invalid Stage 1 JSON for job {job.job_id}: {e}")
     
     def _save_job_outputs(self, job_id: str, result: DNAAnalysisResult) -> Dict[str, str]:
         """

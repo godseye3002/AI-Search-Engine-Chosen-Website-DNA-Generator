@@ -42,6 +42,8 @@ if not gemini_logger.handlers:
     handler.setFormatter(formatter)
     gemini_logger.addHandler(handler)
 
+logger = logging.getLogger(__name__)
+
 def track_gemini_classification(func_name: str, prompt: str, response: Any = None, error: Exception = None, start_time: float = None):
     """Track Gemini API calls for classification"""
     end_time = time.time()
@@ -159,6 +161,7 @@ def detect_special_url_with_gemini(url: str) -> Optional[Dict[str, Any]]:
     """
     Uses Gemini LLM to analyze the URL string to determine if it is a special utility URL.
     """
+    start_time = None
     try:
         model = genai.GenerativeModel('gemini-2.5-flash-lite')
         
@@ -223,6 +226,8 @@ def detect_special_url_with_gemini(url: str) -> Optional[Dict[str, Any]]:
         }
 
     except Exception as e:
+        track_gemini_classification("Special URL Classification", prompt, error=e, start_time=start_time)
+        logger.exception("Failed to classify special URL via Gemini: %s", url)
         return None
 
 
