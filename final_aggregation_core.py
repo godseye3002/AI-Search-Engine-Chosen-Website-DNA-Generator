@@ -143,7 +143,7 @@ You must output final result in following JSON structure. **Do not use biologica
                 "temperature": 0.2,
                 "top_p": 0.95,
                 "top_k": 40,
-                "max_output_tokens": 8192,
+                # "max_output_tokens": 8192,
             }
         )
         if not is_production_mode():
@@ -255,7 +255,7 @@ You must output final result in following JSON structure. **Do not use biologica
                     "temperature": 0.2,
                     "top_p": 0.95,
                     "top_k": 40,
-                    "max_output_tokens": 4048,  # Further reduced
+                    # "max_output_tokens": 4048,  # Further reduced
                 }
             )
             

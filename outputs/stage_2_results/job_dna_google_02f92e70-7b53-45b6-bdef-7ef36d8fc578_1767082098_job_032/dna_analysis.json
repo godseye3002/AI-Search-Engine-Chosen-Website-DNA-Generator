@@ -1,0 +1,175 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767082098_job_032",
+  "url": "https://zapier.com/blog/best-marketing-automation-software/",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "schema_data",
+        "meta_description",
+        "brand_identity",
+        "value_proposition",
+        "conversion_element",
+        "navigation_structure",
+        "interactive_component",
+        "heading",
+        "metadata"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 59,
+        "description_length": 143,
+        "has_canonical": false,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 14.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "9 best marketing automation software tools in 2026 | Zapier",
+      "relevance_reason": "Title targets 'marketing automation' rather than the requested 'MMP' (Mobile Measurement Partners) or specific 'link tracking' for onboarding, indicating a category mismatch.",
+      "ranking_factor": "topic_misalignment",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "\"dateModified\":\"October 1, 2025\", \"headline\":\"The 9 best marketing automation software tools in 2026\"",
+      "relevance_reason": "Demonstrates aggressive SEO forward-dating strategy (targeting 2026) to maintain evergreen status.",
+      "ranking_factor": "freshness_signal",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "solution for executing self-sufficient marketing campaigns",
+      "relevance_reason": "Description focuses on campaign execution/automation rather than the analytical/attribution aspect of the user query.",
+      "ranking_factor": "intent_mismatch",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Zapier Automation Platform",
+      "relevance_reason": "Identifies the content source/publisher, establishing the domain context for the analysis.",
+      "ranking_factor": "domain_authority",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "No-code automation across 8,000+ apps",
+      "relevance_reason": "High-level platform capability claim, though not specific to the user's MMP query.",
+      "ranking_factor": "unique_selling_proposition",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Contact sales",
+      "relevance_reason": "Global navigation CTA targeting enterprise/high-value leads.",
+      "ranking_factor": "conversion_optimization",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "nav class=\"css-neeaic\" data-testid=\"blog-nav\"",
+      "relevance_reason": "Defines the content segment as a blog section, implying informational intent rather than transactional",
+      "ranking_factor": "site_architecture",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Categories dropdown (<details><summary>)",
+      "relevance_reason": "Structural element for content discovery; contains no specific MMP tool data",
+      "ranking_factor": "ux_design",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "The 9 best marketing automation software tools in 2026",
+      "relevance_reason": "Topic mismatch: Content focuses on 'marketing automation' rather than the requested 'MMP platforms' or 'link tracking' for onboarding.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "17 min read",
+      "relevance_reason": "Indicates deep-dive, long-form content strategy which competes for attention in the broader martech space.",
+      "ranking_factor": "content_depth",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "October 1, 2025",
+      "relevance_reason": "Utilization of future-dating strategy to signal freshness and relevance for upcoming search trends.",
+      "ranking_factor": "freshness_signal",
+      "causal_strength": 0.25
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Low evidence quality and relevance",
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 98.257809,
+  "analysis_timestamp": "2025-12-30T13:44:25.685544"
+}

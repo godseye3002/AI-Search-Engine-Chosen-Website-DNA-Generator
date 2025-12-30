@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "RocketLazyLoadScripts",
+    "relevance_reason": "This script indicates the use of the WP Rocket plugin for performance optimization (lazy loading of JavaScript). This is a competitive insight into their technical SEO and user experience strategy.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "https://trackier.com",
+    "relevance_reason": "The logo's href identifies the competitor as 'Trackier', a known performance marketing and MMP platform, directly relevant to the user query.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Platform",
+    "relevance_reason": "The primary navigation starts with 'Platform', indicating the competitor's site structure is heavily product-focused, positioning their platform as the core solution.",
+    "ranking_factor": "site_architecture",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Essential Suite",
+    "relevance_reason": "Identifies the competitor's product bundle that contains relevant features.",
+    "ranking_factor": "brand_positioning",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Marketing Analytics",
+    "relevance_reason": "This feature is directly related to the user's need to measure marketing performance, indicating the competitor's capability in this area.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Automated Invoicing",
+    "relevance_reason": "Indicates a potential value proposition of combining analytics with financial/operational tools, which could be a differentiator.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Performance Marketing Software",
+    "relevance_reason": "The link text and destination URL ('/performance-marketing-software/') represent a high-level category that directly encompasses the user's query for MMPs and link tracking tools. This serves as a primary navigation path to relevant content.",
+    "ranking_factor": "internal_linking",
+    "causal_strength": 0.85
+  }
+]

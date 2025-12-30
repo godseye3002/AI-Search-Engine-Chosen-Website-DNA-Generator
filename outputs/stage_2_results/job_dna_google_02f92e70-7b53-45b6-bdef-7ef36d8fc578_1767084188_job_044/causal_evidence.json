@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "/_next/static/",
+    "relevance_reason": "Indicates the website is built using the Next.js framework, a modern technology choice that often correlates with high-performance sites.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "images.ctfassets.net",
+    "relevance_reason": "Identifies Contentful as the headless CMS, suggesting a structured and potentially API-driven content strategy.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "best-marketing-analytics-tools.png",
+    "relevance_reason": "The filename of a preloaded image provides a weak but present signal about the page's topic, aligning broadly with the user's interest in marketing tools.",
+    "ranking_factor": "asset_naming_convention",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics",
+    "relevance_reason": "Identifies the publisher of the content, a competitor in the marketing analytics and reporting space.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics G2 Leader Fall 2025",
+    "relevance_reason": "A strong trust signal using a third-party award to establish authority and market leadership.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "G2 Users Love Us",
+    "relevance_reason": "Leverages user satisfaction as a form of social proof to build credibility.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "18 Best Marketing Analytics Tools in 2025 (Features + Reviews)",
+    "relevance_reason": "The headline frames the content as a comprehensive list of tools. While broader than 'MMP platforms', it's highly likely to include relevant options for the user's query.",
+    "ranking_factor": "content_framing",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Compare features, pricing, and pros and cons of the 18 best marketing analytics tools in 2025.",
+    "relevance_reason": "The description promises a detailed comparison, which directly matches the user's intent to evaluate and select a tool.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "AgencyAnalytics",
+    "relevance_reason": "The publisher is a known entity in the marketing analytics software space, which can lend authoritativeness (E-E-A-T) to the content.",
+    "ranking_factor": "authoritativeness_signal",
+    "causal_strength": 0.8
+  }
+]

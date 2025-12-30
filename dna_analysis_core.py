@@ -8,6 +8,8 @@ Extracts winning content DNA from classified HTML data.
 import os
 import json
 import re
+import time
+import logging
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 from datetime import datetime
@@ -19,6 +21,37 @@ from dotenv import load_dotenv
 load_dotenv() 
 API_KEY = os.getenv('GEMINI_API_KEY', '')
 genai.configure(api_key=API_KEY)
+
+# Setup Gemini API tracker
+gemini_logger = logging.getLogger('gemini_api')
+gemini_logger.setLevel(logging.INFO)
+if not gemini_logger.handlers:
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter('[GEMINI] %(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    gemini_logger.addHandler(handler)
+
+def track_gemini_call(func_name: str, prompt: str, response: Any = None, error: Exception = None, start_time: float = None):
+    """Track Gemini API calls for debugging"""
+    end_time = time.time()
+    duration = end_time - start_time if start_time else 0
+    
+    gemini_logger.info(f"=== {func_name} ===")
+    gemini_logger.info(f"Duration: {duration:.2f}s")
+    gemini_logger.info(f"Prompt length: {len(prompt)} chars")
+    
+    if error:
+        gemini_logger.error(f"ERROR: {str(error)}")
+        gemini_logger.error(f"Error type: {type(error).__name__}")
+    elif response:
+        if hasattr(response, 'text'):
+            gemini_logger.info(f"Response length: {len(response.text)} chars")
+            gemini_logger.info(f"Response preview: {response.text[:200]}...")
+        else:
+            gemini_logger.info(f"Response type: {type(response)}")
+            gemini_logger.info(f"Response preview: {str(response)[:200]}...")
+    
+    gemini_logger.info("=" * 50)
 
 
 @dataclass
@@ -366,18 +399,23 @@ class ForensicDNAAnalyzer:
         }}
         """
         
+        start_time = None
         try:
             model = genai.GenerativeModel(
-                model_name="gemini-3-pro-preview",
+                model_name="gemini-2.5-pro",
                 generation_config={
                     "temperature": 0.1,
                     "top_p": 0.95,
                     "top_k": 40,
-                    "max_output_tokens": 2048,  # Reduced to avoid token limits
+                    # "max_output_tokens": 2048,  # Reduced to avoid token limits
                 }
             )
             
+            # Track Gemini API call
+            start_time = time.time()
             response = model.generate_content(prompt)
+            track_gemini_call("DNA Analysis", prompt, response=response, start_time=start_time)
+            
             response_text = response.text.strip()
             
             # Clean response
@@ -406,6 +444,9 @@ class ForensicDNAAnalyzer:
             return analysis
             
         except Exception as e:
+            # Track Gemini API error
+            track_gemini_call("DNA Analysis", prompt, error=e, start_time=start_time)
+            
             # Return meaningful fallback instead of empty arrays
             return {
                 "relevance_score": 50,

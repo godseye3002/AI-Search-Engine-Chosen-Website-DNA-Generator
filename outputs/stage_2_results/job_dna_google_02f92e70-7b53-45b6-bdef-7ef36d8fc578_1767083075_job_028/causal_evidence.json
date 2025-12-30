@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Discover The 10 Best Performance Marketing Tracking Software",
+    "relevance_reason": "Directly addresses the user's request for 'top link tracking tools' using a listicle format.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "optimize your ad campaigns and accurately measure ROI",
+    "relevance_reason": "Aligns with the user intent to 'measure marketing distribution channel performance'.",
+    "ranking_factor": "intent_matching",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Matt Pattoli, Founder at Cometly",
+    "relevance_reason": "Identifies the content source as a vendor (Cometly), indicating a competitive analysis piece likely positioning their own tool against MMPs.",
+    "ranking_factor": "source_authority",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Server-Side Tracking: Built-in, zero code",
+    "relevance_reason": "Identifies specific tracking technology with 'zero code' UVP, highly relevant to link tracking tools",
+    "ranking_factor": "technical_capability",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AI Ads Manager: Track, manage, optimize ads",
+    "relevance_reason": "Matches user intent for measuring marketing distribution channel performance",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Attribution",
+    "relevance_reason": "Direct keyword match for MMP (Mobile Measurement Partner) core functionality",
+    "ranking_factor": "entity_match",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Multi-Touch Attribution: View impact across journey",
+    "relevance_reason": "Directly addresses the requirement to measure marketing distribution channel performance",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Server-Side Tracking: Built-in, zero code",
+    "relevance_reason": "Identifies specific link tracking technology relevant to MMPs",
+    "ranking_factor": "technical_specification",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Conversion Sync: Sync data to ad platforms",
+    "relevance_reason": "Highlights data integration with distribution channels",
+    "ranking_factor": "integration_capability",
+    "causal_strength": 0.75
+  }
+]

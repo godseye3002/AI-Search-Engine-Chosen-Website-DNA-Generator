@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "9 best marketing automation software tools in 2026",
+    "relevance_reason": "Low semantic alignment: Content focuses on 'marketing automation' rather than the requested 'MMP platforms' or 'link tracking' for onboarding.",
+    "ranking_factor": "title_tag_optimization",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "dateModified: October 1, 2025",
+    "relevance_reason": "Indicates aggressive content maintenance strategy (future-dating) to signal freshness, though topic is adjacent, not direct.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "executing self-sufficient marketing campaigns",
+    "relevance_reason": "Highlights campaign execution rather than the requested attribution/measurement capabilities.",
+    "ranking_factor": "meta_description_relevance",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "No-code automation across 8,000+ apps",
+    "relevance_reason": "Establishes publisher authority (Zapier) and integration scale, though unrelated to specific MMP query.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "demo_source=cs_nav_header_/best-marketing-automation-software/",
+    "relevance_reason": "URL parameter in sales link indicates the page context is 'best marketing automation software', suggesting adjacent content may be relevant.",
+    "ranking_factor": "contextual_signal",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Zapier Automation Platform",
+    "relevance_reason": "Identifies the platform hosting the content.",
+    "ranking_factor": "brand_identity",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "nav class=\"css-neeaic\" data-testid=\"blog-nav\"",
+    "relevance_reason": "Identifies the section as a blog navigation bar, setting the context for informational content rather than a product landing page.",
+    "ranking_factor": "site_structure",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Categories <details> <summary>",
+    "relevance_reason": "Indicates a categorized content hub structure, implying a breadth of topics beyond the specific query.",
+    "ranking_factor": "internal_linking",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "The 9 best marketing automation software tools in 2026",
+    "relevance_reason": "Significant topic divergence: Content focuses on 'Marketing Automation' rather than the requested 'MMP platforms' or 'Link Tracking' for onboarding.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "October 1, 2025",
+    "relevance_reason": "Demonstrates a 'future-proofing' content strategy to capture forward-looking search intent.",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Best apps",
+    "relevance_reason": "Broad categorization suggests a general software listicle rather than a specialized technical deep dive into attribution.",
+    "ranking_factor": "site_structure",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": ".css-1ohxx2f{display:-webkit-box;display:-webkit-flex...background-color:#fff3e6...}",
+    "relevance_reason": "Chunk contains only CSS styling metadata with no semantic text, tools, or metrics.",
+    "ranking_factor": "technical_structure",
+    "causal_strength": 0.0
+  }
+]

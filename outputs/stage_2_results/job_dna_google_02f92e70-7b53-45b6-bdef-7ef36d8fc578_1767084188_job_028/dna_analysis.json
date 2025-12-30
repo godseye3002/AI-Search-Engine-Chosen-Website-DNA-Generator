@@ -1,0 +1,151 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767084188_job_028",
+  "url": "https://www.cometly.com/post/performance-marketing-tracking-software",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "metadata_title",
+        "metadata_description",
+        "schema_author",
+        "schema_type",
+        "navigation_link",
+        "navigation_link",
+        "feature_list_item",
+        "feature_list_item",
+        "feature_list_item",
+        "feature_list_item"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 78.33333333333333,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Discover The 10 Best Performance Marketing Tracking Software",
+      "relevance_reason": "The title directly addresses the user's search for 'top' tracking tools by promising a list of the '10 Best'. 'Performance Marketing Tracking Software' is a close semantic match for the user's query.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Explore the 10 best performance marketing tracking software to optimize your ad campaigns and accurately measure ROI.",
+      "relevance_reason": "The description aligns with the user's goal of measuring channel performance by explicitly mentioning 'optimize ad campaigns' and 'measure ROI'.",
+      "ranking_factor": "user_intent_alignment",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Author: Matt Pattoli, Founder at Cometly",
+      "relevance_reason": "The content is authored by the founder of a company in the same space (Cometly), indicating potential expert insight but also a likely bias towards their own product.",
+      "ranking_factor": "author_authority",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Server-Side Tracking",
+      "relevance_reason": "This feature directly addresses the 'tracking tools' component of the user query, indicating the site offers a relevant solution.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Attribution",
+      "relevance_reason": "The presence of 'Attribution' in the primary navigation signals the platform's capability to 'measure marketing distribution channel performance', a core part of the user's intent.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Multi-Touch Attribution - View impact across journey",
+      "relevance_reason": "Directly addresses the user's need to measure marketing channel performance across the entire user journey, a core function of MMPs.",
+      "ranking_factor": "feature_relevance",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Server-Side Tracking - Built-in, zero code",
+      "relevance_reason": "Highlights a critical technical capability for modern link tracking, addressing data accuracy and privacy concerns. The 'zero code' aspect is a strong value proposition.",
+      "ranking_factor": "technical_capability",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Analytics - Build dashboards and reports",
+      "relevance_reason": "This feature is essential for the 'measure performance' part of the user query, indicating the tool's reporting capabilities.",
+      "ranking_factor": "feature_relevance",
+      "causal_strength": 0.8
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 50.185857,
+  "analysis_timestamp": "2025-12-30T14:16:18.668499"
+}

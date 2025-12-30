@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Next.js Framework",
+    "relevance_reason": "The file paths (/_next/static/) indicate the site is built on Next.js, a modern React framework known for performance, which is a competitive advantage.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Contentful CMS",
+    "relevance_reason": "Image URLs (images.ctfassets.net) reveal the use of Contentful, a headless CMS, suggesting a sophisticated and scalable content infrastructure.",
+    "ranking_factor": "content_infrastructure",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "best-marketing-analytics-tools.png",
+    "relevance_reason": "The filename of a preloaded hero image strongly indicates the page's topic is directly relevant to the user's query about marketing tools.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics",
+    "relevance_reason": "The HTML identifies the content publisher as 'AgencyAnalytics', a marketing reporting platform. This provides context for the content's perspective, although it is not an MMP itself.",
+    "ranking_factor": "source_authority",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics G2 Leader Fall 2025",
+    "relevance_reason": "The footer contains a G2 award badge. This is a trust signal used to establish the publisher's authority in the broader 'Business Intelligence' and marketing analytics space.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "18 Best Marketing Analytics Tools in 2025 (Features + Reviews)",
+    "relevance_reason": "The headline indicates a comprehensive listicle of tools, which aligns with the user's intent to discover and compare options. The year '2025' is a strong signal for content freshness.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Compare features, pricing, and pros and cons of the 18 best marketing analytics tools...",
+    "relevance_reason": "The description promises a structured comparison (features, pricing, pros/cons), which is highly valuable for a user in the evaluation phase of their research.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "publisher:{\"@type\":\"Corporation\",\"name\":\"AgencyAnalytics\"...}",
+    "relevance_reason": "The content is published by a known entity in the marketing analytics industry, which serves as a strong E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) signal.",
+    "ranking_factor": "eeat_signal",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "AppsFlyer: Best for comprehensive deep linking and audience segmentation, which is critical for personalized onboarding flows.",
+    "relevance_reason": "Directly connects a specific tool (AppsFlyer) to a key feature (deep linking) and the user's goal (onboarding).",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Measuring channel performance requires tracking metrics like LTV, ROAS, and retention rate for each cohort.",
+    "relevance_reason": "Identifies core metrics directly related to the user's task of measuring performance.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Comparing the Top MMP Platforms for Marketing Attribution",
+    "relevance_reason": "Heading uses primary keywords (MMP Platforms, Marketing Attribution) that align with the user's query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  }
+]

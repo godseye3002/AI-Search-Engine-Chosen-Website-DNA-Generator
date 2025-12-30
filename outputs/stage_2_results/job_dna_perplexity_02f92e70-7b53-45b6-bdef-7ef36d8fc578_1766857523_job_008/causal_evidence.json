@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "class RocketLazyLoadScripts",
+    "relevance_reason": "Identifies competitor use of WP Rocket for aggressive JavaScript lazy loading, impacting Core Web Vitals scores",
+    "ranking_factor": "page_speed_optimization",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "navigator.userAgent.match(/MSIE|Internet Explorer/i)",
+    "relevance_reason": "Legacy browser detection logic suggests broad audience targeting including outdated systems",
+    "ranking_factor": "technical_accessibility",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Mobile Attribution",
+    "relevance_reason": "Direct mapping to 'app tracking' core functionality",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SKAdNetwork Attribution",
+    "relevance_reason": "Specific, high-value iOS tracking protocol relevant to modern MMPs",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Cost Aggregation",
+    "relevance_reason": "Differentiating feature often compared in MMP selection",
+    "ranking_factor": "feature_density",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Mobile Measurement Partner (MMP)",
+    "relevance_reason": "Direct definition of the tool category matching the user query",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Accurately measure and analyze the impact of your marketing with an MMP tailored to your business.",
+    "relevance_reason": "Articulates core benefit (measurement/tracking) and customization",
+    "ranking_factor": "content_relevance",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Go beyond legacy MMP providers with Singular’s end-to-end growth platform",
+    "relevance_reason": "Competitive positioning against 'legacy' tools to imply superiority ('Best')",
+    "ranking_factor": "competitive_differentiation",
+    "causal_strength": 0.92
+  }
+]

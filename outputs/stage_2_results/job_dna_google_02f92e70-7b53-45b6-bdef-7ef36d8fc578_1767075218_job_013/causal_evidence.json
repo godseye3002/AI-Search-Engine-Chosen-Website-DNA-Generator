@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 6 Mobile Measurement Partners In India For Accurate App Analytics (2025)",
+    "relevance_reason": "Directly addresses 'MMP platforms' and 'top tools' query intent with specific list count.",
+    "ranking_factor": "title_keyword_optimization",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "track your app marketing ROI and performance effectively",
+    "relevance_reason": "Matches user need to 'measure marketing distribution channel performance'.",
+    "ranking_factor": "intent_alignment",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "2025-06-17",
+    "relevance_reason": "Indicates extremely high freshness (future-dated/current context), suggesting up-to-date tool comparisons.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Appfillip",
+    "relevance_reason": "Identifies the content source as a marketing agency, suggesting potential service-based bias in recommendations.",
+    "ranking_factor": "source_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "App Marketing Services",
+    "relevance_reason": "Establishes the broad domain context (App Marketing) which encompasses MMPs, though no specific tools are listed in this chunk.",
+    "ranking_factor": "topical_relevance",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "App Store Optimization",
+    "relevance_reason": "Related service offering, indicating the site covers the mobile app ecosystem.",
+    "ranking_factor": "semantic_clustering",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "href=\"tel:(309)%208855-314\"",
+    "relevance_reason": "Direct telephone link in sidebar; irrelevant to MMP platform analysis",
+    "ranking_factor": "conversion_element",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "elementskit-icon-box",
+    "relevance_reason": "Structural container for contact icon; contains no semantic content regarding tracking tools",
+    "ranking_factor": "page_structure",
+    "causal_strength": 0.0
+  }
+]

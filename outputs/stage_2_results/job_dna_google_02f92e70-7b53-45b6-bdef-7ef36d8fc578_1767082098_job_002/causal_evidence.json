@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+    "relevance_reason": "Identifies 'Segwise' as the content publisher, a platform relevant to mobile product growth and analytics",
+    "ranking_factor": "source_identification",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Competitor uses Google Tag Manager for their own analytics tracking",
+    "ranking_factor": "technical_stack",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai",
+    "relevance_reason": "Identifies Superblog as the content management system used for this blog",
+    "ranking_factor": "platform_analysis",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "Table of contents entry confirms the page defines the core entity (MMP) requested in the query.",
+    "ranking_factor": "topic_alignment",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Key Features to Consider",
+    "relevance_reason": "Indicates the content provides evaluation criteria for tracking tools, matching the 'measure performance' intent.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "segwise.ai",
+    "relevance_reason": "Identifies the publisher as a specialized analytics platform, establishing domain authority.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top Mobile Measurement Partners (MMPs) in 2025",
+    "relevance_reason": "Direct semantic match to user query regarding top MMP platforms and tracking tools.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Tool Comparison",
+    "relevance_reason": "Indicates the content structure aligns with the user's intent to compare distribution channel performance tools.",
+    "ranking_factor": "content_type_alignment",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "February 19, 2025",
+    "relevance_reason": "High freshness score, ensuring the list of tools is current for the specified year.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "Directly addresses the acronym 'MMP' from the user query, establishing topical authority.",
+    "ranking_factor": "topic_definition",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Key Features to Consider",
+    "relevance_reason": "Signals a buyer's guide structure, highly relevant for users looking for 'top tools'.",
+    "ranking_factor": "user_intent_alignment",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Accurate Attribution",
+    "relevance_reason": "Identifies a core technical requirement for link tracking and channel performance.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.75
+  }
+]

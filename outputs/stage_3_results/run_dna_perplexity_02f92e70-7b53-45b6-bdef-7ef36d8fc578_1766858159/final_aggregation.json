@@ -1,0 +1,191 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "Best MMP tool for app tracking?",
+  "sources_analyzed": 10,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Directly address the user's comparative query",
+      "optimized_pattern_template": "The [Number] Best Mobile Measurement Partners (MMPs) in [Year]",
+      "adoption_rate": 0.6
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Must define what a Mobile Measurement Partner (MMP) is and list the top entities covered in the article, such as Branch, Singular, AppsFlyer, Adjust.",
+      "adoption_rate": 0.5
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "detailed_list_or_comparison",
+      "content_requirement": "Provide a detailed breakdown of each MMP tool, covering key features, pricing, and unique value propositions. Must address core evaluation criteria like attribution accuracy and fraud prevention.",
+      "adoption_rate": 0.7
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "Mobile Measurement Partner (MMP)": {
+      "classification": "Technology Category",
+      "primary_definition": "A 3rd-party tool that helps brands track and attribute app installs, user behavior, and campaign performance to better understand marketing program performance.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "app tracking",
+        "mobile attribution",
+        "campaign performance",
+        "user behavior"
+      ],
+      "frequency_across_sources": 0.9
+    },
+    "Branch": {
+      "classification": "MMP / Deep Linking Platform",
+      "primary_definition": "A mobile measurement partner specializing in deep linking to track and attribute app installs and complex user journeys.",
+      "high_value_attributes": [
+        {
+          "data_point": "Utilizes a sophisticated B2B marketing stack including Marketo, Demandbase, and G2 for lead capture.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "deep linking",
+        "attribution",
+        "user journey",
+        "GDPR",
+        "CCPA"
+      ],
+      "frequency_across_sources": 0.3
+    },
+    "Singular": {
+      "classification": "MMP / Growth Platform",
+      "primary_definition": "An end-to-end growth platform positioned as a modern alternative to legacy MMPs, focusing on cost aggregation and marketing impact analysis.",
+      "high_value_attributes": [
+        {
+          "data_point": "Specializes in SKAdNetwork (SKAN) Attribution and Cost Aggregation features.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "SKAdNetwork",
+        "cost aggregation",
+        "ROI",
+        "growth platform"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Adjust": {
+      "classification": "MMP",
+      "primary_definition": "A widely recognized Mobile Measurement Partner for app tracking, attribution, and analytics.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "MMP",
+        "attribution",
+        "analytics"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "AppsFlyer": {
+      "classification": "MMP",
+      "primary_definition": "A leading Mobile Measurement Partner providing app attribution and marketing analytics.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "MMP",
+        "attribution",
+        "marketing analytics"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Kochava": {
+      "classification": "MMP",
+      "primary_definition": "An established Mobile Measurement Partner offering attribution and analytics for mobile apps.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "MMP",
+        "attribution",
+        "analytics"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "MobileAction": {
+      "classification": "MMP / ASO Tool",
+      "primary_definition": "A mobile measurement partner associated with App Store Optimization (ASO) services.",
+      "high_value_attributes": [
+        {
+          "data_point": "Case study: Square achieved a 50% ROAS uplift and a 40% CPC decrease using MobileAction.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        }
+      ],
+      "semantic_keywords": [
+        "ASO",
+        "ROAS",
+        "CPC",
+        "app store"
+      ],
+      "frequency_across_sources": 0.1
+    },
+    "Apptrove": {
+      "classification": "MMP / Measurement Suite",
+      "primary_definition": "An all-round measurement suite for data-driven app growth, focusing on increasing installs and improving campaign ROI.",
+      "high_value_attributes": [
+        {
+          "data_point": "Key features include Deep Linking, 500+ Global Partners, SKAN Analytics, and All Round Fraud Protection.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "deep linking",
+        "SKAN",
+        "fraud protection",
+        "ROI"
+      ],
+      "frequency_across_sources": 0.1
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "listicle",
+        "usage_frequency": 0.4,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "comparison_table",
+        "usage_frequency": 0.1,
+        "effectiveness_score": 0.95
+      },
+      {
+        "format_type": "definitional_guide",
+        "usage_frequency": 0.4,
+        "effectiveness_score": 0.8
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2200,
+      "entity_density_optimal": 0.03,
+      "readability_score": 0.7
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "A clear definition of 'Mobile Measurement Partner (MMP)'",
+      "A list of top MMP tools including Branch, Singular, Adjust, and AppsFlyer",
+      "Discussion of key evaluation criteria: attribution accuracy, fraud prevention, integration capabilities, and pricing",
+      "Mention of modern tracking technologies like SKAdNetwork (SKAN)",
+      "Inclusion of unique data points or case studies to demonstrate expertise"
+    ],
+    "negative_constraints": [
+      "Avoid being purely promotional for a single vendor in a comparative article",
+      "Avoid making unverified claims without supporting data or social proof"
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true
+    }
+  },
+  "generation_timestamp": "2025-12-27T23:28:28.474312",
+  "sources_processed": 10
+}

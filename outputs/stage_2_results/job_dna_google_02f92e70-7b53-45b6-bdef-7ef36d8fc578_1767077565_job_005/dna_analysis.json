@@ -1,0 +1,174 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767077565_job_005",
+  "url": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/#:~:text=AppsFlyer's%20leadership%20in%20the%20space,through%20uninstalling%20and%20reinstalling%20data.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "source_identity",
+        "navigation_link",
+        "structural_list",
+        "conversion_element",
+        "case_study_headline",
+        "cta_button",
+        "navigation_link",
+        "navigation_link"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 192,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 65.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+      "relevance_reason": "Directly addresses the user's request for 'MMP platforms' and 'top tools' with a specific count (16).",
+      "ranking_factor": "title_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+      "relevance_reason": "Highlights specific metrics (attribution, fraud, integration) relevant to 'measuring marketing distribution channel performance'.",
+      "ranking_factor": "intent_matching",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "mobileaction.co",
+      "relevance_reason": "Identifies the content provider as a specialized entity in the mobile app marketing space.",
+      "ranking_factor": "domain_authority",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SearchAds.com by MobileAction... Manage, automate and optimize Apple Ads campaigns.",
+      "relevance_reason": "Internal product cross-promotion establishing domain authority in app marketing",
+      "ranking_factor": "internal_linking",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Ad Intelligence, ASO Intelligence, Market Intelligence, API Solutions",
+      "relevance_reason": "Footer taxonomy defines the semantic scope of the website (App Analytics vs MMP)",
+      "ranking_factor": "site_structure",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Newsletter... Subscribe to never miss an update... hbspt.forms.create",
+      "relevance_reason": "HubSpot lead generation form integration",
+      "ranking_factor": "conversion_optimization",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+      "relevance_reason": "Provides quantitative evidence of tool performance (MobileAction) regarding marketing metrics (ROAS, CPC)",
+      "ranking_factor": "statistical_evidence",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Read the Success Story",
+      "relevance_reason": "Leverages social proof to validate tool effectiveness",
+      "ranking_factor": "trust_signal",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "16 the Best Mobile Attribution Partners in 2024",
+      "relevance_reason": "Directly addresses the user query for 'top link tracking tools' by promising a list of 16 specific MMP platforms.",
+      "ranking_factor": "listicle_promise",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "How to Choose a Mobile Measurement Partner in 2024",
+      "relevance_reason": "Relevant to the user's intent of evaluating and selecting a tool for performance measurement.",
+      "ranking_factor": "user_intent_alignment",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Integrate Your MMP into SearchAds.com",
+      "relevance_reason": "Identifies a specific downstream integration entity (SearchAds.com), suggesting a workflow context.",
+      "ranking_factor": "entity_association",
+      "causal_strength": 0.85
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 71.507883,
+  "analysis_timestamp": "2025-12-30T12:24:29.856698"
+}

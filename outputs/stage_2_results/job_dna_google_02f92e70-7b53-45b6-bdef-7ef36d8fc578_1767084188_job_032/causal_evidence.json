@@ -1,0 +1,26 @@
+[
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "The 9 best marketing automation software tools in 2026",
+    "relevance_reason": "The content topic is 'marketing automation software', which is related to but broader than the user's specific query about 'link tracking tools' and 'MMP platforms'. This indicates a potential topic mismatch.",
+    "ranking_factor": "topic_relevance",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "October 1, 2025",
+    "relevance_reason": "The article uses a future date, a common SEO tactic to signal content freshness and relevance for future-looking queries.",
+    "ranking_factor": "content_freshness_signal",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "17 min read",
+    "relevance_reason": "Indicates a long-form, in-depth piece of content, which is often favored by search engines.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.4
+  }
+]

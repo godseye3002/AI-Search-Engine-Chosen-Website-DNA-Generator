@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Indicates the use of Google Tag Manager, a tool for managing marketing and analytics tracking scripts. This is a peripheral but relevant technology to the user's query.",
+    "ranking_factor": "technology_stack",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai/.../favicon-segwise...",
+    "relevance_reason": "Identifies the site owner as 'Segwise' and the publishing platform as 'Superblog.ai'. This provides context on the content's origin and the publisher's tech choices.",
+    "ranking_factor": "platform_identification",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile Measurement Partners?, Key Features to Consider",
+    "relevance_reason": "The Table of Contents (ToC) structure directly addresses the user's query by defining the core entity (MMP) and promising an evaluative framework ('Key Features'), indicating high topical relevance and a user-centric structure.",
+    "ranking_factor": "content_structure",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+    "relevance_reason": "The main site navigation reveals the host's (segwise.ai) product focus. This suggests the article's perspective may be framed by expertise in creative performance and competitive analysis, which are sub-topics of marketing channel measurement.",
+    "ranking_factor": "author_expertise",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top Mobile Measurement Partners (MMPs) in 2025",
+    "relevance_reason": "The H1 title directly addresses the core entity 'MMP' from the user query, indicating high topical relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Category: Tool Comparison",
+    "relevance_reason": "The article is explicitly categorized as a 'Tool Comparison', which aligns perfectly with the user's intent to evaluate different platforms.",
+    "ranking_factor": "content_framing",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "11 min read",
+    "relevance_reason": "The estimated reading time suggests a long-form, in-depth piece of content, which is valuable for a complex research query like this.",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Key Features to Consider",
+    "relevance_reason": "This section directly addresses the user's need to evaluate and compare different tools by outlining the core functionalities to look for.",
+    "ranking_factor": "user_intent_matching",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "The content directly defines the primary entity (MMP) from the user's query, establishing foundational relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Accurate Attribution",
+    "relevance_reason": "Identifies a critical metric and feature for measuring marketing channel performance, which is the core task in the user query.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.9
+  }
+]

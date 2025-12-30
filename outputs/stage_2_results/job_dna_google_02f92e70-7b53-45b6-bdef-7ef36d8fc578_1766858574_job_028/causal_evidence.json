@@ -1,0 +1,42 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Server-Side Tracking Built-in, zero code",
+    "relevance_reason": "Identifies a specific technical tracking capability with a 'zero code' value proposition, highly relevant to link tracking tools.",
+    "ranking_factor": "feature_differentiation",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AI Ads Manager Track, manage, optimize ads",
+    "relevance_reason": "Directly maps to the user intent of measuring marketing distribution channel performance.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Attribution",
+    "relevance_reason": "Core terminology match for MMP (Mobile Measurement Partner) platforms.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

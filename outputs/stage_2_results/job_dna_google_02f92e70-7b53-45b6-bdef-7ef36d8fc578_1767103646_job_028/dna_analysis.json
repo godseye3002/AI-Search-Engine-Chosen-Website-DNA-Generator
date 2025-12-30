@@ -1,0 +1,159 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767103646_job_028",
+  "url": "https://www.cometly.com/post/performance-marketing-tracking-software",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "metadata_title",
+        "structured_data",
+        "metadata_description",
+        "structured_data_author",
+        "link_with_description",
+        "link",
+        "link_with_description",
+        "feature_list_item",
+        "feature_list_item",
+        "feature_list_item"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 75.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "<title>Discover The 10 Best Performance Marketing Tracking Software</title>",
+      "relevance_reason": "The title directly addresses the user's intent to find a list of 'top' or 'best' tools in the performance marketing tracking category, which is closely related to MMPs and link tracking.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "\"headline\": \"10 Performance Marketing Tracking Software Tools To Optimize Your Ad Campaigns\"",
+      "relevance_reason": "The schema headline reinforces the listicle format ('10 Tools') and highlights the core value proposition ('Optimize Your Ad Campaigns'), which aligns with measuring channel performance.",
+      "ranking_factor": "structured_data_seo",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "<meta content=\"Explore the 10 best performance marketing tracking software to optimize your ad campaigns and accurately measure ROI. Enhance your marketing strategy today\" name=\"description\"/>",
+      "relevance_reason": "The description explicitly mentions key user goals like 'optimize ad campaigns' and 'accurately measure ROI', which are central to the user's query about measuring performance.",
+      "ranking_factor": "relevance_signals",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Server-Side Tracking: Built-in, zero code",
+      "relevance_reason": "Directly mentions a core feature ('Server-Side Tracking') relevant to modern link tracking and MMP platforms, addressing user intent for robust measurement tools.",
+      "ranking_factor": "feature_relevance",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "/features/attribution",
+      "relevance_reason": "The navigation path points to an 'Attribution' feature page, which is a fundamental concept for measuring marketing channel performance as specified in the user query.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "AI Ads Manager: Track, manage, optimize ads",
+      "relevance_reason": "Indicates capabilities for managing and tracking ad performance, which is a key function of tools used to measure marketing distribution.",
+      "ranking_factor": "feature_relevance",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Server-Side Tracking: Built-in, zero code",
+      "relevance_reason": "This feature is a core component of modern MMPs and link tracking. The 'zero code' aspect is a strong value proposition.",
+      "ranking_factor": "feature_relevance",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Multi-Touch Attribution: View impact across journey",
+      "relevance_reason": "Directly addresses the user's need to 'measure marketing distribution channel performance'.",
+      "ranking_factor": "query_alignment",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Conversion Sync: Sync data to ad platforms",
+      "relevance_reason": "Highlights a key function of MMPs, which is to close the loop between tracking and ad platform optimization.",
+      "ranking_factor": "feature_relevance",
+      "causal_strength": 0.65
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 51.681674,
+  "analysis_timestamp": "2025-12-30T19:40:42.093412"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Discover The 10 Best Performance Marketing Tracking Software",
+    "relevance_reason": "Directly addresses the user's request for 'top link tracking tools' via a listicle format.",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "optimize your ad campaigns and accurately measure ROI",
+    "relevance_reason": "Aligns with user intent to 'measure marketing distribution channel performance'.",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Matt Pattoli, Founder at Cometly",
+    "relevance_reason": "Identifies the source as a vendor (Cometly) in the tracking space, indicating potential self-inclusion in the 'top tools' list.",
+    "ranking_factor": "authority_and_bias",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Server-Side Tracking: Built-in, zero code",
+    "relevance_reason": "Highlights a specific tracking methodology relevant to the user's request for 'link tracking tools', emphasizing ease of use (zero code).",
+    "ranking_factor": "feature_differentiation",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AI Ads Manager: Track, manage, optimize ads",
+    "relevance_reason": "Directly maps to 'measure marketing distribution channel performance' in the user query.",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Attribution",
+    "relevance_reason": "Core keyword match for MMP (Mobile Measurement Partner) functionality found in the URL slug and link text.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

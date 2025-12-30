@@ -1,0 +1,121 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767082098_job_006",
+  "url": "https://markopolo.ai/blogs/best-marketing-attribution-software",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "meta_generator",
+        "navigation_link",
+        "structural_label"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 68,
+        "description_length": 154,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 52.5,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "12 Best Marketing Attribution Software Tools for 2025 - Markopolo ai",
+      "relevance_reason": "Title indicates a listicle of attribution tools, which directly addresses the user's need for measuring marketing channel performance.",
+      "ranking_factor": "title_relevance",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Learn how to automate sales and marketing with personal AI. Tips on cart recovery automation, conversion optimization...",
+      "relevance_reason": "Description focuses on automation and conversion optimization, which are related to performance but lacks specific MMP or link tracking keywords.",
+      "ranking_factor": "description_context",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Framer 8e1ebfe",
+      "relevance_reason": "Identifies the CMS/Builder used, indicating a modern, likely visually rich content structure.",
+      "ranking_factor": "technical_metadata",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Visitor identification",
+      "relevance_reason": "Highlights a specific tracking/measurement feature offered by the platform, relevant to the 'tracking tools' aspect of the query.",
+      "ranking_factor": "feature_prominence",
+      "causal_strength": 0.25
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Solutions",
+      "relevance_reason": "Establishes the site as a service provider/vendor rather than a review blog, contextualizing the source.",
+      "ranking_factor": "source_identification",
+      "causal_strength": 0.25
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 34.964667,
+  "analysis_timestamp": "2025-12-30T13:39:22.274431"
+}

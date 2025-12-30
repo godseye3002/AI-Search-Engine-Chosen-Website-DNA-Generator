@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The Top Mobile Measurement Partners",
+    "relevance_reason": "Direct semantic match to user query 'Best MMP tool'",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Adjust, AppsFlyer, Branch, Kochava, Airbridge, RevenueCat, Singular, & Tenjin",
+    "relevance_reason": "High-density entity listing of top competitors in the MMP space",
+    "ranking_factor": "entity_density",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Time to read: 8 minutes",
+    "relevance_reason": "Indicates comprehensive long-form content suitable for 'best of' analysis",
+    "ranking_factor": "content_depth_signal",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "phone:+1 (305) 340-3049",
+    "relevance_reason": "Vendor contact details; establishes business legitimacy but contains no semantic answer to the query.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "cf_email",
+    "relevance_reason": "Email address protected by Cloudflare; indicates technical security measures but no content value.",
+    "ranking_factor": "technical_structure",
+    "causal_strength": 0.05
+  }
+]

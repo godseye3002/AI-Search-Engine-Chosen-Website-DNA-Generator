@@ -1,0 +1,34 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 6 Mobile Measurement Partners In India For Accurate App Analytics (2025)",
+    "relevance_reason": "Directly matches the query's core subject (Mobile Measurement Partners/MMP) and uses a listicle format ('Top 6') and future-dating ('2025') to maximize click-through rate.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Discover the top 6 mobile measurement partners in India to track your app marketing ROI and performance effectively in 2025.",
+    "relevance_reason": "Reinforces the title's keywords and explicitly mentions 'ROI' and 'performance', which aligns with the user's goal to 'measure... performance'.",
+    "ranking_factor": "user_intent_matching",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->",
+    "relevance_reason": "Indicates the use of a premium SEO plugin, suggesting the publisher has a sophisticated and deliberate content optimization strategy.",
+    "ranking_factor": "technical_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "tel:(309) 8855-314",
+    "relevance_reason": "This is a generic contact CTA, completely irrelevant to the user's query about link tracking tools and MMPs.",
+    "ranking_factor": "off_topic_content",
+    "causal_strength": 0.0
+  }
+]

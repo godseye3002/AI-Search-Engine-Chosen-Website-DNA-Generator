@@ -1,0 +1,199 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767082098_job_019",
+  "url": "https://www.appsflyer.com/blog/measurement-analytics/mmp-buying-guide/#:~:text=Converting%20users%20across%20platforms%20and,installs%20through%20email%20campaigns%20alone.",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "data_layer_category",
+        "publication_date",
+        "navigation_category",
+        "product_feature",
+        "product_feature",
+        "product_feature",
+        "heading",
+        "metadata"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 49,
+        "description_length": 152,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 58.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "The marketer’s guide to buying an MMP | AppsFlyer",
+      "relevance_reason": "Title directly addresses the user intent of evaluating and selecting MMP platforms.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Cut through the noise with this in-depth guide into buying an MMP helping you transform your marketing efforts from guesswork to a data-driven strategy.",
+      "relevance_reason": "Articulates the value proposition of the content as a decision-making tool for marketing measurement.",
+      "ranking_factor": "click_through_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "'Categories': 'Measurement & analytics'",
+      "relevance_reason": "Classifies the content specifically under the measurement domain requested by the user.",
+      "ranking_factor": "topic_classification",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Measurement Suite",
+      "relevance_reason": "Directly maps to user intent of 'measuring' performance; categorizes the tools available.",
+      "ranking_factor": "information_architecture",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Mobile Attribution",
+      "relevance_reason": "Identifies core MMP functionality for tracking mobile onboarding channels.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "CTV Attribution",
+      "relevance_reason": "Highlights specific distribution channel (Connected TV) tracking capability.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "The marketer’s guide to buying an MMP",
+      "relevance_reason": "Title directly addresses the user intent of selecting/buying an MMP platform.",
+      "ranking_factor": "topic_prominence",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Dec 16, 2024, 14 min read",
+      "relevance_reason": "Signals high freshness and significant content depth (long-form), crucial for competitive analysis.",
+      "ranking_factor": "freshness_and_depth",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Blog > Measurement & analytics",
+      "relevance_reason": "Contextualizes the content within the specific domain of measurement tools.",
+      "ranking_factor": "structural_context",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "style=\"display: none !important;\"",
+      "relevance_reason": "Entire section is hidden from the rendered view, limiting user engagement impact",
+      "ranking_factor": "technical_implementation",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Ready to start making good choices?",
+      "relevance_reason": "Generic persuasive copy attempting to drive conversion",
+      "ranking_factor": "conversion_optimization",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Contact sales / Sign up free",
+      "relevance_reason": "Direct bottom-of-funnel calls to action for the MMP platform",
+      "ranking_factor": "user_action",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Dec 16, 2024",
+      "relevance_reason": "Indicates high content freshness, suggesting the list of tools is up-to-date",
+      "ranking_factor": "freshness_signal",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "14 min read",
+      "relevance_reason": "Signifies long-form, comprehensive content likely covering multiple MMP platforms in depth",
+      "ranking_factor": "content_depth_indicator",
+      "causal_strength": 0.15
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 96.374613,
+  "analysis_timestamp": "2025-12-30T13:44:23.709585"
+}

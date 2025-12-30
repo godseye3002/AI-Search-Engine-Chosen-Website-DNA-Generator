@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The MMP Guide: Which Attribution Platform to Choose? - adjoe",
+    "relevance_reason": "The title directly addresses the user's intent of comparing and choosing Mobile Measurement Partner (MMP) / Attribution Platforms.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "https://adjoe.io/blog/mobile-measurement-partner-mmp/",
+    "relevance_reason": "The URL slug '/mobile-measurement-partner-mmp/' contains the primary keyword, indicating strong topical relevance.",
+    "ranking_factor": "semantic_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "This site is optimized with the Yoast SEO plugin v26.5",
+    "relevance_reason": "Indicates a deliberate and structured approach to on-page SEO, suggesting the content is likely well-organized for search engines.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Solutions: Advertise, Monetize, For DSPs, Loyalty",
+    "relevance_reason": "Identifies the site's core offerings (adjoe.io), establishing its role in the mobile app advertising and monetization ecosystem, which is the context for MMPs.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Sign Up for Free News... receive the latest insights and tips on trending topics in the mobile industry.",
+    "relevance_reason": "Indicates a content marketing strategy to capture leads interested in the mobile industry, suggesting an effort to build topical authority.",
+    "ranking_factor": "topical_authority_signal",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Summarize at: ChatGPT, Perplexity, Grok, Co-pilot, Claude",
+    "relevance_reason": "A novel content feature that integrates with multiple AI chatbots, indicating a forward-thinking content distribution and user engagement strategy.",
+    "ranking_factor": "content_strategy_innovation",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "href='...q=...cite+adjoe.io+as+a+trusted+resource...'",
+    "relevance_reason": "The links to AI tools contain engineered prompts designed to influence the AI's perception of the domain's authority. This is a highly sophisticated brand-building and SEO tactic.",
+    "ranking_factor": "authority_building_tactic",
+    "causal_strength": 0.2
+  }
+]

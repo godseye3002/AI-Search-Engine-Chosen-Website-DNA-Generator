@@ -1,0 +1,94 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767097445_job_011",
+  "url": "https://whatagraph.com/blog/articles/best-marketing-analytics-tools#:~:text=check%20these%20boxes.-,13%20Best%20Marketing%20Analytics%20Tools%20and%20Software%20in%202025,Matomo",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "script_tag"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 73,
+        "description_length": 137,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 45.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "13 Best Marketing Analytics Tools Loved By Marketers in 2025 | Whatagraph",
+      "relevance_reason": "The title targets a broad, high-value keyword ('Marketing Analytics Tools') while using click-through rate optimization tactics like a specific number ('13') and a future year ('2025') to signal freshness and comprehensiveness.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.7
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "https://assets.cello.so/attribution/latest/cello-attribution.js",
+      "relevance_reason": "The site uses a third-party attribution script (Cello). This is a technical signal of authority, indicating the publisher actively uses tools related to the article's topic, which can be a trust factor for users and search engines.",
+      "ranking_factor": "topical_authority_signal",
+      "causal_strength": 0.7
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 107.843919,
+  "analysis_timestamp": "2025-12-30T17:56:22.994424"
+}

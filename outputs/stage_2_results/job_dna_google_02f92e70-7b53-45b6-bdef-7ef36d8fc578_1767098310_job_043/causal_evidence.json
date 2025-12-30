@@ -1,0 +1,18 @@
+[
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Solutions: Advertise, Monetize, For DSPs, Loyalty",
+    "relevance_reason": "Identifies the site owner, 'adjoe', as a company in the mobile ad-tech space. The listed solutions frame their business model, which is adjacent to the MMP ecosystem.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Sign Up for Free News...receive the latest insights and tips on trending topics in the mobile industry.",
+    "relevance_reason": "Highlights a primary call-to-action (newsletter signup) and content marketing strategy aimed at professionals in the mobile industry, a common tactic for B2B lead generation in this sector.",
+    "ranking_factor": "cta_analysis",
+    "causal_strength": 0.2
+  }
+]

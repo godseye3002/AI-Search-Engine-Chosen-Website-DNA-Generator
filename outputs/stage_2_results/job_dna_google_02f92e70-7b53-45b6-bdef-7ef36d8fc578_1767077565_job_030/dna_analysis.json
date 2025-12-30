@@ -1,0 +1,168 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767077565_job_030",
+  "url": "https://trackier.com/performance-marketing-software/#:~:text=%E2%80%9CIt%20was%20a%20wise%20decision,Harness%20every%20digital%20channel.",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "technical_script",
+        "metadata_logic",
+        "brand_identity",
+        "navigation_structure",
+        "technical_metadata",
+        "product_grouping",
+        "feature_module",
+        "adjacent_feature",
+        "sidebar_navigation_widget",
+        "internal_link"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 146,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 28.75,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "class RocketLazyLoadScripts",
+      "relevance_reason": "Identifies competitor technical stack (WP Rocket) used for Core Web Vitals optimization; no semantic content related to MMPs.",
+      "ranking_factor": "page_experience",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "navigator.userAgent.match(/MSIE|Internet Explorer/i)",
+      "relevance_reason": "Legacy browser detection logic, indicating broad compatibility handling.",
+      "ranking_factor": "technical_accessibility",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "trackier.com",
+      "relevance_reason": "Identifies the competitor as Trackier, a known MMP and link tracking platform relevant to the user query.",
+      "ranking_factor": "source_identification",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Platform",
+      "relevance_reason": "Top-level menu item suggests a SaaS product architecture, typical for MMPs.",
+      "ranking_factor": "user_experience",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "elementor-location-header",
+      "relevance_reason": "Reveals competitor tech stack (WordPress/Elementor), implying content management capabilities.",
+      "ranking_factor": "technical_structure",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Essential Suite",
+      "relevance_reason": "Competitor bundles analytics within a core suite, suggesting an all-in-one value proposition.",
+      "ranking_factor": "product_positioning",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Marketing Analytics",
+      "relevance_reason": "Direct semantic match to 'measure marketing distribution channel performance'.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Automated Invoicing",
+      "relevance_reason": "Indicates integration of performance tracking with financial operations, differentiating from standalone MMPs.",
+      "ranking_factor": "feature_differentiation",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Performance Marketing Software",
+      "relevance_reason": "Identifies the parent category/taxonomy the competitor uses to classify tracking and MMP tools.",
+      "ranking_factor": "site_structure",
+      "causal_strength": 0.35
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "href=\"/performance-marketing-software/\"",
+      "relevance_reason": "Directs users to a hub page likely aggregating the specific tools (MMPs) requested in the query.",
+      "ranking_factor": "internal_linking",
+      "causal_strength": 0.35
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Low evidence quality and relevance",
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 80.926685,
+  "analysis_timestamp": "2025-12-30T12:28:12.266759"
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "class RocketLazyLoadScripts",
+    "relevance_reason": "Indicates competitor uses WP Rocket for Core Web Vitals optimization; contains no topical content regarding MMPs.",
+    "ranking_factor": "technical_performance",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "navigator.userAgent.match(/MSIE|Internet Explorer/i)",
+    "relevance_reason": "Legacy browser detection logic; irrelevant to semantic query analysis.",
+    "ranking_factor": "technical_accessibility",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Your Mobile Measurement Partner for Data Driven App Growth",
+    "relevance_reason": "Explicit self-identification as an MMP, directly matching the user's core search intent.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Apptrove, an all-round measurement suite... increase app installs, improve campaign ROI, enhance user LTV, and optimize ad performance",
+    "relevance_reason": "Defines the entity (Apptrove) and maps it to specific tracking KPIs (ROI, LTV, installs).",
+    "ranking_factor": "semantic_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Deep Linking, 500+ Global Partners, SKAN Analytics, Dedicated Customer Support, All Round Fraud Protection",
+    "relevance_reason": "Lists critical technical features required for app tracking and attribution.",
+    "ranking_factor": "feature_density",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

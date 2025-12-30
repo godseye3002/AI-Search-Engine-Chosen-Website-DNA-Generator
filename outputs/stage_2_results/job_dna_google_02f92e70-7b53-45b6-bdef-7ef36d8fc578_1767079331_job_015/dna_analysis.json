@@ -1,0 +1,131 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767079331_job_015",
+  "url": "https://learn.g2.com/best-marketing-analytics-tools",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "schema_data",
+        "publisher_metadata",
+        "fallback_analysis",
+        "fallback_analysis",
+        "fallback_analysis"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 55.5,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "I Tried The Best Marketing Analytics Tools: Here’s My Review",
+      "relevance_reason": "Indicates a comparative review of tools relevant to performance tracking, though broader than specific MMPs.",
+      "ranking_factor": "topical_relevance",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "I tested 30+ tools and these are the top 7 marketing analytics tools of 2025 to track performance",
+      "relevance_reason": "Quantifies research depth (30+ tested) and freshness (2025), directly addressing the 'top tools' aspect of the query.",
+      "ranking_factor": "click_through_optimization",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "\"datePublished\" : \"2025-10-13\"",
+      "relevance_reason": "Signals high freshness/future-relevance, crucial for technology stack recommendations.",
+      "ranking_factor": "freshness",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 21.246723,
+  "analysis_timestamp": "2025-12-30T12:55:05.833921"
+}

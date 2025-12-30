@@ -111,6 +111,62 @@ class DatabasePipelineOrchestrator:
         
         self.logger.debug(f"Generated input hash from {len(sorted_ids)} rows: {hash_digest[:12]}...")
         return hash_digest
+
+    def _build_ai_response_from_input_rows(self, input_rows: List[Any]) -> Dict[str, Any]:
+        if not input_rows:
+            return {
+                'query': '',
+                'source_links': []
+            }
+
+        base_response: Dict[str, Any] = {}
+        merged_source_links: List[Any] = []
+
+        for row in input_rows:
+            converted = self._convert_to_ai_response(getattr(row, 'raw_serp_results', None))
+            if not base_response:
+                base_response = converted if isinstance(converted, dict) else {}
+
+            links = []
+            if isinstance(converted, dict):
+                links = converted.get('source_links') or []
+            if isinstance(links, list) and links:
+                merged_source_links.extend(links)
+
+        if not base_response:
+            base_response = {
+                'query': '',
+                'source_links': []
+            }
+
+        # Deduplicate links while preserving order
+        unique_links: List[Any] = []
+        seen: set = set()
+        for link in merged_source_links:
+            if isinstance(link, dict):
+                key = link.get('raw_url') or link.get('url') or json.dumps(link, sort_keys=True)
+            else:
+                key = str(link)
+
+            if key in seen:
+                continue
+            seen.add(key)
+            unique_links.append(link)
+
+        base_response['source_links'] = unique_links
+
+        # Prefer a query if base_response does not have one
+        if not base_response.get('query'):
+            for row in input_rows:
+                converted = self._convert_to_ai_response(getattr(row, 'raw_serp_results', None))
+                if isinstance(converted, dict) and converted.get('query'):
+                    base_response['query'] = converted.get('query')
+                    break
+
+        self.logger.info(
+            f"Built ai_response from {len(input_rows)} input rows: source_links_count={len(unique_links)}"
+        )
+        return base_response
     
     def _create_directories(self):
         """Create necessary output directories"""
@@ -141,6 +197,9 @@ class DatabasePipelineOrchestrator:
         try:
             # Fetch all input rows for the product first
             input_rows = self.db_manager.fetch_all_input_rows_for_product(data_source, product_id)
+
+            if not input_rows:
+                raise ValueError(f"Product {product_id} not found in {data_source.value} table")
             
             # Generate hash from input rows
             current_input_hash = self._generate_input_hash(input_rows)
@@ -172,13 +231,8 @@ class DatabasePipelineOrchestrator:
                 self.logger.info(f"Product {product_id} has no existing analysis, processing for the first time")
                 is_reprocessing = False
             
-            # Get the first product record for processing (legacy behavior)
-            product_record = self.db_manager.fetch_product_by_id(data_source, product_id)
-            if not product_record:
-                raise ValueError(f"Product {product_id} not found in {data_source.value} table")
-            
-            # Convert raw_serp_results to AI response format
-            ai_response = self._convert_to_ai_response(product_record.raw_serp_results)
+            # Build ai_response from ALL input rows (many-to-one)
+            ai_response = self._build_ai_response_from_input_rows(input_rows)
             
             # Check if source_links is empty - if so, skip processing
             if not ai_response.get('source_links'):
@@ -195,6 +249,9 @@ class DatabasePipelineOrchestrator:
             
             # Run pipeline
             final_result = self.run_pipeline_from_ai_response(ai_response, run_id_override=run_id)
+
+            if final_result.get('status') != 'completed':
+                raise RuntimeError(final_result.get('error') or "Pipeline did not complete")
             
             # Extract actual master blueprint from final_aggregation.json if available
             master_blueprint = {}
@@ -204,6 +261,9 @@ class DatabasePipelineOrchestrator:
                     try:
                         with open(aggregation_path, 'r', encoding='utf-8') as f:
                             master_blueprint = json.load(f)
+                        if not isinstance(master_blueprint, dict):
+                            self.logger.warning(f"Master blueprint loaded from {aggregation_path} is not a dict; using empty dict")
+                            master_blueprint = {}
                         self.logger.info(f"Loaded master blueprint from {aggregation_path}")
                     except Exception as e:
                         self.logger.warning(f"Failed to load master blueprint from {aggregation_path}: {e}")
@@ -244,7 +304,12 @@ class DatabasePipelineOrchestrator:
             # Update status if we have a record
             try:
                 if 'dna_record' in locals():
-                    self.db_manager.update_dna_analysis_status(data_source, dna_record.id, "failed")
+                    if getattr(dna_record, 'id', None) is not None:
+                        self.db_manager.update_dna_analysis_status(data_source, dna_record.id, "failed")
+                    else:
+                        self.logger.warning(
+                            f"Skipping status update because dna_record.id is None for product {product_id}"
+                        )
             except:
                 pass
             

@@ -1,0 +1,26 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 10 marketing analytics platforms for marketers",
+    "relevance_reason": "The content is about the broader category of 'marketing analytics platforms', which is related but not a direct match for the user's specific query about 'MMP platforms' and 'link tracking tools'.",
+    "ranking_factor": "topic_relevance",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "/8-marketing-analytics-platforms-to-simplify-your-data-analysis-processes/",
+    "relevance_reason": "The canonical URL slug mentions '8' platforms, while the title tag mentions '10'. This inconsistency could indicate outdated content or a lack of attention to detail.",
+    "ranking_factor": "content_freshness_signal",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Make managing your marketing data easier with these 10 marketing analytics platforms recommendations",
+    "relevance_reason": "Highlights a key value proposition focused on 'making managing marketing data easier', which appeals to users looking for efficiency.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.6
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "best-marketing-analytics-tools.png",
+    "relevance_reason": "Image filename confirms page topic covers marketing analytics, relevant to distribution channel performance",
+    "ranking_factor": "topic_signal",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "francois-marchand.png",
+    "relevance_reason": "Identifies content creator, potentially establishing E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)",
+    "ranking_factor": "author_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "/_next/static/",
+    "relevance_reason": "Identifies Next.js architecture, implying a modern, likely fast-loading user experience",
+    "ranking_factor": "page_experience",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Best Marketing Analytics Tools: 18 Software Platforms for Marketers",
+    "relevance_reason": "Title suggests a broad listicle that likely contains the requested MMP/link tracking tools within a larger collection.",
+    "ranking_factor": "keyword_broad_match",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "18 Software Platforms",
+    "relevance_reason": "Quantifies the depth of the comparison, setting a benchmark for competitive content density.",
+    "ranking_factor": "content_depth_signal",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Published: Jul 15, 2025",
+    "relevance_reason": "Aggressive future-dating strategy observed, likely to signal extreme freshness or relevance for upcoming trends.",
+    "ranking_factor": "freshness_optimization",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

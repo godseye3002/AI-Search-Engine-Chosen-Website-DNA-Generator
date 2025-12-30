@@ -1,0 +1,158 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767077565_job_041",
+  "url": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/#:~:text=Overall%2C%20Firebase%20stands%20out%20as,of%20spending%20across%20different%20channels.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "tech_stack",
+        "tech_stack",
+        "brand_identity",
+        "product_offering",
+        "navigation_structure",
+        "conversion_element",
+        "case_study_headline",
+        "cta_link"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 192,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 60.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+      "relevance_reason": "Directly addresses user query for MMP platforms with a specific list count (16) and future-dated SEO strategy (2026).",
+      "ranking_factor": "title_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+      "relevance_reason": "Defines specific metrics for 'measuring performance' requested in the query (attribution, fraud, integration).",
+      "ranking_factor": "snippet_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Rank Math PRO",
+      "relevance_reason": "Indicates high-effort SEO optimization to capture competitive traffic for this topic.",
+      "ranking_factor": "technical_seo",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "MobileAction",
+      "relevance_reason": "Identifies the publisher as a mobile app marketing intelligence platform, establishing domain authority but not directly answering the MMP query in this chunk.",
+      "ranking_factor": "source_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SearchAds.com by MobileAction... Manage, automate and optimize Apple Ads campaigns.",
+      "relevance_reason": "Shows the site's focus on paid acquisition (Apple Search Ads), which is adjacent to MMP tracking but distinct.",
+      "ranking_factor": "topical_adjacency",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Ad Intelligence, ASO Intelligence, Market Intelligence",
+      "relevance_reason": "Internal linking structure defines the site's semantic scope (Intelligence/ASO) rather than Attribution/MMP.",
+      "ranking_factor": "site_structure",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+      "relevance_reason": "Provides quantitative evidence of tool performance (MobileAction) regarding marketing metrics (ROAS, CPC) relevant to distribution channel analysis",
+      "ranking_factor": "statistical_evidence",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Read the Success Story",
+      "relevance_reason": "Indicates availability of deep-dive social proof content",
+      "ranking_factor": "trust_signal",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 56.411509,
+  "analysis_timestamp": "2025-12-30T12:26:15.298169"
+}

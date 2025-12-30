@@ -1,0 +1,39 @@
+{
+  "page_structure": {
+    "html_patterns": [
+      "entity_product_suite",
+      "value_proposition",
+      "entity_topic",
+      "heading",
+      "list_item",
+      "heading",
+      "table",
+      "text_content",
+      "text_content"
+    ],
+    "semantic_markup": [],
+    "content_hierarchy": []
+  },
+  "content_characteristics": {
+    "topic_focus": "",
+    "entity_density": 0,
+    "content_depth": "medium",
+    "unique_value_props": []
+  },
+  "technical_seo": {
+    "meta_optimization": {
+      "title_length": 93,
+      "description_length": 123,
+      "has_canonical": true,
+      "has_og_tags": true
+    },
+    "structured_data": [],
+    "performance_signals": []
+  },
+  "ranking_factors": {
+    "evidence_quality": 82.0,
+    "authority_signals": [],
+    "user_experience": [],
+    "content_freshness": "unknown"
+  }
+}

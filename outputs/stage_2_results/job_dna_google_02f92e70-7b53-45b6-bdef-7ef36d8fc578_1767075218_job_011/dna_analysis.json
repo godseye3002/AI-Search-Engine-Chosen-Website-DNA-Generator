@@ -1,0 +1,158 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767075218_job_011",
+  "url": "https://whatagraph.com/blog/articles/best-marketing-analytics-tools#:~:text=check%20these%20boxes.-,13%20Best%20Marketing%20Analytics%20Tools%20and%20Software%20in%202025,Matomo",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "technology_signal",
+        "publisher_entity",
+        "brand_identity",
+        "value_proposition",
+        "feature_integration",
+        "feature_integration",
+        "fallback_analysis",
+        "fallback_analysis",
+        "syntax_artifact"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 73,
+        "description_length": 137,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 38.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "13 Best Marketing Analytics Tools Loved By Marketers in 2025 | Whatagraph",
+      "relevance_reason": "Title indicates a listicle ('13 Best') targeting 'Marketing Analytics Tools' with freshness signal ('2025'), highly relevant to 'top tools' query intent.",
+      "ranking_factor": "title_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "cello-attribution.js",
+      "relevance_reason": "Site uses Cello for attribution, semantically related to the user's search for 'tracking tools' and 'distribution channel performance'.",
+      "ranking_factor": "tech_stack_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Whatagraph",
+      "relevance_reason": "Publisher is a known marketing data platform, establishing authority in the analytics niche.",
+      "ranking_factor": "domain_authority",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Whatagraph",
+      "relevance_reason": "Identifies the hosting platform; Whatagraph is a marketing data reporting tool, not a direct MMP, suggesting the content may be a blog/listicle.",
+      "ranking_factor": "source_identification",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Your single source of truth for marketing data",
+      "relevance_reason": "Defines the tool's core positioning relative to marketing performance measurement.",
+      "ranking_factor": "brand_positioning",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Move data to BigQuery",
+      "relevance_reason": "Highlights advanced data handling capabilities often required for analyzing MMP data.",
+      "ranking_factor": "technical_feature",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "]",
+      "relevance_reason": "Content consists solely of a closing bracket, indicating a parsing error or truncated data with no semantic value.",
+      "ranking_factor": "noise",
+      "causal_strength": 0.0
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 109.237034,
+  "analysis_timestamp": "2025-12-30T11:45:56.827487"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Reddit - The heart of the internet",
+    "relevance_reason": "Identifies the source as a high-authority UGC platform, crucial for 'best tool' queries where user consensus is valued.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "shreddit_adblock_detection_update",
+    "relevance_reason": "Technical evidence of ad-tracking infrastructure, tangentially related to the topic of tracking/MMPs.",
+    "ranking_factor": "technical_sophistication",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "ads_in_related_posts_m1",
+    "relevance_reason": "Indicates monetization structure within the content delivery, relevant for competitive ad placement analysis.",
+    "ranking_factor": "monetization_structure",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "id=\"reddit-logo\"",
+    "relevance_reason": "Identifies the source domain as Reddit, a high-authority platform for user reviews on tools.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<nav class=\"h-header-large flex items-center\">",
+    "relevance_reason": "Site navigation header; contains no specific information regarding MMP tools.",
+    "ranking_factor": "page_structure",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "faceplate-tracker action=\"open\" noun=\"hamburger_menu\"",
+    "relevance_reason": "Indicates complex, interactive web components (Faceplate) used for site UX.",
+    "ranking_factor": "technical_performance",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Best MMP tool for app tracking?",
+    "relevance_reason": "Exact semantic match to user query in H1/Title tag",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "r/ecommerce",
+    "relevance_reason": "High-intent context for business tool selection",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "comment-count=\"4\"",
+    "relevance_reason": "Indicates existence of community answers/comparisons",
+    "ranking_factor": "social_proof",
+    "causal_strength": 0.95
+  }
+]

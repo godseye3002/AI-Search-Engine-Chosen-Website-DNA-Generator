@@ -1,0 +1,150 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767077565_job_031",
+  "url": "https://www.goodbarber.com/blog/10-marketing-tools-you-need-to-boost-revenues-for-small-businesses-in-2023-a1213/#:~:text=Hootsuite%20is%20a%20social%20media%20marketing%20tool,that%20resonate%20the%20most%20with%20your%20audience.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_keywords",
+        "schema_organization",
+        "resource_hints",
+        "brand_identifier",
+        "structural_markup",
+        "heading",
+        "list_item",
+        "list_item"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 74,
+        "description_length": 160,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 26.666666666666668,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+      "relevance_reason": "Listicle format suggests potential inclusion of tracking tools, though the scope is broad (general marketing vs. specific MMPs).",
+      "ranking_factor": "topicality",
+      "causal_strength": 0.4
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GoodBarber, app builder, ASO, Beacons, Geofencing, engagement, iOS, Android",
+      "relevance_reason": "Keywords indicate a focus on mobile app development and proximity marketing rather than attribution or link tracking.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.4
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GoodBarber",
+      "relevance_reason": "Publisher is an App Builder platform, implying the audience consists of app owners who would require MMPs, establishing indirect contextual relevance.",
+      "ranking_factor": "source_authority",
+      "causal_strength": 0.4
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "GoodBarber",
+      "relevance_reason": "Identifies the content publisher. GoodBarber is an App Builder, implying the content may be a blog post advising on MMPs for their users.",
+      "ranking_factor": "source_identification",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<nav id=\"gbnavbar\">...<header class=\"gbhead--crystal\" id=\"gbhead\">",
+      "relevance_reason": "Standard site navigation and logo implementation; contains no semantic information regarding link tracking or MMPs.",
+      "ranking_factor": "page_structure",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+      "relevance_reason": "Content targets general small business marketing rather than the specific 'MMP platforms' or 'onboarding link tracking' requested.",
+      "ranking_factor": "topicality_mismatch",
+      "causal_strength": 0.35
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Google Analytics",
+      "relevance_reason": "Relevant entity for 'measuring marketing distribution channel performance', though not a dedicated Mobile Measurement Partner (MMP).",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.35
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "HubSpot",
+      "relevance_reason": "CRM entity capable of tracking channel performance, partially aligning with the user's need for distribution analysis.",
+      "ranking_factor": "related_entity",
+      "causal_strength": 0.35
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Low evidence quality and relevance",
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 61.423379,
+  "analysis_timestamp": "2025-12-30T12:27:52.780140"
+}

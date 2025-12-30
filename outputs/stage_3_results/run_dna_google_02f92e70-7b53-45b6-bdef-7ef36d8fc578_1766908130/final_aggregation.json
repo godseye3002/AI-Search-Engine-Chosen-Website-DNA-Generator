@@ -1,0 +1,31 @@
+{
+  "master_blueprint_id": "dna_aggregated_fallback_v1",
+  "blueprint_generation_logic": "fallback_no_gemini",
+  "query_context": "top link tracking tools to measure marketing distribution channel performance for onboarding (MMP platforms)",
+  "sources_analyzed": 4,
+  "generation_timestamp": "2025-12-28T13:19:17.060214",
+  "fallback_used": true,
+  "fallback_reason": "Failed to generate master blueprint for run dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766908130 (Gemini returned empty/invalid blueprint)",
+  "sources_summary": [
+    {
+      "url": "https://muffaddal-qutbuddin.medium.com/why-an-mmp-is-a-must-have-for-app-marketers-b216bcc53f2c#:~:text=How%20does%20mobile%20attribution%20work,the%20source%20it%20came%20from.",
+      "classification": "third_party",
+      "relevance_score": null
+    },
+    {
+      "url": "https://marketerhire.com/blog/marketing-attribution-tools",
+      "classification": "third_party",
+      "relevance_score": null
+    },
+    {
+      "url": "https://www.adjust.com/resources/guides/mmp-buyers-guide/#:~:text=To%20further%20app%20growth%20amidst,an%20app%20marketer's%20MarTech%20stack.",
+      "classification": "third_party",
+      "relevance_score": null
+    },
+    {
+      "url": "https://www.appsflyer.com/appsflyer-advantage/kochava/#:~:text=of%20app%20marketing:-,1,goals%20and%20match%20your%20growth",
+      "classification": "third_party",
+      "relevance_score": null
+    }
+  ]
+}

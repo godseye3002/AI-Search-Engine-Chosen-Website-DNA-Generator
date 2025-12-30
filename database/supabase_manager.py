@@ -266,7 +266,7 @@ class SupabaseDataManager:
             logger.error(f"Error saving DNA analysis for product {record.product_id}: {str(e)}")
             raise
     
-    def update_dna_analysis_status(self, data_source: DataSource, record_id: int, status: str) -> bool:
+    def update_dna_analysis_status(self, data_source: DataSource, record_id: Optional[int], status: str) -> bool:
         """
         Update the status of a DNA analysis record
         
@@ -280,6 +280,10 @@ class SupabaseDataManager:
         """
         table_name = self.output_tables[data_source]
         logger.info(f"Updating status to '{status}' for record {record_id} in {table_name}")
+
+        if record_id is None:
+            logger.warning(f"Skipping status update because record_id is None for table {table_name}")
+            return False
         
         try:
             response = self.client.table(table_name).update(
@@ -315,39 +319,46 @@ class SupabaseDataManager:
         logger.info(f"Checking existing analysis for product {product_id} in {table_name}")
         
         try:
-            # Include input_data_hash in the query
             response = self.client.table(table_name).select(
                 "id, product_id, run_id, dna_blueprint, status, input_data_hash, created_at, updated_at"
-            ).eq("product_id", product_id).execute()
+            ).eq("product_id", product_id).order("created_at", desc=True).execute()
             
-            if response.data and len(response.data) > 0:
-                item = response.data[0]
-                record = DNAAnalysisRecord(
-                    id=item['id'],
-                    product_id=item['product_id'],
-                    run_id=item['run_id'],
-                    dna_blueprint=item['dna_blueprint'],
-                    status=item['status'],
+            if not response.data:
+                logger.info(f"No existing analysis found for product {product_id}")
+                return False, None
+            
+            def _build_record(item: Dict[str, Any]) -> DNAAnalysisRecord:
+                return DNAAnalysisRecord(
+                    id=item.get('id'),
+                    product_id=item.get('product_id'),
+                    run_id=item.get('run_id'),
+                    dna_blueprint=item.get('dna_blueprint'),
+                    status=item.get('status'),
+                    input_data_hash=item.get('input_data_hash'),
                     created_at=item.get('created_at'),
                     updated_at=item.get('updated_at')
                 )
-                
-                existing_hash = item.get('input_data_hash')
-                
-                if current_input_hash is not None:
+            
+            if current_input_hash is not None:
+                for item in response.data:
+                    existing_hash = item.get('input_data_hash')
                     if existing_hash == current_input_hash:
-                        logger.info(f"Product {product_id} data is unchanged (hash: {current_input_hash[:12]}...), skipping")
-                        return True, record
-                    else:
-                        logger.info(f"Product {product_id} data has changed (old: {existing_hash[:12] if existing_hash else 'None'}..., new: {current_input_hash[:12]}...), reprocessing")
-                        return False, record
-                else:
-                    # Legacy behavior - if no hash provided, just check existence
-                    logger.info(f"Found existing analysis for product {product_id} with status '{record.status}' (no hash comparison)")
-                    return True, record
-            else:
-                logger.info(f"No existing analysis found for product {product_id}")
-                return False, None
+                        logger.info(
+                            f"Product {product_id} data is unchanged (hash match: {current_input_hash[:12]}...), skipping"
+                        )
+                        return True, _build_record(item)
+                
+                logger.info(
+                    f"Product {product_id} data has changed (no matching hash for {current_input_hash[:12]}..., "
+                    f"found {len(response.data)} historical records)"
+                )
+                return False, _build_record(response.data[0])
+            
+            # Legacy behavior - no hash provided, treat as existence check
+            logger.info(
+                f"Found existing analysis for product {product_id} with status '{response.data[0].get('status')}' (no hash comparison)"
+            )
+            return True, _build_record(response.data[0])
                 
         except Exception as e:
             logger.error(f"Error checking existing analysis for product {product_id}: {str(e)}")

@@ -10,6 +10,7 @@ import json
 import re
 import time
 import random
+import logging
 from typing import Optional, Dict, Any, Literal
 from urllib.parse import urlparse, parse_qs, urljoin
 from pathlib import Path
@@ -31,6 +32,37 @@ if not API_KEY:
 
 # Configure Gemini
 genai.configure(api_key=API_KEY)
+
+# Setup Gemini API tracker
+gemini_logger = logging.getLogger('gemini_classification')
+gemini_logger.setLevel(logging.INFO)
+if not gemini_logger.handlers:
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter('[GEMINI-CLASS] %(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    gemini_logger.addHandler(handler)
+
+def track_gemini_classification(func_name: str, prompt: str, response: Any = None, error: Exception = None, start_time: float = None):
+    """Track Gemini API calls for classification"""
+    end_time = time.time()
+    duration = end_time - start_time if start_time else 0
+    
+    gemini_logger.info(f"=== {func_name} ===")
+    gemini_logger.info(f"Duration: {duration:.2f}s")
+    gemini_logger.info(f"Prompt length: {len(prompt)} chars")
+    
+    if error:
+        gemini_logger.error(f"ERROR: {str(error)}")
+        gemini_logger.error(f"Error type: {type(error).__name__}")
+    elif response:
+        if hasattr(response, 'text'):
+            gemini_logger.info(f"Response length: {len(response.text)} chars")
+            gemini_logger.info(f"Response preview: {response.text[:200]}...")
+        else:
+            gemini_logger.info(f"Response type: {type(response)}")
+            gemini_logger.info(f"Response preview: {str(response)[:200]}...")
+    
+    gemini_logger.info("=" * 50)
 
 
 class ClassificationResult:
@@ -157,10 +189,13 @@ def detect_special_url_with_gemini(url: str) -> Optional[Dict[str, Any]]:
         }}
         """
         
+        # Track Gemini API call
+        start_time = time.time()
         response = model.generate_content(
             prompt,
             generation_config=genai.types.GenerationConfig(temperature=0.1)
         )
+        track_gemini_classification("Special URL Classification", prompt, response=response, start_time=start_time)
         
         text = response.text
         
@@ -458,7 +493,11 @@ Respond ONLY with valid JSON in this exact format (no markdown, no backticks):
 }}
 """
     
+    # Track Gemini API call
+    start_time = time.time()
     response = model.generate_content(prompt)
+    track_gemini_classification("Third Party Classification", prompt, response=response, start_time=start_time)
+    
     text = response.text
     
     try:

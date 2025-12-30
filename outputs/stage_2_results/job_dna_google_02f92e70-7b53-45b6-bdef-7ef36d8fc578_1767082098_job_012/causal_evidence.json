@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 10 marketing analytics platforms for marketers | DashThis",
+    "relevance_reason": "Establishes content as a listicle for 'marketing analytics platforms', which is a broader category than the specific 'MMP/link tracking' query.",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Make managing your marketing data easier with these 10 marketing analytics platforms recommendations",
+    "relevance_reason": "Defines value proposition (data management/simplification) rather than specific attribution/tracking features.",
+    "ranking_factor": "click_through_optimization",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "/blog/8-marketing-analytics-platforms-to-simplify-your-data-analysis-processes/",
+    "relevance_reason": "Forensic Insight: URL indicates original list had 8 tools, while Title claims 10. Suggests content has been updated/expanded to maintain freshness.",
+    "ranking_factor": "content_freshness_indicator",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "DashThis",
+    "relevance_reason": "Identifies the host platform as a reporting solution, likely an aggregator rather than a direct MMP or link tracker.",
+    "ranking_factor": "source_identification",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Integrations",
+    "relevance_reason": "Suggests the platform connects with the specific tracking tools/MMPs the user is searching for.",
+    "ranking_factor": "integration_capabilities",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AI Reporting Tool 🤖",
+    "relevance_reason": "Highlights a competitive differentiator (AI) in the analytics/reporting stack.",
+    "ranking_factor": "unique_value_proposition",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "120 tools for the average enterprise (Netskope’s 2019 Cloud Report)",
+    "relevance_reason": "Market friction point illustrating data fragmentation",
+    "ranking_factor": "authority_citation",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "DashThis",
+    "relevance_reason": "Competitor/Tool example for reporting aggregation",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "automates data collection and aggregation across various platforms",
+    "relevance_reason": "Defines the tool category's primary benefit (Aggregation vs. Tracking)",
+    "ranking_factor": "feature_description",
+    "causal_strength": 0.55
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "120 tools in the average enterprise marketing technology stack (Netskope 2019)",
+    "relevance_reason": "Market saturation data point used to justify need for aggregation tools",
+    "ranking_factor": "authority_evidence",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "European-based martech products in 2021 equal global count from 2016 (3,647)",
+    "relevance_reason": "Growth metric highlighting industry complexity",
+    "ranking_factor": "authority_evidence",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "DashThis",
+    "relevance_reason": "Identified as a marketing analytics platform (dashboarding/aggregation) rather than a direct MMP/link tracker",
+    "ranking_factor": "competitor_identification",
+    "causal_strength": 0.45
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767083075_job_015",
+  "url": "https://learn.g2.com/best-marketing-analytics-tools",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "schema_data",
+        "organization_entity",
+        "brand_identifier",
+        "navigation_taxonomy",
+        "content_strategy_indicator",
+        "text_content",
+        "text_content",
+        "text_content"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 36.25,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "I Tried The Best Marketing Analytics Tools: Here’s My Review",
+      "relevance_reason": "Broad match for performance measurement tools; likely includes tracking/attribution but lacks specific 'MMP' or 'onboarding' keywords in title.",
+      "ranking_factor": "topical_relevance",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "I tested 30+ tools and these are the top 7 marketing analytics tools of 2025",
+      "relevance_reason": "Highlights a curated listicle format derived from a large sample size (30+), indicating rigorous selection criteria.",
+      "ranking_factor": "content_quality_signal",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "\"datePublished\" : \"2025-10-13\"",
+      "relevance_reason": "Indicates extremely fresh/forward-looking content (2025), essential for tracking tool technology stacks.",
+      "ranking_factor": "freshness",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "G2 Logo (learn.g2.com)",
+      "relevance_reason": "Establishes domain authority as a primary software review aggregator",
+      "ranking_factor": "domain_authority",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Industry Insights, G2 Voices, Tech Signals",
+      "relevance_reason": "Defines the content categorization strategy of the competitor",
+      "ranking_factor": "site_structure",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Submit a Pitch, Editorial Guidelines, Our Writers",
+      "relevance_reason": "Identifies reliance on a contributor network/guest posting for content generation",
+      "ranking_factor": "content_operations",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Mailchimp is frequently praised in G2 customer reviews for being one of the easiest ways to launch and measure email campaigns.",
+      "relevance_reason": "Identifies tool and primary measurement capability (email), though misaligned with MMP category.",
+      "ranking_factor": "entity_identification",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "G2 sentiment analysis describe a generally smooth, template-led build experience... deep design control is harder to achieve",
+      "relevance_reason": "Extracts specific user sentiment regarding usability vs customization trade-offs.",
+      "ranking_factor": "sentiment_analysis",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "costs can climb as lists grow... power features, such as fuller A/B testing and more granular segmentation, sit in higher-tier plans",
+      "relevance_reason": "Highlights pricing friction points and feature gating strategies.",
+      "ranking_factor": "pricing_insights",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Table of Contents: 1. HubSpot... 7. MoEngage...",
+      "relevance_reason": "Provides structural overview of competitor tool list",
+      "ranking_factor": "structure_completeness",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "CleverTap: Best for mobile user engagement and retention",
+      "relevance_reason": "Mobile-focused tool relevant to onboarding context, though not strictly an MMP",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "MoEngage: Best for AI-driven multi-channel campaign orchestration",
+      "relevance_reason": "Mobile/Multi-channel tool relevant to distribution channel performance",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.45
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 100.197288,
+  "analysis_timestamp": "2025-12-30T13:58:46.782475"
+}

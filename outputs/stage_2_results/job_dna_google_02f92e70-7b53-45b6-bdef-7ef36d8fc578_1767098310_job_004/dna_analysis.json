@@ -1,0 +1,150 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767098310_job_004",
+  "url": "https://www.businessofapps.com/marketplace/app-analytics/mobile-measurement-partners/",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "entity",
+        "navigation_element",
+        "navigation_element",
+        "sponsored_content_link",
+        "heading",
+        "unique_value_prop",
+        "statistic",
+        "entity_definition"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 63,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 93.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Top Mobile Measurement Partners (MMP) (2025) - Business of Apps",
+      "relevance_reason": "The title directly matches the user's query for 'Top MMP' platforms and signals content freshness with the year '(2025)'.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Mobile Measurement Partners (MMP)",
+      "relevance_reason": "This is the primary entity the user is searching for, confirming the page's topic.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<a data-tab=\"tabs-directory\" ... href=\"/marketplace/app-analytics/mobile-measurement-partners#directory\" ...>Directory</a>",
+      "relevance_reason": "The URL structure and anchor text explicitly target 'mobile-measurement-partners' and a 'directory' format, directly matching the user's intent to find a list of tools.",
+      "ranking_factor": "user_intent_alignment",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<a ... href=\"https://www.businessofapps.com/channels/user-acquisition/\">User Acquisition</a>",
+      "relevance_reason": "The site's main navigation is organized around core marketing funnel stages like 'User Acquisition' and 'App Engagement', indicating deep topical authority relevant to the user's query.",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Web Monetization<span class=\"description\">by Paddle</span>",
+      "relevance_reason": "Indicates a monetization strategy through sponsored content hubs. This suggests the site has strong industry partnerships, which can be a source of unique data or access.",
+      "ranking_factor": "business_model_indicator",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Best Mobile Measurement Partners for Onboarding Analytics",
+      "relevance_reason": "The heading directly matches the user's intent, combining the core entity (MMP) with the specific use case (onboarding).",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Branch is known for its powerful deep linking capabilities, which are essential for a smooth user onboarding experience.",
+      "relevance_reason": "Directly connects a tool's unique feature (deep linking) to the user's specified goal (onboarding).",
+      "ranking_factor": "competitive_advantage",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Branch offers a free tier for up to 10,000 monthly active users (MAUs).",
+      "relevance_reason": "Provides a specific, quantifiable data point (pricing tier) that is highly actionable for users comparing tools.",
+      "ranking_factor": "data_driven_insight",
+      "causal_strength": 0.95
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 97.487976,
+  "analysis_timestamp": "2025-12-30T18:10:40.358127"
+}

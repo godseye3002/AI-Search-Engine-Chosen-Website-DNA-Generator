@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Reddit - The heart of the internet",
+    "relevance_reason": "Identifies the source domain as a high-authority UGC forum, though the specific thread title is missing in this chunk",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "ads_in_related_posts_m1: enabled, shreddit_adblock_detection_update: enabled",
+    "relevance_reason": "Reveals platform monetization and content delivery structure surrounding the target discussion",
+    "ranking_factor": "user_experience_signals",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "apple-mobile-web-app-capable: yes",
+    "relevance_reason": "Indicates mobile-optimized structure, relevant for users searching for mobile app tracking tools",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<header class=\"v2 bg-neutral-background... <nav class=\"h-header-large",
+    "relevance_reason": "Standard website navigation header containing no specific information regarding MMP tools.",
+    "ranking_factor": "page_structure",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "noun=\"reddit_logo\" id=\"reddit-logo\"",
+    "relevance_reason": "Identifies the domain as Reddit, establishing the content as User Generated Content (UGC) / Third Party discussion.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "faceplate-tracker action=\"open\" noun=\"hamburger_menu\"",
+    "relevance_reason": "Indicates mobile-responsive or app-like web architecture (Reddit's 'Shreddit' frontend).",
+    "ranking_factor": "technical_performance",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Best MMP tool for app tracking?",
+    "relevance_reason": "Exact semantic match to user query in H1/Title tag",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "r/ecommerce",
+    "relevance_reason": "Indicates industry-specific context for the tool recommendation",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "comment-count=\"4\"",
+    "relevance_reason": "Indicates availability of community insights/answers",
+    "ranking_factor": "social_proof",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "<aside aria-label=\"Promotion\" class=\"contents\" id=\"right-rail-experience-root\"></aside>",
+    "relevance_reason": "Empty container tag likely reserved for dynamic ads or promotions; contains no text or entities relevant to MMP tools.",
+    "ranking_factor": "layout_structure",
+    "causal_strength": 0.0
+  }
+]

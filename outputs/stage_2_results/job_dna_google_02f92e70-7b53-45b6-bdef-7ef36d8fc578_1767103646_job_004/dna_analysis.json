@@ -1,0 +1,167 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767103646_job_004",
+  "url": "https://www.businessofapps.com/marketplace/app-analytics/mobile-measurement-partners/",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "tech_stack",
+        "url_structure",
+        "navigation_element",
+        "navigation_menu",
+        "navigation_link",
+        "call_to_action",
+        "heading",
+        "statistic",
+        "unique_value_proposition"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 63,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 93.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Top Mobile Measurement Partners (MMP) (2025) - Business of Apps",
+      "relevance_reason": "The title directly matches the user's query for 'top MMP platforms' and includes a freshness signal '(2025)', indicating the content is current and forward-looking.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "WordPress, Bootstrap, Google Fonts",
+      "relevance_reason": "Identifies the underlying technology of the content platform (WordPress), which can inform about their content management capabilities and SEO strategies.",
+      "ranking_factor": "platform_analysis",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "/marketplace/app-analytics/mobile-measurement-partners",
+      "relevance_reason": "The URL slug explicitly contains 'mobile-measurement-partners', a direct synonym for the user's query (MMP platforms).",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Tabs: Overview, Directory",
+      "relevance_reason": "The page structure is divided into a guide ('Overview') and a list ('Directory'), which is an ideal format for a 'top tools' query, enhancing user experience.",
+      "ranking_factor": "user_experience",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Channels: User Acquisition, App Engagement, App Revenue",
+      "relevance_reason": "The site's main navigation covers topics directly related to the function of MMPs, establishing topical authority.",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Directory (10)",
+      "relevance_reason": "This element explicitly states that the page contains a directory of 10 tools/platforms, directly matching the user's intent to find a list of MMPs.",
+      "ranking_factor": "content_scoping",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Buyers Guide [PDF]",
+      "relevance_reason": "Offers a downloadable, high-value content asset (lead magnet) which is a strong value proposition for users in the research phase.",
+      "ranking_factor": "value_proposition",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "Top 7 Mobile Measurement Partners (MMPs) for 2024",
+      "relevance_reason": "Directly addresses the user's query for 'top' tools and explicitly mentions 'MMP', a key term from the query.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "saving marketers an average of 15% on their ad spend",
+      "relevance_reason": "Provides a quantifiable benefit directly related to measuring marketing performance, adding authority and value.",
+      "ranking_factor": "data_driven_authority",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "Branch excels at deep linking. Their 'Journeys' product allows for creating web-to-app banners that have been shown to increase app open rates by over 2x.",
+      "relevance_reason": "Highlights a specific tool's strength in a feature (deep linking) that is critical for the 'onboarding' aspect of the user's query.",
+      "ranking_factor": "feature_differentiation",
+      "causal_strength": 0.95
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 96.536947,
+  "analysis_timestamp": "2025-12-30T19:39:35.737187"
+}
