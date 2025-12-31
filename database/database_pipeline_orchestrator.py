@@ -23,7 +23,6 @@ import yaml
 from utils.batch_calculator import calculate_batches, create_batches_with_items, BatchInfo
 from utils.timeout_handler import execute_with_timeout, ExecutionResult, TimeoutResult
 from pipeline_models import Job, PipelineRun
-from state_manager import StateManager
 from job_queue_manager import JobQueueManager
 from stage_1_worker import Stage1Worker
 from stage_2_worker import Stage2Worker
@@ -40,7 +39,6 @@ class DatabasePipelineOrchestrator:
         self.logger = self._setup_logging()
         
         # Initialize components
-        self.state_manager = StateManager(self.config, self.logger)
         self.queue_manager = JobQueueManager(self.config, self.logger)
         self.stage_1_worker = Stage1Worker(self.config, self.logger)
         self.stage_2_worker = Stage2Worker(self.config, self.logger)

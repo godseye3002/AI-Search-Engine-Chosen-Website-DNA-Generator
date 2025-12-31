@@ -6,6 +6,7 @@ Provides REST endpoints to trigger pipeline runs via serverless deployment
 import os
 import json
 import logging
+import threading
 from datetime import datetime
 from typing import Dict, Any, List, Optional
 from fastapi import FastAPI, HTTPException, BackgroundTasks
@@ -17,6 +18,8 @@ from contextlib import asynccontextmanager
 
 from database.database_pipeline_orchestrator import DatabasePipelineOrchestrator
 from database.supabase_manager import DataSource
+
+os.makedirs("logs", exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
@@ -108,13 +111,17 @@ async def health_check():
     }
 
 @app.post("/process", response_model=ProcessResponse)
-async def process_product(request: ProcessRequest):
+async def process_product(request: ProcessRequest, background_tasks: BackgroundTasks):
     """
     Process a single product through the DNA pipeline
     
     - **product_id**: Product identifier
     - **source**: Data source (google or perplexity)
     """
+    def _run_pipeline_background(ds: DataSource, product_id: str) -> None:
+        orchestrator = DatabasePipelineOrchestrator()
+        orchestrator.process_product_from_database(ds, product_id)
+
     try:
         # Validate source
         try:
@@ -129,14 +136,50 @@ async def process_product(request: ProcessRequest):
             )
         
         logger.info(f"Received process request for product {request.product_id} from {data_source.value}")
-        
-        # Instantiate DatabasePipelineOrchestrator per request
-        orchestrator = DatabasePipelineOrchestrator()
-        
-        # Run pipeline
-        result = orchestrator.process_product_from_database(data_source, request.product_id)
-        
-        return ProcessResponse(**result)
+
+        # Quick freshness check inline (fast) to preserve current UX:
+        # if up-to-date, return skipped immediately; otherwise run full pipeline in background.
+        try:
+            orchestrator = DatabasePipelineOrchestrator()
+            input_rows = orchestrator.db_manager.fetch_all_input_rows_for_product(data_source, request.product_id)
+            if not input_rows:
+                return ProcessResponse(
+                    status="failed",
+                    product_id=request.product_id,
+                    data_source=request.source,
+                    error=f"Product {request.product_id} not found in {data_source.value} table",
+                    message="Validation failed",
+                )
+
+            current_input_hash = orchestrator._generate_input_hash(input_rows)
+            should_skip, existing_analysis = orchestrator.db_manager.check_existing_analysis(
+                data_source, request.product_id, current_input_hash
+            )
+            if should_skip and existing_analysis:
+                return ProcessResponse(
+                    status="skipped",
+                    product_id=request.product_id,
+                    data_source=data_source.value,
+                    analysis_id=existing_analysis.id,
+                    final_output_path=None,
+                    message="Skipped - Up to date",
+                )
+        except Exception:
+            # If freshness check fails, still allow background processing attempt.
+            pass
+
+        threading.Thread(
+            target=_run_pipeline_background,
+            args=(data_source, request.product_id),
+            daemon=True,
+        ).start()
+        return ProcessResponse(
+            status="accepted",
+            product_id=request.product_id,
+            data_source=data_source.value,
+            final_output_path=None,
+            message="Processing started in background. Check /status for updates.",
+        )
         
     except Exception as e:
         logger.error(f"Error processing product {request.product_id}: {str(e)}", exc_info=True)
