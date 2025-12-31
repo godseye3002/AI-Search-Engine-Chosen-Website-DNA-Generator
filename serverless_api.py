@@ -57,21 +57,11 @@ class StatusResponse(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-# Global orchestrator instance
-orchestrator: Optional[DatabasePipelineOrchestrator] = None
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Initialize orchestrator on startup
-    global orchestrator
+    logger.info("Application startup")
     try:
-        logger.info("Initializing Database Pipeline Orchestrator...")
-        orchestrator = DatabasePipelineOrchestrator()
-        logger.info("Orchestrator initialized successfully")
         yield
-    except Exception as e:
-        logger.error(f"Failed to initialize orchestrator: {e}")
-        raise
     finally:
         logger.info("Application shutdown")
 
@@ -118,7 +108,7 @@ async def health_check():
     }
 
 @app.post("/process", response_model=ProcessResponse)
-async def process_product(request: ProcessRequest, background_tasks: BackgroundTasks):
+async def process_product(request: ProcessRequest):
     """
     Process a single product through the DNA pipeline
     
@@ -140,15 +130,8 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
         
         logger.info(f"Received process request for product {request.product_id} from {data_source.value}")
         
-        # Check if orchestrator is initialized
-        if orchestrator is None:
-            return ProcessResponse(
-                status="failed",
-                product_id=request.product_id,
-                data_source=request.source,
-                error="Orchestrator not initialized",
-                message="Server not ready"
-            )
+        # Instantiate DatabasePipelineOrchestrator per request
+        orchestrator = DatabasePipelineOrchestrator()
         
         # Run pipeline
         result = orchestrator.process_product_from_database(data_source, request.product_id)
@@ -198,6 +181,9 @@ async def process_batch(request: BatchProcessRequest):
         
         logger.info(f"Received batch process request for {data_source.value} with limit {request.limit}")
         
+        # Instantiate DatabasePipelineOrchestrator per request
+        orchestrator = DatabasePipelineOrchestrator()
+        
         # Run batch pipeline
         results = orchestrator.process_batch_from_database(data_source, request.limit)
         
@@ -222,7 +208,9 @@ async def check_status(request: StatusRequest):
         results = []
         for source in [DataSource.GOOGLE, DataSource.PERPLEXITY]:
             try:
-                existing = orchestrator.db_manager.check_existing_analysis(source, request.product_id)
+                # Instantiate DatabasePipelineOrchestrator per request
+                orchestrator = DatabasePipelineOrchestrator()
+                should_skip, existing = orchestrator.db_manager.check_existing_analysis(source, request.product_id)
                 if existing:
                     results.append({
                         "data_source": source.value,
@@ -276,6 +264,7 @@ async def get_sources():
 async def get_stats():
     """Get processing statistics"""
     try:
+        orchestrator = DatabasePipelineOrchestrator()
         stats = orchestrator.get_pipeline_statistics()
         return {
             "status": "success",

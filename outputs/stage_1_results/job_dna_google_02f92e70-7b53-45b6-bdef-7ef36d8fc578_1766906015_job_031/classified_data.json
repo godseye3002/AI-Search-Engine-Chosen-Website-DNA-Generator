@@ -1,7 +1,0 @@
-{
-  "classification": "third_party",
-  "text": "10 marketing tools you need to boost revenues for small businesses in 2023",
-  "url": "https://www.goodbarber.com/blog/10-marketing-tools-you-need-to-boost-revenues-for-small-businesses-in-2023-a1213/#:~:text=Hootsuite%20is%20a%20social%20media%20marketing%20tool,that%20resonate%20the%20most%20with%20your%20audience.",
-  "raw_url": "https://www.goodbarber.com/blog/10-marketing-tools-you-need-to-boost-revenues-for-small-businesses-in-2023-a1213/#:~:text=Hootsuite%20is%20a%20social%20media%20marketing%20tool,that%20resonate%20the%20most%20with%20your%20audience.",
-  "error": "Failed to fetch HTML: HTTPSConnectionPool(host='www.goodbarber.com', port=443): Max retries exceeded with url: /blog/10-marketing-tools-you-need-to-boost-revenues-for-small-businesses-in-2023-a1213/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))"
-}

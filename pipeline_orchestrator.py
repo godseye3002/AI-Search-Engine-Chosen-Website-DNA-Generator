@@ -20,7 +20,6 @@ import yaml
 from utils.batch_calculator import calculate_batches, create_batches_with_items, BatchInfo
 from utils.timeout_handler import execute_with_timeout, ExecutionResult, TimeoutResult
 from pipeline_models import Job, PipelineRun
-from state_manager import StateManager
 from job_queue_manager import JobQueueManager
 from stage_1_worker import Stage1Worker
 from stage_2_worker import Stage2Worker
@@ -35,11 +34,7 @@ class PipelineOrchestrator:
         self.config = self._load_config()
         self.logger = self._setup_logging()
         
-        # Create output directories
-        self._create_directories()
-        
         # Initialize components
-        self.state_manager = StateManager(self.config, self.logger)
         self.queue_manager = JobQueueManager(self.config, self.logger)
         self.stage_1_worker = Stage1Worker(self.config, self.logger)
         self.stage_2_worker = Stage2Worker(self.config, self.logger)
@@ -87,19 +82,7 @@ class PipelineOrchestrator:
         return logging.getLogger(__name__)
     
     def _create_directories(self):
-        """Create necessary output directories"""
-        base_dir = self.config.get('pipeline', {}).get('base_output_dir', 'outputs')
-        
-        directories = [
-            base_dir,
-            os.path.join(base_dir, 'stage_1_results'),
-            os.path.join(base_dir, 'stage_2_results'),
-            os.path.join(base_dir, 'stage_3_results'),
-            self.config.get('pipeline', {}).get('logs_dir', 'logs')
-        ]
-        
-        for directory in directories:
-            os.makedirs(directory, exist_ok=True)
+        return
     
     def load_ai_response(self, file_path: str = "ai_response.json") -> Dict[str, Any]:
         """Load AI response from JSON file"""
@@ -170,19 +153,78 @@ class PipelineOrchestrator:
         return run_id
 
     def run_pipeline_from_ai_response(self, ai_response: Dict[str, Any], run_id_override: Optional[str] = None) -> str:
-        """Run the complete pipeline on already loaded AI response data."""
+        """Run the complete pipeline in-memory from an AI response.
+
+        Concurrency-safe: all state is local to this function.
+        """
         self.logger.info("Starting GodsEye pipeline execution")
 
-        run_id = self.create_run(ai_response, run_id_override=run_id_override)
-        self._ai_response_by_run_id[run_id] = ai_response
+        run_id = run_id_override or f"{self.config.get('pipeline', {}).get('run_id_prefix', 'gods_eye_run')}_{int(time.time())}_{uuid.uuid4().hex[:8]}"
+        query = ai_response.get('query', '')
+        source_links = ai_response.get('source_links', [])
 
-        self._execute_stage_1(run_id)
-        self._filter_stage_1_results(run_id)
-        self._execute_stage_2(run_id)
-        self._filter_stage_2_results(run_id)
-        self._execute_stage_3(run_id)
+        run = PipelineRun(
+            run_id=run_id,
+            created_at=datetime.now(),
+            query=query,
+            total_links=len(source_links),
+        )
 
-        self.logger.info(f"Pipeline run {run_id} completed successfully!")
+        for i, link in enumerate(source_links):
+            job_id = f"{run_id}_job_{i+1:03d}"
+            job = Job(
+                job_id=job_id,
+                run_id=run_id,
+                source_link=link,
+                url=link.get('url', ''),
+                text=link.get('text', ''),
+                position=link.get('position', i+1),
+                max_retries=self.config.get('pipeline', {}).get('max_retries', 2)
+            )
+            run.jobs[job_id] = job
+
+        # Stage 1
+        stage1_queue = self.queue_manager.create_stage_1_queue(run)
+        stage1_batches = self.queue_manager.create_batches_for_stage(stage1_queue)
+        for batch in stage1_batches:
+            batch_jobs = []
+            for job_ref in batch.items:
+                if hasattr(job_ref, 'job_id'):
+                    batch_jobs.append(job_ref)
+                else:
+                    batch_jobs.append(run.jobs[job_ref])
+            processed = self.stage_1_worker.process_batch(batch_jobs)
+            for job in processed:
+                run.jobs[job.job_id] = job
+
+        self.queue_manager.filter_stage_1_results(run)
+
+        # Stage 2
+        stage2_queue = self.queue_manager.create_stage_2_queue(run)
+        stage2_batches = self.queue_manager.create_batches_for_stage(stage2_queue)
+        for batch in stage2_batches:
+            batch_jobs = []
+            for job_ref in batch.items:
+                if hasattr(job_ref, 'job_id'):
+                    batch_jobs.append(job_ref)
+                else:
+                    batch_jobs.append(run.jobs[job_ref])
+            processed = self.stage_2_worker.process_batch(batch_jobs, ai_response)
+            for job in processed:
+                run.jobs[job.job_id] = job
+
+        self.queue_manager.filter_stage_2_results(run)
+
+        # Stage 3
+        stage_3_jobs = []
+        for job in run.jobs.values():
+            if job.selected_for_stage_3 and job.stage_2_status == 'completed':
+                stage_3_jobs.append(job)
+
+        if stage_3_jobs:
+            self.stage_3_worker.process_run(run_id, query, stage_3_jobs)
+
+        self.logger.info(f"Pipeline run {run_id} completed")
         return run_id
     
     def get_run_status(self, run_id: str) -> Optional[Dict[str, Any]]:
@@ -207,34 +249,7 @@ class PipelineOrchestrator:
         }
     
     def save_run_state(self, run_id: str):
-        """Save run state to file for persistence"""
-        if run_id not in self.active_runs:
-            return
-        
-        run = self.active_runs[run_id]
-        
-        # Convert to serializable format
-        state_data = {
-            'run_id': run.run_id,
-            'created_at': run.created_at.isoformat(),
-            'query': run.query,
-            'total_links': run.total_links,
-            'status': run.status,
-            'current_stage': run.current_stage,
-            'jobs': {job_id: asdict(job) for job_id, job in run.jobs.items()},
-            'stage_1_batches': [asdict(batch) for batch in run.stage_1_batches],
-            'stage_2_batches': [asdict(batch) for batch in run.stage_2_batches],
-            'stage_3_batches': [asdict(batch) for batch in run.stage_3_batches]
-        }
-        
-        # Save to file
-        output_dir = self.config.get('pipeline', {}).get('base_output_dir', 'outputs')
-        state_file = os.path.join(output_dir, f'run_state_{run_id}.json')
-        
-        with open(state_file, 'w', encoding='utf-8') as f:
-            json.dump(state_data, f, indent=2, default=str)
-        
-        self.logger.debug(f"Saved run state for {run_id} to {state_file}")
+        return
     
     def run_pipeline(self, ai_response_file: str = "ai_response.json") -> str:
         """
@@ -251,29 +266,7 @@ class PipelineOrchestrator:
         # Load AI response
         ai_response = self.load_ai_response(ai_response_file)
         
-        # Create run
-        run_id = self.create_run(ai_response)
-
-        self._ai_response_by_run_id[run_id] = ai_response
-        
-        # Execute Stage 1
-        self._execute_stage_1(run_id)
-        
-        # Filter Stage 1 results for Stage 2
-        self._filter_stage_1_results(run_id)
-        
-        # Execute Stage 2
-        self._execute_stage_2(run_id)
-        
-        # Filter Stage 2 results for Stage 3
-        self._filter_stage_2_results(run_id)
-        
-        # Execute Stage 3
-        self._execute_stage_3(run_id)
-        
-        self.logger.info(f"Pipeline run {run_id} completed successfully!")
-        
-        return run_id
+        return self.run_pipeline_from_ai_response(ai_response)
     
     def _execute_stage_1(self, run_id: str):
         """
@@ -313,8 +306,7 @@ class PipelineOrchestrator:
             for job in processed_jobs:
                 run.jobs[job.job_id] = job
             
-            # Save state after each batch
-            self.state_manager.save_run_state(run)
+            # In-memory pipeline: do not persist state to disk
             
             # Log batch summary
             summary = self.stage_1_worker.get_job_summary(processed_jobs)
@@ -347,8 +339,7 @@ class PipelineOrchestrator:
             run.stage_2_batches = calculate_batches(selected_count, max_parallel)
             self.logger.info(f"Calculated {len(run.stage_2_batches)} Stage 2 batches for {selected_count} selected jobs")
         
-        # Save filtered state
-        self.state_manager.save_run_state(run)
+        # In-memory pipeline: do not persist state to disk
         
         self.logger.info(f"Stage 1 filtering completed: {selected_count} selected, {rejected_count} rejected")
     
@@ -395,9 +386,8 @@ class PipelineOrchestrator:
             for job in processed_jobs:
                 run.jobs[job.job_id] = job
             
-            # Save state after each batch
-            self.state_manager.save_run_state(run)
-            
+            # In-memory pipeline: do not persist state to disk
+
             # Log batch summary
             summary = self.stage_2_worker.get_job_summary(processed_jobs)
             self.logger.info(f"Batch {batch_idx + 1} completed: {summary['completed']} successful, "
@@ -429,9 +419,8 @@ class PipelineOrchestrator:
             run.stage_3_batches = calculate_batches(selected_count, max_parallel)
             self.logger.info(f"Calculated {len(run.stage_3_batches)} Stage 3 batches for {selected_count} selected jobs")
         
-        # Save filtered state
-        self.state_manager.save_run_state(run)
-        
+        # In-memory pipeline: do not persist state to disk
+
         self.logger.info(f"Stage 2 filtering completed: {selected_count} selected, {rejected_count} rejected")
     
     def _execute_stage_3(self, run_id: str):
@@ -468,8 +457,7 @@ class PipelineOrchestrator:
             run.status = 'completed'
             run.completed_at = datetime.now()
             
-            # Save final state
-            self.state_manager.save_run_state(run)
+            # In-memory pipeline: do not persist state to disk
             
             self.logger.info(f"Stage 3 completed for run {run_id}: "
                            f"{result['total_analyzed']} sources analyzed")
@@ -482,8 +470,8 @@ class PipelineOrchestrator:
             run.status = 'failed'
             self.logger.error(f"Stage 3 failed for run {run_id}: {result.get('error', 'Unknown error')}")
         
-        # Save final state
-        self.state_manager.save_run_state(run)
+        # In-memory pipeline: do not persist state to disk
+
 
 
 if __name__ == "__main__":
@@ -506,10 +494,6 @@ if __name__ == "__main__":
         status = orchestrator.get_run_status(run_id)
         print(f"Run status: {status['status']}")
         print(f"Job summary: {status['job_summary']}")
-        
-        # Test saving run state
-        orchestrator.save_run_state(run_id)
-        print(f"Saved run state for {run_id}")
         
     except Exception as e:
         print(f"Error: {e}")

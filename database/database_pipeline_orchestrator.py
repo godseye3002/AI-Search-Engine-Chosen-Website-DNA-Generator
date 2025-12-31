@@ -39,9 +39,6 @@ class DatabasePipelineOrchestrator:
         self.config = self._load_config()
         self.logger = self._setup_logging()
         
-        # Create output directories
-        self._create_directories()
-        
         # Initialize components
         self.state_manager = StateManager(self.config, self.logger)
         self.queue_manager = JobQueueManager(self.config, self.logger)
@@ -252,22 +249,12 @@ class DatabasePipelineOrchestrator:
 
             if final_result.get('status') != 'completed':
                 raise RuntimeError(final_result.get('error') or "Pipeline did not complete")
-            
-            # Extract actual master blueprint from final_aggregation.json if available
-            master_blueprint = {}
-            if final_result.get('status') == 'completed' and 'output_paths' in final_result:
-                aggregation_path = final_result['output_paths'].get('aggregation_path', '')
-                if aggregation_path:
-                    try:
-                        with open(aggregation_path, 'r', encoding='utf-8') as f:
-                            master_blueprint = json.load(f)
-                        if not isinstance(master_blueprint, dict):
-                            self.logger.warning(f"Master blueprint loaded from {aggregation_path} is not a dict; using empty dict")
-                            master_blueprint = {}
-                        self.logger.info(f"Loaded master blueprint from {aggregation_path}")
-                    except Exception as e:
-                        self.logger.warning(f"Failed to load master blueprint from {aggregation_path}: {e}")
-                        master_blueprint = {}
+
+            # In-memory pipeline: Stage 3 returns the master blueprint directly
+            master_blueprint = final_result.get('master_blueprint') or {}
+            if not isinstance(master_blueprint, dict):
+                self.logger.warning("Master blueprint is not a dict; using empty dict")
+                master_blueprint = {}
             
             # Save results to database
             dna_record = DNAAnalysisRecord(
@@ -294,7 +281,7 @@ class DatabasePipelineOrchestrator:
                 "data_source": data_source.value,
                 "run_id": run_id,
                 "analysis_id": saved_record.id,
-                "final_output_path": f"outputs/stage_3_results/run_{run_id}/final_aggregation.json",
+                "final_output_path": None,
                 "message": message
             }
             
@@ -442,21 +429,80 @@ class DatabasePipelineOrchestrator:
         Returns:
             Final aggregation result
         """
-        # Create run with override
-        run_id = self.create_run(ai_response, run_id_override)
-        
-        # Store AI response for this run
-        if hasattr(self, '_ai_responses'):
-            self._ai_responses[run_id] = ai_response
-        else:
-            self._ai_responses = {run_id: ai_response}
-        
-        # Execute all stages
-        self._execute_stage_1(run_id)
-        stage_1_results = self._execute_stage_2(run_id)
-        final_result = self._execute_stage_3(run_id)
-        
-        return final_result
+        # Concurrency-safe, fully in-memory execution.
+        # All per-request state lives in local variables inside this function.
+        run_id = run_id_override or f"{self.config.get('pipeline', {}).get('run_id_prefix', 'gods_eye_run')}_{int(time.time())}_{uuid.uuid4().hex[:8]}"
+
+        query = ai_response.get('query', '')
+        source_links = ai_response.get('source_links', [])
+
+        run = PipelineRun(
+            run_id=run_id,
+            created_at=datetime.now(),
+            query=query,
+            total_links=len(source_links),
+        )
+
+        for i, link in enumerate(source_links):
+            job_id = f"{run_id}_job_{i+1:03d}"
+            job = Job(
+                job_id=job_id,
+                run_id=run_id,
+                source_link=link,
+                url=link.get('url', ''),
+                text=link.get('text', ''),
+                position=link.get('position', i + 1),
+                max_retries=self.config.get('pipeline', {}).get('max_retries', 2),
+            )
+            run.jobs[job_id] = job
+
+        # Stage 1
+        stage1_queue = self.queue_manager.create_stage_1_queue(run)
+        stage1_batches = self.queue_manager.create_batches_for_stage(stage1_queue)
+        for batch in stage1_batches:
+            batch_jobs = []
+            for job_ref in batch.items:
+                if hasattr(job_ref, 'job_id'):
+                    batch_jobs.append(job_ref)
+                else:
+                    batch_jobs.append(run.jobs[job_ref])
+            processed = self.stage_1_worker.process_batch(batch_jobs)
+            for job in processed:
+                run.jobs[job.job_id] = job
+
+        self.queue_manager.filter_stage_1_results(run)
+
+        # Stage 2
+        stage2_queue = self.queue_manager.create_stage_2_queue(run)
+        stage2_batches = self.queue_manager.create_batches_for_stage(stage2_queue)
+        for batch in stage2_batches:
+            batch_jobs = []
+            for job_ref in batch.items:
+                if hasattr(job_ref, 'job_id'):
+                    batch_jobs.append(job_ref)
+                else:
+                    batch_jobs.append(run.jobs[job_ref])
+            processed = self.stage_2_worker.process_batch(batch_jobs, ai_response)
+            for job in processed:
+                run.jobs[job.job_id] = job
+
+        self.queue_manager.filter_stage_2_results(run)
+
+        # Stage 3
+        stage_3_jobs = []
+        for job in run.jobs.values():
+            if job.selected_for_stage_3 and job.stage_2_status == 'completed':
+                stage_3_jobs.append(job)
+
+        if not stage_3_jobs:
+            return {
+                'status': 'failed',
+                'run_id': run_id,
+                'error': 'No jobs selected for Stage 3',
+                'total_analyzed': 0,
+            }
+
+        return self.stage_3_worker.process_run(run_id, query, stage_3_jobs)
     
     def create_run(self, ai_response: Dict[str, Any], run_id_override: str = None) -> str:
         """Create a new pipeline run"""

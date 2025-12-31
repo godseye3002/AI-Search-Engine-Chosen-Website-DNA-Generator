@@ -38,10 +38,6 @@ class Stage2Worker:
         self.output_dir = config.get('stage_2_dna_analysis', {}).get('output_dir', 'stage_2_results')
         self.base_output_dir = config.get('pipeline', {}).get('base_output_dir', 'outputs')
         
-        # Create output directory
-        self.stage_output_dir = os.path.join(self.base_output_dir, self.output_dir)
-        os.makedirs(self.stage_output_dir, exist_ok=True)
-        
         self.logger.info("Stage 2 Worker initialized")
     
     def process_job(self, job: Job, ai_response: Dict[str, Any]) -> Job:
@@ -74,13 +70,10 @@ class Stage2Worker:
             # Process result
             if result.status == TimeoutResult.SUCCESS:
                 dna_result = result.result
+                job.stage_2_data = dna_result.to_dict()
                 
-                # Save DNA analysis outputs
-                output_paths = self._save_job_outputs(job.job_id, dna_result)
-                job.stage_2_output_path = output_paths['dna_analysis_path']
-                
-                # Mark as completed
-                job.mark_stage_complete(2, output_paths['dna_analysis_path'])
+                # Mark as completed (in-memory pipeline; no output_path)
+                job.mark_stage_complete(2, None)
                 
                 self.logger.info(f"Job {job.job_id} completed Stage 2: DNA analysis complete")
                 
@@ -130,24 +123,12 @@ class Stage2Worker:
         Returns:
             Classified data dictionary or None if not found
         """
-        if not job.stage_1_output_path:
-            raise FileNotFoundError(f"Stage 1 output path missing for job {job.job_id}")
-        
-        try:
-            with open(job.stage_1_output_path, 'r', encoding='utf-8') as f:
-                classified_data = json.load(f)
-            
-            # Add job_id for tracking
-            classified_data['job_id'] = job.job_id
-            
-            return classified_data
-            
-        except FileNotFoundError as e:
-            self.logger.error(f"Stage 1 output file not found for job {job.job_id}: {job.stage_1_output_path}")
-            raise
-        except json.JSONDecodeError as e:
-            self.logger.error(f"Invalid JSON in Stage 1 output for job {job.job_id}: {e}")
-            raise ValueError(f"Invalid Stage 1 JSON for job {job.job_id}: {e}")
+        if not job.stage_1_data:
+            raise FileNotFoundError(f"Stage 1 output missing in-memory for job {job.job_id}")
+
+        classified_data = dict(job.stage_1_data)
+        classified_data['job_id'] = job.job_id
+        return classified_data
     
     def _save_job_outputs(self, job_id: str, result: DNAAnalysisResult) -> Dict[str, str]:
         """
@@ -160,52 +141,7 @@ class Stage2Worker:
         Returns:
             Dictionary with file paths
         """
-        # Check if we should save outputs for this stage
-        if not should_save_stage_outputs('stage_2'):
-            if not is_production_mode():
-                logger.info(f"[STAGE2] Skipping file save for job {job_id} in production mode")
-            return {}
-        
-        # Create job-specific directory
-        job_dir = os.path.join(self.stage_output_dir, f"job_{job_id}")
-        os.makedirs(job_dir, exist_ok=True)
-        
-        file_paths = {}
-        
-        # Save DNA analysis result
-        dna_analysis_path = os.path.join(job_dir, 'dna_analysis.json')
-        analysis_data = result.to_dict()
-        
-        with open(dna_analysis_path, 'w', encoding='utf-8') as f:
-            json.dump(analysis_data, f, indent=2, ensure_ascii=False)
-        
-        file_paths['dna_analysis_path'] = dna_analysis_path
-        
-        # Save DNA profile separately for easier access
-        if result.dna_profile:
-            profile_path = os.path.join(job_dir, 'dna_profile.json')
-            with open(profile_path, 'w', encoding='utf-8') as f:
-                json.dump(result.dna_profile, f, indent=2, ensure_ascii=False)
-            file_paths['profile_path'] = profile_path
-        
-        # Save causal evidence separately
-        if result.causal_evidence:
-            evidence_path = os.path.join(job_dir, 'causal_evidence.json')
-            with open(evidence_path, 'w', encoding='utf-8') as f:
-                json.dump(result.causal_evidence, f, indent=2, ensure_ascii=False)
-            file_paths['evidence_path'] = evidence_path
-        
-        # Save content insights
-        if result.content_insights:
-            insights_path = os.path.join(job_dir, 'content_insights.json')
-            with open(insights_path, 'w', encoding='utf-8') as f:
-                json.dump(result.content_insights, f, indent=2, ensure_ascii=False)
-            file_paths['insights_path'] = insights_path
-        
-        if not is_production_mode():
-            logger.debug(f"Saved DNA analysis outputs for job {job_id} to {job_dir}")
-        
-        return file_paths
+        return {}
     
     def process_batch(self, jobs: list, ai_response: Dict[str, Any]) -> list:
         """

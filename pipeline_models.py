@@ -28,12 +28,14 @@ class Job:
     # Stage statuses
     stage_1_status: str = "pending"  # pending, running, completed, failed, skipped
     stage_1_output_path: Optional[str] = None
+    stage_1_data: Optional[Dict[str, Any]] = None
     stage_1_error: Optional[str] = None
     stage_1_start_time: Optional[datetime] = None
     stage_1_end_time: Optional[datetime] = None
     
     stage_2_status: str = "pending"
     stage_2_output_path: Optional[str] = None
+    stage_2_data: Optional[Dict[str, Any]] = None
     stage_2_error: Optional[str] = None
     stage_2_start_time: Optional[datetime] = None
     stage_2_end_time: Optional[datetime] = None
