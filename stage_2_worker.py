@@ -98,6 +98,25 @@ class Stage2Worker:
             error_msg = f"Unexpected error in Stage 2 ({type(e).__name__}): {str(e)}"
             job.mark_stage_failed(2, error_msg)
             self.logger.exception(f"Job {job.job_id} failed Stage 2 with unexpected error")
+            try:
+                from error_email_sender import send_ai_error_email
+                send_ai_error_email(
+                    error=e,
+                    error_context="Stage 2 worker failed while running DNA analysis",
+                    metadata={
+                        "product_id": getattr(job, 'product_id', None),
+                        "run_id": getattr(job, 'run_id', None),
+                        "job_id": getattr(job, 'job_id', None),
+                        "stage": "stage_2_dna_analysis",
+                        "url": getattr(job, 'url', None),
+                        "extra": {
+                            "timeout_per_job": getattr(self, 'timeout_per_job', None),
+                            "stage_1_output_path": getattr(job, 'stage_1_output_path', None),
+                        },
+                    },
+                )
+            except Exception as email_err:
+                self.logger.error(f"Failed to send error email for job {job.job_id}: {email_err}")
         
         return job
     

@@ -300,6 +300,20 @@ class DatabasePipelineOrchestrator:
             
         except Exception as e:
             self.logger.error(f"Error processing product {product_id}: {str(e)}")
+            try:
+                from error_email_sender import send_ai_error_email
+                send_ai_error_email(
+                    error=e,
+                    error_context="Database orchestrator failed while processing product",
+                    metadata={
+                        "product_id": product_id,
+                        "data_source": data_source.value if hasattr(data_source, 'value') else str(data_source),
+                        "run_id": locals().get('run_id'),
+                        "stage": "database_pipeline_orchestrator.process_product_from_database",
+                    },
+                )
+            except Exception as email_err:
+                self.logger.error(f"Failed to send error email for product {product_id}: {email_err}")
             
             # Update status if we have a record
             try:

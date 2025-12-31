@@ -157,6 +157,19 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
         
     except Exception as e:
         logger.error(f"Error processing product {request.product_id}: {str(e)}", exc_info=True)
+        try:
+            from error_email_sender import send_ai_error_email
+            send_ai_error_email(
+                error=e,
+                error_context="API /process request failed",
+                metadata={
+                    "product_id": request.product_id,
+                    "data_source": request.source,
+                    "stage": "serverless_api./process",
+                },
+            )
+        except Exception as email_err:
+            logger.error(f"Failed to send error email for API /process: {email_err}")
         return ProcessResponse(
             status="failed",
             product_id=request.product_id,

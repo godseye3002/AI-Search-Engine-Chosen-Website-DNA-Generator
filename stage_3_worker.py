@@ -131,6 +131,21 @@ class Stage3Worker:
         except Exception as e:
             error_msg = f"Unexpected error in Stage 3 ({type(e).__name__}): {str(e)}"
             self.logger.exception(f"Run {run_id} failed Stage 3 with unexpected error")
+            try:
+                from error_email_sender import send_ai_error_email
+                send_ai_error_email(
+                    error=e,
+                    error_context="Stage 3 worker failed while aggregating final results",
+                    metadata={
+                        "run_id": run_id,
+                        "stage": "stage_3_aggregation",
+                        "extra": {
+                            "timeout_per_job": getattr(self, 'timeout_per_job', None),
+                        },
+                    },
+                )
+            except Exception as email_err:
+                self.logger.error(f"Failed to send error email for run {run_id}: {email_err}")
             
             # Mark jobs as failed
             for job in jobs:
