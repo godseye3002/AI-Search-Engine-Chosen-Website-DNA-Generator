@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top Mobile Measurement Partners (MMP) (2025) - Business of Apps",
+    "relevance_reason": "The title directly matches the user's query for 'top MMP platforms' and includes a freshness signal '(2025)', indicating the content is current and forward-looking.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "WordPress, Bootstrap, Google Fonts",
+    "relevance_reason": "Identifies the underlying technology of the content platform (WordPress), which can inform about their content management capabilities and SEO strategies.",
+    "ranking_factor": "platform_analysis",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "/marketplace/app-analytics/mobile-measurement-partners",
+    "relevance_reason": "The URL slug explicitly contains 'mobile-measurement-partners', a direct synonym for the user's query (MMP platforms).",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Tabs: Overview, Directory",
+    "relevance_reason": "The page structure is divided into a guide ('Overview') and a list ('Directory'), which is an ideal format for a 'top tools' query, enhancing user experience.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Channels: User Acquisition, App Engagement, App Revenue",
+    "relevance_reason": "The site's main navigation covers topics directly related to the function of MMPs, establishing topical authority.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Directory (10)",
+    "relevance_reason": "This element explicitly states that the page contains a directory of 10 tools/platforms, directly matching the user's intent to find a list of MMPs.",
+    "ranking_factor": "content_scoping",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Buyers Guide [PDF]",
+    "relevance_reason": "Offers a downloadable, high-value content asset (lead magnet) which is a strong value proposition for users in the research phase.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 7 Mobile Measurement Partners (MMPs) for 2024",
+    "relevance_reason": "Directly addresses the user's query for 'top' tools and explicitly mentions 'MMP', a key term from the query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "saving marketers an average of 15% on their ad spend",
+    "relevance_reason": "Provides a quantifiable benefit directly related to measuring marketing performance, adding authority and value.",
+    "ranking_factor": "data_driven_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch excels at deep linking. Their 'Journeys' product allows for creating web-to-app banners that have been shown to increase app open rates by over 2x.",
+    "relevance_reason": "Highlights a specific tool's strength in a feature (deep linking) that is critical for the 'onboarding' aspect of the user's query.",
+    "ranking_factor": "feature_differentiation",
+    "causal_strength": 0.95
+  }
+]

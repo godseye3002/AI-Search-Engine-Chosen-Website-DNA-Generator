@@ -1,0 +1,34 @@
+[
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Blog Categories",
+    "relevance_reason": "This chunk is a sticky navigation bar for a blog. It contains no entities or information related to the user's query about link tracking tools or MMPs. Its only value is structural, indicating the page is a blog post.",
+    "ranking_factor": "structural_element",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "The 9 best marketing automation software tools in 2026",
+    "relevance_reason": "The content is about marketing tools, which is a broader category but related to the user's query for specific link tracking/MMP tools.",
+    "ranking_factor": "topic_relevance",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "October 1, 2025",
+    "relevance_reason": "The article is future-dated, a content strategy to maintain perceived freshness and capture future-oriented search queries.",
+    "ranking_factor": "content_freshness_strategy",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "17 min read",
+    "relevance_reason": "Indicates a long-form, in-depth piece of content, which often correlates with higher search rankings.",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.6
+  }
+]

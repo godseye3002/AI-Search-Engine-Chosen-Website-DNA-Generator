@@ -1,0 +1,18 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "13 Best Marketing Analytics Tools Loved By Marketers in 2025 | Whatagraph",
+    "relevance_reason": "The title targets a broad, high-value keyword ('Marketing Analytics Tools') while using click-through rate optimization tactics like a specific number ('13') and a future year ('2025') to signal freshness and comprehensiveness.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "https://assets.cello.so/attribution/latest/cello-attribution.js",
+    "relevance_reason": "The site uses a third-party attribution script (Cello). This is a technical signal of authority, indicating the publisher actively uses tools related to the article's topic, which can be a trust factor for users and search engines.",
+    "ranking_factor": "topical_authority_signal",
+    "causal_strength": 0.7
+  }
+]

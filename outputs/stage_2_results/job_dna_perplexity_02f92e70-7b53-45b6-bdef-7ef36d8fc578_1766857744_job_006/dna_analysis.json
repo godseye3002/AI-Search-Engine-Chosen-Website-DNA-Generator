@@ -1,0 +1,167 @@
+{
+  "job_id": "dna_perplexity_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766857744_job_006",
+  "url": "https://help.impact.com/en/support/solutions/articles/155000001524-mobile-tracking-using-mmps-explained",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "source_identification",
+        "heading",
+        "value_proposition",
+        "metadata",
+        "interactive_ui",
+        "list_content",
+        "heading",
+        "text_content"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 22,
+        "description_length": 248,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 65.75,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Mobile Tracking Using MMPs Explained",
+      "relevance_reason": "Indicates educational content defining the technology rather than a comparative 'best of' list.",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "A Mobile Measurement Partner (MMP) is a 3rd-party tool that helps a brand better understand how their mobile app marketing program is doing performance-wise.",
+      "relevance_reason": "Provides a clear definition of the core entity (MMP) and its value proposition (performance tracking).",
+      "ranking_factor": "semantic_relevance",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "impact.com Help Center",
+      "relevance_reason": "Identifies content as support documentation/integration guide rather than an independent review.",
+      "ranking_factor": "source_credibility",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Mobile Tracking Using MMPs Explained",
+      "relevance_reason": "Title directly addresses the core concept (MMPs and Mobile Tracking) of the user query, though framed as an educational guide rather than a comparison.",
+      "ranking_factor": "topic_authority",
+      "causal_strength": 0.78
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Manage all your partnerships—affiliates, creators, and referrals—in one place!",
+      "relevance_reason": "Highlights the platform's broader value proposition beyond just tracking, positioning it as a holistic partnership management tool.",
+      "ranking_factor": "unique_selling_point",
+      "causal_strength": 0.78
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Updated on: Tue, 20 Aug, 2024",
+      "relevance_reason": "Indicates high content freshness, which is a positive signal for technical documentation regarding tracking standards.",
+      "ranking_factor": "freshness",
+      "causal_strength": 0.78
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Adjust, AppsFlyer, Branch, Segment, Kochava",
+      "relevance_reason": "Identifies top industry players relevant to the 'Best MMP tool' query, though presented as supported integrations rather than a ranked list.",
+      "ranking_factor": "entity_coverage",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Mobile Tracking Using MMPs Explained",
+      "relevance_reason": "Matches informational intent regarding the definition and function of MMPs.",
+      "ranking_factor": "topic_authority",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "integrate your MMP with impact.com to track, report, and pay out for mobile app events",
+      "relevance_reason": "Offers a unique value proposition (centralized reporting/payouts) that differentiates this content from standard 'best of' lists.",
+      "ranking_factor": "unique_value_proposition",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 55.565733,
+  "analysis_timestamp": "2025-12-27T23:20:06.398855"
+}

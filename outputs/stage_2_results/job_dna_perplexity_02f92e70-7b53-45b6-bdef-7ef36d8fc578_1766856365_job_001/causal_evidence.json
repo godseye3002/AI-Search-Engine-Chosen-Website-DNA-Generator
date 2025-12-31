@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<header class=\"v2 bg-neutral-background...\"",
+    "relevance_reason": "Identifies the hosting platform as Reddit (via class names and structure), establishing the content type as likely User Generated Content (UGC).",
+    "ranking_factor": "domain_authority_signal",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "noun=\"reddit_logo\"",
+    "relevance_reason": "Confirms the source entity is Reddit, a high-trust domain for 'best tool' discussions, though the chunk itself lacks topical data.",
+    "ranking_factor": "source_identification",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<faceplate-tracker>, <rpl-tooltip>",
+    "relevance_reason": "Indicates use of Reddit's proprietary 'Faceplate' and 'RPL' frontend framework, characteristic of their modern mobile/web architecture.",
+    "ranking_factor": "technical_implementation",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Recommended MMP for app tracking? : r/googleads",
+    "relevance_reason": "Title contains exact semantic match for user query regarding MMP recommendations",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "subreddit-name=\"googleads\"",
+    "relevance_reason": "Source context implies advice from advertising professionals using Google Ads",
+    "ranking_factor": "domain_authority_context",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "score=\"3\" comment-count=\"6\"",
+    "relevance_reason": "Indicates active discussion and potential for multiple viewpoints",
+    "ranking_factor": "social_proof",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "id=\"right-rail-experience-root\"",
+    "relevance_reason": "Empty container designated for dynamic promotional content; contains no semantic data relevant to MMP tools.",
+    "ranking_factor": "layout_structure",
+    "causal_strength": 0.0
+  }
+]

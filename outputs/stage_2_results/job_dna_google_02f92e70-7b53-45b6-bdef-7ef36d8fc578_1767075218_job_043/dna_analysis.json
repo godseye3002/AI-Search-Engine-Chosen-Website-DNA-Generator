@@ -1,0 +1,149 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767075218_job_043",
+  "url": "https://adjoe.io/blog/mobile-measurement-partner-mmp/#:~:text=A%20specialist%20in%20web%2Dto,Active%20Users%2C%20all%20features%20included.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "url_slug",
+        "meta_image_url",
+        "fallback_analysis",
+        "heading",
+        "interactive_element",
+        "metadata",
+        "navigation",
+        "fallback_analysis"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 141,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 70.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "The MMP Guide: Which Attribution Platform to Choose? - adjoe",
+      "relevance_reason": "Title directly addresses the user's intent to find and choose MMP platforms.",
+      "ranking_factor": "topic_authority",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "mobile-measurement-partner-mmp",
+      "relevance_reason": "URL structure confirms the page focuses specifically on Mobile Measurement Partners.",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "uploads/2025/04/Screenshot-2025-04-03",
+      "relevance_reason": "File path indicates extremely recent or future-dated content (April 2025), suggesting high freshness.",
+      "ranking_factor": "content_freshness",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "The MMP Guide: Which Mobile Measurement Partner Deserves Your Data?",
+      "relevance_reason": "Heading directly addresses the user's intent regarding MMP platforms and selection.",
+      "ranking_factor": "topic_authority",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Summarize at... ChatGPT, Perplexity, Grok, Co-pilot",
+      "relevance_reason": "Unique 'Generative Engine Optimization' (GEO) strategy encouraging users to feed content into AI models with specific citation instructions.",
+      "ranking_factor": "user_engagement",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "April 10, 2025",
+      "relevance_reason": "Indicates content freshness (or potential future-dating strategy) relevant for 'top' tool lists.",
+      "ranking_factor": "freshness",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 76.147887,
+  "analysis_timestamp": "2025-12-30T11:49:09.443971"
+}

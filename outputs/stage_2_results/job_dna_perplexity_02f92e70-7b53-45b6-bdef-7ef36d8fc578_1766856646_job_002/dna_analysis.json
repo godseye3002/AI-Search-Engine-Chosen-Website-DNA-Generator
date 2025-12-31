@@ -1,0 +1,150 @@
+{
+  "job_id": "dna_perplexity_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766856646_job_002",
+  "url": "https://outrankapps.com/mobile-measurement-partners-mmp/",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "meta_data_twitter",
+        "meta_author",
+        "navigation_item",
+        "brand_identity",
+        "trust_signal",
+        "contact_info",
+        "contact_info",
+        "structure_marker"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 35,
+        "description_length": 151,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 38.333333333333336,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "The Top Mobile Measurement Partners",
+      "relevance_reason": "Direct semantic match to user query 'Best MMP tool'",
+      "ranking_factor": "title_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Get the best Mobile Measurement Partners for your app marketing in 2023: Adjust, AppsFlyer, Branch, Kochava, Airbridge, RevenueCat, Singular, & Tenjin.",
+      "relevance_reason": "High-density entity extraction listing 8 specific competitor tools",
+      "ranking_factor": "entity_density",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Time to read: 8 minutes",
+      "relevance_reason": "Indicates comprehensive long-form content suitable for 'best of' analysis",
+      "ranking_factor": "content_depth_signal",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "ASO Insights",
+      "relevance_reason": "Indicates site category (App Store Optimization) related to app tracking context",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Outrank Apps With ASO",
+      "relevance_reason": "Establishes brand focus on app ranking/tracking",
+      "ranking_factor": "brand_relevance",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Jason Batansky (LinkedIn Link)",
+      "relevance_reason": "Links content to a specific human expert for E-E-A-T",
+      "ranking_factor": "author_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "+1 (305) 340-3049",
+      "relevance_reason": "Business verification/Trust signal, irrelevant to MMP feature analysis",
+      "ranking_factor": "trust_signal",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "header_top_column",
+      "relevance_reason": "Indicates page layout structure (Header/Top Bar) rather than body content",
+      "ranking_factor": "page_structure",
+      "causal_strength": 0.05
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 51.392226,
+  "analysis_timestamp": "2025-12-27T23:01:46.304429"
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The marketer’s guide to buying an MMP | AppsFlyer",
+    "relevance_reason": "Directly addresses the 'MMP' entity from the user query and frames the content as a decision-making guide, matching the user's intent to evaluate tools.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Cut through the noise with this in-depth guide into buying an MMP helping you transform your marketing efforts from guesswork to a data-driven strategy.",
+    "relevance_reason": "Highlights the content's value proposition as an in-depth guide for making data-driven decisions about MMPs, which is central to the user's query.",
+    "ranking_factor": "user_intent_matching",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "dataLayer = [{'Categories': 'Measurement & analytics'}]",
+    "relevance_reason": "The internal content classification 'Measurement & analytics' directly aligns with the user's goal of measuring marketing performance.",
+    "ranking_factor": "content_categorization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "https://www.appsflyer.com",
+    "relevance_reason": "The domain identifies the site as AppsFlyer, a major Mobile Measurement Partner (MMP), which is a primary entity in the user's query.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Mobile Attribution",
+    "relevance_reason": "This text from a navigation link is a core concept and keyword ('Attribution') directly related to 'link tracking tools' and 'MMP platforms'.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "CTV Attribution, PC & Console Attribution",
+    "relevance_reason": "The presence of non-mobile attribution types indicates a broad, multi-platform value proposition, a key competitive differentiator.",
+    "ranking_factor": "feature_breadth",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The marketer’s guide to buying an MMP",
+    "relevance_reason": "The H1 title directly addresses the user's intent to research and select an MMP platform.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "14 min read",
+    "relevance_reason": "Indicates a long-form, in-depth piece of content, suggesting high value for a user in the research phase.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "What's inside?",
+    "relevance_reason": "The presence of a Table of Contents (TOC) signifies a well-structured, comprehensive guide, which is a positive signal for user experience.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Contact sales",
+    "relevance_reason": "Primary CTA targeting high-intent, sales-ready leads. Links to 'appsflyer.com/start/demo/'.",
+    "ranking_factor": "conversion_path",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Sign up free",
+    "relevance_reason": "Secondary CTA targeting product-led growth (PLG) or self-serve users. Links to 'appsflyer.com/sign-up/'.",
+    "ranking_factor": "conversion_path",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "style=\"display: none !important;\"",
+    "relevance_reason": "The entire CTA section is hidden by default, suggesting it may be triggered dynamically by user behavior or is part of an A/B test.",
+    "ranking_factor": "technical_implementation",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Dec 16, 2024",
+    "relevance_reason": "Indicates a content freshness strategy. A future date suggests the content is either scheduled or being actively managed to appear new.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "14 min read",
+    "relevance_reason": "Signals to users and search engines that the content is comprehensive and in-depth, which is a positive factor for a detailed query.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.1
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Acquire: Automate and optimize Apple Ads campaigns at scale",
+    "relevance_reason": "Identifies a specific competitor tool focused on a key mobile marketing channel (Apple Ads), which is directly related to measuring distribution performance.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Optimize: Run mobile A/B tests, validate hypothesis, launch games and apps",
+    "relevance_reason": "Highlights a core capability (A/B testing) used for optimizing onboarding and app performance, a key aspect of the user's query.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Blog Category: Apple Ads",
+    "relevance_reason": "Indicates that the site has dedicated content about a major mobile distribution channel, establishing topical authority relevant to the user's query.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.65
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The main heading directly addresses the user's query for top MMP platforms, which are used for link tracking and channel performance measurement.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+    "relevance_reason": "The table of contents lists multiple specific MMP tools, which are the primary entities the user is searching for.",
+    "ranking_factor": "entity_coverage",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "What are the best mobile measurement partners for 2025?",
+    "relevance_reason": "This heading within the table of contents explicitly signals that the article will provide a curated list, matching the user's intent.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.95
+  }
+]

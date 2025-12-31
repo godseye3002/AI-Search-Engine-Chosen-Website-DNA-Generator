@@ -1,0 +1,42 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Why You Need an MMP and Why Branch Is the Best Fit",
+    "relevance_reason": "Directly addresses the user query 'Best MMP tool' with a specific value proposition.",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.78
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Why Branch?",
+    "relevance_reason": "Indicates a dedicated section for competitive differentiation and value proposition.",
+    "ranking_factor": "user_intent_satisfaction",
+    "causal_strength": 0.78
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "GDPR | CCPA | Privacy",
+    "relevance_reason": "Establishes trust and compliance, critical factors for app tracking and MMP selection.",
+    "ranking_factor": "trust_authority",
+    "causal_strength": 0.78
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

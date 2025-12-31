@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+    "relevance_reason": "Identifies 'Segwise' as the content publisher, a platform relevant to mobile product growth and analytics.",
+    "ranking_factor": "source_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Evidence of Google Tag Manager implementation for tracking user interaction and channel performance.",
+    "ranking_factor": "technical_implementation",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai",
+    "relevance_reason": "Indicates use of Superblog CMS, suggesting a focus on SEO-optimized content delivery.",
+    "ranking_factor": "platform_infrastructure",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+    "relevance_reason": "Identifies host platform (Segwise) capabilities which function as analytics layers on top of MMPs",
+    "ranking_factor": "domain_context",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile App Analytics Tools?",
+    "relevance_reason": "Confirms page content addresses the broader category encompassing MMPs and tracking tools",
+    "ranking_factor": "topic_alignment",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Why Mobile App Analytics Tools Matter",
+    "relevance_reason": "Indicates a comprehensive guide structure (Definition -> Importance -> Tools) typical of high-ranking SEO content",
+    "ranking_factor": "content_structure",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Best Mobile App Analytics Tool in 2025: Ultimate Guide for Marketers",
+    "relevance_reason": "Title suggests a forward-looking comparative list of tools for mobile marketers, highly likely to include MMPs given the context of 'analytics' and 'marketing'.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Tools & Comparisons",
+    "relevance_reason": "Explicitly categorizes content as a comparison, directly addressing the user's need for 'top' tools.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "December 02, 2025",
+    "relevance_reason": "Indicates the content is positioned as the most current or future-proofed resource, increasing perceived value for competitive analysis.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "List of Top 5 Mobile App Analytics Tools in 2025",
+    "relevance_reason": "Directly signals a ranked listicle format matching the user's request for 'top tools'.",
+    "ranking_factor": "content_structure_match",
+    "causal_strength": 0.82
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Segwise",
+    "relevance_reason": "Identified via href anchor (#1-segwise) as the primary tool in the list.",
+    "ranking_factor": "competitor_identification",
+    "causal_strength": 0.82
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Mobile App Analytics Tools",
+    "relevance_reason": "Broad category match for 'MMP platforms' and 'tracking tools'.",
+    "ranking_factor": "topic_alignment",
+    "causal_strength": 0.82
+  }
+]

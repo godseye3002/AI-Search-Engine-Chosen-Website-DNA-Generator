@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "What Is a Mobile Measurement Partner? Marketer’s Guide",
+    "relevance_reason": "Defines the category (MMP) directly related to the user query, targeting top-of-funnel educational intent.",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.82
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "A Mobile Measurement Partner (MMP) tracks and attributes app installs, user behavior, and campaign performance.",
+    "relevance_reason": "Explicitly mentions 'tracks... app installs', matching the 'app tracking' aspect of the user query.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.82
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "dns-prefetch: munchkin.marketo.net, tag.demandbase.com, tracking.g2crowd.com",
+    "relevance_reason": "Indicates a sophisticated B2B marketing stack (Marketo, Demandbase, G2) aimed at high-value lead capture.",
+    "ranking_factor": "competitor_intelligence",
+    "causal_strength": 0.82
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Why You Need an MMP and Why Branch Is the Best Fit",
+    "relevance_reason": "Title directly targets the user intent for 'Best MMP tool' by positioning the competitor as the solution.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.78
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Why Branch?",
+    "relevance_reason": "Suggests a dedicated page for value propositions and competitive differentiation.",
+    "ranking_factor": "user_journey_optimization",
+    "causal_strength": 0.78
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "GDPR | CCPA | Opt-Out | Do Not Sell or Share My Personal Information",
+    "relevance_reason": "Extensive privacy compliance links establish trust, a critical decision factor for tracking software.",
+    "ranking_factor": "trust_signals",
+    "causal_strength": 0.78
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

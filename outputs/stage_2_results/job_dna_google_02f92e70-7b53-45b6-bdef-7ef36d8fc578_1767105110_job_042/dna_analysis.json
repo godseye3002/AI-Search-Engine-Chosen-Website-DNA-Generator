@@ -1,0 +1,157 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767105110_job_042",
+  "url": "https://e-cens.com/blog/what-is-a-mobile-measurement-partner/#:~:text=down%20the%20road.-,Best%20Mobile%20Measurement%20Partners:%20Comparing%20Top%20MMPs,web%2Dto%2Dapp%20journeys.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "metadata_title",
+        "metadata_description",
+        "metadata_twitter_card",
+        "navigation_link",
+        "navigation_link",
+        "heading",
+        "navigation_link",
+        "navigation_category",
+        "navigation_link"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 126,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 63.75,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "What’s A Mobile Measurement Partner (MMP) | E-CENS",
+      "relevance_reason": "The title directly addresses the core concept 'MMP' from the user's query, indicating the content is highly focused on the topic.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Understand MMPs & their role in measuring marketing campaign success.",
+      "relevance_reason": "The description aligns perfectly with the user's intent to 'measure marketing... performance', framing the article as a solution-oriented resource.",
+      "ranking_factor": "intent_matching",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Time to read: 16 minutes",
+      "relevance_reason": "The estimated read time suggests a long-form, in-depth article, which is a strong indicator of comprehensive content that likely covers the topic thoroughly.",
+      "ranking_factor": "content_depth_signal",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Measurement Strategy",
+      "relevance_reason": "This navigation item directly addresses the user's core need to 'measure' performance, indicating the site's topical focus on the problem space, even if it doesn't list tools.",
+      "ranking_factor": "topic_relevance",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Measurement & Data Collection",
+      "relevance_reason": "This menu category shows the site's services are aligned with the technical aspects of tracking and MMP platforms, positioning them as a potential consultant or service provider.",
+      "ranking_factor": "topic_authority",
+      "causal_strength": 0.45
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "GTM vs. Google Analytics vs. Gtag.js: The 2026 Guide",
+      "relevance_reason": "Identifies specific web analytics tools (GTM, GA) which are relevant for tracking marketing channels, but are not Mobile Measurement Partners (MMPs) as specified in the query.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Mobile App Analytics",
+      "relevance_reason": "This service offering directly corresponds to the 'MMP platforms' part of the user query, indicating the site's expertise in mobile measurement.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Measurement & Data Collection",
+      "relevance_reason": "This menu category groups several services (GA4, Server-Side Tagging, Analytics) that are fundamental to the user's goal of measuring marketing channel performance.",
+      "ranking_factor": "topical_relevance",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Server-Side Tagging",
+      "relevance_reason": "Mentions a specific, advanced tracking technology relevant to sophisticated marketing measurement, suggesting deep technical expertise.",
+      "ranking_factor": "topical_depth",
+      "causal_strength": 0.6
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 79.547562,
+  "analysis_timestamp": "2025-12-30T20:05:54.799660"
+}

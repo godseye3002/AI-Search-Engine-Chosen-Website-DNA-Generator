@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+    "relevance_reason": "Directly matches the user's query for 'MMP platforms' and uses a listicle format ('16 best') which is highly relevant for a 'top tools' query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+    "relevance_reason": "Outlines the key comparison criteria for MMPs, which directly addresses the user's need to evaluate and select a tool.",
+    "ranking_factor": "user_intent_matching",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/",
+    "relevance_reason": "The URL structure contains keywords 'blog', 'best-mobile-measurement-partners-mmp', reinforcing the topic's relevance to search engines.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SearchAds.com by MobileAction, Ad Intelligence, ASO Intelligence, Market Intelligence, API Solutions, Managed Services",
+    "relevance_reason": "Identifies the publisher's core product offerings, positioning them as a competitor in the broader mobile marketing intelligence space, which is adjacent to MMPs.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Manage, automate and optimize Apple Ads campaigns.",
+    "relevance_reason": "This is the value proposition for 'SearchAds.com', indicating a focus on a specific marketing channel (Apple Ads). This is relevant for understanding their specialization.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "hbspt.forms.create({ portalId: \"5119197\", formId: \"33e57ce5-124c-4dc3-be9a-1f4256250614\" ...",
+    "relevance_reason": "Reveals the use of HubSpot for lead generation (newsletter signup), providing insight into the competitor's marketing technology stack.",
+    "ranking_factor": "marketing_tactic",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "MobileAction",
+    "relevance_reason": "Identifies a specific platform relevant to the user's query for MMP platforms.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "50% ROAS uplift + 40% CPC decrease",
+    "relevance_reason": "Provides quantifiable performance metrics (ROAS, CPC) that directly relate to the user's goal of measuring marketing channel performance.",
+    "ranking_factor": "data_driven_evidence",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Square reached a... with MobileAction",
+    "relevance_reason": "Uses a well-known company (Square) as a case study, which builds credibility and trust.",
+    "ranking_factor": "authority_and_trust",
+    "causal_strength": 0.9
+  }
+]

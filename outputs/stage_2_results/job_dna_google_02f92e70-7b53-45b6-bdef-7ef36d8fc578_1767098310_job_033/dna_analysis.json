@@ -1,0 +1,149 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767098310_job_033",
+  "url": "https://www.activecampaign.com/blog/best-omnichannel-marketing-software#:~:text=HubSpot%20HubSpot%20is%20widely%20recognized%20as%20one,across%20multiple%20channels.%20Key%20features%20of%20HubSpot:",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "metadata_title",
+        "metadata_date",
+        "metadata_author",
+        "heading",
+        "metadata",
+        "author_info",
+        "metadata",
+        "heading"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 63,
+        "description_length": 124,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 28.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "8 Best Omnichannel Marketing Software for 2025 | ActiveCampaign",
+      "relevance_reason": "The title indicates a listicle of marketing tools. While 'Omnichannel Marketing' is broader than the user's specific query for 'MMP platforms', it is topically related and likely to cover relevant tools.",
+      "ranking_factor": "content_framing",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "2024-12-14T13:13:00-06:00",
+      "relevance_reason": "Content is dated for the end of the current year to appear fresh and highly relevant for the upcoming year (2025), a common SEO tactic to boost perceived relevance.",
+      "ranking_factor": "content_freshness",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Jeremy Collier",
+      "relevance_reason": "The article has a named author with an associated image, which is a positive signal for E-E-A-T (Expertise, Authoritativeness, Trustworthiness).",
+      "ranking_factor": "authoritativeness_signal",
+      "causal_strength": 0.6
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "The 8 Best Omnichannel Marketing Software Tools for 2025",
+      "relevance_reason": "The title indicates a list of marketing tools. While 'Omnichannel Marketing' is broader than the user's specific query for 'MMP platforms', there is a thematic overlap.",
+      "ranking_factor": "topic_relevance",
+      "causal_strength": 0.55
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "data-section-meta='{\"pageUri\":\"blog/best-omnichannel-marketing-software\"...}'",
+      "relevance_reason": "The page URI confirms the article's topic, setting the context for the content that follows. It establishes the article's focus on a broader category than the user's specific query.",
+      "ranking_factor": "content_framing",
+      "causal_strength": 0.55
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Jeremy Collier",
+      "relevance_reason": "The presence of a named author with a profile picture is a signal for E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness).",
+      "ranking_factor": "authority_signal",
+      "causal_strength": 0.55
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "data-section-meta='{\"pageUri\":\"blog/best-omnichannel-marketing-software\"...}'",
+      "relevance_reason": "The page URI metadata reveals the content's actual topic is 'omnichannel marketing software', which is a significant mismatch with the user's query about MMPs and link tracking.",
+      "ranking_factor": "topic_mismatch",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "How to Build a 24/7 Real Estate Marketing Engine for Busy Agents",
+      "relevance_reason": "The featured article is about a niche topic (Real Estate Marketing) that is completely unrelated to measuring channel performance for app onboarding.",
+      "ranking_factor": "content_irrelevance",
+      "causal_strength": 0.05
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Low evidence quality and relevance",
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 93.335186,
+  "analysis_timestamp": "2025-12-30T18:14:10.329359"
+}

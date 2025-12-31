@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "best-marketing-analytics-tools.png",
+    "relevance_reason": "The filename of a preloaded image strongly suggests the page topic is about marketing analytics tools, which is semantically related to the user's query for MMPs and link tracking tools.",
+    "ranking_factor": "semantic_relevance",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics",
+    "relevance_reason": "Identifies the primary entity/competitor associated with the content.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AgencyAnalytics G2 Leader Fall 2025",
+    "relevance_reason": "Highlights a key value proposition and trust signal (G2 award), positioning the brand as a leader.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "G2 Users Love Us",
+    "relevance_reason": "Uses social proof from a major review platform to build credibility.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "\"headline\":\"18 Best Marketing Analytics Tools in 2025 (Features + Reviews)\"",
+    "relevance_reason": "The headline in the JSON-LD schema clearly indicates the page is a comprehensive listicle comparing relevant tools, directly matching the user's intent to find and evaluate platforms.",
+    "ranking_factor": "intent_matching",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "\"publisher\":{\"@type\":\"Corporation\",\"name\":\"AgencyAnalytics\"}",
+    "relevance_reason": "The content is published by a known entity in the marketing analytics industry, which acts as a strong E-E-A-T (Expertise, Authoritativeness, Trustworthiness) signal to search engines.",
+    "ranking_factor": "E-E-A-T",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "\"datePublished\":\"2025-07-15T00:00:00+00:00\"",
+    "relevance_reason": "The future-dated publication date is a technical SEO tactic to signal content freshness and relevance for the upcoming year.",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.75
+  }
+]

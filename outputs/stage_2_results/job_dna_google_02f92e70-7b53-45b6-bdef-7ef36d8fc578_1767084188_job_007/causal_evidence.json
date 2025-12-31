@@ -1,0 +1,114 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The title directly matches the user's query for 'MMP platforms' and related concepts like 'attribution', indicating high topical relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Make use of our list of the best mobile measurement partners to use in 2022 and go through the checklist of picking an MMP.",
+    "relevance_reason": "Promises a curated list and a decision-making framework ('checklist'), which directly addresses the user's research intent.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Est. reading time: 37 minutes",
+    "relevance_reason": "The long estimated reading time suggests a comprehensive, in-depth article, which is a strong positive signal for a research-oriented query.",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Acquire: Automate and optimize Apple Ads campaigns at scale",
+    "relevance_reason": "Identifies a specific tool for managing a key mobile marketing channel (Apple Ads), which is a component of measuring distribution performance.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Optimize: Run mobile A/B tests, validate hypothesis, launch games and apps",
+    "relevance_reason": "Highlights a tool for conversion optimization (A/B testing), which is relevant to improving onboarding and overall channel performance.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Blog Categories: ASO, Apple Ads, A/B testing",
+    "relevance_reason": "The site's main navigation and blog categories indicate topical authority on subjects directly related to mobile marketing performance and attribution.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top Mobile Measurement Partners (MMPs) for Link Tracking",
+    "relevance_reason": "Heading directly matches the core entities of the user query (MMPs, link tracking).",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "They claim to have 72% market share among non-gaming apps.",
+    "relevance_reason": "Provides a specific, quantifiable data point (market share) for a key entity (AppsFlyer), establishing authority.",
+    "ranking_factor": "data_driven_insight",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust offers a powerful suite of tools focusing on fraud prevention and analytics.",
+    "relevance_reason": "Highlights a unique selling point (fraud prevention) for a competitor, which is a key decision factor.",
+    "ranking_factor": "competitive_differentiation",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The main heading (H1) directly matches the user's query for top MMP platforms.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+    "relevance_reason": "The Table of Contents explicitly lists multiple relevant MMP tools, directly answering the user's need for a list of options.",
+    "ranking_factor": "entity_coverage",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Top Mobile Measurement Partners (MMPs) for 2024",
+    "relevance_reason": "The main heading directly addresses the user's query for 'top' tools and explicitly mentions 'MMP', a key term from the query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "AppsFlyer boasts a 65% market share.",
+    "relevance_reason": "Provides a specific, quantifiable data point that helps users gauge the prominence and adoption of a recommended tool.",
+    "ranking_factor": "data_richness",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust is known for its focus on security and automation... Their unique value proposition is their all-in-one suite that combines measurement, cybersecurity, and automation.",
+    "relevance_reason": "Clearly articulates a unique selling point for a specific tool, helping users differentiate between options.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.95
+  }
+]

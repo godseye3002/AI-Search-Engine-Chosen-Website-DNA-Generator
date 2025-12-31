@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<meta content=\"HubSpot's customer platform includes all the marketing, sales, customer service, and CRM software you need to grow your business.\" name=\"description\"/>",
+    "relevance_reason": "Identifies the competitor's core value proposition as an all-in-one platform, which contrasts with the user's specific query for specialized link tracking/MMP tools. This highlights a potential market positioning difference.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<link href=\"https://www.hubspot.com\" hreflang=\"x-default\" rel=\"alternate\"/>\n<link href=\"https://www.hubspot.es\" hreflang=\"es\" rel=\"alternate\"/>",
+    "relevance_reason": "Reveals a sophisticated international SEO strategy, targeting at least 6 specific language markets. This indicates a global market presence and significant investment in localization.",
+    "ranking_factor": "international_seo",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<link href=\"https://js.hs-analytics.net\" rel=\"dns-prefetch\"/>\n<link href=\"https://www.googletagmanager.com\" rel=\"dns-prefetch\"/>",
+    "relevance_reason": "Shows the technical stack includes both a proprietary analytics system (hs-analytics.net) and standard third-party tools like Google Tag Manager. The use of dns-prefetch indicates a focus on page performance.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<a aria-label=\"HubSpot\" class=\"global-nav-logo-wrapper ga_nav_link\"...>",
+    "relevance_reason": "Identifies the competitor as HubSpot, a major player in the marketing technology space, even though the content is not directly related to the query.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "data-ga_nav_tree_text=\"...\" data-ga_nav_type=\"header_nav\"",
+    "relevance_reason": "Reveals the use of specific Google Analytics data attributes for tracking user navigation, indicating a data-driven approach to site optimization.",
+    "ranking_factor": "analytics_strategy",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<ul class=\"global-nav-utility-submenu ...\" id=\"global-nav-dropdown-list-language_switcher\">...日本語...Deutsch...English...",
+    "relevance_reason": "The presence of a language switcher with links to country-specific domains (.jp, .de) demonstrates a strong international market presence and localization strategy.",
+    "ranking_factor": "market_reach",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Unite marketing, sales, and customer service on one AI-powered customer platform that delivers results fast.",
+    "relevance_reason": "This is the competitor's core value proposition, positioning themselves as an all-in-one platform, which is a strategic counterpoint to the user's search for specialized tools like MMPs.",
+    "ranking_factor": "brand_positioning",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Get a demo | Get started free",
+    "relevance_reason": "Highlights a dual go-to-market strategy. The 'Get a demo' targets high-intent, sales-led prospects, while 'Get started free' captures product-led growth users. This is a key competitive insight into their customer acquisition model.",
+    "ranking_factor": "conversion_strategy",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "HubSpot Customer Platform",
+    "relevance_reason": "Identifies the specific product/brand being promoted by the competitor.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "278,000 customers in over 135 countries",
+    "relevance_reason": "This is a social proof metric used to establish the competitor's market leadership and scale.",
+    "ranking_factor": "social_proof",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "ebay-logo, doordash-logo, reddit-logo",
+    "relevance_reason": "Leverages well-known brand logos to build trust and credibility by association.",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.1
+  }
+]

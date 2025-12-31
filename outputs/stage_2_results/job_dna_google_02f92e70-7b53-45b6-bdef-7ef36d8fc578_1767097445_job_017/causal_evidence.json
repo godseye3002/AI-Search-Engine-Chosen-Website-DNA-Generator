@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Acquire",
+    "relevance_reason": "Identifies a specific tool within the mobile marketing ecosystem, which is the subject of the user query.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Automate and optimize Apple Ads campaigns at scale",
+    "relevance_reason": "This describes a function directly related to measuring marketing distribution channel performance (Apple Ads), which aligns with the user's intent.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Apple Ads",
+    "relevance_reason": "The presence of a dedicated blog category for a major mobile marketing channel indicates the site's topical authority on the query's subject matter.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The H1 title directly matches the user's query for 'top' 'MMP platforms' and specifies the number of tools reviewed.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+    "relevance_reason": "The table of contents explicitly lists the specific MMP tools that will be discussed, directly answering the user's need for examples.",
+    "ranking_factor": "entity_coverage",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "28 Jul 2025",
+    "relevance_reason": "The future date suggests a content strategy focused on perceived freshness and forward-looking relevance, which can be a competitive advantage.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Top Mobile Measurement Partners (MMPs) for Link Tracking",
+    "relevance_reason": "The main heading directly matches the user's query for 'MMP platforms' and 'link tracking tools'.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Holds approximately 60% of the mobile attribution market.",
+    "relevance_reason": "Provides a quantifiable data point establishing a tool's market dominance, which is a strong signal for 'top tools'.",
+    "ranking_factor": "data_driven_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Its unique value proposition lies in its 'Protect360' suite, which provides enterprise-grade fraud protection",
+    "relevance_reason": "Highlights a specific, named feature that differentiates a tool, helping users make a comparative decision.",
+    "ranking_factor": "competitive_advantage",
+    "causal_strength": 0.95
+  }
+]

@@ -1,0 +1,166 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767097445_job_014",
+  "url": "https://segwise.ai/blog/best-mobile-app-analytics-tools-marketers",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "analytics_script",
+        "asset_url",
+        "asset_url",
+        "css_framework",
+        "table_of_contents_entry",
+        "navigation_link",
+        "heading",
+        "metadata",
+        "metadata",
+        "metadata"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 68,
+        "description_length": 143,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 63.75,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GTM-M4LRWT7N",
+      "relevance_reason": "Indicates the use of Google Tag Manager for analytics and tracking. While not an MMP, it is a core tool in the marketing measurement ecosystem.",
+      "ranking_factor": "technical_implementation",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": ".../favicon-segwise-1711707238347-compressed.png",
+      "relevance_reason": "Identifies the site's brand as 'Segwise', which is a key piece of information for competitive analysis.",
+      "ranking_factor": "brand_identification",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "https://assets.superblog.ai/...",
+      "relevance_reason": "Reveals the content is hosted on 'Superblog.ai', indicating the competitor's content management system or platform choice.",
+      "ranking_factor": "platform_identification",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "What Are Mobile App Analytics Tools?",
+      "relevance_reason": "The Table of Contents (TOC) heading indicates the article's topic is highly relevant to the user query, focusing on the foundational definition of tools in this category.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Competitor Tracking",
+      "relevance_reason": "The main navigation reveals that the host site, segwise.ai, offers a 'Competitor Tracking' feature, positioning them as a player in the analytics space and providing context on their potential bias.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Best Mobile App Analytics Tool in 2025: Ultimate Guide for Marketers",
+      "relevance_reason": "The H1 title directly targets the user's interest in mobile analytics tools, a superset of MMPs. The use of '2025' is a strong freshness signal.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "December 02, 2025",
+      "relevance_reason": "The article is future-dated, a specific SEO tactic to maintain a high perceived freshness over a long period. This is a key competitive strategy.",
+      "ranking_factor": "freshness_signal",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Tools & Comparisons",
+      "relevance_reason": "The content is explicitly categorized to match the user's intent of comparing different tools, which is highly relevant to the query.",
+      "ranking_factor": "content_framing",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "List of Top 5 Mobile App Analytics Tools in 2025",
+      "relevance_reason": "The heading indicates a listicle format that directly addresses the user's intent to find and compare multiple tools.",
+      "ranking_factor": "content_format",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "#1-segwise",
+      "relevance_reason": "Identifies a specific competitor tool being reviewed, which is a primary goal of the user's query.",
+      "ranking_factor": "entity_coverage",
+      "causal_strength": 0.85
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 92.329215,
+  "analysis_timestamp": "2025-12-30T17:57:55.501660"
+}

@@ -1,0 +1,141 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "Best MMP tool for app tracking?",
+  "sources_analyzed": 5,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Provide a definitive, comprehensive list that directly answers the user's query.",
+      "optimized_pattern_template": "[Number] Best Mobile Measurement Partners (MMPs) for [Use Case] in [Year]",
+      "adoption_rate": 0.8
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Must include key entities: Adjust, AppsFlyer, Branch, Kochava, Singular, MobileAction",
+      "adoption_rate": 0.6
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "buyers_guide_section",
+      "consensus_intent": "Help users make a decision by providing clear evaluation criteria.",
+      "content_requirement": "Must explain how to choose an MMP, covering factors like attribution accuracy, fraud prevention, and pricing.",
+      "adoption_rate": 0.4
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "entity_breakdown_section",
+      "consensus_intent": "Provide detailed reviews for each recommended tool.",
+      "content_requirement": "Each primary entity must have its own H2 section with detailed analysis.",
+      "adoption_rate": 0.4
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "MobileAction": {
+      "classification": "App Marketing & Analytics Platform",
+      "primary_definition": "An intelligence platform for app marketing, offering tools for Ad, ASO, and Market Intelligence, which can be integrated with MMPs.",
+      "high_value_attributes": [
+        {
+          "data_point": "Claims '50% ROAS uplift + 40% CPC decrease' in success metrics.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        },
+        {
+          "data_point": "Used by high-profile client 'Square'.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        },
+        {
+          "data_point": "Offers a proprietary tool 'SearchAds.com' to manage and optimize Apple Ads campaigns.",
+          "source_weight": "Medium (derived from unique signal)",
+          "confidence": 0.85
+        }
+      ],
+      "semantic_keywords": [
+        "Ad Intelligence",
+        "ASO Intelligence",
+        "Market Intelligence",
+        "Apple Ads",
+        "SearchAds.com"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Adjust": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "A mobile measurement partner used for app marketing attribution and analytics.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "app attribution",
+        "mobile analytics",
+        "fraud prevention"
+      ],
+      "frequency_across_sources": 0.4
+    },
+    "AppsFlyer": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "A mobile measurement partner for tracking and attributing app marketing campaigns.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "app marketing",
+        "campaign tracking",
+        "mobile measurement"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Branch": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "A mobile measurement and deep linking platform used for app marketing.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "deep linking",
+        "app tracking",
+        "user acquisition"
+      ],
+      "frequency_across_sources": 0.2
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "comparative_guide_listicle",
+        "usage_frequency": 0.6,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "forum_discussion",
+        "usage_frequency": 0.4,
+        "effectiveness_score": 0.7
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2200,
+      "entity_density_optimal": 0.04,
+      "readability_score": 0.75
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "A clear list of top MMP tools by name.",
+      "Specific evaluation criteria: attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+      "Quantifiable performance metrics or case study data (e.g., % uplift).",
+      "Social proof, such as logos or names of well-known clients.",
+      "Author attribution to signal E-E-A-T."
+    ],
+    "negative_constraints": [
+      "Avoid titles that are just questions without providing an answer.",
+      "Do not publish without a meta description.",
+      "Avoid unstructured content; use a clear heading hierarchy (H1, H2s for each tool)."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true,
+      "has_canonical_tag": true,
+      "has_og_tags": true
+    }
+  },
+  "generation_timestamp": "2025-12-27T22:57:59.523361",
+  "sources_processed": 5
+}

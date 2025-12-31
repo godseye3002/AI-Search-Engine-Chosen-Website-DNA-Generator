@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "What’s A Mobile Measurement Partner (MMP) | E-CENS",
+    "relevance_reason": "Direct match for the user's specific acronym (MMP) and core topic definition.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "role in measuring marketing campaign success",
+    "relevance_reason": "Semantically aligns with user's request to 'measure marketing distribution channel performance'.",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "16 minutes",
+    "relevance_reason": "Reading time indicates a comprehensive deep-dive, suggesting detailed tool analysis or comparison.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Measurement Strategy",
+    "relevance_reason": "Indicates site authority in the domain of the user query, though the chunk lacks specific tool names.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Measurement & Data Collection",
+    "relevance_reason": "Broad category match for 'MMP platforms' and 'tracking tools'.",
+    "ranking_factor": "semantic_relevance",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Growth Marketing",
+    "relevance_reason": "Contextual relevance to 'marketing distribution channel performance'.",
+    "ranking_factor": "contextual_alignment",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "GTM vs. Google Analytics vs. Gtag.js: The 2026 Guide",
+    "relevance_reason": "Discusses tracking infrastructure (GTM, GA) but fails to address specific MMP (Mobile Measurement Partner) platforms requested in query.",
+    "ranking_factor": "topic_adjacency",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "GTM, Google Analytics, Gtag.js",
+    "relevance_reason": "Lists foundational web/app tracking tools, distinct from specialized attribution MMPs.",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "2026 Guide",
+    "relevance_reason": "High-intent freshness signal (future-dated) to attract clicks for current/future tracking standards.",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Mobile App Analytics",
+    "relevance_reason": "Service category directly related to MMPs and tracking tools",
+    "ranking_factor": "semantic_relevance",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Measurement Strategy",
+    "relevance_reason": "Contextual relevance to measuring marketing distribution performance",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "GA4 Migration",
+    "relevance_reason": "Mention of a specific analytics platform entity (Google Analytics 4)",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.2
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 10 Mobile Measurement Partners (MMPs) for 2024",
+    "relevance_reason": "The main heading directly addresses the user's query for 'top' 'MMP platforms'.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch excels in deep linking, which is vital for seamless user onboarding experiences",
+    "relevance_reason": "Directly connects a specific tool's feature (deep linking) to the user's specified goal ('onboarding').",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Value Prop: Unified marketing data and analytics (cost aggregation).",
+    "relevance_reason": "Provides a distinct value proposition for a specific tool (Singular), aiding in competitive comparison.",
+    "ranking_factor": "entity_differentiation",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "6. Mixpanel",
+    "relevance_reason": "Mixpanel is a product analytics tool highly relevant for tracking user onboarding funnels, a key part of the user query.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "#1. Seamlessly integrates with all major marketing channels.",
+    "relevance_reason": "This feature of the top-listed tool directly addresses the user's need to measure 'marketing distribution channel performance'.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "13 Best Marketing Analytics Tools and Software in 2025",
+    "relevance_reason": "The main heading indicates a broad list of marketing analytics tools, which is related to, but not specific to, the user's query for MMPs.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.6
+  }
+]

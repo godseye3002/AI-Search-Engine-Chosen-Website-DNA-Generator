@@ -1,0 +1,150 @@
+{
+  "job_id": "dna_perplexity_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766858159_job_007",
+  "url": "https://apptrove.com",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "infrastructure_script",
+        "compatibility_code",
+        "fallback_analysis",
+        "fallback_analysis",
+        "heading",
+        "text_content",
+        "feature_list",
+        "call_to_action",
+        "fallback_analysis"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 54,
+        "description_length": 150,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 49.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "class RocketLazyLoadScripts",
+      "relevance_reason": "Indicates competitor uses WP Rocket for Core Web Vitals optimization; contains no topical content regarding MMPs.",
+      "ranking_factor": "technical_performance",
+      "causal_strength": 0.0
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "navigator.userAgent.match(/MSIE|Internet Explorer/i)",
+      "relevance_reason": "Legacy browser detection logic; irrelevant to semantic query analysis.",
+      "ranking_factor": "technical_accessibility",
+      "causal_strength": 0.0
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Your Mobile Measurement Partner for Data Driven App Growth",
+      "relevance_reason": "Explicit self-identification as an MMP, directly matching the user's core search intent.",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Apptrove, an all-round measurement suite... increase app installs, improve campaign ROI, enhance user LTV, and optimize ad performance",
+      "relevance_reason": "Defines the entity (Apptrove) and maps it to specific tracking KPIs (ROI, LTV, installs).",
+      "ranking_factor": "semantic_relevance",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Deep Linking, 500+ Global Partners, SKAN Analytics, Dedicated Customer Support, All Round Fraud Protection",
+      "relevance_reason": "Lists critical technical features required for app tracking and attribution.",
+      "ranking_factor": "feature_density",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_main",
+      "section_type": "main_content",
+      "html_snippet": "Content analysis failed - using fallback",
+      "relevance_reason": "API error - manual review needed",
+      "ranking_factor": "unknown",
+      "causal_strength": 0.5
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 98.106922,
+  "analysis_timestamp": "2025-12-27T23:27:42.943968"
+}

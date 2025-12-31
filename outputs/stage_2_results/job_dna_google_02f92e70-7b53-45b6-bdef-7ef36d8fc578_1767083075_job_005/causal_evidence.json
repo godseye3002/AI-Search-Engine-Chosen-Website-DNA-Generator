@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+    "relevance_reason": "Directly addresses the user's request for 'MMP platforms' and 'top tools' with a quantified list (16).",
+    "ranking_factor": "exact_keyword_match",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+    "relevance_reason": "Highlights specific metrics (attribution accuracy, integration) relevant to 'measuring marketing distribution channel performance'.",
+    "ranking_factor": "intent_alignment",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "mobileaction.co",
+    "relevance_reason": "Identifies the content provider as a specialized entity in the mobile app marketing space.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "MobileAction",
+    "relevance_reason": "Identifies the publisher as a mobile data intelligence platform, establishing domain authority for the topic.",
+    "ranking_factor": "source_credibility",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Ad Intelligence",
+    "relevance_reason": "Internal link to a related product that measures marketing performance, though not strictly an MMP.",
+    "ranking_factor": "internal_linking",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SearchAds.com by MobileAction",
+    "relevance_reason": "Internal cross-promotion of Apple Search Ads tools, related to distribution channels.",
+    "ranking_factor": "internal_linking",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+    "relevance_reason": "Provides specific quantitative evidence of tool performance regarding marketing metrics (ROAS, CPC)",
+    "ranking_factor": "social_proof",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "MobileAction",
+    "relevance_reason": "Identifies a platform relevant to marketing performance measurement",
+    "ranking_factor": "entity_identification",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "16 the Best Mobile Attribution Partners in 2024",
+    "relevance_reason": "Explicitly indicates a listicle containing 16 specific tools relevant to the user's request for MMP platforms.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "How to Choose a Mobile Measurement Partner in 2024",
+    "relevance_reason": "Addresses the decision-making process for selecting tracking tools, matching the 'measure performance' intent.",
+    "ranking_factor": "user_intent_satisfaction",
+    "causal_strength": 0.8
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Integrate Your MMP into SearchAds.com",
+    "relevance_reason": "Identifies a specific platform integration (SearchAds.com) as a value proposition.",
+    "ranking_factor": "entity_association",
+    "causal_strength": 0.8
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 6 Mobile Measurement Partners In India For Accurate App Analytics (2025)",
+    "relevance_reason": "Explicit keyword match for 'Mobile Measurement Partners' (MMP) and 'App Analytics' aligned with user query.",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "track your app marketing ROI and performance effectively",
+    "relevance_reason": "Directly addresses the user's intent to 'measure marketing distribution channel performance'.",
+    "ranking_factor": "intent_match",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "2025-06-17T10:28:12+00:00",
+    "relevance_reason": "Indicates extremely fresh/future-dated content, suggesting high relevance for current tool landscapes.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.88
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "App Marketing Services",
+    "relevance_reason": "Establishes the domain context as an App Marketing agency, suggesting the site may contain relevant content elsewhere, but this specific chunk lacks tool data.",
+    "ranking_factor": "domain_relevance",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Appfillip",
+    "relevance_reason": "Identifies the content publisher.",
+    "ranking_factor": "source_identification",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 6 Mobile Measurement Partners in India (2025 Guide)",
+    "relevance_reason": "Directly targets the 'MMP platforms' portion of the user query with a forward-looking listicle format.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Mobile Measurement Partners (MMPs) are third-party platforms that help app marketers attribute installs, measure campaign performance, and detect fraud.",
+    "relevance_reason": "Explicitly defines the tools' function in measuring 'marketing distribution channel performance' (attribution/installs).",
+    "ranking_factor": "semantic_match",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "AppsFlyer... Real-time attribution... Advanced fraud detection (Protect360)",
+    "relevance_reason": "Identifies a market leader with specific tracking and security features.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "href=\"tel:(309)%208855-314\"",
+    "relevance_reason": "Direct telephone link; irrelevant to digital marketing tracking tools query",
+    "ranking_factor": "conversion_element",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "ekit-sidebar-group info-group ekit-slide",
+    "relevance_reason": "Sidebar navigation/widget container; contains no semantic content related to MMPs",
+    "ranking_factor": "page_layout",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "<svg... path d=\"M39.5185 31.1202...\"",
+    "relevance_reason": "Vector icon (phone handset) indicating contact method",
+    "ranking_factor": "visual_design",
+    "causal_strength": 0.0
+  }
+]

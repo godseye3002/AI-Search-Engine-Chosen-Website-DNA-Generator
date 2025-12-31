@@ -1,0 +1,151 @@
+{
+  "job_id": "dna_perplexity_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766857523_job_008",
+  "url": "https://www.singular.net/mmp/",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "infrastructure_script",
+        "infrastructure_logic",
+        "navigation_link",
+        "navigation_link",
+        "navigation_link",
+        "structure_category",
+        "heading_h1",
+        "value_proposition",
+        "heading_h2",
+        "call_to_action"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 43,
+        "description_length": 117,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 56.333333333333336,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "class RocketLazyLoadScripts",
+      "relevance_reason": "Identifies competitor use of WP Rocket for aggressive JavaScript lazy loading, impacting Core Web Vitals scores",
+      "ranking_factor": "page_speed_optimization",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "navigator.userAgent.match(/MSIE|Internet Explorer/i)",
+      "relevance_reason": "Legacy browser detection logic suggests broad audience targeting including outdated systems",
+      "ranking_factor": "technical_accessibility",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Mobile Attribution",
+      "relevance_reason": "Direct mapping to 'app tracking' core functionality",
+      "ranking_factor": "keyword_relevance",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SKAdNetwork Attribution",
+      "relevance_reason": "Specific, high-value iOS tracking protocol relevant to modern MMPs",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Cost Aggregation",
+      "relevance_reason": "Differentiating feature often compared in MMP selection",
+      "ranking_factor": "feature_density",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Mobile Measurement Partner (MMP)",
+      "relevance_reason": "Direct definition of the tool category matching the user query",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.92
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Accurately measure and analyze the impact of your marketing with an MMP tailored to your business.",
+      "relevance_reason": "Articulates core benefit (measurement/tracking) and customization",
+      "ranking_factor": "content_relevance",
+      "causal_strength": 0.92
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Go beyond legacy MMP providers with Singular’s end-to-end growth platform",
+      "relevance_reason": "Competitive positioning against 'legacy' tools to imply superiority ('Best')",
+      "ranking_factor": "competitive_differentiation",
+      "causal_strength": 0.92
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Basic content structure present"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 47.62452,
+  "analysis_timestamp": "2025-12-27T23:16:19.684875"
+}

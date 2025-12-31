@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The MMP Guide: Which Attribution Platform to Choose? - adjoe",
+    "relevance_reason": "Title directly addresses the user's intent to find and choose MMP platforms.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "mobile-measurement-partner-mmp",
+    "relevance_reason": "URL structure confirms the page focuses specifically on Mobile Measurement Partners.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "uploads/2025/04/Screenshot-2025-04-03",
+    "relevance_reason": "File path indicates extremely recent or future-dated content (April 2025), suggesting high freshness.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The MMP Guide: Which Mobile Measurement Partner Deserves Your Data?",
+    "relevance_reason": "Heading directly addresses the user's intent regarding MMP platforms and selection.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Summarize at... ChatGPT, Perplexity, Grok, Co-pilot",
+    "relevance_reason": "Unique 'Generative Engine Optimization' (GEO) strategy encouraging users to feed content into AI models with specific citation instructions.",
+    "ranking_factor": "user_engagement",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "April 10, 2025",
+    "relevance_reason": "Indicates content freshness (or potential future-dating strategy) relevant for 'top' tool lists.",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

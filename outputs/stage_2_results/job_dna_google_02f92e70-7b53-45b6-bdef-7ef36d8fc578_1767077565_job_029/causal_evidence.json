@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 10 Best Link Tracking Software for Effective Performance Analysis",
+    "relevance_reason": "Direct alignment with user query for 'link tracking tools' and 'performance analysis'",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "wordCount: 4569",
+    "relevance_reason": "Indicates comprehensive long-form content, suggesting detailed tool analysis",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Discover the top 10 link tracking software options to enhance your performance analysis.",
+    "relevance_reason": "Matches user intent for tool discovery and selection",
+    "ranking_factor": "ctr_optimization",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Top 10 Best Link Tracking Software for Effective Performance Analysis",
+    "relevance_reason": "Direct semantic match for 'top link tracking tools' and 'performance' query components",
+    "ranking_factor": "title_tag_optimization",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "November 16, 2025",
+    "relevance_reason": "Indicates extremely high content freshness (future-dated strategy for SEO longevity)",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "ShortPen University",
+    "relevance_reason": "Establishes authority via educational categorization",
+    "ranking_factor": "authority_signal",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 10 Best Link Tracking Software for Effective Performance Analysis",
+    "relevance_reason": "Matches user intent for 'top link tracking tools' and 'performance analysis'",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "automatically gather UTM parameters, geo/device data, and even post-click events (signups, purchases)",
+    "relevance_reason": "Addresses 'measure marketing distribution' and 'onboarding' (signups) requirements",
+    "ranking_factor": "feature_matching",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "November 16, 2025",
+    "relevance_reason": "Indicates future-dated content strategy for SEO freshness",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.72
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "You may also like",
+    "relevance_reason": "Identifies content as internal recirculation/navigation rather than primary query answer",
+    "ranking_factor": "page_structure",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "10 Best Free Link Shortener Options in 2025 (Really FREE)",
+    "relevance_reason": "Contains 'Link Shortener' entity, semantically related to 'link tracking' but distinct from MMPs",
+    "ranking_factor": "semantic_relatedness",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "30+ Marketing Metrics to Track: The Essential Guide for Modern Marketers",
+    "relevance_reason": "Contextual support for 'measuring performance' aspect of user query",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.15
+  }
+]

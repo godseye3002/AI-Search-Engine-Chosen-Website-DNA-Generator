@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top Mobile Measurement Partners (MMP) (2025) - Business of Apps",
+    "relevance_reason": "The title directly matches the user's query for 'top' 'MMP platforms', indicating high relevance and a comparative list format.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "(2025)",
+    "relevance_reason": "The year in the title signals that the content is current and forward-looking, a critical factor for users evaluating technology platforms.",
+    "ranking_factor": "content_freshness",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "/marketplace/app-analytics/mobile-measurement-partners#guide",
+    "relevance_reason": "The URL path directly contains 'mobile-measurement-partners' and 'app-analytics', which are core entities in the user's query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Tabs: Overview, Directory",
+    "relevance_reason": "The content is structured into a guide ('Overview') and a list of tools ('Directory'), which directly addresses the user's need to find and compare tools.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "User Acquisition",
+    "relevance_reason": "This navigation category is directly related to the user's goal of measuring marketing channel performance for onboarding.",
+    "ranking_factor": "topic_relevance",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "AppsFlyer: Known for its comprehensive analytics suite and deep linking capabilities. Offers a 98% accuracy rate in attribution.",
+    "relevance_reason": "Highlights a specific, top-tier MMP (AppsFlyer) and provides a quantifiable statistic (98% accuracy) and key features, directly answering the user's query for top tools.",
+    "ranking_factor": "entity_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "When choosing an MMP, consider factors like pricing, integration complexity, and the specific metrics you need to track, such as LTV (Lifetime Value), ROAS (Return on Ad Spend), and retention rates.",
+    "relevance_reason": "Identifies critical performance metrics (LTV, ROAS) directly related to measuring marketing channel performance, showing a deep understanding of the user's goal.",
+    "ranking_factor": "topical_depth",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust: Praised for its fraud prevention suite and granular cohort analysis. Used by over 50,000 apps worldwide.",
+    "relevance_reason": "Provides another key entity (Adjust) with a unique value proposition (fraud prevention) and a social proof statistic (50,000 apps), aiding competitive comparison.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Directory (10)",
+    "relevance_reason": "This link indicates the presence of a list of 10 specific tools or platforms, directly addressing the user's query for 'top link tracking tools'. The number provides a clear scope of the content.",
+    "ranking_factor": "content_scoping",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Buyers Guide [PDF]",
+    "relevance_reason": "The page offers a downloadable PDF guide, a unique value proposition that serves as a lead magnet and a high-value asset for users comparing tools.",
+    "ranking_factor": "unique_content_offering",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "mobile-measurement-partners",
+    "relevance_reason": "The URL slug explicitly contains 'mobile-measurement-partners', a direct synonym for the 'MMP platforms' in the user query, confirming high topic relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+    "relevance_reason": "The title indicates a list of marketing tools, which is broadly related to the query. However, the focus on 'small businesses' and 'boosting revenues' suggests a generalist approach, likely lacking the specific focus on MMPs and link tracking for onboarding.",
+    "ranking_factor": "low_specificity",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GoodBarber, app builder, app, mobile app, Reseller, ASO, marketing, business, mobile, features, Beacons, Geofencing, engagement, iOS, Android, native, native app",
+    "relevance_reason": "Keywords mention terms related to the mobile app ecosystem (ASO, iOS, Android, mobile app), which is the context for MMPs. However, it completely omits core query terms like 'MMP', 'link tracking', or 'attribution'.",
+    "ranking_factor": "contextual_adjacency",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Schema.org, Open Graph, Twitter Cards",
+    "relevance_reason": "The presence of comprehensive structured data (Schema, OG, Twitter) indicates a focus on SEO and social sharing best practices, but does not inform on the content's relevance to the specific query.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "GoodBarber",
+    "relevance_reason": "The HTML chunk identifies the site's brand, 'GoodBarber', through the logo's SVG title and link href. While GoodBarber is in the app development space, this specific structural element provides no information related to the user's query about link tracking or MMPs.",
+    "ranking_factor": "brand_identification",
+    "causal_strength": 0.05
+  }
+]

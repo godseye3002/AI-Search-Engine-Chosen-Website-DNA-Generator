@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 10 marketing analytics platforms for marketers | DashThis",
+    "relevance_reason": "The title frames the content as a listicle ('Top 10'), which aligns with the user's 'top tools' query. However, the topic 'marketing analytics platforms' is broader than the specified 'MMP platforms'.",
+    "ranking_factor": "content_framing",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Title/Description: '10 marketing analytics platforms' vs. Canonical URL: '8-marketing-analytics-platforms...'",
+    "relevance_reason": "A factual inconsistency between the title and the canonical URL slug suggests a potential lack of content maintenance or an SEO oversight, which is a competitive vulnerability.",
+    "ranking_factor": "content_accuracy",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<link ... hreflang=\"fr\" ...>, <link ... hreflang=\"es\" ...>, etc.",
+    "relevance_reason": "The presence of multiple hreflang tags (en, fr, es, de, pt) indicates a sophisticated international SEO strategy, targeting a global audience.",
+    "ranking_factor": "internationalization",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "AI Reporting Tool 🤖",
+    "relevance_reason": "Indicates an advanced, modern feature set focused on automated reporting, which is a competitive differentiator.",
+    "ranking_factor": "unique_selling_proposition",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "White Label",
+    "relevance_reason": "Highlights a key feature for a specific target audience (marketing agencies), showing a clear market position.",
+    "ranking_factor": "target_audience_feature",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "DashThis For: SEO Reporting, PPC & SEM Reporting, Social Media Reporting",
+    "relevance_reason": "This section explicitly lists marketing distribution channels the tool reports on, which is thematically related to the user's goal of measuring channel performance.",
+    "ranking_factor": "solution_positioning",
+    "causal_strength": 0.35
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Netskope’s 2019 Cloud Report puts this figure at 120 for the average enterprise, a number that keeps rising year on year.",
+    "relevance_reason": "Uses a specific, cited statistic to establish the scale of the problem (tool overload), which builds credibility and hooks the reader.",
+    "ranking_factor": "authority_building",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "A sample report from a marketing analytics platform like DashThis. Try it with your data!",
+    "relevance_reason": "This is a product-led growth tactic embedded in the content. It promotes a specific tool (DashThis) with a visual aid and a direct link to a trial, aiming for conversion.",
+    "ranking_factor": "conversion_element",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Which marketing initiatives should we focus on? Which marketing initiatives aren’t working... What should we be working on...",
+    "relevance_reason": "Frames the value of marketing analytics platforms by listing the key strategic questions they help answer, aligning the tool category with the user's goal of performance measurement.",
+    "ranking_factor": "value_proposition",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "More tools mean a higher risk of data fragmentation and siloed data. Imagine the hours you spend each week logging in to each platform, exporting data, uploading it to Microsoft Excel, normalizing and",
+    "relevance_reason": "This text establishes the core pain point (data fragmentation from multiple tools) that the article aims to solve with marketing analytics platforms. This is contextually relevant to a user looking to consolidate performance measurement.",
+    "ranking_factor": "problem_solution_framework",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "A sample report from a marketing analytics platform like DashThis. Try it with your data!",
+    "relevance_reason": "The content explicitly promotes 'DashThis' with links to a sample report and a registration page, indicating a primary conversion goal.",
+    "ranking_factor": "conversion_element",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Netskope’s 2019 Cloud Report puts this figure at 120 for the average enterprise, a number that keeps rising year on year.",
+    "relevance_reason": "Uses an external data point to add credibility and quantify the scale of the problem being discussed (martech tool proliferation).",
+    "ranking_factor": "authority_building",
+    "causal_strength": 0.4
+  }
+]

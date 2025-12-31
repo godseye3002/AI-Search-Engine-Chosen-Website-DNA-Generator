@@ -10,10 +10,20 @@ import json
 import logging
 from datetime import datetime
 from typing import Dict, Any, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from classification_core import classify_website, ClassificationResult
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
+from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
 from pipeline_models import Job
+
+# Configure logging based on environment
+log_level = logging.INFO if not is_production_mode() else logging.ERROR
+logging.basicConfig(
+    level=log_level,
+    format='%(asctime)s - %(name)s - %(levelname)s - [STAGE1] - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 class Stage1Worker:
@@ -45,6 +55,8 @@ class Stage1Worker:
             Updated Job object with results
         """
         self.logger.info(f"Processing job {job.job_id} for Stage 1")
+        self.logger.info(f"Job URL: {job.url}")
+        self.logger.info(f"Job text: {job.text[:100]}..." if len(job.text) > 100 else f"Job text: {job.text}")
         
         # Mark job as started
         job.mark_stage_start(1)
@@ -62,7 +74,10 @@ class Stage1Worker:
                 'extraction_order': job.source_link.get('extraction_order')
             }
             
+            self.logger.info(f"Prepared input data for classification: {list(input_data.keys())}")
+            
             # Execute classification with timeout
+            self.logger.info(f"Starting classification with timeout: {self.timeout_per_link}s")
             result = execute_with_timeout(
                 classify_website,
                 args=(input_data,),
@@ -72,6 +87,7 @@ class Stage1Worker:
             # Process result
             if result.status == TimeoutResult.SUCCESS:
                 classification_result = result.result
+                self.logger.info(f"Classification successful: {classification_result.classification}")
                 
                 # Update job with results
                 job.classification = classification_result.classification
@@ -97,9 +113,27 @@ class Stage1Worker:
                 self.logger.error(f"Job {job.job_id} failed Stage 1: {error_msg}")
         
         except Exception as e:
-            error_msg = f"Unexpected error in Stage 1: {str(e)}"
+            error_msg = f"Unexpected error in Stage 1 ({type(e).__name__}): {str(e)}"
             job.mark_stage_failed(1, error_msg)
-            self.logger.error(f"Job {job.job_id} failed Stage 1: {error_msg}")
+            self.logger.exception(f"Job {job.job_id} failed Stage 1 with unexpected error")
+            try:
+                from error_email_sender import send_ai_error_email
+                send_ai_error_email(
+                    error=e,
+                    error_context="Stage 1 worker failed while classifying a URL",
+                    metadata={
+                        "product_id": getattr(job, 'product_id', None),
+                        "run_id": getattr(job, 'run_id', None),
+                        "job_id": getattr(job, 'job_id', None),
+                        "stage": "stage_1_classification",
+                        "url": getattr(job, 'url', None),
+                        "extra": {
+                            "timeout_per_link": getattr(self, 'timeout_per_link', None),
+                        },
+                    },
+                )
+            except Exception as email_err:
+                self.logger.error(f"Failed to send error email for job {job.job_id}: {email_err}")
         
         return job
     
@@ -114,6 +148,12 @@ class Stage1Worker:
         Returns:
             Dictionary with file paths
         """
+        # Check if we should save outputs for this stage
+        if not should_save_stage_outputs('stage_1'):
+            if not is_production_mode():
+                logger.info(f"[STAGE1] Skipping file save for job {job_id} in production mode")
+            return {}
+        
         # Create job-specific directory
         job_dir = os.path.join(self.stage_output_dir, f"job_{job_id}")
         os.makedirs(job_dir, exist_ok=True)
@@ -143,7 +183,9 @@ class Stage1Worker:
                 f.write(result.html)
             file_paths['html_path'] = html_path
         
-        self.logger.debug(f"Saved outputs for job {job_id} to {job_dir}")
+        if not is_production_mode():
+            logger.debug(f"Saved outputs for job {job_id} to {job_dir}")
+        
         return file_paths
     
     def process_batch(self, jobs: list) -> list:
@@ -158,11 +200,13 @@ class Stage1Worker:
         """
         self.logger.info(f"Processing batch of {len(jobs)} jobs for Stage 1")
         
-        # Process jobs sequentially for now (can be made parallel later)
+        max_workers = self.config.get('pipeline', {}).get('max_parallel_workers_stage_1', 10)
+
         processed_jobs = []
-        for job in jobs:
-            processed_job = self.process_job(job)
-            processed_jobs.append(processed_job)
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(self.process_job, job): job for job in jobs}
+            for future in as_completed(futures):
+                processed_jobs.append(future.result())
         
         # Count results
         completed = sum(1 for job in processed_jobs if job.stage_1_status == 'completed')

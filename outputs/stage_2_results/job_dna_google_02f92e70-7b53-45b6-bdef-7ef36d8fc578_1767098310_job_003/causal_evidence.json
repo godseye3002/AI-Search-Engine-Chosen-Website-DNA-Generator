@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GTM-M4LRWT7N",
+    "relevance_reason": "Identifies the use of Google Tag Manager, indicating a sophisticated approach to analytics and marketing tag management on the site.",
+    "ranking_factor": "tech_stack_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+    "relevance_reason": "The favicon URL reveals the brand name 'Segwise', identifying the publisher of the content.",
+    "ranking_factor": "brand_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "assets.superblog.ai",
+    "relevance_reason": "Indicates the website is built on or uses the 'Superblog.ai' platform, providing insight into the publisher's content management system (CMS) choice.",
+    "ranking_factor": "tech_stack_identification",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "Directly addresses the 'MMP platforms' component of the user query, indicating the content is foundational and highly relevant.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Key Features to Consider",
+    "relevance_reason": "Aligns with user intent to evaluate and compare tools by promising a list of important criteria.",
+    "ranking_factor": "user_intent_matching",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+    "relevance_reason": "Identifies the publisher (segwise.ai) as an entity in the marketing analytics space, establishing its topical authority on the subject.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "What Are Mobile Measurement Partners?",
+    "relevance_reason": "Directly defines a core entity (MMP) from the user query, indicating foundational and authoritative content.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Key Features to Consider",
+    "relevance_reason": "Outlines the evaluation criteria for tools, directly addressing the user's intent to find the 'top' or 'best' options.",
+    "ranking_factor": "user_intent_satisfaction",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Accurate Attribution",
+    "relevance_reason": "Highlights a critical feature for measuring marketing channel performance, which is the core task mentioned in the query.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.9
+  }
+]

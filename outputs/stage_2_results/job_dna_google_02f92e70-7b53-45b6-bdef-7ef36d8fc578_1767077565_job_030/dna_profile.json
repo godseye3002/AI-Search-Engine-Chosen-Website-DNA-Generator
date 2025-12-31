@@ -1,0 +1,40 @@
+{
+  "page_structure": {
+    "html_patterns": [
+      "technical_script",
+      "metadata_logic",
+      "brand_identity",
+      "navigation_structure",
+      "technical_metadata",
+      "product_grouping",
+      "feature_module",
+      "adjacent_feature",
+      "sidebar_navigation_widget",
+      "internal_link"
+    ],
+    "semantic_markup": [],
+    "content_hierarchy": []
+  },
+  "content_characteristics": {
+    "topic_focus": "",
+    "entity_density": 0,
+    "content_depth": "medium",
+    "unique_value_props": []
+  },
+  "technical_seo": {
+    "meta_optimization": {
+      "title_length": 60,
+      "description_length": 146,
+      "has_canonical": true,
+      "has_og_tags": true
+    },
+    "structured_data": [],
+    "performance_signals": []
+  },
+  "ranking_factors": {
+    "evidence_quality": 28.75,
+    "authority_signals": [],
+    "user_experience": [],
+    "content_freshness": "unknown"
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Industry Insights, G2 Voices, Tech Signals",
+    "relevance_reason": "Defines the publisher's content taxonomy, though unrelated to specific MMP tools",
+    "ranking_factor": "site_structure",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "G2",
+    "relevance_reason": "Identifies the domain authority hosting the competitive analysis content",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Submit a Pitch",
+    "relevance_reason": "Indicates a contributor network strategy for content generation",
+    "ranking_factor": "content_sourcing",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

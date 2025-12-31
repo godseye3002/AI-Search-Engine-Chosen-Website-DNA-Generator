@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "13 Best Marketing Analytics Tools Loved By Marketers in 2025 | Whatagraph",
+    "relevance_reason": "Title indicates a listicle ('13 Best') covering the broader category ('Marketing Analytics') of the user's query with high freshness ('2025').",
+    "ranking_factor": "title_tag_optimization",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "cello-attribution.js",
+    "relevance_reason": "The site uses Cello for attribution, a tool semantically related to the user's search for tracking/MMP platforms.",
+    "ranking_factor": "tech_stack_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Whatagraph",
+    "relevance_reason": "Identifies the content source as a marketing data platform, establishing domain authority.",
+    "ranking_factor": "source_authority",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

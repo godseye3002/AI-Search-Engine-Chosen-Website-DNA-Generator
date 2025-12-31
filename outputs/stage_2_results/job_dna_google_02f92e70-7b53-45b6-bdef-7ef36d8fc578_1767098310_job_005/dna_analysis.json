@@ -1,0 +1,175 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767098310_job_005",
+  "url": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/#:~:text=AppsFlyer's%20leadership%20in%20the%20space,through%20uninstalling%20and%20reinstalling%20data.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_description",
+        "seo_tooling",
+        "analytics_script",
+        "entity_brand",
+        "entity_product_list",
+        "value_proposition",
+        "text_content",
+        "link",
+        "link_text"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 192,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 76.25,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+      "relevance_reason": "The title directly matches the user's query for 'top MMP platforms', providing a specific number (16) and a future-focused year (2026), suggesting a comprehensive and current list.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing. Find the perfect MMP solution for your app marketing campaigns",
+      "relevance_reason": "The description outlines the exact comparison criteria (attribution, fraud, integration, pricing) a user looking for MMPs would need, directly addressing the intent behind the query.",
+      "ranking_factor": "user_intent_match",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Search Engine Optimization by Rank Math PRO",
+      "relevance_reason": "Indicates that the page is professionally optimized for search engines, suggesting the content is likely well-structured and authoritative to achieve high rankings.",
+      "ranking_factor": "content_quality_signal",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "MobileAction",
+      "relevance_reason": "Identifies the primary company of the analyzed content. The company operates in the mobile marketing analytics space, which is topically related to the user's query about MMPs.",
+      "ranking_factor": "brand_authority",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SearchAds.com by MobileAction, Ad Intelligence, ASO Intelligence, Market Intelligence, API Solutions, Managed Services",
+      "relevance_reason": "The list of products reveals the company's focus on ad intelligence, ASO, and market intelligence, which are adjacent but distinct from the core MMP/link tracking functionality the user is searching for. This is a key competitive positioning insight.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Manage, automate and optimize Apple Ads campaigns.",
+      "relevance_reason": "This is a specific value proposition for the 'SearchAds.com' tool, indicating a focus on a particular marketing channel (Apple Ads) rather than a comprehensive, multi-channel MMP solution.",
+      "ranking_factor": "feature_highlight",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+      "relevance_reason": "Provides a quantifiable success story for a relevant platform (MobileAction), directly addressing the user's need for performance measurement tools. It includes specific metrics (ROAS, CPC) and statistics (50%, 40%).",
+      "ranking_factor": "data_driven_evidence",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Read the Success Story",
+      "relevance_reason": "Acts as a call-to-action for deeper, more detailed content (a case study), which is valuable for users in the evaluation phase of their research.",
+      "ranking_factor": "content_depth_indicator",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "16 the Best Mobile Attribution Partners in 2024",
+      "relevance_reason": "Directly addresses the user's need for a list of 'top tools' by promising a specific number (16) of partners, indicating a comprehensive listicle format.",
+      "ranking_factor": "content_scoping",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Integrate Your MMP into SearchAds.com",
+      "relevance_reason": "Reveals a product-led content strategy, aiming to convert informational traffic by highlighting a unique integration with their own tool (SearchAds.com).",
+      "ranking_factor": "business_goal_alignment",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "How to Choose a Mobile Measurement Partner in 2024",
+      "relevance_reason": "Targets a high-intent, decision-making stage of the user journey, moving beyond a simple list to provide selection criteria.",
+      "ranking_factor": "user_intent_targeting",
+      "causal_strength": 0.9
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 78.422193,
+  "analysis_timestamp": "2025-12-30T18:10:21.204385"
+}

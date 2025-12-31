@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+    "relevance_reason": "The title indicates a broad focus on general marketing tools for small businesses, not the specific user need for MMPs or link tracking tools for onboarding.",
+    "ranking_factor": "topic_mismatch",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GoodBarber, app builder, app, mobile app, Reseller, ASO, marketing, business, mobile, features, Beacons, Geofencing, engagement, iOS, Android, native, native app",
+    "relevance_reason": "Keywords show a focus on mobile app creation and general mobile marketing (ASO, engagement), which is tangentially related to MMPs but does not directly mention link tracking or attribution platforms.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Small businesses are always looking for ways to increase their revenue and productivity. Here are 10 great marketing tools that can help them do just that in 20",
+    "relevance_reason": "The description confirms the content's target audience (small businesses) and goal (increasing revenue), which is too general for the user's specific technical query.",
+    "ranking_factor": "audience_mismatch",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "GoodBarber",
+    "relevance_reason": "The HTML chunk identifies the website's brand as 'GoodBarber' via the logo's SVG title and link. This entity is not a link tracking tool or MMP platform, making it irrelevant to the user query.",
+    "ranking_factor": "brand_authority",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<nav id=\"gbnavbar\">",
+    "relevance_reason": "This chunk consists of a site-wide navigation bar and header. It contains no content that addresses the user's query about link tracking tools.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+    "relevance_reason": "The content is a broad listicle for small businesses, not a specialized analysis of link tracking or MMP platforms as requested by the user query.",
+    "ranking_factor": "topic_mismatch",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Google Analytics - Data Analytics",
+    "relevance_reason": "Mentions a tool capable of tracking website traffic and performance, which is tangentially related to the query's intent but is not a specific MMP or link tracking tool for onboarding.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.2
+  }
+]

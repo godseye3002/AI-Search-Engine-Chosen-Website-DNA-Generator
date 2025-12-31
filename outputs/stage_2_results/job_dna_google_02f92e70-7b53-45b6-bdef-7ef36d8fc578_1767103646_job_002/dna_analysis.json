@@ -1,0 +1,150 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767103646_job_002",
+  "url": "https://segwise.ai/blog/mobile-measurement-partners#:~:text=Key%20Features%20to%20Consider,Tool%20Comparison",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "script_tag",
+        "link_tag",
+        "style_tag",
+        "navigation_link",
+        "table_of_contents_item",
+        "heading",
+        "heading",
+        "subheading",
+        "subheading"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 46,
+        "description_length": 161,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 71.25,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})(window,'GTM-M4LRWT7N','google_tags_first_party');",
+      "relevance_reason": "Identifies the use of Google Tag Manager (GTM-M4LRWT7N), a tool for managing tracking scripts, which is contextually relevant to the user's query about measurement.",
+      "ranking_factor": "technology_stack",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "<link href=\"https://assets.superblog.ai/site_cuid_clo00o2d0644641vqp8vh8w6cd/images/favicon-segwise-1711707238347-compressed.png\" rel=\"icon\">",
+      "relevance_reason": "The favicon URL reveals the publisher is likely 'Segwise' and the platform is 'Superblog.ai'. Segwise is an analytics company, suggesting the content may be authoritative.",
+      "ranking_factor": "brand_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "/*! tailwindcss v4.1.8 | MIT License | https://tailwindcss.com */",
+      "relevance_reason": "Indicates the use of Tailwind CSS, a modern CSS framework. This provides insight into the site's design and development approach.",
+      "ranking_factor": "technology_stack",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Features: Creative Analytics, Creative Tagging, Fatigue Tracking, Competitor Tracking",
+      "relevance_reason": "The main navigation reveals the core product features of the host site (segwise.ai), providing direct competitive intelligence on their market positioning against MMPs.",
+      "ranking_factor": "brand_positioning",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "The Table of Contents directly addresses the core entity 'Mobile Measurement Partners' from the user query, indicating strong topical alignment.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "Directly defines the core entity type (MMP) mentioned in the user's query.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Key Features to Consider",
+      "relevance_reason": "This section heading indicates the content will provide evaluation criteria, which is essential for a user looking for 'top' tools.",
+      "ranking_factor": "user_intent_alignment",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Accurate Attribution",
+      "relevance_reason": "Identifies a critical feature for measuring marketing channel performance, directly addressing the user's core need.",
+      "ranking_factor": "metric_relevance",
+      "causal_strength": 0.9
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 80.549225,
+  "analysis_timestamp": "2025-12-30T19:39:19.327755"
+}

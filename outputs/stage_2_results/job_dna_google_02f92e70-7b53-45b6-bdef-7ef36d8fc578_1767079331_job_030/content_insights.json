@@ -1,0 +1,37 @@
+{
+  "content_strategy": {
+    "strengths": [
+      "Basic content structure present"
+    ],
+    "weaknesses": [
+      "Poor entity coverage and topic focus",
+      "Direct competitor analysis needed"
+    ],
+    "opportunities": [
+      "Identify competitive gaps"
+    ]
+  },
+  "seo_recommendations": {
+    "technical_improvements": [
+      "Optimize meta descriptions for better click-through rates",
+      "Ensure proper heading hierarchy (H1 > H2 > H3)"
+    ],
+    "content_optimizations": [
+      "Increase entity density and topic coverage",
+      "Add more specific examples and case studies"
+    ],
+    "structure_enhancements": [
+      "Implement semantic HTML5 elements",
+      "Add structured data markup"
+    ]
+  },
+  "competitive_analysis": {
+    "differentiators": [
+      "Competitor perspective"
+    ],
+    "gap_opportunities": [
+      "Identify underserved subtopics",
+      "Create comparison content"
+    ]
+  }
+}

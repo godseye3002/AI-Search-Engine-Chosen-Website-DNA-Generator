@@ -1,0 +1,166 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767103646_job_015",
+  "url": "https://learn.g2.com/best-marketing-analytics-tools",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_description",
+        "title",
+        "structured_data",
+        "entity_reference",
+        "navigation_link",
+        "text_content",
+        "text_content",
+        "list_item",
+        "list_item",
+        "list_item"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 32.5,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "I tested 30+ tools and these are the top 7 marketing analytics tools of 2025 to track performance, optimize campaigns, and drive results. Here's my review.",
+      "relevance_reason": "The description establishes authority by quantifying the research (30+ tools tested) and frames the content as a curated, high-value list ('top 7'). The mention of '2025' is a strong signal for content freshness.",
+      "ranking_factor": "content_freshness_claim",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "I Tried The Best Marketing Analytics Tools: Here’s My Review",
+      "relevance_reason": "The title uses a first-person, review-based format ('I Tried... Here's My Review') which can increase click-through rates by building trust and signaling an authentic, hands-on perspective.",
+      "ranking_factor": "user_engagement_signal",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "\"datePublished\" : \"2025-10-13T05:30:00.000Z\"",
+      "relevance_reason": "The JSON-LD schema includes a future publication date. This is a deliberate SEO tactic to make the content appear new and relevant for a longer period, targeting future search queries.",
+      "ranking_factor": "technical_seo",
+      "causal_strength": 0.65
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "https://form.asana.com/?k=2cPuYmXbWvqA3F6CMTd_Fw&d=46608419138132",
+      "relevance_reason": "Identifies Asana as a tool used for content operations (pitch submission), but this is irrelevant to the user's query about link tracking tools.",
+      "ranking_factor": "off_topic",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Industry Insights",
+      "relevance_reason": "This is a generic navigation link for a content category. It does not contain any specific information related to MMP platforms or link tracking.",
+      "ranking_factor": "off_topic",
+      "causal_strength": 0.05
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Mailchimp is frequently praised in G2 customer reviews for being one of the easiest ways to launch and measure email campaigns.",
+      "relevance_reason": "Identifies a core value proposition (ease of use for email) and cites a third-party source (G2) for credibility, which is a strong trust signal.",
+      "ranking_factor": "entity_value_proposition",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "costs can climb as lists grow...some power features, such as fuller A/B testing and more granular segmentation, sit in higher-tier plans",
+      "relevance_reason": "Highlights key limitations (pricing model, feature gating) that are critical for user decision-making and competitive differentiation.",
+      "ranking_factor": "content_depth",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "4. CleverTap: Best for mobile user engagement and retention",
+      "relevance_reason": "Identifies a mobile-focused marketing platform. While not an MMP, it's the most topically adjacent entity in the list, signaling a potential focus on broader mobile marketing rather than specific attribution.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "7. MoEngage: Best for AI-driven multi-channel campaign orchestration",
+      "relevance_reason": "Mentions a multi-channel platform, which relates to the user's need to measure different distribution channels, but the focus is on 'orchestration' rather than 'measurement' or 'attribution'.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.3
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Frequently asked questions about the best marketing analytics tools",
+      "relevance_reason": "This final item clarifies the article's scope is 'marketing analytics tools', a much broader topic than the user's specific query for 'MMP platforms' for link tracking.",
+      "ranking_factor": "topic_mismatch",
+      "causal_strength": 0.3
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 89.75134,
+  "analysis_timestamp": "2025-12-30T19:41:20.135520"
+}

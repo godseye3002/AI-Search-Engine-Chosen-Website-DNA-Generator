@@ -1,0 +1,158 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767098310_job_014",
+  "url": "https://segwise.ai/blog/best-mobile-app-analytics-tools-marketers",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "script",
+        "link",
+        "link",
+        "style",
+        "heading",
+        "metadata",
+        "metadata",
+        "link",
+        "heading",
+        "entity"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 68,
+        "description_length": 143,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 53.75,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "GTM-M4LRWT7N",
+      "relevance_reason": "Identifies the use of Google Tag Manager for analytics and marketing tag deployment. This is a key component of the site's marketing technology stack.",
+      "ranking_factor": "technical_setup",
+      "causal_strength": 0.0
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "favicon-segwise-1711707238347-compressed.png",
+      "relevance_reason": "The favicon URL reveals the brand name of the publisher is 'segwise', providing brand identity.",
+      "ranking_factor": "brand_identification",
+      "causal_strength": 0.0
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "assets.superblog.ai",
+      "relevance_reason": "The asset host URL suggests the site may be built on or hosted by the 'superblog.ai' platform, identifying the underlying CMS or blog engine.",
+      "ranking_factor": "platform_identification",
+      "causal_strength": 0.0
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Best Mobile App Analytics Tool in 2025: Ultimate Guide for Marketers",
+      "relevance_reason": "The H1 title directly addresses the broader category of 'Mobile App Analytics Tools', which encompasses the user's specific query about MMPs and link tracking.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "December 02, 2025",
+      "relevance_reason": "The article is future-dated, a content strategy to signal long-term relevance and freshness to search engines and users.",
+      "ranking_factor": "content_freshness_signal",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "8 min read",
+      "relevance_reason": "Indicates a piece of long-form content, suggesting a potentially in-depth comparison that would be valuable to the user.",
+      "ranking_factor": "content_depth_indicator",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "List of Top 5 Mobile App Analytics Tools in 2025",
+      "relevance_reason": "This heading directly addresses the user's intent to find a curated list of top tools, matching the core 'top tools' aspect of the query.",
+      "ranking_factor": "intent_matching",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Segwise",
+      "relevance_reason": "The mention of a specific tool ('Segwise') indicates the content provides concrete examples, which is a primary goal for a user searching for tool recommendations.",
+      "ranking_factor": "entity_coverage",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Key Benefits of Using a Mobile App Analytics Tool",
+      "relevance_reason": "This section promises to explain the value, which aligns with the user's goal of understanding how these tools measure performance.",
+      "ranking_factor": "topic_relevance",
+      "causal_strength": 0.85
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 78.328171,
+  "analysis_timestamp": "2025-12-30T18:11:58.941148"
+}

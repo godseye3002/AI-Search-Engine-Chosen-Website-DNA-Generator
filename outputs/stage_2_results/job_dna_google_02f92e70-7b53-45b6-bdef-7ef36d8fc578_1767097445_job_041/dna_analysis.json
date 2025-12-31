@@ -1,0 +1,175 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767097445_job_041",
+  "url": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/#:~:text=Overall%2C%20Firebase%20stands%20out%20as,of%20spending%20across%20different%20channels.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_description",
+        "canonical_url",
+        "script",
+        "entity_mention",
+        "entity_mention",
+        "call_to_action",
+        "text_content",
+        "entity",
+        "statistics"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 50,
+        "description_length": 192,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 72.5,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "16 best Mobile Measurement Partners (MMPs) in 2026",
+      "relevance_reason": "The title directly matches the user's query for 'top' MMPs, providing a specific number (16) and a forward-looking year (2026) to signal up-to-date content.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Compare the leading mobile measurement partners on attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+      "relevance_reason": "The description outlines the key evaluation criteria for MMPs, which directly aligns with the user's goal of measuring performance.",
+      "ranking_factor": "content_value_proposition",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "https://www.mobileaction.co/blog/best-mobile-measurement-partners-mmp/",
+      "relevance_reason": "The URL slug 'best-mobile-measurement-partners-mmp' is highly optimized and reinforces the topic of the page for search engines.",
+      "ranking_factor": "url_structure",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "SearchAds.com by MobileAction",
+      "relevance_reason": "Identifies a specific tool for managing and optimizing mobile ad campaigns (Apple Ads), a concept related to measuring marketing channel performance.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.2
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Ad Intelligence",
+      "relevance_reason": "Mentions a product directly related to analyzing marketing performance, which aligns with the user's general intent, even if not specifically an MMP.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.2
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Subscribe to never miss an update in mobile app marketing.",
+      "relevance_reason": "Establishes the website's topical authority and focus on mobile app marketing, the broader domain of the user's query.",
+      "ranking_factor": "topical_authority",
+      "causal_strength": 0.2
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Square reached a 50% ROAS uplift + 40% CPC decrease with MobileAction",
+      "relevance_reason": "Provides a specific, quantifiable success story for a relevant tool (MobileAction), demonstrating its value in improving key marketing performance metrics (ROAS, CPC).",
+      "ranking_factor": "social_proof",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "MobileAction",
+      "relevance_reason": "Identifies a specific platform relevant to the user's query for MMPs and link tracking tools.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "50% ROAS uplift + 40% CPC decrease",
+      "relevance_reason": "These are critical performance metrics that directly answer the user's need to measure channel performance, making the associated tool a strong competitor.",
+      "ranking_factor": "data_driven_evidence",
+      "causal_strength": 0.8
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "16 the Best Mobile Attribution Partners in 2024",
+      "relevance_reason": "Directly addresses the user's intent for a list of 'top' tools by providing a specific number (16) and signaling content freshness (2024).",
+      "ranking_factor": "content_freshness_and_depth",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Integrate Your MMP into SearchAds.com",
+      "relevance_reason": "Reveals a strategic content marketing goal: funneling readers from a general informational query towards the site's proprietary product (SearchAds.com).",
+      "ranking_factor": "business_goal_alignment",
+      "causal_strength": 0.95
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 93.489057,
+  "analysis_timestamp": "2025-12-30T17:57:56.713994"
+}

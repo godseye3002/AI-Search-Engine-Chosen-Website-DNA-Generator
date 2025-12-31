@@ -1,0 +1,174 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767084188_job_040",
+  "url": "https://segwise.ai/blog/mobile-measurement-partners",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "technology_stack",
+        "platform_identification",
+        "brand_identification",
+        "technology_stack",
+        "structural_element",
+        "navigation_link",
+        "heading",
+        "metadata_category",
+        "metadata_statistic",
+        "navigation_link"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 46,
+        "description_length": 161,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 67.5,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Google Tag Manager (GTM-M4LRWT7N)",
+      "relevance_reason": "The site uses Google Tag Manager for analytics and script management, a common tool in the marketing technology space.",
+      "ranking_factor": "technical_implementation",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "superblog.ai",
+      "relevance_reason": "The favicon URL reveals the content is hosted on the Superblog.ai platform, identifying the underlying CMS.",
+      "ranking_factor": "source_attribution",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "segwise",
+      "relevance_reason": "The favicon URL path identifies the brand/site as 'Segwise', which is essential context for competitive analysis.",
+      "ranking_factor": "source_attribution",
+      "causal_strength": 0.1
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<nav id=\"toc\">...<a href=\"#what-are-mobile-measurement-partners\">...<span>What Are Mobile Measurement Partners?</span></a>...</nav>",
+      "relevance_reason": "The presence of a Table of Contents (ToC) with a heading that directly matches the core subject of the user query ('Mobile Measurement Partners') indicates the article is highly relevant and well-structured.",
+      "ranking_factor": "content_structure",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "<a href=\"https://segwise.ai/features/competitor-tracking\">Competitor Tracking</a>",
+      "relevance_reason": "The site's main navigation reveals its own product features, such as 'Competitor Tracking'. This provides insight into the author's expertise, potential bias, and their unique value proposition within the marketing analytics space.",
+      "ranking_factor": "author_expertise",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Top Mobile Measurement Partners (MMPs) in 2025",
+      "relevance_reason": "The H1 title directly matches the user's query for 'MMP platforms' and includes a future year, signaling fresh and relevant content.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Tool Comparison",
+      "relevance_reason": "The content is explicitly categorized as a 'Tool Comparison', which directly aligns with the user's goal of competitive analysis.",
+      "ranking_factor": "content_format",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "11 min read",
+      "relevance_reason": "Indicates a long-form, in-depth article, suggesting comprehensive coverage suitable for a detailed analysis.",
+      "ranking_factor": "content_depth",
+      "causal_strength": 0.95
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "What Are Mobile Measurement Partners?",
+      "relevance_reason": "Directly addresses the 'MMP platforms' part of the user query, confirming the article's topic.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Key Features to Consider",
+      "relevance_reason": "Indicates the content will provide evaluation criteria, which is a core part of a 'top tools' query.",
+      "ranking_factor": "user_intent_matching",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "Accurate Attribution",
+      "relevance_reason": "Highlights a critical feature for measuring marketing channel performance, showing topic depth.",
+      "ranking_factor": "topic_specificity",
+      "causal_strength": 0.9
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 75.531876,
+  "analysis_timestamp": "2025-12-30T14:16:43.789535"
+}

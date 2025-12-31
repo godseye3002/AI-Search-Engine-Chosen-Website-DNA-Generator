@@ -1,0 +1,42 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 10 marketing analytics platforms for marketers | DashThis",
+    "relevance_reason": "The title targets the broad, semantically related keyword 'marketing analytics platforms' but does not specifically mention 'link tracking' or 'MMP', indicating a broader content focus than the user query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "https://dashthis.com/blog/8-marketing-analytics-platforms-to-simplify-your-data-analysis-processes/",
+    "relevance_reason": "The canonical URL slug refers to '8 marketing analytics platforms', which contradicts the 'Top 10' in the title. This suggests the title may be inflated for click-through rate (CTR) or is outdated.",
+    "ranking_factor": "content_framing",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<link ... hreflang=\"fr\" rel=\"alternate\"/>, <link ... hreflang=\"es\" .../>",
+    "relevance_reason": "The presence of multiple hreflang tags (en, fr, es, de, pt) reveals a sophisticated international SEO strategy, targeting a global audience with translated content.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "More tools mean a higher risk of data fragmentation and siloed data. Imagine the hours you spend each week logging in to each platform, exporting data, uploading it to Microsoft Excel, normalizing and",
+    "relevance_reason": "This section frames the core problem (data silos and manual work) that marketing analytics and MMP platforms solve. It's a strong hook for users experiencing this issue.",
+    "ranking_factor": "problem_framing",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "A sample report from a marketing analytics platform like DashThis. Try it with your data!",
+    "relevance_reason": "The content explicitly promotes its own tool, DashThis, with a direct call-to-action, indicating a primary goal of lead generation for their software.",
+    "ranking_factor": "conversion_element",
+    "causal_strength": 0.3
+  }
+]

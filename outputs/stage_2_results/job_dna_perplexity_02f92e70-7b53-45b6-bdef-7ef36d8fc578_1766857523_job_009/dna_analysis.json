@@ -1,0 +1,159 @@
+{
+  "job_id": "dna_perplexity_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1766857523_job_009",
+  "url": "https://www.branch.io/glossary/mobile-measurement-partner-mmp/",
+  "classification": "competitor",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_title",
+        "meta_description",
+        "tech_stack_indicator",
+        "publisher_entity",
+        "article_title",
+        "navigation_link",
+        "trust_signal",
+        "brand_entity",
+        "heading",
+        "text_content"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 54,
+        "description_length": 152,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 73.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "What Is a Mobile Measurement Partner? Marketer’s Guide",
+      "relevance_reason": "Educational content targeting the core acronym (MMP) rather than a direct 'best of' list, likely serving as a top-of-funnel entry point.",
+      "ranking_factor": "informational_intent",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "tracks and attributes app installs, user behavior, and campaign performance",
+      "relevance_reason": "Defines the core functional requirements of the user's search query (app tracking).",
+      "ranking_factor": "semantic_match",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "tracking.g2crowd.com",
+      "relevance_reason": "Presence of G2 Crowd prefetch indicates reliance on social proof/reviews to validate 'Best' status.",
+      "ranking_factor": "authority_signal",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Why You Need an MMP and Why Branch Is the Best Fit",
+      "relevance_reason": "Directly addresses the user query 'Best MMP tool' with a competitive claim.",
+      "ranking_factor": "semantic_match",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Why Branch?",
+      "relevance_reason": "Indicates a dedicated persuasion page for competitive differentiation.",
+      "ranking_factor": "user_journey_optimization",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "GDPR | CCPA | Privacy",
+      "relevance_reason": "Highlights compliance capabilities, a critical factor for MMP selection.",
+      "ranking_factor": "trust_authority",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "What is a mobile measurement partner (MMP)?",
+      "relevance_reason": "Direct definition of the core subject in the user query, establishing topical authority.",
+      "ranking_factor": "semantic_match",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "MMPs collect and analyze data like clicks, impressions, and installs... to attribute user actions back to specific campaigns",
+      "relevance_reason": "Explains the functional utility of the tools requested, addressing informational intent.",
+      "ranking_factor": "content_depth",
+      "causal_strength": 0.72
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Tracking across devices... Analytics in real time... Privacy and compliance",
+      "relevance_reason": "Outlines critical features that define a 'best' tool, serving as evaluation criteria.",
+      "ranking_factor": "feature_extraction",
+      "causal_strength": 0.72
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus",
+        "Direct competitor analysis needed"
+      ],
+      "opportunities": [
+        "Identify competitive gaps"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Competitor perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 52.999583,
+  "analysis_timestamp": "2025-12-27T23:16:23.970284"
+}

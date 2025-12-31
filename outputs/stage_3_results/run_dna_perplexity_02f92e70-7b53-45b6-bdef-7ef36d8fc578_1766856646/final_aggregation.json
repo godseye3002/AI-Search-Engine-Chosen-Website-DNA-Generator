@@ -1,0 +1,170 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "Best MMP tool for app tracking?",
+  "sources_analyzed": 5,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Directly answer user query with a comprehensive, fresh-looking title.",
+      "optimized_pattern_template": "The [Number] Best Mobile Measurement Partners (MMPs) in [Current/Future Year]",
+      "adoption_rate": 0.8
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Must include key entities: [Adjust, AppsFlyer, MobileAction, Branch, Kochava, Singular]",
+      "adoption_rate": 0.7
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "comparison_section",
+      "content_requirement": "Detailed breakdown of each tool, comparing on criteria like attribution accuracy, fraud prevention, integration capabilities, and pricing.",
+      "adoption_rate": 0.8
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "buyers_guide",
+      "consensus_intent": "Help users make a decision by explaining how to choose the right tool.",
+      "optimized_pattern_template": "How to Choose the Right Mobile Measurement Partner for Your App",
+      "adoption_rate": 0.6
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "Adjust": {
+      "classification": "Mobile Measurement Partner",
+      "primary_definition": "A mobile measurement partner for app marketing, attribution, and analytics.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mmp",
+        "app tracking",
+        "attribution",
+        "analytics"
+      ],
+      "frequency_across_sources": 0.4
+    },
+    "AppsFlyer": {
+      "classification": "Mobile Measurement Partner",
+      "primary_definition": "A mobile attribution and marketing analytics platform.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mmp",
+        "app tracking",
+        "attribution",
+        "marketing analytics"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "MobileAction": {
+      "classification": "Mobile Measurement Partner / ASO Tool",
+      "primary_definition": "A platform for mobile measurement and app store optimization, offering integration with ad platforms.",
+      "high_value_attributes": [
+        {
+          "data_point": "Case studies show results like 50% ROAS uplift and 40% CPC decrease.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        },
+        {
+          "data_point": "Used by high-profile clients such as Square.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "mmp",
+        "aso",
+        "searchads.com",
+        "roas",
+        "cpc",
+        "case study"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Branch": {
+      "classification": "Mobile Measurement Partner",
+      "primary_definition": "A mobile linking and attribution platform focused on deep linking.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mmp",
+        "deep linking",
+        "attribution"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Kochava": {
+      "classification": "Mobile Measurement Partner",
+      "primary_definition": "Provides mobile attribution and analytics for marketers.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mmp",
+        "attribution",
+        "analytics"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Singular": {
+      "classification": "Mobile Measurement Partner",
+      "primary_definition": "A marketing intelligence platform that unifies campaign and attribution data.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mmp",
+        "marketing intelligence",
+        "roi"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Tenjin": {
+      "classification": "Mobile Measurement Partner",
+      "primary_definition": "A mobile marketing infrastructure and analytics platform.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mmp",
+        "analytics",
+        "mobile infrastructure"
+      ],
+      "frequency_across_sources": 0.2
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "comparison_table",
+        "usage_frequency": 0.6,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "expert_listicle",
+        "usage_frequency": 0.8,
+        "effectiveness_score": 0.85
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2000,
+      "entity_density_optimal": 0.03,
+      "readability_score": 0.7
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "A comprehensive list of 8+ MMP tools.",
+      "Specific comparison criteria: attribution accuracy, fraud prevention, integration capabilities, pricing.",
+      "Quantifiable data points, statistics, or case studies (e.g., ROAS uplift).",
+      "A 'How to Choose' or buyer's guide section.",
+      "The current or a future year in the title and content to signal freshness."
+    ],
+    "negative_constraints": [
+      "Content that only promotes a single tool without objective comparison.",
+      "Generic descriptions without specific features or data.",
+      "Missing or unoptimized meta descriptions.",
+      "Outdated information (e.g., mentioning old years)."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true
+    }
+  },
+  "generation_timestamp": "2025-12-27T23:02:48.670111",
+  "sources_processed": 5
+}

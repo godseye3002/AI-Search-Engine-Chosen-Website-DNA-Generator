@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The title directly matches the user's query for 'MMP platforms' and specifies the content is a curated list ('8 Best'), which aligns with the 'top tools' intent.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "https://splitmetrics.com/blog/best-mobile-measurement-partners-2022/",
+    "relevance_reason": "The discrepancy between the URL's year (2022) and the title's year (2025) reveals a content freshness strategy, where an existing high-performing asset is updated to maintain relevance and rankings.",
+    "ranking_factor": "content_freshness_strategy",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Est. reading time: 37 minutes",
+    "relevance_reason": "The long estimated reading time suggests the content is comprehensive and in-depth, which is a strong value proposition for a user researching a complex topic like MMPs.",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Acquire: Automate and optimize Apple Ads campaigns at scale",
+    "relevance_reason": "Identifies a tool focused on a specific marketing distribution channel (Apple Ads), which is tangentially related to the user's query about measuring channel performance.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Optimize: Run mobile A/B tests, validate hypothesis, launch games and apps",
+    "relevance_reason": "Mentions A/B testing, a method for optimizing app performance, which relates to the 'onboarding' aspect of the user query.",
+    "ranking_factor": "topic_coverage",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "App Radar by SplitMetrics: Improve ASO",
+    "relevance_reason": "Highlights App Store Optimization (ASO) as a key service, another facet of mobile marketing channel performance.",
+    "ranking_factor": "topic_coverage",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "AppsFlyer boasts an impressive 65% market share in the mobile attribution space.",
+    "relevance_reason": "Provides a specific, quantifiable statistic about a major entity (AppsFlyer), establishing its market leadership and authority.",
+    "ranking_factor": "data_richness",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch's core strength lies in its deep linking technology... which is critical for onboarding.",
+    "relevance_reason": "Directly connects a tool's unique feature (deep linking) to the user's specific goal (onboarding).",
+    "ranking_factor": "query_term_solution_mapping",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 5 Mobile Measurement Partners (MMPs) for 2024",
+    "relevance_reason": "Heading directly matches the core entities of the user query (MMP).",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The H1 title is a direct match for the user's query about 'top' 'MMP platforms' for measurement.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+    "relevance_reason": "The table of contents explicitly lists multiple MMP tools, which are the primary entities the user is searching for.",
+    "ranking_factor": "entity_coverage",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "28 Jul 2025",
+    "relevance_reason": "The future date indicates a content strategy to maintain perceived freshness and rank for future-dated queries.",
+    "ranking_factor": "content_freshness_strategy",
+    "causal_strength": 0.95
+  }
+]

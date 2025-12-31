@@ -1,0 +1,40 @@
+{
+  "page_structure": {
+    "html_patterns": [
+      "meta_title",
+      "meta_description",
+      "tech_stack",
+      "brand_entity",
+      "product_listing",
+      "value_proposition",
+      "conversion_element",
+      "statistical_proof",
+      "cta_link",
+      "navigation_link"
+    ],
+    "semantic_markup": [],
+    "content_hierarchy": []
+  },
+  "content_characteristics": {
+    "topic_focus": "",
+    "entity_density": 0,
+    "content_depth": "medium",
+    "unique_value_props": []
+  },
+  "technical_seo": {
+    "meta_optimization": {
+      "title_length": 50,
+      "description_length": 192,
+      "has_canonical": true,
+      "has_og_tags": true
+    },
+    "structured_data": [],
+    "performance_signals": []
+  },
+  "ranking_factors": {
+    "evidence_quality": 70.0,
+    "authority_signals": [],
+    "user_experience": [],
+    "content_freshness": "unknown"
+  }
+}

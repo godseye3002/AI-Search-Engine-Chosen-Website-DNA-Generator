@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top 6 Mobile Measurement Partners In India For Accurate App Analytics (2025)",
+    "relevance_reason": "Title directly matches the user's query for 'MMP platforms' and uses a listicle format ('Top 6') with a future date ('2025') to signal freshness and authority.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Discover the top 6 mobile measurement partners in India to track your app marketing ROI and performance effectively in 2025.",
+    "relevance_reason": "The description explicitly addresses the core user intent of tracking marketing ROI and performance, which aligns with the query's goal.",
+    "ranking_factor": "user_intent_match",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Search Engine Optimization by Rank Math PRO",
+    "relevance_reason": "Indicates the use of a premium SEO tool, suggesting a sophisticated and deliberate content and SEO strategy.",
+    "ranking_factor": "competitive_sophistication",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "App Marketing Services",
+    "relevance_reason": "The navigation link indicates the website's general topic is related to the user's query, but this structural element does not contain specific tools or answers.",
+    "ranking_factor": "topical_authority_signal",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "appfillip.com",
+    "relevance_reason": "The domain name suggests a focus on 'apps', which is contextually relevant to the query about mobile measurement platforms.",
+    "ranking_factor": "domain_relevance",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Top 6 Mobile Measurement Partners in India (2025 Guide)",
+    "relevance_reason": "The H1 title directly matches the user's intent for 'top' 'MMP platforms' and establishes the content's purpose as a curated list.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Mobile Measurement Partners (MMPs) are third-party platforms that help app marketers attribute installs, measure campaign performance, and detect fraud.",
+    "relevance_reason": "This definition explicitly connects the content's topic (MMPs) to the user's goal of measuring marketing performance and attribution.",
+    "ranking_factor": "topic_clarity",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch stands out for its deep linking and cross-platform attribution capabilities.",
+    "relevance_reason": "Highlights a unique value proposition (deep linking) directly related to 'link tracking tools', a key phrase in the user query.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.95
+  }
+]

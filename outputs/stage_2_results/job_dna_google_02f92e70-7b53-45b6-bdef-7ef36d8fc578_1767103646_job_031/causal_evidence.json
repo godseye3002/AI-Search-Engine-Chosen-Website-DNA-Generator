@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+    "relevance_reason": "The title indicates a broad, high-level listicle targeting 'small businesses', which misaligns with the specific, technical user query about MMP platforms for performance measurement.",
+    "ranking_factor": "content_framing",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "GoodBarber, app builder, app, mobile app, Reseller, ASO, marketing, business, mobile, features, Beacons, Geofencing, engagement, iOS, Android, native, native app",
+    "relevance_reason": "Keywords show a focus on the mobile app ecosystem, which is the correct context for MMPs. However, they lack specific query terms like 'MMP', 'link tracking', or 'attribution'.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Small businesses are always looking for ways to increase their revenue and productivity. Here are 10 great marketing tools that can help them do just that in 20",
+    "relevance_reason": "The description confirms the content's focus on a general 'small business' audience and a high-level 'revenue' goal, rather than the specific task of measuring channel performance for onboarding.",
+    "ranking_factor": "user_intent_mismatch",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "GoodBarber",
+    "relevance_reason": "The HTML chunk identifies the publisher's brand ('GoodBarber') via the logo's SVG title and homepage link. This element is not relevant to the user's query about MMPs.",
+    "ranking_factor": "brand_context",
+    "causal_strength": 0.0
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Google Analytics",
+    "relevance_reason": "This is the only tool mentioned that directly relates to tracking website traffic and performance, which is tangentially related to the user's query about measuring channel performance. However, it is not an MMP or a specialized link tracking tool for onboarding.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "10 marketing tools you need to boost revenues for small businesses in 2023",
+    "relevance_reason": "The title clearly indicates the content's focus is on general marketing for small businesses, which does not align with the specific, technical query about MMP platforms for link tracking.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.2
+  }
+]

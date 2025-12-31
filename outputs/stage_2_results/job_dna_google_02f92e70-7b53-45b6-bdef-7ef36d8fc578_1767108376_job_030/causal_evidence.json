@@ -1,0 +1,42 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "RocketLazyLoadScripts",
+    "relevance_reason": "Indicates the competitor's use of a performance optimization tool (likely WP Rocket) for lazy loading JavaScript. This is a technical insight into their site build, not topical content.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\\/7\\..*?rv:11/i))",
+    "relevance_reason": "Contains a script specifically for handling legacy Internet Explorer browsers, suggesting a focus on broad browser compatibility.",
+    "ranking_factor": "technical_seo",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "<a class=\"elementor-icon\" href=\"https://trackier.com\">...</a>",
+    "relevance_reason": "Identifies the competitor's brand (Trackier), a performance marketing platform directly relevant to the user's query for MMPs.",
+    "ranking_factor": "brand_recognition",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Platform",
+    "relevance_reason": "The primary navigation link 'Platform' points to the core product offering, which is central to the user's query about MMP platforms.",
+    "ranking_factor": "information_architecture",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Performance Marketing Software",
+    "relevance_reason": "This sidebar element acts as a strong topical signal and a call-to-action, directing users to a parent category page ('/performance-marketing-software/') that encompasses the query's subject (MMP platforms, link tracking).",
+    "ranking_factor": "internal_linking",
+    "causal_strength": 0.75
+  }
+]

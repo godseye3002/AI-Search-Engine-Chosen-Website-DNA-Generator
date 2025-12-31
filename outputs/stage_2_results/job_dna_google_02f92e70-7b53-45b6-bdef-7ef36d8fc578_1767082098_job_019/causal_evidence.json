@@ -1,0 +1,114 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The marketer’s guide to buying an MMP | AppsFlyer",
+    "relevance_reason": "Title directly addresses the user intent of evaluating and selecting MMP platforms.",
+    "ranking_factor": "keyword_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Cut through the noise with this in-depth guide into buying an MMP helping you transform your marketing efforts from guesswork to a data-driven strategy.",
+    "relevance_reason": "Articulates the value proposition of the content as a decision-making tool for marketing measurement.",
+    "ranking_factor": "click_through_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "'Categories': 'Measurement & analytics'",
+    "relevance_reason": "Classifies the content specifically under the measurement domain requested by the user.",
+    "ranking_factor": "topic_classification",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Measurement Suite",
+    "relevance_reason": "Directly maps to user intent of 'measuring' performance; categorizes the tools available.",
+    "ranking_factor": "information_architecture",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Mobile Attribution",
+    "relevance_reason": "Identifies core MMP functionality for tracking mobile onboarding channels.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "CTV Attribution",
+    "relevance_reason": "Highlights specific distribution channel (Connected TV) tracking capability.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The marketer’s guide to buying an MMP",
+    "relevance_reason": "Title directly addresses the user intent of selecting/buying an MMP platform.",
+    "ranking_factor": "topic_prominence",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Dec 16, 2024, 14 min read",
+    "relevance_reason": "Signals high freshness and significant content depth (long-form), crucial for competitive analysis.",
+    "ranking_factor": "freshness_and_depth",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Blog > Measurement & analytics",
+    "relevance_reason": "Contextualizes the content within the specific domain of measurement tools.",
+    "ranking_factor": "structural_context",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "style=\"display: none !important;\"",
+    "relevance_reason": "Entire section is hidden from the rendered view, limiting user engagement impact",
+    "ranking_factor": "technical_implementation",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Ready to start making good choices?",
+    "relevance_reason": "Generic persuasive copy attempting to drive conversion",
+    "ranking_factor": "conversion_optimization",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Contact sales / Sign up free",
+    "relevance_reason": "Direct bottom-of-funnel calls to action for the MMP platform",
+    "ranking_factor": "user_action",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Dec 16, 2024",
+    "relevance_reason": "Indicates high content freshness, suggesting the list of tools is up-to-date",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "14 min read",
+    "relevance_reason": "Signifies long-form, comprehensive content likely covering multiple MMP platforms in depth",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.15
+  }
+]

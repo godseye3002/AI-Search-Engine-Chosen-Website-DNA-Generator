@@ -11,9 +11,18 @@ import logging
 from datetime import datetime
 from typing import Dict, Any, Optional
 
-from final_aggregation_core import MasterBlueprintAggregator, AggregationResult
+from final_aggregation_core import aggregate_pipeline_results
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
+from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
 from pipeline_models import Job
+
+# Configure logging based on environment
+log_level = logging.INFO if not is_production_mode() else logging.ERROR
+logging.basicConfig(
+    level=log_level,
+    format='%(asctime)s - %(name)s - %(levelname)s - [STAGE3] - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 class Stage3Worker:
@@ -24,19 +33,15 @@ class Stage3Worker:
         self.logger = logger or logging.getLogger(__name__)
         
         # Stage 3 specific settings
-        self.timeout_per_job = config.get('stage_3_aggregation', {}).get('timeout_per_job', 300)  # Increased for Master Blueprint
+        self.timeout_per_job = config.get('stage_3_aggregation', {}).get('timeout_per_job', 300)
         self.output_dir = config.get('stage_3_aggregation', {}).get('output_dir', 'stage_3_results')
         self.base_output_dir = config.get('pipeline', {}).get('base_output_dir', 'outputs')
-        
-        # Initialize Master Blueprint Aggregator
-        model_name = config.get('stage_3_aggregation', {}).get('model_name', 'gemini-3-pro-preview')
-        self.master_aggregator = MasterBlueprintAggregator(model_name=model_name)
         
         # Create output directory
         self.stage_output_dir = os.path.join(self.base_output_dir, self.output_dir)
         os.makedirs(self.stage_output_dir, exist_ok=True)
         
-        self.logger.info("Stage 3 Worker initialized")
+        self.logger.info("Stage 3 Worker initialized with simplified aggregation")
     
     def process_run(self, run_id: str, query: str, jobs: list) -> Dict[str, Any]:
         """
@@ -63,17 +68,17 @@ class Stage3Worker:
             
             # Execute Master Blueprint aggregation with timeout
             result = execute_with_timeout(
-                self.master_aggregator.aggregate_run_results,
+                aggregate_pipeline_results,
                 args=(run_id, query, dna_results),
                 timeout=self.timeout_per_job
             )
             
             # Process result
             if result.status == TimeoutResult.SUCCESS:
-                aggregation_result = result.result
+                master_blueprint = result.result
                 
                 # Save aggregation outputs
-                output_paths = self._save_run_outputs(run_id, aggregation_result)
+                output_paths = self._save_run_outputs(run_id, master_blueprint)
                 
                 # Update job statuses
                 for job in jobs:
@@ -85,9 +90,9 @@ class Stage3Worker:
                 return {
                     'status': 'completed',
                     'run_id': run_id,
-                    'total_analyzed': aggregation_result.total_analyzed,
+                    'total_analyzed': len(dna_results),
                     'output_paths': output_paths,
-                    'processing_time': aggregation_result.processing_time,
+                    'processing_time': None,
                     'error': None
                 }
                 
@@ -124,8 +129,23 @@ class Stage3Worker:
                 }
         
         except Exception as e:
-            error_msg = f"Unexpected error in Stage 3: {str(e)}"
-            self.logger.error(f"Run {run_id} failed Stage 3: {error_msg}")
+            error_msg = f"Unexpected error in Stage 3 ({type(e).__name__}): {str(e)}"
+            self.logger.exception(f"Run {run_id} failed Stage 3 with unexpected error")
+            try:
+                from error_email_sender import send_ai_error_email
+                send_ai_error_email(
+                    error=e,
+                    error_context="Stage 3 worker failed while aggregating final results",
+                    metadata={
+                        "run_id": run_id,
+                        "stage": "stage_3_aggregation",
+                        "extra": {
+                            "timeout_per_job": getattr(self, 'timeout_per_job', None),
+                        },
+                    },
+                )
+            except Exception as email_err:
+                self.logger.error(f"Failed to send error email for run {run_id}: {email_err}")
             
             # Mark jobs as failed
             for job in jobs:
@@ -183,68 +203,44 @@ class Stage3Worker:
         
         return dna_results
     
-    def _save_run_outputs(self, run_id: str, result: AggregationResult) -> Dict[str, str]:
+    def _save_run_outputs(self, run_id: str, result: Dict[str, Any]) -> Dict[str, str]:
         """
         Save final aggregation results to files.
         
         Args:
             run_id: Pipeline run identifier
-            result: Aggregation result
+            result: Aggregation result (master blueprint)
             
         Returns:
             Dictionary with file paths
         """
+        # Check if we should save outputs for this stage
+        if not should_save_stage_outputs('stage_3'):
+            if not is_production_mode():
+                logger.info(f"[STAGE3] Skipping file save for run {run_id} in production mode")
+            return {}
+        
         # Create run-specific directory
         run_dir = os.path.join(self.stage_output_dir, f"run_{run_id}")
         os.makedirs(run_dir, exist_ok=True)
         
         file_paths = {}
         
-        # Save complete aggregation result
+        # Save master blueprint as the main output (only file in production mode)
         aggregation_path = os.path.join(run_dir, 'final_aggregation.json')
-        aggregation_data = result.to_dict()
         
+        # The result is now just the master blueprint dictionary
         with open(aggregation_path, 'w', encoding='utf-8') as f:
-            json.dump(aggregation_data, f, indent=2, ensure_ascii=False)
+            json.dump(result, f, indent=2, ensure_ascii=False)
         
         file_paths['aggregation_path'] = aggregation_path
         
-        # Save master blueprint separately (new)
-        if result.master_blueprint:
-            blueprint_path = os.path.join(run_dir, 'master_blueprint.json')
-            with open(blueprint_path, 'w', encoding='utf-8') as f:
-                json.dump(result.master_blueprint, f, indent=2, ensure_ascii=False)
-            file_paths['blueprint_path'] = blueprint_path
+        if not is_production_mode():
+            logger.info(f"Saved master blueprint to {aggregation_path}")
+        else:
+            # In production mode, only log essential info
+            logger.error(f"[STAGE3] Master blueprint saved for run {run_id}")
         
-        # Save summary report separately
-        if result.summary_report:
-            report_path = os.path.join(run_dir, 'summary_report.txt')
-            with open(report_path, 'w', encoding='utf-8') as f:
-                f.write(result.summary_report)
-            file_paths['report_path'] = report_path
-        
-        # Save recommendations separately
-        if result.content_recommendations:
-            recs_path = os.path.join(run_dir, 'content_recommendations.json')
-            with open(recs_path, 'w', encoding='utf-8') as f:
-                json.dump(result.content_recommendations, f, indent=2, ensure_ascii=False)
-            file_paths['recommendations_path'] = recs_path
-        
-        # Save ranking opportunities separately
-        if result.ranking_opportunities:
-            opportunities_path = os.path.join(run_dir, 'ranking_opportunities.json')
-            with open(opportunities_path, 'w', encoding='utf-8') as f:
-                json.dump(result.ranking_opportunities, f, indent=2, ensure_ascii=False)
-            file_paths['opportunities_path'] = opportunities_path
-        
-        # Save competitive insights separately
-        if result.competitive_insights:
-            insights_path = os.path.join(run_dir, 'competitive_insights.json')
-            with open(insights_path, 'w', encoding='utf-8') as f:
-                json.dump(result.competitive_insights, f, indent=2, ensure_ascii=False)
-            file_paths['insights_path'] = insights_path
-        
-        self.logger.info(f"Saved final aggregation outputs for run {run_id} to {run_dir}")
         return file_paths
     
     def get_run_summary(self, run_result: Dict[str, Any]) -> Dict[str, Any]:

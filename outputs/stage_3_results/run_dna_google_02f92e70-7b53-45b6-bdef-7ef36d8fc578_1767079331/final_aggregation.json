@@ -1,0 +1,140 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "top link tracking tools to measure marketing distribution channel performance for onboarding (MMP platforms)",
+  "sources_analyzed": 27,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Attract clicks with a specific, high-value listicle title.",
+      "optimized_pattern_template": "The [Number] Best Mobile Measurement Partners (MMPs) for [Year]",
+      "adoption_rate": 0.65
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "summary_block",
+      "content_requirement": "Immediately define what a Mobile Measurement Partner (MMP) is and its role in measuring marketing performance.",
+      "adoption_rate": 0.7
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "evaluation_criteria_section",
+      "consensus_intent": "Establish authority by providing a framework for choosing a tool.",
+      "optimized_pattern_template": "Key Features to Consider When Choosing an MMP",
+      "content_requirement": "Must include key concepts: [Attribution, Data Analysis, Integrations, Fraud Prevention, Pricing]",
+      "adoption_rate": 0.45
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "comparison_listicle",
+      "consensus_intent": "Deliver the core promise of the article by listing and comparing top tools.",
+      "content_requirement": "List and detail specific MMP tools, including unique features and benefits.",
+      "adoption_rate": 0.8
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "Mobile Measurement Partner (MMP)": {
+      "classification": "Platform Category / Core Concept",
+      "primary_definition": "A third-party platform that tracks and attributes mobile app installs and subsequent in-app events to the specific marketing campaigns and distribution channels that drove them, enabling accurate performance and ROI measurement.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "mobile attribution",
+        "link tracking",
+        "app analytics",
+        "marketing performance",
+        "ROI measurement",
+        "fraud prevention"
+      ],
+      "frequency_across_sources": 1.0
+    },
+    "Attribution": {
+      "classification": "Key Feature / Process",
+      "primary_definition": "The process of connecting a user action, such as an app install or purchase, to a specific marketing touchpoint, like an ad click or view, to understand channel effectiveness.",
+      "high_value_attributes": [],
+      "semantic_keywords": [
+        "attribution accuracy",
+        "multi-touch attribution",
+        "last-click",
+        "deep linking",
+        "web-to-app"
+      ],
+      "frequency_across_sources": 0.6
+    },
+    "MobileAction": {
+      "classification": "Tool / Company",
+      "primary_definition": "A mobile marketing intelligence platform that provides services such as Ad Intelligence, ASO Intelligence, and Market Intelligence.",
+      "high_value_attributes": [
+        {
+          "data_point": "Case study with Square resulted in a 50% ROAS uplift and a 40% CPC decrease.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        }
+      ],
+      "semantic_keywords": [
+        "SearchAds.com",
+        "ASO",
+        "ad intelligence",
+        "competitor tracking"
+      ],
+      "frequency_across_sources": 0.15
+    },
+    "Netskope": {
+      "classification": "Data Source / Company",
+      "primary_definition": "A cloud security company that publishes industry data, such as the Cloud Report, often cited to illustrate market complexity.",
+      "high_value_attributes": [
+        {
+          "data_point": "The 2019 Cloud Report stated the average enterprise uses 120 marketing tools.",
+          "source_weight": "Medium (provides context)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "Cloud Report",
+        "martech stack",
+        "tool fragmentation"
+      ],
+      "frequency_across_sources": 0.07
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "comparison_listicle",
+        "usage_frequency": 0.8,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "buyers_guide",
+        "usage_frequency": 0.4,
+        "effectiveness_score": 0.75
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2200,
+      "entity_density_optimal": 0.03,
+      "readability_score": 0.7
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "A clear definition of 'Mobile Measurement Partner (MMP)' near the top.",
+      "A numbered list of tools (e.g., 'Top 8', '16 Best').",
+      "A dedicated section on 'Key Features' or 'How to Choose an MMP'.",
+      "Inclusion of core concepts: Attribution, ROI, Fraud Prevention, Integrations.",
+      "A future-facing year (e.g., 2025, 2026) in the H1 title and meta title."
+    ],
+    "negative_constraints": [
+      "Using overly broad titles that omit 'MMP' or 'Attribution'.",
+      "Failing to provide specific, quantifiable data or case studies.",
+      "Presenting an outdated list without a current year marker."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true
+    }
+  },
+  "generation_timestamp": "2025-12-30T12:56:04.078122",
+  "sources_processed": 27
+}

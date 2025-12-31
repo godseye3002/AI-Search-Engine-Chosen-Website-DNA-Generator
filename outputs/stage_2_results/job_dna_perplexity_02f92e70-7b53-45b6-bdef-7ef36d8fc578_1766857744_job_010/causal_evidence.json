@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Measurement & Data Collection",
+    "relevance_reason": "Broadly relevant category indicating the site covers data tracking topics, though not a direct tool list.",
+    "ranking_factor": "site_structure",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Measurement Strategy",
+    "relevance_reason": "Implies a consultative approach to MMPs rather than a direct software review in this specific chunk.",
+    "ranking_factor": "internal_linking",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Growth Marketing",
+    "relevance_reason": "Contextual keyword related to the usage of MMP tools.",
+    "ranking_factor": "semantic_context",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "GTM vs. Google Analytics vs. Gtag.js: The 2026 Guide",
+    "relevance_reason": "Discusses tracking infrastructure and analytics implementation but fails to address specific Mobile Measurement Partners (MMPs)",
+    "ranking_factor": "topical_adjacency",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The 2026 Guide",
+    "relevance_reason": "Suggests future-proofed or highly current content strategy",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "GTM, Google Analytics, Gtag.js",
+    "relevance_reason": "Lists technical tracking tools distinct from the requested MMP category",
+    "ranking_factor": "entity_extraction",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

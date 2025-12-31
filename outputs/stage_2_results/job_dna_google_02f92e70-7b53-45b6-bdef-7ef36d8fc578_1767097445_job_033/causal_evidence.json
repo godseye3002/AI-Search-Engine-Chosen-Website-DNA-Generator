@@ -1,0 +1,122 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<title>8 Best Omnichannel Marketing Software for 2025 | ActiveCampaign</title>",
+    "relevance_reason": "The title indicates the content is about 'Omnichannel Marketing Software', a topic related to but broader than the user's specific query for 'MMP platforms'. It also identifies the publisher as 'ActiveCampaign'.",
+    "ranking_factor": "topic_targeting",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "<meta content=\"2024-12-14T13:13:00-06:00\" property=\"article:published_time\">",
+    "relevance_reason": "Reveals a content strategy of future-dating articles to maintain perceived freshness, which is a competitive SEO tactic.",
+    "ranking_factor": "content_freshness_strategy",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "gtm.js?id=GTM-NQ88L9R",
+    "relevance_reason": "Identifies the use of Google Tag Manager (ID: GTM-NQ88L9R), providing insight into the competitor's marketing analytics stack.",
+    "ranking_factor": "technology_stack",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "ActiveCampaign",
+    "relevance_reason": "The HTML identifies the brand as ActiveCampaign, a marketing automation platform. While related to marketing, it is not primarily known as an MMP or a specialized link tracking tool for channel performance.",
+    "ranking_factor": "brand_identification",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Marketing Automation",
+    "relevance_reason": "This feature is tangentially related to the user's goal but does not directly address the core need for MMPs or advanced link tracking for channel attribution.",
+    "ranking_factor": "topic_adjacency",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "CRM",
+    "relevance_reason": "Customer Relationship Management is a related but distinct category from Mobile Measurement Partners and link tracking tools.",
+    "ranking_factor": "topic_adjacency",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The 8 Best Omnichannel Marketing Software Tools for 2025",
+    "relevance_reason": "The title indicates a listicle of tools, which aligns with the user's intent. However, 'Omnichannel Marketing Software' is a broader category than the user's specific query for 'link tracking tools' and 'MMP platforms', reducing direct relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Jeremy Collier",
+    "relevance_reason": "The content is attributed to a specific author with a profile picture and link, which is a strong signal for E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness).",
+    "ranking_factor": "trust_signal",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "<nav aria-label=\"breadcrumb\" ...>Blog > Best Omnichannel Marketing Software</nav>",
+    "relevance_reason": "The use of breadcrumbs improves site structure and user navigation, which are positive SEO factors.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.6
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Automation",
+    "relevance_reason": "The main heading of this section is 'Automation', which is a broad marketing topic and does not address the user's specific query about link tracking tools or MMPs.",
+    "ranking_factor": "topic_mismatch",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "How to Build a 24/7 Real Estate Marketing Engine for Busy Agents",
+    "relevance_reason": "The featured article is highly specific to the real estate industry, indicating the content is not a general comparison of marketing measurement tools as requested by the user.",
+    "ranking_factor": "topic_mismatch",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "blog/best-omnichannel-marketing-software",
+    "relevance_reason": "The page URI indicates the broader topic is 'omnichannel marketing software', which is related to but distinct from the user's specific need for 'link tracking tools' and 'MMPs'.",
+    "ranking_factor": "topic_mismatch",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Try it now, for free. No credit card required. Instant set-up.",
+    "relevance_reason": "This is a primary conversion element for the website (ActiveCampaign) but is not relevant to the user's query about link tracking tools.",
+    "ranking_factor": "user_conversion_element",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Master Autonomous Marketing. Get the free mini-course...",
+    "relevance_reason": "This is a lead nurturing/content marketing offer, not an answer to the user's query.",
+    "ranking_factor": "lead_generation",
+    "causal_strength": 0.1
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "What is omnichannel marketing software?",
+    "relevance_reason": "The term 'omnichannel marketing' is tangentially related to 'marketing distribution channels' but does not address the core query about MMPs or link tracking tools.",
+    "ranking_factor": "semantic_context",
+    "causal_strength": 0.1
+  }
+]

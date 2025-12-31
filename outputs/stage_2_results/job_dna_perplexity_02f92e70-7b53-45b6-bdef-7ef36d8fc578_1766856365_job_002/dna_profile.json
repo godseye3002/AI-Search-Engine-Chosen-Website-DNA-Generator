@@ -1,0 +1,36 @@
+{
+  "page_structure": {
+    "html_patterns": [
+      "meta_title",
+      "meta_description",
+      "metadata_author",
+      "metadata_read_time",
+      "fallback_analysis",
+      "contact_information"
+    ],
+    "semantic_markup": [],
+    "content_hierarchy": []
+  },
+  "content_characteristics": {
+    "topic_focus": "",
+    "entity_density": 0,
+    "content_depth": "medium",
+    "unique_value_props": []
+  },
+  "technical_seo": {
+    "meta_optimization": {
+      "title_length": 35,
+      "description_length": 151,
+      "has_canonical": true,
+      "has_og_tags": true
+    },
+    "structured_data": [],
+    "performance_signals": []
+  },
+  "ranking_factors": {
+    "evidence_quality": 50.0,
+    "authority_signals": [],
+    "user_experience": [],
+    "content_freshness": "unknown"
+  }
+}

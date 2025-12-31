@@ -1,0 +1,182 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767082098_job_044",
+  "url": "https://agencyanalytics.com/blog/best-marketing-analytics-tools#:~:text=6.,invaluable%20for%20optimizing%20marketing%20strategies.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "meta_image_filename",
+        "meta_author_image",
+        "tech_stack_indicator",
+        "brand_identity",
+        "trust_signal",
+        "structural_navigation",
+        "meta_headline",
+        "meta_description",
+        "structured_data_date",
+        "entity_publisher"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 80,
+        "description_length": 139,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 40.0,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "best-marketing-analytics-tools.png",
+      "relevance_reason": "Image filename strongly suggests the page content covers marketing analytics tools, broadly relevant to the user's request for tracking tools.",
+      "ranking_factor": "topic_signaling",
+      "causal_strength": 0.35
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "francois-marchand.png",
+      "relevance_reason": "Identifies the likely author (Francois Marchand), establishing potential content authority.",
+      "ranking_factor": "E-E-A-T_signal",
+      "causal_strength": 0.35
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "/_next/static/",
+      "relevance_reason": "Indicates usage of Next.js framework, suggesting a modern, client-side rendered application structure.",
+      "ranking_factor": "technical_architecture",
+      "causal_strength": 0.35
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "AgencyAnalytics",
+      "relevance_reason": "Identifies the publisher/platform providing the analysis or tool",
+      "ranking_factor": "source_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "G2 Users Love Us, AgencyAnalytics G2 Leader Fall 2025",
+      "relevance_reason": "Establishes credibility of the content source via third-party validation",
+      "ranking_factor": "trust_authority",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Main navigation, Footer navigation",
+      "relevance_reason": "Standard site structure, low direct relevance to specific MMP query",
+      "ranking_factor": "page_structure",
+      "causal_strength": 0.15
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "18 Best Marketing Analytics Tools in 2025 (Features + Reviews)",
+      "relevance_reason": "Listicle format targeting broader analytics category that likely encompasses MMPs and tracking tools",
+      "ranking_factor": "keyword_prominence",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Compare features, pricing, and pros and cons... Find the right platform for your tech stack.",
+      "relevance_reason": "Indicates comparative analysis content which aligns with user intent for tool selection",
+      "ranking_factor": "search_intent_match",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "2025-07-15T00:00:00+00:00",
+      "relevance_reason": "Forward-dating strategy used to signal content freshness and relevance for the upcoming year",
+      "ranking_factor": "freshness_signal",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Best Marketing Analytics Tools: 18 Software Platforms for Marketers",
+      "relevance_reason": "Broad category match for 'top tools' query; implies inclusion of tracking/MMP tools within the list.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "18 Software Platforms",
+      "relevance_reason": "Indicates a comprehensive listicle format, high value for users comparing options.",
+      "ranking_factor": "content_depth",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_4_main",
+      "section_type": "main_content",
+      "html_snippet": "Published: Jul 15, 2025",
+      "relevance_reason": "Signifies extreme content freshness (or strategic date updates) to signal relevance to search engines.",
+      "ranking_factor": "freshness",
+      "causal_strength": 0.75
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 96.611424,
+  "analysis_timestamp": "2025-12-30T13:44:23.715100"
+}

@@ -1,0 +1,155 @@
+{
+  "master_blueprint_id": "dna_aggregated_v1",
+  "blueprint_generation_logic": "Consensus_Plus_Uniqueness",
+  "query_context": "top link tracking tools to measure marketing distribution channel performance for onboarding (MMP platforms)",
+  "sources_analyzed": 28,
+  "layer_1_structural_framework": [
+    {
+      "sequence_order": 1,
+      "component_type": "h1_header",
+      "consensus_intent": "Attract clicks and set clear expectations for a comparative listicle.",
+      "optimized_pattern_template": "The Top [Number] Mobile Measurement Partners (MMPs) in [Year]: A Complete Guide",
+      "adoption_rate": 0.75
+    },
+    {
+      "sequence_order": 2,
+      "component_type": "definitional_block",
+      "content_requirement": "Must define 'Mobile Measurement Partner (MMP)' and its core function in attributing installs, measuring campaign performance, and detecting fraud.",
+      "adoption_rate": 0.6
+    },
+    {
+      "sequence_order": 3,
+      "component_type": "evaluation_criteria_section",
+      "content_requirement": "Must list key features to consider before the main comparison, such as 'Accurate Attribution', 'Fraud Prevention', 'Deep Linking', 'Integration Capabilities', and 'Pricing'.",
+      "adoption_rate": 0.7
+    },
+    {
+      "sequence_order": 4,
+      "component_type": "tool_comparison_list",
+      "content_requirement": "Detailed review of individual tools, including strengths, unique features, and ideal use cases. Must include top entities: [AppsFlyer, Adjust, Branch]",
+      "adoption_rate": 0.9
+    }
+  ],
+  "layer_2_entity_knowledge_base": {
+    "AppsFlyer": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "The market leader in mobile attribution, known for its comprehensive platform, extensive integrations, and large market share.",
+      "high_value_attributes": [
+        {
+          "data_point": "Holds an estimated 65% of the mobile attribution market share.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        },
+        {
+          "data_point": "Trusted by over 12,000 brands.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.9
+        }
+      ],
+      "semantic_keywords": [
+        "mobile attribution",
+        "market share",
+        "analytics",
+        "cross-platform",
+        "ROI"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "Adjust": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "A comprehensive MMP with a strong focus on fraud prevention and security, offering granular cohort analysis to protect ad spend.",
+      "high_value_attributes": [
+        {
+          "data_point": "Its Fraud Prevention Suite saves clients an average of 15% on their ad spend.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        }
+      ],
+      "semantic_keywords": [
+        "fraud prevention",
+        "security",
+        "cohort analysis",
+        "ad fraud",
+        "data privacy"
+      ],
+      "frequency_across_sources": 0.13
+    },
+    "Branch": {
+      "classification": "Mobile Measurement Partner (MMP)",
+      "primary_definition": "An MMP renowned for its superior deep linking technology, which is crucial for creating seamless user experiences from ad click to in-app content, especially for user onboarding.",
+      "high_value_attributes": [
+        {
+          "data_point": "Primary value proposition is superior deep linking technology for seamless user onboarding.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.95
+        }
+      ],
+      "semantic_keywords": [
+        "deep linking",
+        "onboarding",
+        "user experience",
+        "cross-platform attribution",
+        "web-to-app"
+      ],
+      "frequency_across_sources": 0.2
+    },
+    "MobileAction": {
+      "classification": "Mobile Marketing Intelligence Platform",
+      "primary_definition": "A platform for mobile intelligence and campaign optimization, particularly for paid user acquisition channels like Apple Ads.",
+      "high_value_attributes": [
+        {
+          "data_point": "Case study with Square showed a 50% ROAS uplift and a 40% CPC decrease.",
+          "source_weight": "High (derived from unique signal)",
+          "confidence": 0.85
+        }
+      ],
+      "semantic_keywords": [
+        "ad intelligence",
+        "ASO",
+        "ROAS",
+        "CPC",
+        "Apple Ads"
+      ],
+      "frequency_across_sources": 0.06
+    }
+  },
+  "layer_3_content_patterns": {
+    "successful_formats": [
+      {
+        "format_type": "listicle_comparison",
+        "usage_frequency": 0.8,
+        "effectiveness_score": 0.9
+      },
+      {
+        "format_type": "buyers_guide",
+        "usage_frequency": 0.5,
+        "effectiveness_score": 0.85
+      }
+    ],
+    "content_depth_indicators": {
+      "average_word_count": 2500,
+      "entity_density_optimal": 0.03,
+      "readability_score": 0.7
+    }
+  },
+  "layer_4_seo_compliance": {
+    "mandatory_inclusions": [
+      "Definition of 'Mobile Measurement Partner (MMP)'.",
+      "Direct comparison of top 3 entities: AppsFlyer, Adjust, Branch.",
+      "Discussion of core features: Attribution, Deep Linking, Fraud Prevention.",
+      "Use of a future year (e.g., 2025/2026) in the H1 and Title tag to signal freshness."
+    ],
+    "negative_constraints": [
+      "Avoid overly broad topics like 'general marketing tools' which dilute relevance.",
+      "Avoid focusing on a single tool without providing competitive context.",
+      "Avoid factual inconsistencies between title, URL, and content."
+    ],
+    "technical_requirements": {
+      "page_load_speed_optimal": "< 2s",
+      "mobile_friendly": true,
+      "structured_data_present": true
+    }
+  },
+  "generation_timestamp": "2025-12-30T20:09:19.655154",
+  "sources_processed": 28
+}

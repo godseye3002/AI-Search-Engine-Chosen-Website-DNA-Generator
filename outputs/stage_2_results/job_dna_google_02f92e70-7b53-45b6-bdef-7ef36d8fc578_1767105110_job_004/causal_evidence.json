@@ -1,0 +1,106 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Top Mobile Measurement Partners (MMP) (2025) - Business of Apps",
+    "relevance_reason": "The title directly targets the core entity 'Mobile Measurement Partners (MMP)' from the user query, indicating high topical relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "/marketplace/app-analytics/mobile-measurement-partners#directory",
+    "relevance_reason": "The URL path explicitly contains 'mobile-measurement-partners', a direct synonym for the query's 'MMP platforms', indicating high topical relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Tabbed navigation with 'Overview' and 'Directory' sections.",
+    "relevance_reason": "This structure caters directly to a user research query by separating educational content ('Overview'/'guide') from a list of tools ('Directory'), enhancing user experience.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Channels: User Acquisition, App Engagement, App Revenue",
+    "relevance_reason": "The site's main navigation topics are core concepts related to the purpose of using MMPs, establishing broad topical authority.",
+    "ranking_factor": "topical_authority",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust offers a comprehensive suite. Their standout feature is the Fraud Prevention Suite, which proactively blocks ad fraud in real-time, saving clients an average of 15% on their ad spend.",
+    "relevance_reason": "Identifies a specific tool (Adjust) and its unique value proposition (Fraud Prevention Suite) supported by a quantifiable statistic (15% savings), directly addressing the user's need for tool comparison.",
+    "ranking_factor": "unique_value_proposition",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "AppsFlyer holds a significant market share, trusted by over 12,000 brands.",
+    "relevance_reason": "Provides a key statistic (market share, number of brands) that establishes the tool's authority and popularity, a crucial factor for user decision-making.",
+    "ranking_factor": "data_driven_insight",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch is renowned for its deep linking technology. It ensures a seamless user experience from ad click to the specific in-app content, which is vital for successful onboarding.",
+    "relevance_reason": "Highlights a tool (Branch) and connects its core feature (deep linking) directly to a key part of the user query (onboarding).",
+    "ranking_factor": "query_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Directory (10)",
+    "relevance_reason": "This link explicitly promises a list of 10 Mobile Measurement Partners, directly fulfilling the user's need for tool options.",
+    "ranking_factor": "content_quantification",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Buyers Guide [PDF]",
+    "relevance_reason": "Offers a downloadable, in-depth resource (PDF guide), which is a strong value proposition and a common strategy for lead generation in competitive analysis content.",
+    "ranking_factor": "unique_content_offering",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "/marketplace/app-analytics/mobile-measurement-partners",
+    "relevance_reason": "The URL slug contains the exact keyword 'mobile-measurement-partners', indicating strong on-page SEO and high topical relevance to the user query.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.9
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Best Mobile Measurement Partners (MMPs) for Link Tracking",
+    "relevance_reason": "The H2 heading directly matches the user's query intent, including the specific acronym 'MMP' and the core task 'Link Tracking'.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "integrating with over 9,000 media partners",
+    "relevance_reason": "This is a hard number that provides a quantifiable measure of a platform's scale, acting as a strong trust and authority signal.",
+    "ranking_factor": "data_driven_authority",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust focuses heavily on fraud prevention and security.",
+    "relevance_reason": "Highlights a key differentiator (fraud prevention) that addresses a critical pain point for marketers, influencing their choice of tool.",
+    "ranking_factor": "competitive_differentiation",
+    "causal_strength": 0.95
+  }
+]

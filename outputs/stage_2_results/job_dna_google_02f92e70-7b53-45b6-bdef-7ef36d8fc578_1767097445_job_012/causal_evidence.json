@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "DashThis",
+    "relevance_reason": "Identifies the brand as a marketing reporting tool, which is tangentially related to measuring marketing performance but is not a link tracking or MMP platform.",
+    "ranking_factor": "brand_identity",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Marketing Reporting",
+    "relevance_reason": "This navigation item shows the site's topic is related to the user's broader goal (measuring marketing performance) but does not directly address the specific need for link tracking or MMPs.",
+    "ranking_factor": "topic_relevance",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Integrations",
+    "relevance_reason": "Suggests the tool connects with other platforms, which is a key consideration for users evaluating marketing tools, but does not specify which ones.",
+    "ranking_factor": "feature_highlight",
+    "causal_strength": 0.2
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "More tools mean a higher risk of data fragmentation and siloed data. Imagine the hours you spend each week logging in to each platform, exporting data, uploading it to Microsoft Excel, normalizing and",
+    "relevance_reason": "This section frames the core problem (manual data aggregation from multiple sources) that marketing analytics and MMP platforms are designed to solve. It directly addresses the user's need to measure performance across channels.",
+    "ranking_factor": "problem_solution_framing",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Marketing analytics platforms help marketing teams aggregate data across multiple marketing tools into one view to understand how their marketing initiatives are performing.",
+    "relevance_reason": "This defines the solution category, which is highly relevant to the user's query about measuring performance across distribution channels.",
+    "ranking_factor": "solution_definition",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "A sample report from a marketing analytics platform like DashThis. Try it with your data!",
+    "relevance_reason": "Identifies a specific competitor (DashThis) and their lead generation tactic (interactive demo/trial) embedded within the content.",
+    "ranking_factor": "competitor_mention",
+    "causal_strength": 0.7
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Netskope’s 2019 Cloud Report puts this figure at 120 for the average enterprise, a number that keeps rising year on year.",
+    "relevance_reason": "Uses a specific, sourced statistic to establish the problem of 'tool overload', creating a strong hook for the reader.",
+    "ranking_factor": "content_authority",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "A sample report from a marketing analytics platform like DashThis. Try it with your data!",
+    "relevance_reason": "Integrates the website's own product (DashThis) with a visual example and a direct call-to-action, serving as a lead generation mechanism within the content.",
+    "ranking_factor": "conversion_optimization",
+    "causal_strength": 0.4
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Marketing analytics platforms help marketing teams aggregate data across multiple marketing tools into one view to understand how their marketing initiatives are performing.",
+    "relevance_reason": "Provides a clear definition of the content's core topic, educating the user and setting the stage for the subsequent list of tools.",
+    "ranking_factor": "topical_clarity",
+    "causal_strength": 0.4
+  }
+]

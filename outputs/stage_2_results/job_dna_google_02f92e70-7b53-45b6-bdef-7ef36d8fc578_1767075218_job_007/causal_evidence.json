@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "Direct keyword match for 'MMP platforms' and 'attribution' with forward-looking year targeting.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "37 minutes",
+    "relevance_reason": "Indicates 'Ultimate Guide' depth, suggesting comprehensive coverage of the competitive landscape.",
+    "ranking_factor": "content_depth_signal",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "checklist of picking an MMP",
+    "relevance_reason": "Promises actionable decision-making framework beyond simple tool listing.",
+    "ranking_factor": "click_through_optimization",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "Title directly matches the user's intent for 'top MMP platforms' and targets a specific future timeframe (2025).",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+    "relevance_reason": "Explicitly lists the specific tools/entities requested in the query regarding link tracking and MMPs.",
+    "ranking_factor": "entity_density",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Why are MMPs essential for app marketers?",
+    "relevance_reason": "Addresses the 'measure marketing distribution channel performance' aspect of the user query by explaining value.",
+    "ranking_factor": "semantic_relevance",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  }
+]

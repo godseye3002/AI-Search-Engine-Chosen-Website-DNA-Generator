@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "13 Best Marketing Analytics Tools Loved By Marketers in 2025 | Whatagraph",
+    "relevance_reason": "Title indicates a listicle ('13 Best') targeting 'Marketing Analytics Tools' with freshness signal ('2025'), highly relevant to 'top tools' query intent.",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "cello-attribution.js",
+    "relevance_reason": "Site uses Cello for attribution, semantically related to the user's search for 'tracking tools' and 'distribution channel performance'.",
+    "ranking_factor": "tech_stack_relevance",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Whatagraph",
+    "relevance_reason": "Publisher is a known marketing data platform, establishing authority in the analytics niche.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.75
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Whatagraph",
+    "relevance_reason": "Identifies the hosting platform; Whatagraph is a marketing data reporting tool, not a direct MMP, suggesting the content may be a blog/listicle.",
+    "ranking_factor": "source_identification",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Your single source of truth for marketing data",
+    "relevance_reason": "Defines the tool's core positioning relative to marketing performance measurement.",
+    "ranking_factor": "brand_positioning",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Move data to BigQuery",
+    "relevance_reason": "Highlights advanced data handling capabilities often required for analyzing MMP data.",
+    "ranking_factor": "technical_feature",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "]",
+    "relevance_reason": "Content consists solely of a closing bracket, indicating a parsing error or truncated data with no semantic value.",
+    "ranking_factor": "noise",
+    "causal_strength": 0.0
+  }
+]

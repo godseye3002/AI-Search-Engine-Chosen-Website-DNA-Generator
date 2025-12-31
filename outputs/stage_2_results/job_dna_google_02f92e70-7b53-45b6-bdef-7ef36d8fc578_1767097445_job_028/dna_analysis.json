@@ -1,0 +1,158 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767097445_job_028",
+  "url": "https://www.cometly.com/post/performance-marketing-tracking-software",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "metadata_title",
+        "schema_author",
+        "metadata_description",
+        "feature_listing",
+        "feature_listing",
+        "value_proposition",
+        "text_content",
+        "text_content",
+        "text_content"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 60,
+        "description_length": 155,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 83.33333333333333,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Discover The 10 Best Performance Marketing Tracking Software",
+      "relevance_reason": "The title directly addresses the user's intent to find top tools by promising a curated listicle ('10 Best'), which is a strong match for a 'top tools' query.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Author: Matt Pattoli, Founder at Cometly",
+      "relevance_reason": "Content is authored by the founder of a company in the same space (Cometly). This is a key competitive insight, indicating a content marketing strategy to establish authority and potentially feature their own tool.",
+      "ranking_factor": "author_authority",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "optimize your ad campaigns and accurately measure ROI",
+      "relevance_reason": "The description highlights key value propositions (optimizing campaigns, measuring ROI) that align with the user's goal of measuring marketing channel performance.",
+      "ranking_factor": "value_proposition",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Server-Side Tracking",
+      "relevance_reason": "This is a core feature directly related to link tracking and overcoming modern tracking limitations, which is central to the user's query.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Attribution",
+      "relevance_reason": "The presence of an 'Attribution' feature (inferred from href='/features/attribution') directly addresses the user's need to measure marketing channel performance, a key function of MMPs.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_2_structural",
+      "section_type": "structural",
+      "html_snippet": "Built-in, zero code",
+      "relevance_reason": "This describes the Server-Side Tracking feature, highlighting ease of implementation as a unique selling point relevant to users evaluating tools.",
+      "ranking_factor": "value_proposition",
+      "causal_strength": 0.75
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Multi-Touch Attribution - View impact across journey",
+      "relevance_reason": "Directly addresses the user's core need to measure performance and impact across different marketing channels.",
+      "ranking_factor": "entity_relevance",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Server-Side Tracking - Built-in, zero code",
+      "relevance_reason": "Identifies a key technical capability (server-side tracking) crucial for modern link tracking and presents a unique value proposition ('zero code').",
+      "ranking_factor": "technical_specificity",
+      "causal_strength": 0.85
+    },
+    {
+      "chunk_id": "chunk_3_main",
+      "section_type": "main_content",
+      "html_snippet": "Conversion Sync - Sync data to ad platforms",
+      "relevance_reason": "Highlights a feature essential for closing the loop on channel performance by feeding conversion data back to advertising networks.",
+      "ranking_factor": "feature_utility",
+      "causal_strength": 0.85
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "High evidence quality and relevance",
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 48.30625,
+  "analysis_timestamp": "2025-12-30T17:57:11.635707"
+}

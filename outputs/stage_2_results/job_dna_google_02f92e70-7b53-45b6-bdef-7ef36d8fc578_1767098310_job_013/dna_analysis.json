@@ -1,0 +1,113 @@
+{
+  "job_id": "dna_google_02f92e70-7b53-45b6-bdef-7ef36d8fc578_1767098310_job_013",
+  "url": "https://appfillip.com/blog/top-mobile-measurement-partners-in-india#:~:text=June%2017%2C%202025,offering%20secure%20and%20scalable%20solutions.",
+  "classification": "third_party",
+  "dna_profile": {
+    "page_structure": {
+      "html_patterns": [
+        "title_tag",
+        "meta_description",
+        "seo_plugin",
+        "analytics_setup",
+        "call_to_action"
+      ],
+      "semantic_markup": [],
+      "content_hierarchy": []
+    },
+    "content_characteristics": {
+      "topic_focus": "",
+      "entity_density": 0,
+      "content_depth": "medium",
+      "unique_value_props": []
+    },
+    "technical_seo": {
+      "meta_optimization": {
+        "title_length": 76,
+        "description_length": 124,
+        "has_canonical": true,
+        "has_og_tags": true
+      },
+      "structured_data": [],
+      "performance_signals": []
+    },
+    "ranking_factors": {
+      "evidence_quality": 52.5,
+      "authority_signals": [],
+      "user_experience": [],
+      "content_freshness": "unknown"
+    }
+  },
+  "causal_evidence": [
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Top 6 Mobile Measurement Partners In India For Accurate App Analytics (2025)",
+      "relevance_reason": "Directly addresses the core entity 'Mobile Measurement Partners' (MMP) from the user query. The listicle format ('Top 6') and future-dating ('2025') are strong engagement signals.",
+      "ranking_factor": "keyword_optimization",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Discover the top 6 mobile measurement partners in India to track your app marketing ROI and performance effectively in 2025.",
+      "relevance_reason": "Reinforces the title and explicitly mentions key performance indicators like 'marketing ROI' and 'performance', aligning with the user's goal of measurement.",
+      "ranking_factor": "user_intent_matching",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_1_metadata",
+      "section_type": "metadata",
+      "html_snippet": "Search Engine Optimization by Rank Math PRO",
+      "relevance_reason": "Indicates the competitor uses a premium SEO tool, suggesting a sophisticated and deliberate content strategy focused on search performance.",
+      "ranking_factor": "technical_seo",
+      "causal_strength": 0.9
+    },
+    {
+      "chunk_id": "chunk_5_sidebar",
+      "section_type": "sidebar",
+      "html_snippet": "tel:(309)%208855-314",
+      "relevance_reason": "The element is a telephone link, which is a contact CTA and not relevant to the user's query about link tracking tools.",
+      "ranking_factor": "off_topic_content",
+      "causal_strength": 0.05
+    }
+  ],
+  "content_insights": {
+    "content_strategy": {
+      "strengths": [
+        "Third-party authority perspective"
+      ],
+      "weaknesses": [
+        "Poor entity coverage and topic focus"
+      ],
+      "opportunities": [
+        "Leverage authority for credibility"
+      ]
+    },
+    "seo_recommendations": {
+      "technical_improvements": [
+        "Optimize meta descriptions for better click-through rates",
+        "Ensure proper heading hierarchy (H1 > H2 > H3)"
+      ],
+      "content_optimizations": [
+        "Increase entity density and topic coverage",
+        "Add more specific examples and case studies"
+      ],
+      "structure_enhancements": [
+        "Implement semantic HTML5 elements",
+        "Add structured data markup"
+      ]
+    },
+    "competitive_analysis": {
+      "differentiators": [
+        "Third_Party perspective"
+      ],
+      "gap_opportunities": [
+        "Identify underserved subtopics",
+        "Create comparison content"
+      ]
+    }
+  },
+  "error": null,
+  "processing_time": 83.339338,
+  "analysis_timestamp": "2025-12-30T18:12:03.726287"
+}

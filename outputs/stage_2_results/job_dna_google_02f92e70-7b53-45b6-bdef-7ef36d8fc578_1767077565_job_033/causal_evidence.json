@@ -1,0 +1,122 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "8 Best Omnichannel Marketing Software for 2025",
+    "relevance_reason": "Identifies content as a listicle targeting 2025, though 'Omnichannel Marketing' differs semantically from specific 'MMP' query.",
+    "ranking_factor": "title_relevance",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "2024-12-14T13:13:00-06:00",
+    "relevance_reason": "Content is highly current and forward-looking (targeting 2025).",
+    "ranking_factor": "freshness",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "automation,growth",
+    "relevance_reason": "Keywords suggest a focus on marketing automation/CRM rather than pure link tracking or mobile measurement (MMP).",
+    "ranking_factor": "topic_clustering",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "ActiveCampaign",
+    "relevance_reason": "Identifies the platform hosting the content, though not a dedicated MMP",
+    "ranking_factor": "domain_entity",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Marketing Automation - Automate and optimize customer journeys",
+    "relevance_reason": "Highlights platform capabilities related to marketing distribution, but not specific to link tracking/MMP",
+    "ranking_factor": "product_feature",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Active Intelligence - Power your marketing with AI orchestration",
+    "relevance_reason": "Shows AI integration in marketing tools",
+    "ranking_factor": "feature_innovation",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The 8 Best Omnichannel Marketing Software Tools for 2025",
+    "relevance_reason": "Listicle title targeting 'marketing software tools' and '2025' freshness, though 'Omnichannel' diverges from the specific 'MMP' (Mobile Measurement Partner) user intent.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "ActiveCampaign",
+    "relevance_reason": "Identified via breadcrumbs and image paths; indicates the content is likely a competitor comparison where the publisher is included.",
+    "ranking_factor": "domain_authority",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Jeremy Collier",
+    "relevance_reason": "Author attribution signal relevant for E-E-A-T analysis.",
+    "ranking_factor": "content_credibility",
+    "causal_strength": 0.45
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Automation",
+    "relevance_reason": "Broad category label; lacks specific connection to MMPs or link tracking tools",
+    "ranking_factor": "structural_navigation",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "How to Build a 24/7 Real Estate Marketing Engine for Busy Agents",
+    "relevance_reason": "Topic is specific to Real Estate, unrelated to marketing distribution channel performance for onboarding",
+    "ranking_factor": "irrelevant_content",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "December 22, 2025",
+    "relevance_reason": "Indicates content freshness (or future dating), but topic remains irrelevant",
+    "ranking_factor": "temporal_data",
+    "causal_strength": 0.05
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Try it now, for free... No credit card required. Instant set-up.",
+    "relevance_reason": "Competitor conversion tactic using frictionless entry (no credit card) in sticky sidebar.",
+    "ranking_factor": "conversion_optimization",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Contents... What is omnichannel marketing software? ... What are the benefits...",
+    "relevance_reason": "Table of Contents reveals article scope focuses on 'Omnichannel Marketing' rather than specific 'MMP' or 'Link Tracking' tools, suggesting potential topic drift.",
+    "ranking_factor": "content_structure",
+    "causal_strength": 0.25
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Master Autonomous Marketing... Get the free mini-course",
+    "relevance_reason": "Secondary lead magnet targeting educational intent.",
+    "ranking_factor": "engagement_strategy",
+    "causal_strength": 0.25
+  }
+]

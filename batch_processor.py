@@ -69,6 +69,9 @@ class BatchProcessor:
         # Active batches
         self.active_batches: Dict[str, List[BatchJob]] = {}
         
+        # Track created batch IDs for consistency
+        self.created_batch_ids: Dict[str, str] = {}
+        
         self.logger.info("Batch Processor initialized")
     
     def create_batch(self, batch_id: str, queries: List[str], 
@@ -293,9 +296,10 @@ class BatchProcessor:
             if job.query:
                 ai_response['query'] = job.query
             
-            # Create and run pipeline
-            run_id = orchestrator.create_run(ai_response)
-            orchestrator.run_pipeline()
+            # Extract batch_id from job.job_id and use as run_id for all jobs in this batch
+            batch_id = "_".join(job.job_id.split('_')[:4])  # Get first 4 parts
+
+            run_id = orchestrator.run_pipeline_from_ai_response(ai_response, run_id_override=batch_id)
             
             return {
                 'job_id': job.job_id,
@@ -481,6 +485,9 @@ class BatchProcessor:
             raise ValueError("No valid queries found in files")
         
         batch_id = f"batch_{os.path.basename(batch_dir)}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        
+        # Store this batch_id so it can be retrieved consistently
+        self.created_batch_ids[os.path.basename(batch_dir)] = batch_id
         
         return self.create_batch(batch_id, queries, ai_files)
     

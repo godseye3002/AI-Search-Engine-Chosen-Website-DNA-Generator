@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "The marketer’s guide to buying an MMP | AppsFlyer",
+    "relevance_reason": "Directly addresses the user intent of evaluating/selecting MMP platforms.",
+    "ranking_factor": "keyword_prominence",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Cut through the noise with this in-depth guide into buying an MMP helping you transform your marketing efforts from guesswork to a data-driven strategy.",
+    "relevance_reason": "Highlights the value proposition of 'data-driven strategy' and 'in-depth guide' for decision making.",
+    "ranking_factor": "click_through_optimization",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_1_metadata",
+    "section_type": "metadata",
+    "html_snippet": "Categories': 'Measurement & analytics'",
+    "relevance_reason": "Classifies the content under the exact functional domain requested (measuring performance).",
+    "ranking_factor": "topic_classification",
+    "causal_strength": 0.92
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "The marketer’s guide to buying an MMP",
+    "relevance_reason": "Directly addresses the user's interest in MMP platforms with a buyer-intent guide.",
+    "ranking_factor": "topic_authority",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "Measurement & analytics",
+    "relevance_reason": "Categorizes the content under the specific function requested (measuring performance).",
+    "ranking_factor": "structural_context",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_3_main",
+    "section_type": "main_content",
+    "html_snippet": "14 min read",
+    "relevance_reason": "Indicates comprehensive, deep-dive content likely covering multiple aspects of the user query.",
+    "ranking_factor": "content_depth",
+    "causal_strength": 0.85
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Content analysis failed - using fallback",
+    "relevance_reason": "API error - manual review needed",
+    "ranking_factor": "unknown",
+    "causal_strength": 0.5
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "Dec 16, 2024",
+    "relevance_reason": "Indicates extremely high content freshness, suggesting up-to-date market analysis of MMPs",
+    "ranking_factor": "freshness_signal",
+    "causal_strength": 0.15
+  },
+  {
+    "chunk_id": "chunk_5_sidebar",
+    "section_type": "sidebar",
+    "html_snippet": "14 min read",
+    "relevance_reason": "Signals comprehensive long-form content strategy, likely covering multiple tools in depth",
+    "ranking_factor": "content_depth_indicator",
+    "causal_strength": 0.15
+  }
+]

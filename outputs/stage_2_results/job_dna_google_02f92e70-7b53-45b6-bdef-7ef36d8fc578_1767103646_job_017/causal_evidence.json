@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "SplitMetrics Acquire, SplitMetrics Optimize, App Radar by SplitMetrics",
+    "relevance_reason": "Identifies a suite of mobile marketing tools. While not direct MMPs, they are adjacent competitors in the mobile user acquisition and optimization space.",
+    "ranking_factor": "entity_relevance",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "Automate and optimize Apple Ads campaigns at scale",
+    "relevance_reason": "Highlights a specific capability related to a marketing distribution channel (Apple Ads), which aligns with the user's intent to measure channel performance.",
+    "ranking_factor": "feature_relevance",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_2_structural",
+    "section_type": "structural",
+    "html_snippet": "ASO, Apple Ads, A/B testing",
+    "relevance_reason": "Reveals the company's core content pillars and areas of expertise, which are relevant to the broader mobile marketing context of the query.",
+    "ranking_factor": "topic_coverage",
+    "causal_strength": 0.3
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "8 Best Mobile Measurement Partners (MMPs) to Consider for Your Mobile App Attribution in 2025",
+    "relevance_reason": "The main heading directly matches the user's query for top MMP platforms, indicating high topical relevance.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_4_main",
+    "section_type": "main_content",
+    "html_snippet": "Adjust, AppsFlyer, AppMetrica, Branch, Kochava, RevenueCat, Singular, Tenjin",
+    "relevance_reason": "The Table of Contents explicitly lists the exact entities (MMP tools) the user is searching for.",
+    "ranking_factor": "entity_coverage",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Best Mobile Measurement Partners (MMPs) for Link Tracking",
+    "relevance_reason": "The H2 heading directly matches the user's query, explicitly mentioning 'MMPs' and 'Link Tracking'.",
+    "ranking_factor": "keyword_optimization",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "<table>...<th>Tool</th><th>Key Feature</th><th>Pricing Model</th>...</table>",
+    "relevance_reason": "The comparison table provides a scannable, high-value summary of the tools, directly facilitating the user's competitive analysis task.",
+    "ranking_factor": "user_experience",
+    "causal_strength": 0.95
+  },
+  {
+    "chunk_id": "chunk_5_main",
+    "section_type": "main_content",
+    "html_snippet": "Branch...offer a free tier for up to 10,000 monthly active users (MAUs), making it accessible for startups.",
+    "relevance_reason": "Provides a specific, actionable insight (freemium model) tied to a user segment (startups), which is a strong value proposition.",
+    "ranking_factor": "actionable_insight",
+    "causal_strength": 0.95
+  }
+]
