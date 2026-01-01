@@ -28,6 +28,7 @@ from stage_1_worker import Stage1Worker
 from stage_2_worker import Stage2Worker
 from stage_3_worker import Stage3Worker
 from database.supabase_manager import SupabaseDataManager, DataSource, ProductAnalysisRecord, DNAAnalysisRecord
+from utils.env_utils import get_log_level
 
 
 class DatabasePipelineOrchestrator:
@@ -62,7 +63,7 @@ class DatabasePipelineOrchestrator:
     
     def _setup_logging(self) -> logging.Logger:
         """Setup logging configuration"""
-        log_level = self.config.get('logging', {}).get('level', 'INFO')
+        log_level = self.config.get('logging', {}).get('level', get_log_level())
         logger = logging.getLogger(__name__)
         logger.setLevel(log_level)
         

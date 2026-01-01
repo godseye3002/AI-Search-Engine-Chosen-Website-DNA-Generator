@@ -17,12 +17,13 @@ from contextlib import asynccontextmanager
 
 from database.database_pipeline_orchestrator import DatabasePipelineOrchestrator
 from database.supabase_manager import DataSource
+from utils.env_utils import get_log_level
 
 os.makedirs("logs", exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=get_log_level(),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)

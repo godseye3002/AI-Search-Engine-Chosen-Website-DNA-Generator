@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from classification_core import classify_website, ClassificationResult
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
-from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
+from utils.env_utils import is_production_mode
 from pipeline_models import Job
 
 # Configure logging based on environment
