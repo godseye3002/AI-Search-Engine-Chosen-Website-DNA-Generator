@@ -6,7 +6,6 @@ Provides REST endpoints to trigger pipeline runs via serverless deployment
 import os
 import json
 import logging
-import threading
 from datetime import datetime
 from typing import Dict, Any, List, Optional
 from fastapi import FastAPI, HTTPException, BackgroundTasks
@@ -121,7 +120,6 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
     def _run_pipeline_background(ds: DataSource, product_id: str) -> None:
         orchestrator = DatabasePipelineOrchestrator()
         orchestrator.process_product_from_database(ds, product_id)
-
     try:
         # Validate source
         try:
@@ -168,11 +166,7 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
             # If freshness check fails, still allow background processing attempt.
             pass
 
-        threading.Thread(
-            target=_run_pipeline_background,
-            args=(data_source, request.product_id),
-            daemon=True,
-        ).start()
+        background_tasks.add_task(_run_pipeline_background, data_source, request.product_id)
         return ProcessResponse(
             status="accepted",
             product_id=request.product_id,
