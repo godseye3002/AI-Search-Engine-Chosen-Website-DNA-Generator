@@ -14,13 +14,14 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 from datetime import datetime
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 load_dotenv() 
 API_KEY = os.getenv('GEMINI_API_KEY', '')
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 # Setup Gemini API tracker
 gemini_logger = logging.getLogger('gemini_api')
@@ -265,7 +266,7 @@ class ForensicDNAAnalyzer:
     """AI-powered forensic DNA analyzer for content analysis"""
     
     def __init__(self, model_name: str = "gemini-1.5-flash"):
-        self.model = genai.GenerativeModel(model_name)
+        self.model_name = model_name
         self.chunker = SemanticHTMLChunker()
     
     def analyze_content_dna(self, classified_data: Dict[str, Any], 
@@ -401,19 +402,16 @@ class ForensicDNAAnalyzer:
         
         start_time = None
         try:
-            model = genai.GenerativeModel(
-                model_name="gemini-2.5-pro",
-                generation_config={
-                    "temperature": 0.1,
-                    "top_p": 0.95,
-                    "top_k": 40,
-                    # "max_output_tokens": 2048,  # Reduced to avoid token limits
-                }
+            model_name = "gemini-2.5-pro"
+            config = types.GenerateContentConfig(
+                temperature=0.1,
+                top_p=0.95,
+                top_k=40,
             )
             
             # Track Gemini API call
             start_time = time.time()
-            response = model.generate_content(prompt)
+            response = client.models.generate_content(model=model_name, contents=prompt, config=config)
             track_gemini_call("DNA Analysis", prompt, response=response, start_time=start_time)
             
             response_text = response.text.strip()

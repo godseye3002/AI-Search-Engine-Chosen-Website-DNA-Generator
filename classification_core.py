@@ -16,7 +16,8 @@ from urllib.parse import urlparse, parse_qs, urljoin
 from pathlib import Path
 
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import requests
 from bs4 import BeautifulSoup
 
@@ -30,8 +31,7 @@ REQUEST_TIMEOUT = 30
 if not API_KEY:
     raise ValueError('GEMINI_API_KEY is not set in the environment variables.')
 
-# Configure Gemini
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 # Setup Gemini API tracker
 gemini_logger = logging.getLogger('gemini_classification')
@@ -163,7 +163,7 @@ def detect_special_url_with_gemini(url: str) -> Optional[Dict[str, Any]]:
     """
     start_time = None
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash-lite')
+        model_name = 'gemini-2.5-flash-lite'
         
         prompt = f"""
         You are a URL structure expert. Analyze the specific string patterns of the URL below to determine if it is a "Special Utility URL" (which should be skipped) or a standard "Content URL" (which contains a webpage to be scraped).
@@ -194,9 +194,10 @@ def detect_special_url_with_gemini(url: str) -> Optional[Dict[str, Any]]:
         
         # Track Gemini API call
         start_time = time.time()
-        response = model.generate_content(
-            prompt,
-            generation_config=genai.types.GenerationConfig(temperature=0.1)
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(temperature=0.1),
         )
         track_gemini_classification("Special URL Classification", prompt, response=response, start_time=start_time)
         
@@ -459,7 +460,7 @@ CONTENT PREVIEW: {normalize_text(main_content)[:3000]}
 
 def classify_with_gemini(content: str, url: str, search_text: str) -> Dict[str, Any]:
     """Calls Gemini to classify if the site is third-party or competitor"""
-    model = genai.GenerativeModel('gemini-2.5-flash-lite')
+    model_name = 'gemini-2.5-flash-lite'
     
     prompt = f"""
 You are analyzing a website to determine if it is a THIRD-PARTY review/comparison/listing site or the OFFICIAL PRODUCT/COMPETITOR site.
@@ -500,7 +501,7 @@ Respond ONLY with valid JSON in this exact format (no markdown, no backticks):
     
     # Track Gemini API call
     start_time = time.time()
-    response = model.generate_content(prompt)
+    response = client.models.generate_content(model=model_name, contents=prompt)
     track_gemini_classification("Third Party Classification", prompt, response=response, start_time=start_time)
     
     text = response.text

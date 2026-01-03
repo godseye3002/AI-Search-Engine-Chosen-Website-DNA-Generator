@@ -9,7 +9,8 @@ import logging
 from typing import Any, Dict, List
 from datetime import datetime
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from dotenv import load_dotenv
 from utils.env_utils import is_production_mode, get_log_level
 
@@ -23,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 load_dotenv() 
 API_KEY = os.getenv('GEMINI_API_KEY', '')
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 
 class SimpleBlueprintGenerator:
@@ -137,14 +138,11 @@ You must output final result in following JSON structure. **Do not use biologica
     def __init__(self, model_name: str = "gemini-2.5-pro"):
         if not is_production_mode():
             logger.info(f"Initializing SimpleBlueprintGenerator with model: {model_name}")
-        self.model = genai.GenerativeModel(
-            model_name=model_name,
-            generation_config={
-                "temperature": 0.2,
-                "top_p": 0.95,
-                "top_k": 40,
-                # "max_output_tokens": 8192,
-            }
+        self.model_name = model_name
+        self.config = types.GenerateContentConfig(
+            temperature=0.2,
+            top_p=0.95,
+            top_k=40,
         )
         if not is_production_mode():
             logger.info("Gemini model configured successfully")
@@ -176,7 +174,11 @@ You must output final result in following JSON structure. **Do not use biologica
             # Generate blueprint
             if not is_production_mode():
                 logger.info("Calling Gemini API to generate master blueprint...")
-            response = self.model.generate_content(self.MASTER_BLUEPRINT_PROMPT + "\n\n" + input_text)
+            response = client.models.generate_content(
+                model=self.model_name,
+                contents=self.MASTER_BLUEPRINT_PROMPT + "\n\n" + input_text,
+                config=self.config,
+            )
             response_text = response.text
             
             if not is_production_mode():
@@ -249,18 +251,19 @@ You must output final result in following JSON structure. **Do not use biologica
             # gemini-2.5-pro
             # gemini-3-pro-preview
             # Generate with even smaller token limit
-            reduced_model = genai.GenerativeModel(
-                model_name="gemini-2.5-pro",
-                generation_config={
-                    "temperature": 0.2,
-                    "top_p": 0.95,
-                    "top_k": 40,
-                    # "max_output_tokens": 4048,  # Further reduced
-                }
+            reduced_model_name = "gemini-2.5-pro"
+            reduced_config = types.GenerateContentConfig(
+                temperature=0.2,
+                top_p=0.95,
+                top_k=40,
             )
             
             logger.info("Calling Gemini API with reduced settings...")
-            response = reduced_model.generate_content(self.MASTER_BLUEPRINT_PROMPT + "\n\n" + input_text)
+            response = client.models.generate_content(
+                model=reduced_model_name,
+                contents=self.MASTER_BLUEPRINT_PROMPT + "\n\n" + input_text,
+                config=reduced_config,
+            )
             response_text = response.text
             
             logger.info(f"Received reduced response of length: {len(response_text)} characters")

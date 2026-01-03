@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import traceback
 from typing import Any, Dict, Optional
 
-import google.generativeai as genai
+from google import genai
 
 # Load environment variables
 load_dotenv()
@@ -73,8 +73,7 @@ def generate_ai_error_message(error_payload: Dict[str, Any]) -> str:
         )
 
     try:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-2.5-pro")
+        client = genai.Client(api_key=api_key)
 
         prompt = f"""
 You are a senior backend reliability engineer and debugging expert.
@@ -93,7 +92,10 @@ Incident payload (JSON):
 {error_payload}
 """
 
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model="gemini-2.5-pro",
+            contents=prompt,
+        )
         text = (response.text or "").strip()
         return text or f"AI summary unavailable.\n\n{summarize_error(Exception(error_payload.get('error_message')))}"
     except Exception as e:
