@@ -8,7 +8,6 @@ from typing import Any, Dict, Optional, Tuple
 
 from database.supabase_manager import SupabaseDataManager
 
-
 load_dotenv()
 
 SERVER_NAME = "Deep Analysis Website DNA Extracter"
@@ -77,15 +76,20 @@ def send_success_email_to_user(
     run_id: Optional[str] = None,
 ) -> bool:
     if not _is_truthy(os.getenv("ENABLE_SUCCESS_EMAILS")):
+        print(f"🔕 Success emails disabled - skipping email for product {product_id}")
         return False
 
     smtp_host, smtp_port, smtp_user, smtp_pass, from_email = _get_smtp_config()
     if not smtp_user or not smtp_pass:
+        print(f"❌ SMTP configuration missing - cannot send success email for product {product_id}")
         return False
 
     user_email, product_name, product_url, user_name = _get_user_contact_by_product_id(product_id)
     if not user_email:
+        print(f"❌ User email not found for product {product_id} - cannot send success email")
         return False
+
+    print(f"📧 Sending success email to {user_email} for product {product_name} ({product_id})")
 
     subject = "✅ Your Website DNA Analysis is Complete"
 
@@ -133,6 +137,8 @@ def send_success_email_to_user(
             server.starttls()
             server.login(smtp_user, smtp_pass)
             server.send_message(msg)
+        print(f"✅ Success email sent successfully to {user_email} for product {product_id}")
         return True
-    except Exception:
+    except Exception as e:
+        print(f"❌ Failed to send success email for product {product_id}: {e}")
         return False

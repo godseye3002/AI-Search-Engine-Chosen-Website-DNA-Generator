@@ -268,15 +268,19 @@ class DatabasePipelineOrchestrator:
 
             try:
                 from success_email_sender import send_success_email_to_user
-                send_success_email_to_user(
+                email_sent = send_success_email_to_user(
                     product_id=product_id,
                     data_source=data_source.value,
                     analysis_id=getattr(saved_record, "id", None),
                     run_id=run_id,
                 )
+                if email_sent:
+                    self.logger.info(f"✅ Success email sent for product {product_id} ({data_source.value})")
+                else:
+                    self.logger.info(f"🔕 Success email not sent for product {product_id} ({data_source.value}) - check configuration")
             except Exception as email_err:
                 self.logger.warning(
-                    f"Success email send failed for product {product_id} ({data_source.value}): {email_err}"
+                    f"❌ Success email send failed for product {product_id} ({data_source.value}): {email_err}"
                 )
             
             self.logger.info(f"Successfully processed product {product_id} with analysis ID {saved_record.id}")
