@@ -21,7 +21,7 @@ def _is_truthy(value: Optional[str]) -> bool:
 
 def _get_smtp_config() -> Tuple[str, int, str, str, str]:
     smtp_host = os.getenv("SMTP_HOST", "smtp.gmail.com")
-    smtp_port = int(os.getenv("SMTP_PORT", "587"))
+    smtp_port = int(os.getenv("SMTP_PORT", "465"))
     smtp_user = os.getenv("SMTP_USER") or ""
     smtp_pass = os.getenv("SMTP_PASS") or ""
     from_email = os.getenv("FROM_EMAIL", smtp_user) or smtp_user
@@ -133,10 +133,18 @@ def send_success_email_to_user(
     msg.attach(MIMEText(html_body, "html"))
 
     try:
-        with smtplib.SMTP(smtp_host, smtp_port) as server:
-            server.starttls()
-            server.login(smtp_user, smtp_pass)
-            server.send_message(msg)
+        # Use SMTP_SSL for port 465, SMTP for other ports (like 587)
+        if smtp_port == 465:
+            print(f"🔐 Connecting to SMTP_SSL on port {smtp_port}")
+            with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
+                server.login(smtp_user, smtp_pass)
+                server.send_message(msg)
+        else:
+            print(f"🔐 Connecting to SMTP with STARTTLS on port {smtp_port}")
+            with smtplib.SMTP(smtp_host, smtp_port) as server:
+                server.starttls()
+                server.login(smtp_user, smtp_pass)
+                server.send_message(msg)
         print(f"✅ Success email sent successfully to {user_email} for product {product_id}")
         return True
     except Exception as e:
