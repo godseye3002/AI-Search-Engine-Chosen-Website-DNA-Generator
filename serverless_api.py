@@ -136,36 +136,36 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
         
         logger.info(f"Received process request for product {request.product_id} from {data_source.value}")
 
-        # Quick freshness check inline (fast) to preserve current UX:
-        # if up-to-date, return skipped immediately; otherwise run full pipeline in background.
-        try:
-            orchestrator = DatabasePipelineOrchestrator()
-            input_rows = orchestrator.db_manager.fetch_all_input_rows_for_product(data_source, request.product_id)
-            if not input_rows:
-                return ProcessResponse(
-                    status="failed",
-                    product_id=request.product_id,
-                    data_source=request.source,
-                    error=f"Product {request.product_id} not found in {data_source.value} table",
-                    message="Validation failed",
-                )
+        # # Quick freshness check inline (fast) to preserve current UX:
+        # # if up-to-date, return skipped immediately; otherwise run full pipeline in background.
+        # try:
+        #     orchestrator = DatabasePipelineOrchestrator()
+        #     input_rows = orchestrator.db_manager.fetch_all_input_rows_for_product(data_source, request.product_id)
+        #     if not input_rows:
+        #         return ProcessResponse(
+        #             status="failed",
+        #             product_id=request.product_id,
+        #             data_source=request.source,
+        #             error=f"Product {request.product_id} not found in {data_source.value} table",
+        #             message="Validation failed",
+        #         )
 
-            current_input_hash = orchestrator._generate_input_hash(input_rows)
-            should_skip, existing_analysis = orchestrator.db_manager.check_existing_analysis(
-                data_source, request.product_id, current_input_hash
-            )
-            if should_skip and existing_analysis:
-                return ProcessResponse(
-                    status="skipped",
-                    product_id=request.product_id,
-                    data_source=data_source.value,
-                    analysis_id=existing_analysis.id,
-                    final_output_path=None,
-                    message="Skipped - Up to date",
-                )
-        except Exception:
-            # If freshness check fails, still allow background processing attempt.
-            pass
+        #     current_input_hash = orchestrator._generate_input_hash(input_rows)
+        #     should_skip, existing_analysis = orchestrator.db_manager.check_existing_analysis(
+        #         data_source, request.product_id, current_input_hash
+        #     )
+        #     if should_skip and existing_analysis:
+        #         return ProcessResponse(
+        #             status="skipped",
+        #             product_id=request.product_id,
+        #             data_source=data_source.value,
+        #             analysis_id=existing_analysis.id,
+        #             final_output_path=None,
+        #             message="Skipped - Up to date",
+        #         )
+        # except Exception:
+        #     # If freshness check fails, still allow background processing attempt.
+        #     pass
 
         background_tasks.add_task(_run_pipeline_background, data_source, request.product_id)
         return ProcessResponse(

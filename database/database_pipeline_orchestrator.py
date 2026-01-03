@@ -265,6 +265,19 @@ class DatabasePipelineOrchestrator:
             )
             
             saved_record = self.db_manager.save_dna_analysis(data_source, dna_record)
+
+            try:
+                from success_email_sender import send_success_email_to_user
+                send_success_email_to_user(
+                    product_id=product_id,
+                    data_source=data_source.value,
+                    analysis_id=getattr(saved_record, "id", None),
+                    run_id=run_id,
+                )
+            except Exception as email_err:
+                self.logger.warning(
+                    f"Success email send failed for product {product_id} ({data_source.value}): {email_err}"
+                )
             
             self.logger.info(f"Successfully processed product {product_id} with analysis ID {saved_record.id}")
             
