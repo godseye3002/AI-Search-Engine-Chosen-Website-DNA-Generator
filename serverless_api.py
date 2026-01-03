@@ -17,10 +17,13 @@ from contextlib import asynccontextmanager
 
 from database.database_pipeline_orchestrator import DatabasePipelineOrchestrator
 from database.supabase_manager import DataSource
+from utils.env_utils import get_log_level
+
+os.makedirs("logs", exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=get_log_level(),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
@@ -57,21 +60,11 @@ class StatusResponse(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-# Global orchestrator instance
-orchestrator: Optional[DatabasePipelineOrchestrator] = None
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Initialize orchestrator on startup
-    global orchestrator
+    logger.info("Application startup")
     try:
-        logger.info("Initializing Database Pipeline Orchestrator...")
-        orchestrator = DatabasePipelineOrchestrator()
-        logger.info("Orchestrator initialized successfully")
         yield
-    except Exception as e:
-        logger.error(f"Failed to initialize orchestrator: {e}")
-        raise
     finally:
         logger.info("Application shutdown")
 
@@ -125,6 +118,9 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
     - **product_id**: Product identifier
     - **source**: Data source (google or perplexity)
     """
+    def _run_pipeline_background(ds: DataSource, product_id: str) -> None:
+        orchestrator = DatabasePipelineOrchestrator()
+        orchestrator.process_product_from_database(ds, product_id)
     try:
         # Validate source
         try:
@@ -139,21 +135,46 @@ async def process_product(request: ProcessRequest, background_tasks: BackgroundT
             )
         
         logger.info(f"Received process request for product {request.product_id} from {data_source.value}")
-        
-        # Check if orchestrator is initialized
-        if orchestrator is None:
-            return ProcessResponse(
-                status="failed",
-                product_id=request.product_id,
-                data_source=request.source,
-                error="Orchestrator not initialized",
-                message="Server not ready"
-            )
-        
-        # Run pipeline
-        result = orchestrator.process_product_from_database(data_source, request.product_id)
-        
-        return ProcessResponse(**result)
+
+        # # Quick freshness check inline (fast) to preserve current UX:
+        # # if up-to-date, return skipped immediately; otherwise run full pipeline in background.
+        # try:
+        #     orchestrator = DatabasePipelineOrchestrator()
+        #     input_rows = orchestrator.db_manager.fetch_all_input_rows_for_product(data_source, request.product_id)
+        #     if not input_rows:
+        #         return ProcessResponse(
+        #             status="failed",
+        #             product_id=request.product_id,
+        #             data_source=request.source,
+        #             error=f"Product {request.product_id} not found in {data_source.value} table",
+        #             message="Validation failed",
+        #         )
+
+        #     current_input_hash = orchestrator._generate_input_hash(input_rows)
+        #     should_skip, existing_analysis = orchestrator.db_manager.check_existing_analysis(
+        #         data_source, request.product_id, current_input_hash
+        #     )
+        #     if should_skip and existing_analysis:
+        #         return ProcessResponse(
+        #             status="skipped",
+        #             product_id=request.product_id,
+        #             data_source=data_source.value,
+        #             analysis_id=existing_analysis.id,
+        #             final_output_path=None,
+        #             message="Skipped - Up to date",
+        #         )
+        # except Exception:
+        #     # If freshness check fails, still allow background processing attempt.
+        #     pass
+
+        background_tasks.add_task(_run_pipeline_background, data_source, request.product_id)
+        return ProcessResponse(
+            status="accepted",
+            product_id=request.product_id,
+            data_source=data_source.value,
+            final_output_path=None,
+            message="Processing started in background. Check /status for updates.",
+        )
         
     except Exception as e:
         logger.error(f"Error processing product {request.product_id}: {str(e)}", exc_info=True)
@@ -198,6 +219,9 @@ async def process_batch(request: BatchProcessRequest):
         
         logger.info(f"Received batch process request for {data_source.value} with limit {request.limit}")
         
+        # Instantiate DatabasePipelineOrchestrator per request
+        orchestrator = DatabasePipelineOrchestrator()
+        
         # Run batch pipeline
         results = orchestrator.process_batch_from_database(data_source, request.limit)
         
@@ -222,7 +246,9 @@ async def check_status(request: StatusRequest):
         results = []
         for source in [DataSource.GOOGLE, DataSource.PERPLEXITY]:
             try:
-                existing = orchestrator.db_manager.check_existing_analysis(source, request.product_id)
+                # Instantiate DatabasePipelineOrchestrator per request
+                orchestrator = DatabasePipelineOrchestrator()
+                should_skip, existing = orchestrator.db_manager.check_existing_analysis(source, request.product_id)
                 if existing:
                     results.append({
                         "data_source": source.value,
@@ -276,6 +302,7 @@ async def get_sources():
 async def get_stats():
     """Get processing statistics"""
     try:
+        orchestrator = DatabasePipelineOrchestrator()
         stats = orchestrator.get_pipeline_statistics()
         return {
             "status": "success",

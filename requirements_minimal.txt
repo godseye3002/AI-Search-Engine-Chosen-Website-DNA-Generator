@@ -1,0 +1,23 @@
+# Core serverless API
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+
+# Database
+supabase>=2.0.0
+
+# AI/LLM
+google-genai>=0.3.0
+
+# Web scraping & HTTP
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Environment & config
+python-dotenv>=1.0.0
+PyYAML>=6.0
+
+# Utilities (standard library alternatives where possible)
+# Note: No need for aiofiles/aiohttp since we use FastAPI's built-in BackgroundTasks
+# Note: No need for extra async libraries as we're not using complex async patterns

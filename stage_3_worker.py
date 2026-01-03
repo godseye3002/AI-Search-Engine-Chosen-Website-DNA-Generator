@@ -13,7 +13,7 @@ from typing import Dict, Any, Optional
 
 from final_aggregation_core import aggregate_pipeline_results
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
-from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
+from utils.env_utils import is_production_mode
 from pipeline_models import Job
 
 # Configure logging based on environment
@@ -36,10 +36,6 @@ class Stage3Worker:
         self.timeout_per_job = config.get('stage_3_aggregation', {}).get('timeout_per_job', 300)
         self.output_dir = config.get('stage_3_aggregation', {}).get('output_dir', 'stage_3_results')
         self.base_output_dir = config.get('pipeline', {}).get('base_output_dir', 'outputs')
-        
-        # Create output directory
-        self.stage_output_dir = os.path.join(self.base_output_dir, self.output_dir)
-        os.makedirs(self.stage_output_dir, exist_ok=True)
         
         self.logger.info("Stage 3 Worker initialized with simplified aggregation")
     
@@ -76,14 +72,11 @@ class Stage3Worker:
             # Process result
             if result.status == TimeoutResult.SUCCESS:
                 master_blueprint = result.result
-                
-                # Save aggregation outputs
-                output_paths = self._save_run_outputs(run_id, master_blueprint)
-                
+
                 # Update job statuses
                 for job in jobs:
                     if job.selected_for_stage_3:
-                        job.mark_stage_complete(3, output_paths['aggregation_path'])
+                        job.mark_stage_complete(3, None)
                 
                 self.logger.info(f"Run {run_id} completed Stage 3: Final aggregation complete")
                 
@@ -91,7 +84,7 @@ class Stage3Worker:
                     'status': 'completed',
                     'run_id': run_id,
                     'total_analyzed': len(dna_results),
-                    'output_paths': output_paths,
+                    'master_blueprint': master_blueprint,
                     'processing_time': None,
                     'error': None
                 }
@@ -175,31 +168,15 @@ class Stage3Worker:
             if not job.selected_for_stage_3 or job.stage_2_status != 'completed':
                 continue
             
-            try:
-                # Load DNA analysis result
-                dna_file = os.path.join(
-                    self.base_output_dir, 
-                    'stage_2_results', 
-                    f'job_{job.job_id}', 
-                    'dna_analysis.json'
-                )
-                
-                with open(dna_file, 'r', encoding='utf-8') as f:
-                    dna_data = json.load(f)
-                
-                # Add job metadata
-                dna_data['job_id'] = job.job_id
-                dna_data['url'] = job.url
-                dna_data['classification'] = job.classification
-                
-                dna_results.append(dna_data)
-                
-            except FileNotFoundError:
-                self.logger.warning(f"DNA analysis file not found for job {job.job_id}")
+            if not getattr(job, 'stage_2_data', None):
+                self.logger.warning(f"DNA analysis missing in-memory for job {job.job_id}")
                 continue
-            except json.JSONDecodeError as e:
-                self.logger.error(f"Invalid JSON in DNA analysis for job {job.job_id}: {e}")
-                continue
+
+            dna_data = dict(job.stage_2_data)
+            dna_data['job_id'] = job.job_id
+            dna_data['url'] = job.url
+            dna_data['classification'] = job.classification
+            dna_results.append(dna_data)
         
         return dna_results
     
@@ -214,34 +191,7 @@ class Stage3Worker:
         Returns:
             Dictionary with file paths
         """
-        # Check if we should save outputs for this stage
-        if not should_save_stage_outputs('stage_3'):
-            if not is_production_mode():
-                logger.info(f"[STAGE3] Skipping file save for run {run_id} in production mode")
-            return {}
-        
-        # Create run-specific directory
-        run_dir = os.path.join(self.stage_output_dir, f"run_{run_id}")
-        os.makedirs(run_dir, exist_ok=True)
-        
-        file_paths = {}
-        
-        # Save master blueprint as the main output (only file in production mode)
-        aggregation_path = os.path.join(run_dir, 'final_aggregation.json')
-        
-        # The result is now just the master blueprint dictionary
-        with open(aggregation_path, 'w', encoding='utf-8') as f:
-            json.dump(result, f, indent=2, ensure_ascii=False)
-        
-        file_paths['aggregation_path'] = aggregation_path
-        
-        if not is_production_mode():
-            logger.info(f"Saved master blueprint to {aggregation_path}")
-        else:
-            # In production mode, only log essential info
-            logger.error(f"[STAGE3] Master blueprint saved for run {run_id}")
-        
-        return file_paths
+        return {}
     
     def get_run_summary(self, run_result: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -259,9 +209,7 @@ class Stage3Worker:
             'total_analyzed': run_result.get('total_analyzed', 0),
             'processing_time': run_result.get('processing_time', 0),
             'error': run_result.get('error'),
-            'has_recommendations': bool(run_result.get('output_paths', {}).get('recommendations_path')),
-            'has_opportunities': bool(run_result.get('output_paths', {}).get('opportunities_path')),
-            'has_report': bool(run_result.get('output_paths', {}).get('report_path'))
+            'has_master_blueprint': bool(run_result.get('master_blueprint'))
         }
 
 

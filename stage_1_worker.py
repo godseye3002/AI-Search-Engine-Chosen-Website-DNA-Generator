@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from classification_core import classify_website, ClassificationResult
 from utils.timeout_handler import execute_with_timeout, TimeoutResult
-from utils.env_utils import is_production_mode, get_log_level, should_save_stage_outputs
+from utils.env_utils import is_production_mode
 from pipeline_models import Job
 
 # Configure logging based on environment
@@ -37,10 +37,6 @@ class Stage1Worker:
         self.timeout_per_link = config.get('stage_1_classification', {}).get('timeout_per_link', 30)
         self.output_dir = config.get('stage_1_classification', {}).get('output_dir', 'stage_1_results')
         self.base_output_dir = config.get('pipeline', {}).get('base_output_dir', 'outputs')
-        
-        # Create output directory
-        self.stage_output_dir = os.path.join(self.base_output_dir, self.output_dir)
-        os.makedirs(self.stage_output_dir, exist_ok=True)
         
         self.logger.info("Stage 1 Worker initialized")
     
@@ -92,13 +88,10 @@ class Stage1Worker:
                 # Update job with results
                 job.classification = classification_result.classification
                 job.stage_1_error = classification_result.error
+                job.stage_1_data = classification_result.to_dict()
                 
-                # Save outputs to files
-                output_paths = self._save_job_outputs(job.job_id, classification_result)
-                job.stage_1_output_path = output_paths['classified_data_path']
-                
-                # Mark as completed
-                job.mark_stage_complete(1, output_paths['classified_data_path'])
+                # Mark as completed (in-memory pipeline; no output_path)
+                job.mark_stage_complete(1, None)
                 
                 self.logger.info(f"Job {job.job_id} completed Stage 1: {classification_result.classification}")
                 
@@ -148,45 +141,7 @@ class Stage1Worker:
         Returns:
             Dictionary with file paths
         """
-        # Check if we should save outputs for this stage
-        if not should_save_stage_outputs('stage_1'):
-            if not is_production_mode():
-                logger.info(f"[STAGE1] Skipping file save for job {job_id} in production mode")
-            return {}
-        
-        # Create job-specific directory
-        job_dir = os.path.join(self.stage_output_dir, f"job_{job_id}")
-        os.makedirs(job_dir, exist_ok=True)
-        
-        file_paths = {}
-        
-        # Save classified data
-        classified_data_path = os.path.join(job_dir, 'classified_data.json')
-        classified_data = result.to_dict()
-        
-        with open(classified_data_path, 'w', encoding='utf-8') as f:
-            json.dump(classified_data, f, indent=2, ensure_ascii=False)
-        
-        file_paths['classified_data_path'] = classified_data_path
-        
-        # Save metadata if available
-        if result.metadata:
-            metadata_path = os.path.join(job_dir, 'metadata.json')
-            with open(metadata_path, 'w', encoding='utf-8') as f:
-                json.dump(result.metadata, f, indent=2, ensure_ascii=False)
-            file_paths['metadata_path'] = metadata_path
-        
-        # Save raw HTML if available and configured
-        if result.html and self.config.get('stage_1_classification', {}).get('save_raw_html', True):
-            html_path = os.path.join(job_dir, 'raw_html.html')
-            with open(html_path, 'w', encoding='utf-8') as f:
-                f.write(result.html)
-            file_paths['html_path'] = html_path
-        
-        if not is_production_mode():
-            logger.debug(f"Saved outputs for job {job_id} to {job_dir}")
-        
-        return file_paths
+        return {}
     
     def process_batch(self, jobs: list) -> list:
         """
