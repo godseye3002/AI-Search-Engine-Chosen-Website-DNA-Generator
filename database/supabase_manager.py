@@ -82,6 +82,51 @@ class SupabaseDataManager:
             DataSource.GOOGLE: "product_analysis_dna_google",
             DataSource.PERPLEXITY: "product_analysis_dna_perplexity"
         }
+
+    def _get_deep_analysis_hash_column(self, data_source: DataSource) -> str:
+        if data_source == DataSource.GOOGLE:
+            return "deep_analysis_google_hash"
+        if data_source == DataSource.PERPLEXITY:
+            return "deep_analysis_perplexity_hash"
+        raise ValueError(f"Unsupported data_source: {data_source}")
+
+    def set_product_deep_analysis_hash(self, data_source: DataSource, product_id: str, input_hash: str) -> bool:
+        column_name = self._get_deep_analysis_hash_column(data_source)
+        logger.info(f"Setting {column_name} for product {product_id}")
+
+        try:
+            response = (
+                self.client.table("products")
+                .update({column_name: input_hash, "updated_at": datetime.utcnow().isoformat()})
+                .eq("id", product_id)
+                .execute()
+            )
+            if response.data and len(response.data) > 0:
+                return True
+            logger.warning(f"No product updated while setting {column_name} for product {product_id}")
+            return False
+        except Exception as e:
+            logger.error(f"Error setting {column_name} for product {product_id}: {str(e)}")
+            return False
+
+    def clear_product_deep_analysis_hash(self, data_source: DataSource, product_id: str) -> bool:
+        column_name = self._get_deep_analysis_hash_column(data_source)
+        logger.info(f"Clearing {column_name} for product {product_id}")
+
+        try:
+            response = (
+                self.client.table("products")
+                .update({column_name: None, "updated_at": datetime.utcnow().isoformat()})
+                .eq("id", product_id)
+                .execute()
+            )
+            if response.data and len(response.data) > 0:
+                return True
+            logger.warning(f"No product updated while clearing {column_name} for product {product_id}")
+            return False
+        except Exception as e:
+            logger.error(f"Error clearing {column_name} for product {product_id}: {str(e)}")
+            return False
     
     def fetch_pending_products(self, data_source: DataSource, limit: Optional[int] = None) -> List[ProductAnalysisRecord]:
         """

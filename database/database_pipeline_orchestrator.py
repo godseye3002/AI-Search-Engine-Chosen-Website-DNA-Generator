@@ -200,6 +200,10 @@ class DatabasePipelineOrchestrator:
             # Generate hash from input rows
             current_input_hash = self._generate_input_hash(input_rows)
             self.logger.info(f"Generated input hash for product {product_id}: {current_input_hash[:12]}...")
+
+            # Store current hash in products table as the "in progress" marker.
+            # If processing fails later, we'll clear it in the exception handler.
+            self.db_manager.set_product_deep_analysis_hash(data_source, product_id, current_input_hash)
             
             # Check if analysis already exists and compare data freshness
             should_skip, existing_analysis = self.db_manager.check_existing_analysis(data_source, product_id, current_input_hash)
@@ -207,6 +211,8 @@ class DatabasePipelineOrchestrator:
             if should_skip:
                 if existing_analysis:
                     self.logger.info(f"Product {product_id} data is unchanged, skipping processing")
+                    # Not processing anything; clear the in-progress marker we just set.
+                    self.db_manager.clear_product_deep_analysis_hash(data_source, product_id)
                     return {
                         "status": "skipped",
                         "product_id": product_id,
@@ -233,6 +239,7 @@ class DatabasePipelineOrchestrator:
             # Check if source_links is empty - if so, skip processing
             if not ai_response.get('source_links'):
                 self.logger.info(f"Skipping product {product_id} - no source_links found")
+                self.db_manager.clear_product_deep_analysis_hash(data_source, product_id)
                 return {
                     "status": "skipped",
                     "product_id": product_id,
@@ -265,6 +272,8 @@ class DatabasePipelineOrchestrator:
             )
             
             saved_record = self.db_manager.save_dna_analysis(data_source, dna_record)
+
+            # Keep the hash as record of successful analysis - don't clear it
 
             try:
                 from success_email_sender import send_success_email_to_user
@@ -303,6 +312,12 @@ class DatabasePipelineOrchestrator:
             
         except Exception as e:
             self.logger.error(f"Error processing product {product_id}: {str(e)}")
+
+            # Ensure we clear the hash marker on any failure.
+            try:
+                self.db_manager.clear_product_deep_analysis_hash(data_source, product_id)
+            except Exception:
+                pass
             try:
                 from error_email_sender import send_ai_error_email
                 send_ai_error_email(
